@@ -1,10 +1,12 @@
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.exe.config
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.exe
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.pdb
-C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csprojResolveAssemblyReference.cache
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.frm_Main.resources
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.Properties.Resources.resources
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csproj.GenerateResource.Cache
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.exe
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.pdb
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.Image_Res.resources
+C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csprojAssemblyReference.cache
+C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.frm_ChangeMode.resources

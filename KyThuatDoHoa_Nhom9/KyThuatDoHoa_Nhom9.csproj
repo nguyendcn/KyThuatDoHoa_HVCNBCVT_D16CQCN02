@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Variables\CodeFile1.cs" />
+    <Compile Include="Variables\Collection_Strs.cs" />
     <Compile Include="frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,7 +61,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Str_Collection.cs" />
+    <Compile Include="UI\frm_ChangeMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frm_ChangeMode.Designer.cs">
+      <DependentUpon>frm_ChangeMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Variables\Constants.cs" />
+    <Compile Include="Variables\Globals.cs" />
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +85,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\frm_ChangeMode.resx">
+      <DependentUpon>frm_ChangeMode.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,31 +102,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\X_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Subtract_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Square_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3D_sharp_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2D_shaps_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sort Down_16px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Menu_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Collapse Arrow_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Expand Arrow_32px.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
