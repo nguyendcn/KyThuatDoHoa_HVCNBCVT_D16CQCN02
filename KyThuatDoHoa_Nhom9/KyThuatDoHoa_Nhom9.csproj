@@ -102,7 +102,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\3D Model_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collapse Arrow_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand Arrow_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Workflow_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2D Model_25px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
