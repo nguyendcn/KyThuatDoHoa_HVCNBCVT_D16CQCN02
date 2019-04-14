@@ -29,13 +29,17 @@
         private void InitializeComponent()
         {
             this.pnl_Mode = new System.Windows.Forms.Panel();
+            this.btn_Menu = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.btn_ChangeMode = new System.Windows.Forms.Button();
             this.pnl_ToolBox = new System.Windows.Forms.Panel();
             this.pnl_Change = new System.Windows.Forms.Panel();
             this.pnl_WorkStation = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btn_Menu = new System.Windows.Forms.Button();
+            this.pnl_Tb_2D = new System.Windows.Forms.Panel();
+            this.pnl_Tb_3D = new System.Windows.Forms.Panel();
             this.pnl_Mode.SuspendLayout();
+            this.pnl_ToolBox.SuspendLayout();
+            this.pnl_Tb_2D.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Mode
@@ -50,6 +54,26 @@
             this.pnl_Mode.Size = new System.Drawing.Size(860, 50);
             this.pnl_Mode.TabIndex = 0;
             // 
+            // btn_Menu
+            // 
+            this.btn_Menu.Location = new System.Drawing.Point(12, 12);
+            this.btn_Menu.Name = "btn_Menu";
+            this.btn_Menu.Size = new System.Drawing.Size(75, 23);
+            this.btn_Menu.TabIndex = 2;
+            this.btn_Menu.Text = "menu";
+            this.btn_Menu.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(573, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button2_MouseDown);
+            // 
             // btn_ChangeMode
             // 
             this.btn_ChangeMode.Location = new System.Drawing.Point(116, 12);
@@ -63,6 +87,7 @@
             // pnl_ToolBox
             // 
             this.pnl_ToolBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnl_ToolBox.Controls.Add(this.pnl_Tb_2D);
             this.pnl_ToolBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_ToolBox.Location = new System.Drawing.Point(600, 50);
             this.pnl_ToolBox.Name = "pnl_ToolBox";
@@ -87,25 +112,22 @@
             this.pnl_WorkStation.Size = new System.Drawing.Size(600, 550);
             this.pnl_WorkStation.TabIndex = 3;
             // 
-            // button2
+            // pnl_Tb_2D
             // 
-            this.button2.Location = new System.Drawing.Point(573, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button2_MouseDown);
+            this.pnl_Tb_2D.Controls.Add(this.pnl_Tb_3D);
+            this.pnl_Tb_2D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Tb_2D.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Tb_2D.Name = "pnl_Tb_2D";
+            this.pnl_Tb_2D.Size = new System.Drawing.Size(260, 600);
+            this.pnl_Tb_2D.TabIndex = 0;
             // 
-            // btn_Menu
+            // pnl_Tb_3D
             // 
-            this.btn_Menu.Location = new System.Drawing.Point(12, 12);
-            this.btn_Menu.Name = "btn_Menu";
-            this.btn_Menu.Size = new System.Drawing.Size(75, 23);
-            this.btn_Menu.TabIndex = 2;
-            this.btn_Menu.Text = "menu";
-            this.btn_Menu.UseVisualStyleBackColor = true;
+            this.pnl_Tb_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Tb_3D.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Tb_3D.Name = "pnl_Tb_3D";
+            this.pnl_Tb_3D.Size = new System.Drawing.Size(260, 600);
+            this.pnl_Tb_3D.TabIndex = 0;
             // 
             // frm_Main
             // 
@@ -123,6 +145,8 @@
             this.Name = "frm_Main";
             this.Text = "frm_main";
             this.pnl_Mode.ResumeLayout(false);
+            this.pnl_ToolBox.ResumeLayout(false);
+            this.pnl_Tb_2D.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -136,6 +160,8 @@
         private System.Windows.Forms.Button btn_ChangeMode;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_Menu;
+        private System.Windows.Forms.Panel pnl_Tb_2D;
+        private System.Windows.Forms.Panel pnl_Tb_3D;
     }
 }
 

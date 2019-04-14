@@ -28,18 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_2D = new System.Windows.Forms.Button();
+            this.btn_3D = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_2D
             // 
-            this.button1.Location = new System.Drawing.Point(150, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_2D.Location = new System.Drawing.Point(12, 12);
+            this.btn_2D.Name = "btn_2D";
+            this.btn_2D.Size = new System.Drawing.Size(75, 23);
+            this.btn_2D.TabIndex = 0;
+            this.btn_2D.TabStop = false;
+            this.btn_2D.Text = "2D";
+            this.btn_2D.UseVisualStyleBackColor = true;
+            this.btn_2D.Click += new System.EventHandler(this.btn_2D_Click);
+            // 
+            // btn_3D
+            // 
+            this.btn_3D.Location = new System.Drawing.Point(126, 12);
+            this.btn_3D.Name = "btn_3D";
+            this.btn_3D.Size = new System.Drawing.Size(75, 23);
+            this.btn_3D.TabIndex = 1;
+            this.btn_3D.Text = "3D";
+            this.btn_3D.UseVisualStyleBackColor = true;
+            this.btn_3D.Click += new System.EventHandler(this.btn_3D_Click);
             // 
             // frm_ChangeMode
             // 
@@ -47,7 +59,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(338, 148);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_3D);
+            this.Controls.Add(this.btn_2D);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_ChangeMode";
             this.Text = "frm_ChangeMode";
@@ -57,6 +70,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_2D;
+        private System.Windows.Forms.Button btn_3D;
     }
 }

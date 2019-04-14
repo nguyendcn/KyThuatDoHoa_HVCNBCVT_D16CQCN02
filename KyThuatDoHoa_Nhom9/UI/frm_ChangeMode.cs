@@ -11,30 +11,49 @@ using KyThuatDoHoa_Nhom9.Variables;
 
 namespace KyThuatDoHoa_Nhom9.UI
 {
+    /// <summary>
+    /// Form chứa các button cho phép chọn chế độ làm vệc như: 2D, 3D
+    /// </summary>
     public partial class frm_ChangeMode : Form
     {
         public frm_ChangeMode()
         {
             InitializeComponent();
-            this.LostFocus += Frm_ChangeMode_LostFocus;
+            this.LostFocus += Frm_ChangeMode_LostFocus; //them su kien
         }
 
+        public Constants.Mode Return_Mode { get; set; }
 
-        public string ReturnText { get; set; }
-
-        private void Frm_ChangeMode_LostFocus(object sender, EventArgs e)
+        private void Frm_ChangeMode_LostFocus(object sender, EventArgs e) // su kien click ngoai form thi form se tu dong tat
         {
             frm_ChangeMode fr = sender as frm_ChangeMode;
+
             fr.Close();
             fr.Dispose();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        #region Xử lý thay đổi chế độ làm việc
+        private void btn_2D_Click(object sender, EventArgs e)
         {
-            this.ReturnText = Collection_Strs._2D_shapes;
+            this.Return_Mode = Constants.Mode._2D; // thay doi che do lam viec thanh 2D
+
             this.Visible = false;
             this.Close();
             this.Dispose();
         }
+
+        private void btn_3D_Click(object sender, EventArgs e)
+        {
+            this.Return_Mode = Constants.Mode._3D; // thay doi che do lam viec thanh 2D
+
+            //tư dộng hủy form sau khi return
+            this.Visible = false;
+            this.Close();
+            this.Dispose();
+        }
+
+        #endregion
+
+
     }
 }
