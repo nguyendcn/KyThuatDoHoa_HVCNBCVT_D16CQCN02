@@ -12,6 +12,14 @@ namespace KyThuatDoHoa_Nhom9.Variables
     /// </summary>
     public static class Globals
     {
+        /// <summary>
+        /// Mạc định là chế độ làm việc là 2D
+        /// </summary>
         public static Constants.Mode _Mode_current = Constants.Mode._2D;
+
+        /// <summary>
+        /// Chế độ hiển thị các button trong pnl_Mode kèm theo text hay không. Mạc định là có
+        /// </summary>
+        public static bool _btn_isShowDetails = true;
     }
 }

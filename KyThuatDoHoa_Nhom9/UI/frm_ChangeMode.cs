@@ -37,6 +37,7 @@ namespace KyThuatDoHoa_Nhom9.UI
 
         #endregion
 
+        #region Function
         private void Set_FocusButton(Constants.Mode mode)
         {
             if (mode == Constants.Mode._2D)
@@ -48,6 +49,7 @@ namespace KyThuatDoHoa_Nhom9.UI
                 btn_3D.BackColor = Constants.Background_Btn_Focus;
             }
         }
+        #endregion
 
         #region Xử lý thay đổi chế độ làm việc
         private void btn_2D_Click(object sender, EventArgs e)
@@ -70,7 +72,6 @@ namespace KyThuatDoHoa_Nhom9.UI
         }
 
         #endregion
-
 
     }
 }

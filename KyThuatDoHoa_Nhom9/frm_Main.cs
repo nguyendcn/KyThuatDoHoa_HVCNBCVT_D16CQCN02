@@ -9,61 +9,134 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KyThuatDoHoa_Nhom9.UI;
+using KyThuatDoHoa_Nhom9.Variables;
 
 namespace KyThuatDoHoa_Nhom9
 {
     public partial class frm_Main : Form
     {
-        
 
         public frm_Main()
         {
             InitializeComponent();
 
             //2D mode is startup;
-            //pnl_Menu_2Dshapes.Visible = true;
-            //pnl_Menu_3Dshapes.Visible = false;
+            Setup_Toolbar(Globals._Mode_current);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Toolbar_Click(object sender, EventArgs e)
         {
-            this.IsMdiContainer = true;
-            frm_ChangeMode fr  = new frm_ChangeMode();
-            fr.VisibleChanged += Fr_VisibleChanged;
-            fr.StartPosition = FormStartPosition.Manual;
+            frm_ChangeMode frm_cm  = new frm_ChangeMode(Globals._Mode_current);
 
-            int BorderWidth = (this.Width - this.ClientSize.Width) / 2;
-            int TitlebarHeight = this.Height - (this.ClientSize.Height + BorderWidth);
+            //them su kien khi form ChangeMode an di
+            frm_cm.VisibleChanged += new EventHandler(delegate (object obj, EventArgs ea){
+                frm_ChangeMode frm = obj as frm_ChangeMode;
+                if (!frm.Visible)
+                {
+                    frm.Dispose();
+                    if (frm.Return_Mode != Globals._Mode_current) //da thay doi che do
+                    {
+                        Globals._Mode_current = frm.Return_Mode;
+                        Setup_Toolbar(Globals._Mode_current); //thay do hien thi
+                    }
+                }
+            });
 
-            fr.Left = this.Location.X + pnl_Change.Location.X + BorderWidth;
-            fr.Top = this.Location.Y + pnl_Change.Location.Y + TitlebarHeight ;
+            //set vi tri hien thi phu thuoc vao thuoc tinh Control.Location
+            frm_cm.StartPosition = FormStartPosition.Manual;
 
+            //tinh kich thuowc cua border va thanh titlebar
+            int _border_Width = (this.Width - this.ClientSize.Width) / 2;
+            int _titlebar_Height = this.Height - (this.ClientSize.Height + _border_Width);
 
+            //set le trai va le tren cung so voi man hinh sao cho nam duoi pnl_Change
+            frm_cm.Left = this.Location.X + pnl_Change.Location.X + _border_Width; 
+            frm_cm.Top = this.Location.Y + pnl_Change.Location.Y + _titlebar_Height; 
 
-
-            fr.Show();
-
+            frm_cm.Show();
         }
 
-        private void Fr_VisibleChanged(object sender, EventArgs e)
-        {
-            frm_ChangeMode frm = sender as frm_ChangeMode;
-            if (!frm.Visible)
+
+        #region Function
+
+        /// <summary>
+        /// Hiển thị pnl tương ứng với mode hiện tại
+        /// </summary>
+        /// <param name="mode">Used to indicate status.</param>
+        private void Setup_Toolbar(Constants.Mode mode)
+        {   
+            //Ẩn toàn bộ các panel trong pnl_toolBox
+            foreach(Control ctr in this.pnl_ToolBox.Controls)
             {
-                frm.Dispose();
-                MessageBox.Show(frm.ReturnText);
-                
+                ctr.Visible = false;
+            }
+
+            //Hiển thị pnl, thay đổi text, img của btn_Toolbar với mode tương ứng
+            if(mode == Constants.Mode._2D)
+            {
+                this.pnl_Tb_2D.Visible = true;
+                this.btn_Toolbar.Text = Collection_Strs._2D_shapes;
+                this.btn_Toolbar.Image = Image_Res._2D_Model_25px;
+            }
+            else if(mode == Constants.Mode._3D)
+            {
+                this.pnl_Tb_3D.Visible = true;
+                this.btn_Toolbar.Text = Collection_Strs._3D_shapes;
+                this.btn_Toolbar.Image = Image_Res._3D_Model_25px;
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Hiển thị text của button hay không
+        /// </summary>
+        /// <param name="isShow">Used to indicate text.</param>
+        private void SetTextForButton(bool isShow)
         {
-            MessageBox.Show("sdfsdfasfd");
-        }
+            if(isShow)
+            {
+                //set btn_Menu
+                btn_Menu.Text = Collection_Strs._Menu;
+                btn_Menu.ImageAlign = ContentAlignment.TopCenter;
 
-        private void button2_MouseDown(object sender, MouseEventArgs e)
+                //set btn_Toolbar theo mode hien tai
+                btn_Toolbar.ImageAlign = ContentAlignment.TopCenter;
+                if (Globals._Mode_current == Constants.Mode._2D)
+                {
+                    btn_Toolbar.Text = Collection_Strs._2D_shapes;
+                }
+                else if(Globals._Mode_current == Constants.Mode._3D)
+                {
+                    btn_Toolbar.Text = Collection_Strs._3D_shapes;
+                }
+            }
+            else
+            {
+                foreach(Button ctr in this.pnl_Mode.Controls)
+                {
+                    if(ctr is Button)
+                    {
+                        ctr.Text = "";
+                        ctr.ImageAlign = ContentAlignment.MiddleCenter;
+                    }
+                }
+            }
+        }
+        #endregion
+
+        private void btn_ShowDetails_btn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("zxcvcxvzxc");
+            if(Globals._btn_isShowDetails)
+            {
+                Globals._btn_isShowDetails = false;
+                btn_ShowDetails_btn.Image = Image_Res.Collapse_Arrow_25px;
+            }
+            else
+            {
+                Globals._btn_isShowDetails = true;
+                btn_ShowDetails_btn.Image = Image_Res.Expand_Arrow_25px;
+            }
+
+            SetTextForButton(Globals._btn_isShowDetails);
         }
     }
 }

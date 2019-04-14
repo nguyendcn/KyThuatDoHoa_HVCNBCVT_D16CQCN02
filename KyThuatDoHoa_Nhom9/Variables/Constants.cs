@@ -23,5 +23,6 @@ namespace KyThuatDoHoa_Nhom9.Variables
         private static Color background_Btn_Focus = Color.AliceBlue;
 
         public static Color Background_Btn_Focus { get => background_Btn_Focus; }
+
     }
 }
