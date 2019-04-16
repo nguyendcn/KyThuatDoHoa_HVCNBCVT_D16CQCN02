@@ -64,15 +64,15 @@ namespace KyThuatDoHoa_Nhom9
         /// </summary>
         /// <param name="mode">Used to indicate status.</param>
         private void Setup_Toolbar(Constants.Mode mode)
-        {   
-            //Ẩn toàn bộ các panel trong pnl_toolBox
-            foreach(Control ctr in this.pnl_ToolBox.Controls)
-            {
-                ctr.Visible = false;
-            }
+        {
+           // Ẩn toàn bộ các panel trong pnl_toolBox
+            //foreach (Control ctr in this.pnl_ToolBox.Controls)
+            //{
+            //    ctr.Visible = false;
+            //}
 
             //Hiển thị pnl, thay đổi text, img của btn_Toolbar với mode tương ứng
-            if(mode == Constants.Mode._2D)
+            if (mode == Constants.Mode._2D)
             {
                 this.pnl_Tb_2D.Visible = true;
                 this.btn_Toolbar.Text = Collection_Strs._2D_shapes;
@@ -90,6 +90,8 @@ namespace KyThuatDoHoa_Nhom9
         /// Hiển thị text của button hay không
         /// </summary>
         /// <param name="isShow">Used to indicate text.</param>
+
+        #region SetTextForButton
         private void SetTextForButton(bool isShow)
         {
             if(isShow)
@@ -122,7 +124,7 @@ namespace KyThuatDoHoa_Nhom9
             }
         }
         #endregion
-
+       
         private void btn_ShowDetails_btn_Click(object sender, EventArgs e)
         {
             if(Globals._btn_isShowDetails)
@@ -137,6 +139,12 @@ namespace KyThuatDoHoa_Nhom9
             }
 
             SetTextForButton(Globals._btn_isShowDetails);
+        }
+        #endregion
+
+        private void btn_Menu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

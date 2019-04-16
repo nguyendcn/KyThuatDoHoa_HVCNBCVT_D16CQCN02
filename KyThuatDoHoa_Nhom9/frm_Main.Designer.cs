@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.pnl_Mode = new System.Windows.Forms.Panel();
-            this.btn_Menu = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_ShowDetails_btn = new System.Windows.Forms.Button();
+            this.btn_Menu = new System.Windows.Forms.Button();
             this.btn_Toolbar = new System.Windows.Forms.Button();
             this.pnl_ToolBox = new System.Windows.Forms.Panel();
             this.pnl_Tb_2D = new System.Windows.Forms.Panel();
             this.pnl_Tb_3D = new System.Windows.Forms.Panel();
             this.pnl_Change = new System.Windows.Forms.Panel();
             this.pnl_WorkStation = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_Mode.SuspendLayout();
-            this.pnl_ToolBox.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pnl_ToolBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Mode
@@ -55,20 +55,14 @@
             this.pnl_Mode.Size = new System.Drawing.Size(860, 49);
             this.pnl_Mode.TabIndex = 0;
             // 
-            // btn_Menu
+            // panel1
             // 
-            this.btn_Menu.FlatAppearance.BorderSize = 0;
-            this.btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Menu.ForeColor = System.Drawing.Color.White;
-            this.btn_Menu.Image = global::KyThuatDoHoa_Nhom9.Image_Res.List_25px;
-            this.btn_Menu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Menu.Location = new System.Drawing.Point(10, 0);
-            this.btn_Menu.Name = "btn_Menu";
-            this.btn_Menu.Size = new System.Drawing.Size(85, 50);
-            this.btn_Menu.TabIndex = 2;
-            this.btn_Menu.Text = "Menu";
-            this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Menu.UseVisualStyleBackColor = true;
+            this.panel1.Controls.Add(this.btn_ShowDetails_btn);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(807, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(53, 49);
+            this.panel1.TabIndex = 3;
             // 
             // btn_ShowDetails_btn
             // 
@@ -81,6 +75,22 @@
             this.btn_ShowDetails_btn.TabIndex = 1;
             this.btn_ShowDetails_btn.UseVisualStyleBackColor = true;
             this.btn_ShowDetails_btn.Click += new System.EventHandler(this.btn_ShowDetails_btn_Click);
+            // 
+            // btn_Menu
+            // 
+            this.btn_Menu.FlatAppearance.BorderSize = 0;
+            this.btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Menu.ForeColor = System.Drawing.Color.White;
+            this.btn_Menu.Image = global::KyThuatDoHoa_Nhom9.Image_Res.List_25px;
+            this.btn_Menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Menu.Location = new System.Drawing.Point(10, 0);
+            this.btn_Menu.Name = "btn_Menu";
+            this.btn_Menu.Size = new System.Drawing.Size(85, 50);
+            this.btn_Menu.TabIndex = 2;
+            this.btn_Menu.Text = "Menu";
+            this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Menu.UseVisualStyleBackColor = true;
+            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
             // 
             // btn_Toolbar
             // 
@@ -144,15 +154,6 @@
             this.pnl_WorkStation.Size = new System.Drawing.Size(600, 552);
             this.pnl_WorkStation.TabIndex = 3;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btn_ShowDetails_btn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(807, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(53, 49);
-            this.panel1.TabIndex = 3;
-            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -165,12 +166,12 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpButton = true;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Main";
             this.Text = "frm_main";
             this.pnl_Mode.ResumeLayout(false);
-            this.pnl_ToolBox.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.pnl_ToolBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

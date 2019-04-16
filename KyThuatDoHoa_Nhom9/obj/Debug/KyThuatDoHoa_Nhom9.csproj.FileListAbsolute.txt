@@ -10,3 +10,15 @@ C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDo
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csprojAssemblyReference.cache
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csproj.CoreCompileInputs.cache
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.frm_ChangeMode.resources
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.exe.config
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.exe
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.pdb
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csprojAssemblyReference.cache
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.frm_Main.resources
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.Image_Res.resources
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.Properties.Resources.resources
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.frm_ChangeMode.resources
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csproj.GenerateResource.cache
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csproj.CoreCompileInputs.cache
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.exe
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.pdb
