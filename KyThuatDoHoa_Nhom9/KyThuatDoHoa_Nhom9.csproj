@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\UserCtr\ChooseMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserCtr\ChooseMode.Designer.cs">
+      <DependentUpon>ChooseMode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Variables\CodeFile1.cs" />
     <Compile Include="Variables\Collection_Strs.cs" />
     <Compile Include="frm_Main.cs">
@@ -87,6 +93,9 @@
     </Compile>
     <EmbeddedResource Include="UI\frm_ChangeMode.resx">
       <DependentUpon>frm_ChangeMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserCtr\ChooseMode.resx">
+      <DependentUpon>ChooseMode.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

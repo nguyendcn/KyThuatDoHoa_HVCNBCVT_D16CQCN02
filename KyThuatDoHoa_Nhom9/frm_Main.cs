@@ -22,38 +22,59 @@ namespace KyThuatDoHoa_Nhom9
 
             //2D mode is startup;
             Setup_Toolbar(Globals._Mode_current);
+            //this.cm_ChooseMode.BringToFront();
         }
 
         private void btn_Toolbar_Click(object sender, EventArgs e)
         {
-            frm_ChangeMode frm_cm  = new frm_ChangeMode(Globals._Mode_current);
+            //frm_ChangeMode frm_cm  = new frm_ChangeMode(Globals._Mode_current);
 
-            //them su kien khi form ChangeMode an di
-            frm_cm.VisibleChanged += new EventHandler(delegate (object obj, EventArgs ea){
-                frm_ChangeMode frm = obj as frm_ChangeMode;
-                if (!frm.Visible)
+            ////them su kien khi form ChangeMode an di
+            //frm_cm.VisibleChanged += new EventHandler(delegate (object obj, EventArgs ea){
+            //    frm_ChangeMode frm = obj as frm_ChangeMode;
+            //    if (!frm.Visible)
+            //    {
+            //        frm.Dispose();
+            //        if (frm.Return_Mode != Globals._Mode_current) //da thay doi che do
+            //        {
+            //            Globals._Mode_current = frm.Return_Mode;
+            //            Setup_Toolbar(Globals._Mode_current); //thay do hien thi
+            //        }
+            //    }
+            //});
+
+            ////set vi tri hien thi phu thuoc vao thuoc tinh Control.Location
+            //frm_cm.StartPosition = FormStartPosition.Manual;
+
+            ////tinh kich thuowc cua border va thanh titlebar
+            //int _border_Width = (this.Width - this.ClientSize.Width) / 2;
+            //int _titlebar_Height = this.Height - (this.ClientSize.Height + _border_Width);
+
+            ////set le trai va le tren cung so voi man hinh sao cho nam duoi pnl_Change
+            //frm_cm.Left = this.Location.X + pnl_Change.Location.X + _border_Width; 
+            //frm_cm.Top = this.Location.Y + pnl_Change.Location.Y + _titlebar_Height; 
+
+            //frm_cm.Show();
+
+            UI.UserCtr.ChooseMode cm = new UI.UserCtr.ChooseMode(Variables.Globals._Mode_current);
+            cm.VisibleChanged += new EventHandler(delegate (object obj, EventArgs ea)
+            {
+                UI.UserCtr.ChooseMode _cm = obj as UI.UserCtr.ChooseMode;
+                if (!_cm.Visible)
                 {
-                    frm.Dispose();
-                    if (frm.Return_Mode != Globals._Mode_current) //da thay doi che do
+                    _cm.Dispose();
+                    if (_cm.Return_Mode != Globals._Mode_current) //da thay doi che do
                     {
-                        Globals._Mode_current = frm.Return_Mode;
+                        Globals._Mode_current = _cm.Return_Mode;
                         Setup_Toolbar(Globals._Mode_current); //thay do hien thi
+                        cm.Dispose();
                     }
                 }
             });
-
-            //set vi tri hien thi phu thuoc vao thuoc tinh Control.Location
-            frm_cm.StartPosition = FormStartPosition.Manual;
-
-            //tinh kich thuowc cua border va thanh titlebar
-            int _border_Width = (this.Width - this.ClientSize.Width) / 2;
-            int _titlebar_Height = this.Height - (this.ClientSize.Height + _border_Width);
-
-            //set le trai va le tren cung so voi man hinh sao cho nam duoi pnl_Change
-            frm_cm.Left = this.Location.X + pnl_Change.Location.X + _border_Width; 
-            frm_cm.Top = this.Location.Y + pnl_Change.Location.Y + _titlebar_Height; 
-
-            frm_cm.Show();
+            cm.Location = new Point(this.pnl_Change.Location.X, this.pnl_Change.Location.Y);
+            this.Controls.Add(cm);
+            cm.BringToFront();
+            cm.Focus();
         }
 
 
@@ -65,11 +86,11 @@ namespace KyThuatDoHoa_Nhom9
         /// <param name="mode">Used to indicate status.</param>
         private void Setup_Toolbar(Constants.Mode mode)
         {
-           // Ẩn toàn bộ các panel trong pnl_toolBox
-            //foreach (Control ctr in this.pnl_ToolBox.Controls)
-            //{
-            //    ctr.Visible = false;
-            //}
+            // Ẩn toàn bộ các panel trong pnl_toolBox
+            foreach (Control ctr in this.pnl_ToolBox.Controls)
+            {
+                ctr.Visible = false;
+            }
 
             //Hiển thị pnl, thay đổi text, img của btn_Toolbar với mode tương ứng
             if (mode == Constants.Mode._2D)
