@@ -23,6 +23,9 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
         {
             InitializeComponent();
 
+            this.Return_Mode = _mode;
+            SetFocusButton(_mode);
+
             if (mf == null)
             {
                 mf = new MyFilter();
@@ -34,9 +37,18 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
 
         }
 
+        #region Property
+
+        /// <summary>
+        /// Get or set Mode current
+        /// </summary>
         public Variables.Constants.Mode Return_Mode { get; set; }
 
         private static MyFilter mf = null;
+
+        #endregion
+
+        #region Event
 
         private void mf_KeyUp(IntPtr target)
         {
@@ -47,9 +59,48 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
                     if (!IsTargetMine(target))
                     {
                         this.Visible = false;
+
+                        Application.RemoveMessageFilter(mf);
+                        mf = null;
                         this.Dispose();
                     }
                 }
+            }
+        }
+
+        private void mf_MouseDown()
+        {
+            if (this.Visible)
+            {
+                if (!this.RectangleToScreen(this.ClientRectangle).Contains(Cursor.Position))
+                {
+                    this.Visible = false;
+                    Application.RemoveMessageFilter(mf);
+                    mf = null;
+                    this.DestroyHandle();
+                    this.Dispose();
+                }
+            }
+        }
+        #endregion
+
+        #region Function
+
+        /// <summary>
+        /// Select button of mode current
+        /// </summary>
+        /// <param name="_mode">Used to focus button</param>
+        private void SetFocusButton(Variables.Constants.Mode _mode)
+        {
+            if(_mode == Variables.Constants.Mode._2D)
+            {
+                this.btn_2D.BackColor = Variables.Constants.Background_Btn_Focus;
+                this.btn_2D.Focus();
+            }
+            else if(_mode == Variables.Constants.Mode._3D)
+            {
+                this.btn_3D.BackColor = Variables.Constants.Background_Btn_Focus;
+                this.btn_3D.Focus();
             }
         }
 
@@ -78,19 +129,9 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             return false;
         }
 
-        private void mf_MouseDown()
-        {
-            if (this.Visible)
-            {
-                if (!this.RectangleToScreen(this.ClientRectangle).Contains(Cursor.Position))
-                {
-                    this.Visible = false;
-                    this.Dispose();
-                }
-            }
-        }
+        #endregion
 
-        #region Handl change mode
+        #region Handl event change mode
 
         private void btn_2D_Click(object sender, EventArgs e)
         {

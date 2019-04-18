@@ -24,38 +24,9 @@ namespace KyThuatDoHoa_Nhom9
             Setup_Toolbar(Globals._Mode_current);
             //this.cm_ChooseMode.BringToFront();
         }
-
+    
         private void btn_Toolbar_Click(object sender, EventArgs e)
         {
-            //frm_ChangeMode frm_cm  = new frm_ChangeMode(Globals._Mode_current);
-
-            ////them su kien khi form ChangeMode an di
-            //frm_cm.VisibleChanged += new EventHandler(delegate (object obj, EventArgs ea){
-            //    frm_ChangeMode frm = obj as frm_ChangeMode;
-            //    if (!frm.Visible)
-            //    {
-            //        frm.Dispose();
-            //        if (frm.Return_Mode != Globals._Mode_current) //da thay doi che do
-            //        {
-            //            Globals._Mode_current = frm.Return_Mode;
-            //            Setup_Toolbar(Globals._Mode_current); //thay do hien thi
-            //        }
-            //    }
-            //});
-
-            ////set vi tri hien thi phu thuoc vao thuoc tinh Control.Location
-            //frm_cm.StartPosition = FormStartPosition.Manual;
-
-            ////tinh kich thuowc cua border va thanh titlebar
-            //int _border_Width = (this.Width - this.ClientSize.Width) / 2;
-            //int _titlebar_Height = this.Height - (this.ClientSize.Height + _border_Width);
-
-            ////set le trai va le tren cung so voi man hinh sao cho nam duoi pnl_Change
-            //frm_cm.Left = this.Location.X + pnl_Change.Location.X + _border_Width; 
-            //frm_cm.Top = this.Location.Y + pnl_Change.Location.Y + _titlebar_Height; 
-
-            //frm_cm.Show();
-
             UI.UserCtr.ChooseMode cm = new UI.UserCtr.ChooseMode(Variables.Globals._Mode_current);
             cm.VisibleChanged += new EventHandler(delegate (object obj, EventArgs ea)
             {
@@ -67,7 +38,7 @@ namespace KyThuatDoHoa_Nhom9
                     {
                         Globals._Mode_current = _cm.Return_Mode;
                         Setup_Toolbar(Globals._Mode_current); //thay do hien thi
-                        cm.Dispose();
+                        
                     }
                 }
             });
@@ -163,9 +134,20 @@ namespace KyThuatDoHoa_Nhom9
         }
         #endregion
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        private int asdf(int a)
+        {
+            return 1;
+        }
+
         private void btn_Menu_Click(object sender, EventArgs e)
         {
-
+            
+          
         }
     }
 }
