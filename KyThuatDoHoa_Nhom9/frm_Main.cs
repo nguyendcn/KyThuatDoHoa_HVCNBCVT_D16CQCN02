@@ -64,26 +64,30 @@ namespace KyThuatDoHoa_Nhom9
             }
 
             //Hiển thị pnl, thay đổi text, img của btn_Toolbar với mode tương ứng
+
+
             if (mode == Constants.Mode._2D)
             {
                 this.pnl_Tb_2D.Visible = true;
-                this.btn_Toolbar.Text = Collection_Strs._2D_shapes;
+                if(Variables.Globals._btn_isShowDetails)
+                    this.btn_Toolbar.Text = Collection_Strs._2D_shapes;
                 this.btn_Toolbar.Image = Image_Res._2D_Model_25px;
             }
-            else if(mode == Constants.Mode._3D)
+            else if (mode == Constants.Mode._3D)
             {
                 this.pnl_Tb_3D.Visible = true;
-                this.btn_Toolbar.Text = Collection_Strs._3D_shapes;
+                if (Variables.Globals._btn_isShowDetails)
+                    this.btn_Toolbar.Text = Collection_Strs._3D_shapes;
                 this.btn_Toolbar.Image = Image_Res._3D_Model_25px;
             }
+
         }
+
 
         /// <summary>
         /// Hiển thị text của button hay không
         /// </summary>
         /// <param name="isShow">Used to indicate text.</param>
-
-        #region SetTextForButton
         private void SetTextForButton(bool isShow)
         {
             if(isShow)
@@ -105,29 +109,30 @@ namespace KyThuatDoHoa_Nhom9
             }
             else
             {
-                foreach(Button ctr in this.pnl_Mode.Controls)
+                foreach(Control ctr in this.pnl_Mode.Controls)
                 {
                     if(ctr is Button)
                     {
-                        ctr.Text = "";
-                        ctr.ImageAlign = ContentAlignment.MiddleCenter;
+                        Button btn = ctr as Button;
+                        btn.Text = "";
+                        btn.ImageAlign = ContentAlignment.MiddleCenter;
+                        
                     }
                 }
             }
         }
-        #endregion
-       
-        private void btn_ShowDetails_btn_Click(object sender, EventArgs e)
+
+        private void Btn_ShowBtnDetails_Click(object sender, EventArgs e)
         {
-            if(Globals._btn_isShowDetails)
+            if (Globals._btn_isShowDetails)
             {
                 Globals._btn_isShowDetails = false;
-                btn_ShowDetails_btn.Image = Image_Res.Collapse_Arrow_25px;
+                btn_ShowBtnDetails.Image = Image_Res.Collapse_Arrow_25px;
             }
             else
             {
                 Globals._btn_isShowDetails = true;
-                btn_ShowDetails_btn.Image = Image_Res.Expand_Arrow_25px;
+                btn_ShowBtnDetails.Image = Image_Res.Expand_Arrow_25px;
             }
 
             SetTextForButton(Globals._btn_isShowDetails);
@@ -144,10 +149,12 @@ namespace KyThuatDoHoa_Nhom9
             return 1;
         }
 
-        private void btn_Menu_Click(object sender, EventArgs e)
+        private void Btn_Menu_Click(object sender, EventArgs e)
         {
             
           
         }
+
+        
     }
 }
