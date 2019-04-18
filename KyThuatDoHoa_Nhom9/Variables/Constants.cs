@@ -18,10 +18,13 @@ namespace KyThuatDoHoa_Nhom9.Variables
         public enum Mode { _3D, _2D };
 
         /// <summary>
-        /// Màu background button khi focus
+        /// Background color button whent focusing
         /// </summary>
-        private static Color background_Btn_Focus = Color.AliceBlue;
+        private static readonly Color background_Btn_Focus = Color.FromArgb(0, 192, 192);
 
+        /// <summary>
+        /// Get setting color for button focusing
+        /// </summary>
         public static Color Background_Btn_Focus { get => background_Btn_Focus; }
 
     }

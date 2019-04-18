@@ -34,6 +34,7 @@
             // 
             // btn_3D
             // 
+            this.btn_3D.FlatAppearance.BorderSize = 0;
             this.btn_3D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_3D.ForeColor = System.Drawing.Color.White;
             this.btn_3D.Image = global::KyThuatDoHoa_Nhom9.Image_Res._3D_Model_25px;
@@ -49,6 +50,7 @@
             // 
             // btn_2D
             // 
+            this.btn_2D.FlatAppearance.BorderSize = 0;
             this.btn_2D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_2D.ForeColor = System.Drawing.Color.White;
             this.btn_2D.Image = global::KyThuatDoHoa_Nhom9.Image_Res._2D_Model_25px;
@@ -67,12 +69,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.btn_3D);
             this.Controls.Add(this.btn_2D);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ChooseMode";
-            this.Size = new System.Drawing.Size(311, 137);
+            this.Size = new System.Drawing.Size(307, 133);
             this.ResumeLayout(false);
 
         }
