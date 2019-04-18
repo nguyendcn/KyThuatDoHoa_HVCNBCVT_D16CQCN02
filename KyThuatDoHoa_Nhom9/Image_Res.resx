@@ -118,17 +118,65 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Capsule_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Capsule_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Circle_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Circle_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Collapse_Arrow_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Collapse Arrow_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cube_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Cube_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cylinder_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Cylinder_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Diamonds_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Diamonds_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Expand_Arrow_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Expand Arrow_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Heart_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Heart_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hexagon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Hexagon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Left_triangle_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Left triangle_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="List_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\List_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Moon_Star_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Moon Star_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pentagon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Pentagon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pyramid_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Pyramid_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Redo_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Redo_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rounded_Rectangle_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Rounded Rectangle_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sphere_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Sphere_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Square_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Square_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Star_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Star_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Triangle_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Triangle_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Undo_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Undo_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -134,6 +134,66 @@
   <ItemGroup>
     <None Include="Resources\2D Model_25px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cylinder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pyramid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sphere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cube_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cylinder_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sphere_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pyramid_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left triangle_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rounded Rectangle_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heart_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Moon Star_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circle_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capsule_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Square_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Triangle_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pentagon_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hexagon_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds_32px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -19,37 +19,87 @@ namespace KyThuatDoHoa_Nhom9
         public frm_Main()
         {
             InitializeComponent();
-
+            
             //2D mode is startup;
             Setup_Toolbar(Globals._Mode_current);
-            //this.cm_ChooseMode.BringToFront();
-        }
-    
-        private void btn_Toolbar_Click(object sender, EventArgs e)
-        {
-            UI.UserCtr.ChooseMode cm = new UI.UserCtr.ChooseMode(Variables.Globals._Mode_current);
-            cm.VisibleChanged += new EventHandler(delegate (object obj, EventArgs ea)
-            {
-                UI.UserCtr.ChooseMode _cm = obj as UI.UserCtr.ChooseMode;
-                if (!_cm.Visible)
-                {
-                    _cm.Dispose();
-                    if (_cm.Return_Mode != Globals._Mode_current) //da thay doi che do
-                    {
-                        Globals._Mode_current = _cm.Return_Mode;
-                        Setup_Toolbar(Globals._Mode_current); //thay do hien thi
-                        
-                    }
-                }
-            });
-            cm.Location = new Point(this.pnl_Change.Location.X, this.pnl_Change.Location.Y);
-            this.Controls.Add(cm);
-            cm.BringToFront();
-            cm.Focus();
+
+            Setup_ToolTips();
         }
 
 
         #region Function
+
+        /// <summary>
+        /// Setup tooltip for all controls in this form
+        /// </summary>
+        private void Setup_ToolTips()
+        {
+            ToolTip tt = new ToolTip();
+            tt.AutoPopDelay = 5000;
+            tt.InitialDelay = 500;
+            tt.ReshowDelay = 500;
+            tt.ShowAlways = true;
+
+            #region Set tooltip for button inside pnl_Change
+
+            tt.SetToolTip(this.btn_Menu, this.btn_Menu.Tag.ToString());
+            tt.SetToolTip(this.btn_Toolbar, this.btn_Toolbar.Tag.ToString());
+            tt.SetToolTip(this.btn_ShowBtnDetails, this.btn_ShowBtnDetails.Tag.ToString());
+            #endregion
+
+            #region Set tooltip for button inside pnl_2D
+
+            //grb 2D
+            foreach(Control ctr in this.grb_2DShapes.Controls)
+            {
+                if(ctr is Button)
+                {
+                    if (ctr.Tag == null)
+                    {
+                        tt.SetToolTip(ctr, "Tag_name null");
+                    }
+                    else
+                    {
+                        tt.SetToolTip(ctr, ctr.Tag.ToString());
+                    }
+                }
+            }
+
+            //grb line
+            foreach (Control ctr in this.grb_2DLine.Controls)
+            {
+                if (ctr is Button)
+                {
+                    if (ctr.Tag == null)
+                    {
+                        tt.SetToolTip(ctr, "Tag_name null");
+                    }
+                    else
+                    {
+                        tt.SetToolTip(ctr, ctr.Tag.ToString());
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Set tooltip for button inside pnl_3D
+            foreach (Control ctr in this.grb_3Dobject.Controls)
+            {
+                if (ctr is Button)
+                {
+                    if (ctr.Tag == null)
+                    {
+                        tt.SetToolTip(ctr, "Tag_name null");
+                    }
+                    else
+                    {
+                        tt.SetToolTip(ctr, ctr.Tag.ToString());
+                    }
+                }
+            }
+            #endregion
+        }
 
         /// <summary>
         /// Hiển thị pnl tương ứng với mode hiện tại
@@ -64,8 +114,6 @@ namespace KyThuatDoHoa_Nhom9
             }
 
             //Hiển thị pnl, thay đổi text, img của btn_Toolbar với mode tương ứng
-
-
             if (mode == Constants.Mode._2D)
             {
                 this.pnl_Tb_2D.Visible = true;
@@ -82,7 +130,6 @@ namespace KyThuatDoHoa_Nhom9
             }
 
         }
-
 
         /// <summary>
         /// Hiển thị text của button hay không
@@ -122,6 +169,20 @@ namespace KyThuatDoHoa_Nhom9
             }
         }
 
+        #endregion
+
+        private void Btn_Menu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #region Event Handl
+
+        /// <summary>
+        /// Whent user click to button ShowDetails
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_ShowBtnDetails_Click(object sender, EventArgs e)
         {
             if (Globals._btn_isShowDetails)
@@ -137,24 +198,97 @@ namespace KyThuatDoHoa_Nhom9
 
             SetTextForButton(Globals._btn_isShowDetails);
         }
-        #endregion
 
         /// <summary>
-        /// 
+        /// When user click to button Toolbar 
         /// </summary>
-        /// <param name="a"></param>
-        /// <returns></returns>
-        private int asdf(int a)
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_Toolbar_Click(object sender, EventArgs e)
         {
-            return 1;
+            UI.UserCtr.ChooseMode cm = new UI.UserCtr.ChooseMode(Variables.Globals._Mode_current);
+
+            cm.VisibleChanged += new EventHandler(delegate (object obj, EventArgs ea)
+            {
+                UI.UserCtr.ChooseMode _cm = obj as UI.UserCtr.ChooseMode;
+                if (!_cm.Visible)
+                {
+                    _cm.Dispose();
+                    if (_cm.Return_Mode != Globals._Mode_current) //da thay doi che do
+                    {
+                        Globals._Mode_current = _cm.Return_Mode;
+                        Setup_Toolbar(Globals._Mode_current); //thay do hien thi
+
+                    }
+                }
+            });
+            cm.Location = new Point(this.pnl_Change.Location.X, this.pnl_Change.Location.Y);
+            this.Controls.Add(cm);
+            cm.BringToFront();
+            cm.Focus();
         }
 
-        private void Btn_Menu_Click(object sender, EventArgs e)
+
+        /// <summary>
+        /// Event Handl whent mouse enter to button.
+        /// </summary>
+        /// <param name="sender">Button clicked.</param>
+        /// <param name="e">Event.</param>
+        private void Button_MouseEnter(object sender, EventArgs e)
         {
-            
-          
+            Button btn = sender as Button;
+            btn.FlatAppearance.BorderSize = 1; //Resize border
         }
 
-        
+        /// <summary>
+        /// Event Handl whent mouse leave this button.
+        /// </summary>
+        /// <param name="sender">Button clicked.</param>
+        /// <param name="e">Event</param>
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.FlatAppearance.BorderSize = 0; //Resize border
+        }
+
+        /// <summary>
+        /// Handl Event whent clicked.
+        /// </summary>
+        /// <param name="sender">Button clicked.</param>
+        /// <param name="e">Event.</param>
+        private void Button_Click(object sender, EventArgs e)
+        {
+            if (Variables.Globals._Mode_current == Constants.Mode._2D)
+            {
+                //End focus button in grb_2DShapes
+                foreach (Control ctr in grb_2DShapes.Controls)
+                {
+                    if (ctr is Button)
+                    {
+                        Button b = ctr as Button;
+                        b.BackColor = Color.Transparent;
+                    }
+                }
+            }
+            else if (Variables.Globals._Mode_current == Constants.Mode._3D)
+            {
+                //End focus button in grb_3Dobject
+                foreach (Control ctr in grb_3Dobject.Controls)
+                {
+                    if (ctr is Button)
+                    {
+                        Button b = ctr as Button;
+                        b.BackColor = Color.Transparent;
+                    }
+                }
+            }
+
+            //Focus button clicked
+            Button btn = sender as Button;
+            btn.BackColor = Color.BlueViolet;
+        }
+
+
+        #endregion
     }
 }
