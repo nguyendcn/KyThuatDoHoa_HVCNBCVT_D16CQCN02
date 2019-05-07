@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Point.cs" />
+    <Compile Include="Class\ToaDo.cs" />
     <Compile Include="UI\UserCtr\ChooseMode.cs">
       <SubType>UserControl</SubType>
     </Compile>
