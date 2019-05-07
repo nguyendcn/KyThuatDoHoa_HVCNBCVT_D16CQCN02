@@ -42,7 +42,7 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
         /// <summary>
         /// Get or set Mode current
         /// </summary>
-        public Variables.Constants.Mode Return_Mode { get; set; }
+        public Variables.Constants.Mode Return_Mode { get; set; } // trả về mode khi click bnt_2d hoặc btn_3d
 
         private static MyFilter mf = null;
 

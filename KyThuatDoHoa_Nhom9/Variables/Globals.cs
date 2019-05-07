@@ -21,5 +21,17 @@ namespace KyThuatDoHoa_Nhom9.Variables
         /// Chế độ hiển thị các button trong pnl_Mode kèm theo text hay không. Mạc định là có
         /// </summary>
         public static bool _btn_isShowDetails = true;
+
+        public static int i = 0;
+
+        /// <summary>
+        /// Chiều rộng của hệ tọa độ người dùng 
+        /// </summary>
+        public static int widthPanel = 0;
+
+        /// <summary>
+        /// Chiều cao của hệ tọa độ người dùng
+        /// </summary>
+        public static int heightPanel = 0;
     }
 }

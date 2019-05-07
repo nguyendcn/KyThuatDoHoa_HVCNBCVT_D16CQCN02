@@ -13,13 +13,18 @@ using KyThuatDoHoa_Nhom9.Variables;
 
 namespace KyThuatDoHoa_Nhom9
 {
+
     public partial class frm_Main : Form
     {
-
+        private Bitmap bm;
+        private Graphics grp;
+         
         public frm_Main()
         {
             InitializeComponent();
             
+            
+
             //2D mode is startup;
             Setup_Toolbar(Globals._Mode_current);
 
@@ -34,6 +39,7 @@ namespace KyThuatDoHoa_Nhom9
         /// </summary>
         private void Setup_ToolTips()
         {
+            
             ToolTip tt = new ToolTip();
             tt.AutoPopDelay = 5000;
             tt.InitialDelay = 500;
@@ -108,7 +114,7 @@ namespace KyThuatDoHoa_Nhom9
         private void Setup_Toolbar(Constants.Mode mode)
         {
             // Ẩn toàn bộ các panel trong pnl_toolBox
-            foreach (Control ctr in this.pnl_ToolBox.Controls)
+            foreach (Control ctr in this.pnl_ToolBox.Controls) // List control trong pnl_ToolBox
             {
                 ctr.Visible = false;
             }
@@ -202,18 +208,16 @@ namespace KyThuatDoHoa_Nhom9
         /// <summary>
         /// When user click to button Toolbar 
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Btn_Toolbar_Click(object sender, EventArgs e)
         {
             UI.UserCtr.ChooseMode cm = new UI.UserCtr.ChooseMode(Variables.Globals._Mode_current);
-
+            // Tạo event thay đổi từ Mode 2D sang 3D và ngược lại
             cm.VisibleChanged += new EventHandler(delegate (object obj, EventArgs ea)
             {
                 UI.UserCtr.ChooseMode _cm = obj as UI.UserCtr.ChooseMode;
                 if (!_cm.Visible)
                 {
-                    _cm.Dispose();
+                    _cm.Dispose(); // Xóa toàn bộ component có trong _cm
                     if (_cm.Return_Mode != Globals._Mode_current) //da thay doi che do
                     {
                         Globals._Mode_current = _cm.Return_Mode;
@@ -288,6 +292,137 @@ namespace KyThuatDoHoa_Nhom9
             btn.BackColor = Color.BlueViolet;
         }
 
+
+        #endregion
+
+
+        #region Vẽ trên pnl_WorkStation
+        private void Pnl_WorkStation_Paint(object sender, PaintEventArgs e)
+        {
+            // check 3d hay 2d
+            
+            VeLuoiPixel(new Pen(Color.Red));
+
+        }
+
+        public void VeLuoiPixel( Pen pen)
+        {
+            int i = 0,
+                width = Variables.Globals.widthPanel,
+                height = Variables.Globals.heightPanel;
+            Graphics g = this.pnl_WorkStation.CreateGraphics();
+            // Vẽ 2 đường biên Ox và Oy
+            g.DrawLine(pen, 5 *width / 2, 0, 5 * width / 2, pnl_WorkStation.Height);
+            g.DrawLine(pen, 0, 5 * height / 2, pnl_WorkStation.Width, 5 * height / 2);
+
+            if (chkLuoiPixel.Checked)
+            {
+                // Vẽ toàn bộ đường dọc
+                for (; i <= width; i++)
+                {
+                    if (i == width / 2)
+                        continue;
+                    g.DrawLine(new Pen(Color.Black), 5 * i, 0, 5 * i, pnl_WorkStation.Height);
+                }
+                // Vẽ toàn bộ đường ngang
+                for (i = 0; i <= height; i++)
+                {
+                    if (i == height / 2)
+                        continue;
+                    g.DrawLine(new Pen(Color.Black), 0, 5 * i, pnl_WorkStation.Width, 5 * i);
+                }
+            }
+        }
+
+        private void Pnl_WorkStation_SizeChanged(object sender, EventArgs e)
+        {
+            // Lấy kích thước mới khi SizeChanged
+            Variables.Globals.widthPanel = ReturnEvenNumber( pnl_WorkStation.Width / 5);
+            Variables.Globals.heightPanel = ReturnEvenNumber( pnl_WorkStation.Height / 5);
+            pnl_WorkStation.Refresh();
+            VeLuoiPixel(new Pen(Color.Red));
+        }
+
+        private void Frm_Main_Load(object sender, EventArgs e)
+        {
+            Variables.Globals.widthPanel = ReturnEvenNumber( pnl_WorkStation.Width / 5);
+            Variables.Globals.heightPanel = ReturnEvenNumber(pnl_WorkStation.Height / 5);
+        }
+
+        private void Pnl_WorkStation_MouseMove(object sender, MouseEventArgs e)
+        {
+            int x = 0, y = 0;
+            Point p, q;
+            //p = new Point(ToaDo.(e.Location.X), ToaDo.LuoiPixel(e.Location.Y));
+            Int32.TryParse(e.Location.X.ToString(), out x);
+            Int32.TryParse(e.Location.Y.ToString(), out y);
+            p =  ToaDo.MayTinhNguoiDung(x,y);
+            q = ToaDo.NguoiDungMayTinh(p.X, p.Y);
+            // Kích thước của pnl_WorkStation
+            lblWidth.Text = Variables.Globals.widthPanel.ToString();
+            lblHeight.Text = Variables.Globals.heightPanel.ToString();
+
+            // Vị trí trên màn hình máy tính
+            lblXcpt.Text = q.X.ToString();
+            lblYcmt.Text = q.Y.ToString();
+
+            // Vị trí của chuột trên đồ thị người dùng
+            lblX.Text = p.X.ToString();
+            lblY.Text = p.Y.ToString();
+        }
+        /// <summary>
+        /// Trả về giá trị chẵn của pnl_WorkStation
+        /// </summary>
+        public int ReturnEvenNumber(int number)
+        {
+            if (number % 2 == 0)
+                return number;
+            return number - 1;
+        }
+
+        private void ChkLuoiPixel_CheckedChanged(object sender, EventArgs e)
+        {
+            // Lấy kích thước mới khi SizeChanged
+            Variables.Globals.widthPanel = ReturnEvenNumber(pnl_WorkStation.Width / 5);
+            Variables.Globals.heightPanel = ReturnEvenNumber(pnl_WorkStation.Height / 5);
+            pnl_WorkStation.Refresh();
+            VeLuoiPixel(new Pen(Color.Red));    
+        }
+
+        private void Pnl_WorkStation_MouseClick(object sender, MouseEventArgs e)
+        {
+            int x = e.Location.X,
+                y = e.Location.Y;
+
+            int pointX = ToaDo.LuoiPixel(x),
+            pointY = ToaDo.LuoiPixel(y);
+
+
+            if (e.Button == MouseButtons.Left)
+            {
+                // Vẽ pixel 
+                Graphics gp = this.pnl_WorkStation.CreateGraphics();
+                Pen p = new Pen(Color.Green);
+                SolidBrush b = new SolidBrush(Color.Green);
+                gp.DrawEllipse(p, pointX, pointY, 2, 2);
+                gp.FillEllipse(b, pointX, pointY, 2, 2);
+                gp.DrawEllipse(p, pointX - 2, pointY - 2, 2, 2);
+                gp.FillEllipse(b, pointX - 2, pointY - 2, 2, 2);
+                gp.DrawEllipse(p, pointX, pointY - 2, 2, 2);
+                gp.FillEllipse(b, pointX, pointY - 2, 2, 2);
+                gp.DrawEllipse(p, pointX - 2, pointY, 2, 2);
+                gp.FillEllipse(b, pointX - 2, pointY, 2, 2);
+            }
+        }
+        /// <summary>
+        /// Chuyển từ tọa máy tính sang tọa độ của người dùng
+        /// </summary>
+        public int ConvertToCoordinatesUser()
+        {
+            
+
+            return 1;
+        }
 
         #endregion
     }

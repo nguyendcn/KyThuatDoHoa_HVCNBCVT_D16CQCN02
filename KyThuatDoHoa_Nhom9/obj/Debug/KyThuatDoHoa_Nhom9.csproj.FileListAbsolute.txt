@@ -23,3 +23,16 @@ C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatD
 C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.exe
 C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.pdb
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.ChooseMode.resources
+D:\Git\C#\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.exe.config
+D:\Git\C#\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.exe
+D:\Git\C#\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.pdb
+D:\Git\C#\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csprojAssemblyReference.cache
+D:\Git\C#\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.frm_Main.resources
+D:\Git\C#\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.Image_Res.resources
+D:\Git\C#\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.Properties.Resources.resources
+D:\Git\C#\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.frm_ChangeMode.resources
+D:\Git\C#\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.ChooseMode.resources
+D:\Git\C#\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csproj.GenerateResource.cache
+D:\Git\C#\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.csproj.CoreCompileInputs.cache
+D:\Git\C#\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.exe
+D:\Git\C#\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.pdb
