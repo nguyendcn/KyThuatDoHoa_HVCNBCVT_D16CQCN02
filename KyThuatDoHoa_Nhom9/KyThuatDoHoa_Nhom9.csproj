@@ -48,6 +48,9 @@
   <ItemGroup>
     <Compile Include="Class\Point.cs" />
     <Compile Include="Class\ToaDo.cs" />
+    <Compile Include="Construct\DefineType\Direction.cs" />
+    <Compile Include="Construct\Shapes2DObject.cs" />
+    <Compile Include="Construct\_2DObject\Square.cs" />
     <Compile Include="UI\UserCtr\ChooseMode.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,6 +198,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Diamonds_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Construct\_3DObject\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
