@@ -13,7 +13,7 @@ namespace KyThuatDoHoa_Nhom9.Construct
         /// <summary>
         /// Initialize object.
         /// </summary>
-        void Init();
+        void Init(Point start, Point end, Size sizeOfLine, Color color);
 
         /// <summary>
         /// Drawing Object in Graphic.

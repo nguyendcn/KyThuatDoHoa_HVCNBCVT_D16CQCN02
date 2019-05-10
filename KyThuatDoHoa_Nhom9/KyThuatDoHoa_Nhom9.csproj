@@ -50,6 +50,7 @@
     <Compile Include="Class\ToaDo.cs" />
     <Compile Include="Construct\DefineType\Direction.cs" />
     <Compile Include="Construct\Shapes2DObject.cs" />
+    <Compile Include="Construct\_2DObject\Line.cs" />
     <Compile Include="Construct\_2DObject\Square.cs" />
     <Compile Include="UI\UserCtr\ChooseMode.cs">
       <SubType>UserControl</SubType>
