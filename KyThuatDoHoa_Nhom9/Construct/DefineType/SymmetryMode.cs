@@ -4,7 +4,7 @@ namespace KyThuatDoHoa_Nhom9.Construct.DefineType
     /// <summary>
     /// Symmetry Mode. 
     /// </summary>
-    enum SymmetryMode
+    public enum SymmetryMode
     {
         /// <summary>
         /// Symmetry by the X coordinate.
