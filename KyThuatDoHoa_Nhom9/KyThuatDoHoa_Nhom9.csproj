@@ -49,6 +49,8 @@
     <Compile Include="Class\Point.cs" />
     <Compile Include="Class\ToaDo.cs" />
     <Compile Include="Construct\DefineType\Direction.cs" />
+    <Compile Include="Construct\DefineType\Matrixs.cs" />
+    <Compile Include="Construct\DefineType\SymmetryMode.cs" />
     <Compile Include="Construct\Shapes2DObject.cs" />
     <Compile Include="Construct\_2DObject\Line.cs" />
     <Compile Include="Construct\_2DObject\Square.cs" />
