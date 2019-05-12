@@ -22,8 +22,9 @@ namespace KyThuatDoHoa_Nhom9
         public frm_Main()
         {
             InitializeComponent();
-            
-            
+
+            bm = new Bitmap(pnl_WorkStation.Width, pnl_WorkStation.Height);
+            grp = Graphics.FromImage(bm);
 
             //2D mode is startup;
             Setup_Toolbar(Globals._Mode_current);
@@ -177,11 +178,6 @@ namespace KyThuatDoHoa_Nhom9
 
         #endregion
 
-        private void Btn_Menu_Click(object sender, EventArgs e)
-        {
-
-        }
-
         #region Event Handl
 
         /// <summary>
@@ -297,23 +293,16 @@ namespace KyThuatDoHoa_Nhom9
 
 
         #region Vẽ trên pnl_WorkStation
-        private void Pnl_WorkStation_Paint(object sender, PaintEventArgs e)
-        {
-            // check 3d hay 2d
-            
-            VeLuoiPixel(new Pen(Color.Red));
-
-        }
 
         public void VeLuoiPixel( Pen pen)
         {
             int i = 0,
                 width = Variables.Globals.widthPanel,
                 height = Variables.Globals.heightPanel;
-            Graphics g = this.pnl_WorkStation.CreateGraphics();
+            //Graphics g = this.pnl_WorkStation.CreateGraphics();
             // Vẽ 2 đường biên Ox và Oy
-            g.DrawLine(pen, 5 *width / 2, 0, 5 * width / 2, pnl_WorkStation.Height);
-            g.DrawLine(pen, 0, 5 * height / 2, pnl_WorkStation.Width, 5 * height / 2);
+            grp.DrawLine(pen, 5 *width / 2, 0, 5 * width / 2, pnl_WorkStation.Height);
+            grp.DrawLine(pen, 0, 5 * height / 2, pnl_WorkStation.Width, 5 * height / 2);
 
             if (chkLuoiPixel.Checked)
             {
@@ -322,54 +311,26 @@ namespace KyThuatDoHoa_Nhom9
                 {
                     if (i == width / 2)
                         continue;
-                    g.DrawLine(new Pen(Color.Black), 5 * i, 0, 5 * i, pnl_WorkStation.Height);
+                    grp.DrawLine(new Pen(Color.Black), 5 * i, 0, 5 * i, pnl_WorkStation.Height);
                 }
                 // Vẽ toàn bộ đường ngang
                 for (i = 0; i <= height; i++)
                 {
                     if (i == height / 2)
                         continue;
-                    g.DrawLine(new Pen(Color.Black), 0, 5 * i, pnl_WorkStation.Width, 5 * i);
+                    grp.DrawLine(new Pen(Color.Black), 0, 5 * i, pnl_WorkStation.Width, 5 * i);
                 }
             }
         }
 
-        private void Pnl_WorkStation_SizeChanged(object sender, EventArgs e)
-        {
-            // Lấy kích thước mới khi SizeChanged
-            Variables.Globals.widthPanel = ReturnEvenNumber( pnl_WorkStation.Width / 5);
-            Variables.Globals.heightPanel = ReturnEvenNumber( pnl_WorkStation.Height / 5);
-            pnl_WorkStation.Refresh();
-            VeLuoiPixel(new Pen(Color.Red));
-        }
 
         private void Frm_Main_Load(object sender, EventArgs e)
         {
-            Variables.Globals.widthPanel = ReturnEvenNumber( pnl_WorkStation.Width / 5);
+
+            Variables.Globals.widthPanel = ReturnEvenNumber(pnl_WorkStation.Width / 5);
             Variables.Globals.heightPanel = ReturnEvenNumber(pnl_WorkStation.Height / 5);
         }
 
-        private void Pnl_WorkStation_MouseMove(object sender, MouseEventArgs e)
-        {
-            int x = 0, y = 0;
-            Point p, q;
-            //p = new Point(ToaDo.(e.Location.X), ToaDo.LuoiPixel(e.Location.Y));
-            Int32.TryParse(e.Location.X.ToString(), out x);
-            Int32.TryParse(e.Location.Y.ToString(), out y);
-            p =  ToaDo.MayTinhNguoiDung(x,y);
-            q = ToaDo.NguoiDungMayTinh(p.X, p.Y);
-            // Kích thước của pnl_WorkStation
-            lblWidth.Text = Variables.Globals.widthPanel.ToString();
-            lblHeight.Text = Variables.Globals.heightPanel.ToString();
-
-            // Vị trí trên màn hình máy tính
-            lblXcpt.Text = q.X.ToString();
-            lblYcmt.Text = q.Y.ToString();
-
-            // Vị trí của chuột trên đồ thị người dùng
-            lblX.Text = p.X.ToString();
-            lblY.Text = p.Y.ToString();
-        }
         /// <summary>
         /// Trả về giá trị chẵn của pnl_WorkStation
         /// </summary>
@@ -386,44 +347,67 @@ namespace KyThuatDoHoa_Nhom9
             Variables.Globals.widthPanel = ReturnEvenNumber(pnl_WorkStation.Width / 5);
             Variables.Globals.heightPanel = ReturnEvenNumber(pnl_WorkStation.Height / 5);
             pnl_WorkStation.Refresh();
-            VeLuoiPixel(new Pen(Color.Red));    
+            VeLuoiPixel(new Pen(Color.Red));
         }
 
         private void Pnl_WorkStation_MouseClick(object sender, MouseEventArgs e)
         {
-            int x = e.Location.X,
-                y = e.Location.Y;
+            pnl_WorkStation.Refresh();
+            //if (chkLuoiPixel.Checked)
+            //{
+                VeLuoiPixel(new Pen(Color.Red));
+            //}
 
-            int pointX = ToaDo.LuoiPixel(x),
-            pointY = ToaDo.LuoiPixel(y);
+            //// Vẽ pixel 
+            grp = pnl_WorkStation.CreateGraphics();
+            //ToaDo.HienThi(e.Location, grp);
+
+            // Vẽ đường thẳng
+            //Drawn.Line(e.Location, new Point(pnl_WorkStation.Width / 2, pnl_WorkStation.Height / 2), grp);
+            // Vẽ đường tròn
+            //Drawn.Circle(e.Location.X, e.Location.Y, 100,grp);
+            //Drawn.Drawn8Point(e.Location, 0, 0, grp);
+            // Vẽ hình chữ nhật
+            //Drawn.HinhChuNhat(e.Location, new Point(pnl_WorkStation.Width / 2, pnl_WorkStation.Height / 2), grp);
+            // Vẽ Elip
+            Drawn.Elipse(e.Location.X,e.Location.Y, 200, 100, grp);
 
 
-            if (e.Button == MouseButtons.Left)
-            {
-                // Vẽ pixel 
-                Graphics gp = this.pnl_WorkStation.CreateGraphics();
-                Pen p = new Pen(Color.Green);
-                SolidBrush b = new SolidBrush(Color.Green);
-                gp.DrawEllipse(p, pointX, pointY, 2, 2);
-                gp.FillEllipse(b, pointX, pointY, 2, 2);
-                gp.DrawEllipse(p, pointX - 2, pointY - 2, 2, 2);
-                gp.FillEllipse(b, pointX - 2, pointY - 2, 2, 2);
-                gp.DrawEllipse(p, pointX, pointY - 2, 2, 2);
-                gp.FillEllipse(b, pointX, pointY - 2, 2, 2);
-                gp.DrawEllipse(p, pointX - 2, pointY, 2, 2);
-                gp.FillEllipse(b, pointX - 2, pointY, 2, 2);
-            }
-        }
-        /// <summary>
-        /// Chuyển từ tọa máy tính sang tọa độ của người dùng
-        /// </summary>
-        public int ConvertToCoordinatesUser()
-        {
-            
-
-            return 1;
+            ////pnl_WorkStation.BackgroundImage = (Bitmap)bm.Clone();
         }
 
         #endregion
+
+        private void Pnl_WorkStation_MouseMove(object sender, MouseEventArgs e)
+        {
+            Point p = e.Location;
+
+            lblWidth.Text = pnl_WorkStation.Width.ToString();
+            lblHeight.Text = pnl_WorkStation.Height.ToString();
+
+            // Tọa độ của chuột khi move
+            lblX1.Text = e.Location.X.ToString();
+            lblY1.Text = e.Location.Y.ToString();
+
+            // Làm tròn tọa độ trên lưới Pixel
+            p = ToaDo.RoundPixel(e.Location);
+            lblX2.Text = p.X.ToString();
+            lblY2.Text = p.Y.ToString();
+
+            // Chuyển từ tọa độ máy tính về tọa độ người dùng
+            p = ToaDo.MayTinhNguoiDung(p);
+            lblX3.Text = p.X.ToString();
+            lblY3.Text = p.Y.ToString();
+
+            // Chuyển từ tọa độ người dùng về tọa độ máy tính
+            p = ToaDo.NguoiDungMayTinh(p);
+            lblX4.Text = p.X.ToString();
+            lblY4.Text = p.Y.ToString();
+        }
+
+        private void Pnl_WorkStation_Paint(object sender, PaintEventArgs e)
+        {
+          
+        }
     }
 }

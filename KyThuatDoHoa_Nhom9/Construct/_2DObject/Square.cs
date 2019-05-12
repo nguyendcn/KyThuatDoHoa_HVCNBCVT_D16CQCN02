@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KyThuatDoHoa_Nhom9.Construct.DefineType;
 
 namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 {
@@ -65,6 +66,26 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         void Shapes2DObject.Draw(System.Drawing.Graphics g)
         {
 
+        }
+
+        public void Rotate(Point p, Direction dir)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Shifting(Direction dir)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Symmetry()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Scale(Point start, Point end)
+        {
+            throw new NotImplementedException();
         }
     }
 }

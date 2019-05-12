@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Point.cs" />
+    <Compile Include="Class\Drawn.cs" />
     <Compile Include="Class\ToaDo.cs" />
     <Compile Include="Construct\DefineType\Direction.cs" />
     <Compile Include="Construct\Shapes2DObject.cs" />
