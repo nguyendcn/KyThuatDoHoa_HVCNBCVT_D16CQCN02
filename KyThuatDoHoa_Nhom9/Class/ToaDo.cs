@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace KyThuatDoHoa_Nhom9
 {
-    public class ToaDo
+    public static class ToaDo
     {
         /// <summary>
         /// Chuyển từ tọa độ máy tính về tọa độ người dùng
@@ -15,8 +15,8 @@ namespace KyThuatDoHoa_Nhom9
         public static Point MayTinhNguoiDung(Point p)
         {
             p = RoundPixel(p);
-            int width = Variables.Globals.widthPanel,
-                height = Variables.Globals.heightPanel,
+            int width = Variables.Globals.sizeOfNewCoor_2D.Width,
+                height = Variables.Globals.sizeOfNewCoor_2D.Height,
                 x = p.X / 5,
                 y = p.Y / 5;
 
@@ -55,8 +55,8 @@ namespace KyThuatDoHoa_Nhom9
         /// </summary>
         public static Point NguoiDungMayTinh(Point p)
         {
-            int width = Variables.Globals.widthPanel,
-                height = Variables.Globals.heightPanel,
+            int width = Variables.Globals.sizeOfNewCoor_2D.Width,
+                height = Variables.Globals.sizeOfNewCoor_2D.Height,
                 x = p.X,
                 y = p.Y;
 

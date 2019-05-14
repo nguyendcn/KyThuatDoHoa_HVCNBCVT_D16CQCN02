@@ -994,12 +994,14 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // picb_2DArea
             // 
-            this.picb_2DArea.BackColor = System.Drawing.Color.Maroon;
+            this.picb_2DArea.BackColor = System.Drawing.Color.White;
+            this.picb_2DArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picb_2DArea.Location = new System.Drawing.Point(305, 100);
             this.picb_2DArea.Name = "picb_2DArea";
             this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
             this.picb_2DArea.TabIndex = 1;
             this.picb_2DArea.TabStop = false;
+            this.picb_2DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.picb_2DArea_Paint);
             // 
             // picb_3DArea
             // 

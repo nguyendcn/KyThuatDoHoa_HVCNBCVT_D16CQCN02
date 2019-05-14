@@ -297,15 +297,21 @@ namespace KyThuatDoHoa_Nhom9
 
         #region Vẽ trên pnl_WorkStation
 
-        public void VeLuoiPixel( Pen pen)
+        private Bitmap DrawCoordinate(Size size)
         {
+            Bitmap bm = new Bitmap(size.Width, size.Height);
+
+            DrawPixelGril(bm, new Pen(Color.Red, 1));
+
+            return bm;
+        }
+
+        private void DrawPixelGril(Bitmap bm, Pen pen)
+        {
+            Graphics g = Graphics.FromImage(bm);
             int i = 0,
-                width = Variables.Globals.widthPanel,
-                height = Variables.Globals.heightPanel;
-            Graphics g = this.pnl_WorkStation.CreateGraphics();
-            // Vẽ 2 đường biên Ox và Oy
-            g.DrawLine(pen, 5 *width / 2, 0, 5 * width / 2, pnl_WorkStation.Height);
-            g.DrawLine(pen, 0, 5 * height / 2, pnl_WorkStation.Width, 5 * height / 2);
+               width = Variables.Globals.sizeOfNewCoor_2D.Width,
+               height = Variables.Globals.sizeOfNewCoor_2D.Height;
 
             if (chkLuoiPixel.Checked)
             {
@@ -314,23 +320,25 @@ namespace KyThuatDoHoa_Nhom9
                 {
                     if (i == width / 2)
                         continue;
-                    g.DrawLine(new Pen(Color.Black), 5 * i, 0, 5 * i, pnl_WorkStation.Height);
+                    g.DrawLine(new Pen(Color.Black), 5 * i, 0, 5 * i, picb_2DArea.Height);
                 }
                 // Vẽ toàn bộ đường ngang
                 for (i = 0; i <= height; i++)
                 {
                     if (i == height / 2)
                         continue;
-                    g.DrawLine(new Pen(Color.Black), 0, 5 * i, pnl_WorkStation.Width, 5 * i);
+                    g.DrawLine(new Pen(Color.Black), 0, 5 * i, picb_2DArea.Width, 5 * i);
                 }
             }
+
+            // Vẽ 2 đường biên Ox và Oy 
+            g.DrawLine(pen, 5 * width / 2, 0, 5 * width / 2, picb_2DArea.Height);
+            g.DrawLine(pen, 0, 5 * height / 2, picb_2DArea.Width, 5 * height / 2);
         }
 
         private void Frm_Main_Load(object sender, EventArgs e)
         {
-            Variables.Globals.widthPanel = ReturnEvenNumber( pnl_WorkStation.Width / 5);
-            Variables.Globals.heightPanel = ReturnEvenNumber(pnl_WorkStation.Height / 5);
-
+            
         }
 
         /// <summary>
@@ -346,21 +354,21 @@ namespace KyThuatDoHoa_Nhom9
         private void ChkLuoiPixel_CheckedChanged(object sender, EventArgs e)
         {
             // Lấy kích thước mới khi SizeChanged
-            Variables.Globals.widthPanel = ReturnEvenNumber(pnl_WorkStation.Width / 5);
-            Variables.Globals.heightPanel = ReturnEvenNumber(pnl_WorkStation.Height / 5);
-           // pnl_WorkStation.Refresh();
-            VeLuoiPixel(new Pen(Color.Red));    
+            Variables.Globals.sizeOfNewCoor_2D.Width = ReturnEvenNumber(picb_2DArea.Width / Variables.Globals.sizePerPoint.Width);
+            Variables.Globals.sizeOfNewCoor_2D.Height = ReturnEvenNumber(picb_2DArea.Height / Variables.Globals.sizePerPoint.Height);
+                
+            this.picb_2DArea.BackgroundImage = DrawCoordinate(new Size(picb_2DArea.Width, picb_2DArea.Height));
         }
 
         private void Pnl_WorkStation_MouseClick(object sender, MouseEventArgs e)
         {
-            //pnl_WorkStation.Refresh();
-            if (chkLuoiPixel.Checked)
-            {
-                VeLuoiPixel(new Pen(Color.Red));
-            }
+            ////pnl_WorkStation.Refresh();
+            //if (chkLuoiPixel.Checked)
+            //{
+            //    VeLuoiPixel(new Pen(Color.Red));
+            //}
 
-            grp = pnl_WorkStation.CreateGraphics();
+            //grp = picb_2DArea.CreateGraphics();
 
         }
 
@@ -370,8 +378,8 @@ namespace KyThuatDoHoa_Nhom9
         {
             Point p = e.Location;
 
-            lblWidth.Text = pnl_WorkStation.Width.ToString();
-            lblHeight.Text = pnl_WorkStation.Height.ToString();
+            lblWidth.Text = picb_2DArea.Width.ToString();
+            lblHeight.Text = picb_2DArea.Height.ToString();
 
             // Tọa độ của chuột khi move
             lblX1.Text = e.Location.X.ToString();
@@ -396,6 +404,14 @@ namespace KyThuatDoHoa_Nhom9
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void picb_2DArea_Paint(object sender, PaintEventArgs e)
+        {
+            //if (grp == null)
+            //    return;
+            //grp.Clear((sender as PictureBox).BackColor);
+            //VeLuoiPixel(new Pen(Color.Red));
         }
     }
 }

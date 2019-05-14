@@ -25,13 +25,13 @@ namespace KyThuatDoHoa_Nhom9.Variables
         public static int i = 0;
 
         /// <summary>
-        /// Chiều rộng của hệ tọa độ người dùng 
+        /// Kích thước mỗi điểm trong hệ tòa dộ người dùng.
         /// </summary>
-        public static int widthPanel = 0;
+        public static System.Drawing.Size sizePerPoint = new System.Drawing.Size(5, 5);
 
         /// <summary>
-        /// Chiều cao của hệ tọa độ người dùng
+        /// Size của hệ tòa độ người dùng khi chuyển từ tọa độ máy sang. Hệ tòa độ 2D.
         /// </summary>
-        public static int heightPanel = 0;
+        public static System.Drawing.Size sizeOfNewCoor_2D; 
     }
 }
