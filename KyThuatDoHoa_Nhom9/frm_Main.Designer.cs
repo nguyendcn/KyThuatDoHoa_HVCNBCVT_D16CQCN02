@@ -30,6 +30,7 @@ namespace KyThuatDoHoa_Nhom9
         private void InitializeComponent()
         {
             this.pnl_Mode = new System.Windows.Forms.Panel();
+            this.button37 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_ShowBtnDetails = new System.Windows.Forms.Button();
@@ -120,6 +121,7 @@ namespace KyThuatDoHoa_Nhom9
             // pnl_Mode
             // 
             this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.pnl_Mode.Controls.Add(this.button37);
             this.pnl_Mode.Controls.Add(this.panel2);
             this.pnl_Mode.Controls.Add(this.panel1);
             this.pnl_Mode.Controls.Add(this.btn_Menu);
@@ -129,6 +131,16 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Mode.Name = "pnl_Mode";
             this.pnl_Mode.Size = new System.Drawing.Size(860, 49);
             this.pnl_Mode.TabIndex = 0;
+            // 
+            // button37
+            // 
+            this.button37.Location = new System.Drawing.Point(444, 13);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(75, 23);
+            this.button37.TabIndex = 5;
+            this.button37.Text = "button37";
+            this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
             // panel2
             // 
@@ -989,19 +1001,20 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation.Name = "pnl_WorkStation";
             this.pnl_WorkStation.Size = new System.Drawing.Size(600, 552);
             this.pnl_WorkStation.TabIndex = 3;
+            this.pnl_WorkStation.SizeChanged += new System.EventHandler(this.pnl_WorkStation_SizeChanged);
             this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
-            this.pnl_WorkStation.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseMove);
             // 
             // picb_2DArea
             // 
             this.picb_2DArea.BackColor = System.Drawing.Color.White;
-            this.picb_2DArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picb_2DArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picb_2DArea.Location = new System.Drawing.Point(305, 100);
             this.picb_2DArea.Name = "picb_2DArea";
             this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
             this.picb_2DArea.TabIndex = 1;
             this.picb_2DArea.TabStop = false;
             this.picb_2DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.picb_2DArea_Paint);
+            this.picb_2DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picb_2DArea_MouseMove);
             // 
             // picb_3DArea
             // 
@@ -1126,6 +1139,7 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Label lblHeight;
         private System.Windows.Forms.PictureBox picb_2DArea;
         private System.Windows.Forms.PictureBox picb_3DArea;
+        private System.Windows.Forms.Button button37;
     }
 }
 

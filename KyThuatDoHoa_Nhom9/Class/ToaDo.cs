@@ -70,6 +70,8 @@ namespace KyThuatDoHoa_Nhom9
         /// </summary>
         public static void HienThi(Point p, Graphics g)
         {
+            if (g == null)
+                return;
             int pointX = RoundPixel(p.X),
                 pointY = RoundPixel(p.Y);
             Pen p1 = new Pen(Color.Green);

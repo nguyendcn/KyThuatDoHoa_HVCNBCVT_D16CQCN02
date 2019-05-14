@@ -374,7 +374,9 @@ namespace KyThuatDoHoa_Nhom9
 
         #endregion
 
-        private void Pnl_WorkStation_MouseMove(object sender, MouseEventArgs e)
+
+
+        private void picb_2DArea_MouseMove(object sender, MouseEventArgs e)
         {
             Point p = e.Location;
 
@@ -401,17 +403,5 @@ namespace KyThuatDoHoa_Nhom9
             lblY4.Text = p.Y.ToString();
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void picb_2DArea_Paint(object sender, PaintEventArgs e)
-        {
-            //if (grp == null)
-            //    return;
-            //grp.Clear((sender as PictureBox).BackColor);
-            //VeLuoiPixel(new Pen(Color.Red));
-        }
     }
 }

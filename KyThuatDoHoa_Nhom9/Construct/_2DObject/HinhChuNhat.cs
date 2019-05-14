@@ -10,9 +10,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 {
     class HinhChuNhat : Shapes2DObject
     {
-        private Point A { get; set; }
-        private Point B { get; set; }
-        public void Draw(Graphics g)
+        private Point _a;
+        private Point _b;
+
+        public Point A { get => _a; set => _a = value; }
+        public Point B { get => _b; set => _b = value; }
+
+    public void Draw(Graphics g)
         {
             Line line;
             line = new Line(this.A, new Point(this.B.X,this.A.Y));
