@@ -38,6 +38,11 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             this.ColorOfLine = color;
         }
 
+        public Line(Point a, Point b)
+        {
+            this.A = a;
+            this.B = b;
+        }
 
         public void setAngle(float angle)
         {
@@ -48,28 +53,149 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             this.angle = angle;
         }
 
-
+        public void SwapPoint()
+        {
+            Point p = this.A;
+            this.A = this.B;
+            this.B = p;
+        }
         public void Draw(Graphics g)
         {
-            int Dx = B.X - A.X;
-            int Dy = B.Y - A.Y;
-            int count = Math.Max(Math.Abs(Dx), Math.Abs(Dy)); // Lấy số bước vẽ dài nhất
-            float delta_X, delta_Y, m, n;
-            if (count > 0)
-            {
-                delta_X = (int)Dx;
-                delta_X /= count;
-                delta_Y = (int)Dy;
-                delta_Y /= count;
+            // Làm tròn tạo độ trên Lưới Pixel
+            this.A = ToaDo.RoundPixel(this.A);
+            this.B = ToaDo.RoundPixel(this.B);
 
-                m = A.X;
-                n = A.Y;
-                while (count-- != 0)
+            int Dx = this.B.X - this.A.X,
+                Dy = this.B.Y - this.A.Y,
+                x = this.A.X,
+                y = this.A.Y,
+                p;
+            // Trùng Ox
+            if (this.A.X == this.B.X)
+            {
+                if (this.A.Y > this.B.Y)
+                    SwapPoint();
+                y = this.A.Y;
+                while (y <= this.B.Y)
                 {
-                    g.FillRectangle(new SolidBrush(this.ColorOfLine), new RectangleF(m, n, this.SizeOfLine.Height, this.SizeOfLine.Width));
-                    m += delta_X;
-                    n += delta_Y;
+                    ToaDo.HienThi(new Point(this.A.X, y), g);
+                    y += 5;
                 }
+                return;
+            }
+            // Trùng Oy
+            if (this.A.Y == this.B.Y)
+            {
+                if (this.A.X > this.B.X)
+                    SwapPoint();
+                x = this.A.X;
+                while (x <= this.B.X)
+                {
+                    ToaDo.HienThi(new Point(x, this.A.Y), g);
+                    x += 5;
+                }
+                return;
+            }
+            float m = (float)Dy / Dx;
+            if (m > 0 && m <= 1)
+            {
+                if (this.A.X > this.B.X)
+                {
+                    SwapPoint();
+                    Dx = this.B.X - this.A.X;
+                    Dy = this.B.Y - this.A.Y;
+                    x = this.A.X;
+                    y = this.A.Y;
+                }
+                p = 2 * Dy - Dx;
+                while (x <= this.B.X)
+                {
+                    ToaDo.HienThi(new Point(x, y), g);
+                    x += 5;
+                    if (p < 0)
+                        p = p + 2 * Dy;
+                    else
+                    {
+                        p = p + 2 * (Dy - Dx);
+                        y += 5;
+                    }
+                }
+                return;
+            }
+            if (m >= -1 && m < 0)
+            {
+                if (this.A.X > this.B.X)
+                {
+                    SwapPoint();
+                    Dx = this.B.X - this.A.X;
+                    Dy = this.B.Y - this.A.Y;
+                    x = this.A.X;
+                    y = this.A.Y;
+                }
+                p = 2 * Dy + Dx;
+                while (x <= this.B.X)
+                {
+                    ToaDo.HienThi(new Point(x, y), g);
+                    x += 5;
+                    if (p < 0)
+                    {
+                        y -= 5;
+                        p = p + 2 * (Dx + Dy);
+                    }
+                    else
+                        p = p + 2 * Dy;
+                }
+                return;
+            }
+            if (m > 1)
+            {
+                if (this.A.Y > this.B.Y)
+                {
+                    SwapPoint();
+                    Dx = this.B.X - this.A.X;
+                    Dy = this.B.Y - this.A.Y;
+                    x = this.A.X;
+                    y = this.A.Y;
+                }
+                p = 2 * Dx - Dy;
+                while (y <= this.B.Y)
+                {
+                    ToaDo.HienThi(new Point(x, y), g);
+                    y += 5;
+                    if (p < 0)
+                        p = p + 2 * Dx;
+                    else
+                    {
+                        x += 5;
+                        p = p + 2 * (Dx - Dy);
+                    }
+                }
+                return;
+            }
+            if (m < -1)
+            {
+                if (this.A.Y > this.B.Y)
+                {
+                    SwapPoint();
+                    Dx = this.B.X - this.A.X;
+                    Dy = this.B.Y - this.A.Y;
+                    x = this.A.X;
+                    y = this.A.Y;
+                }
+                p = 2 * Dx + Dy;
+                while (y <= this.B.Y)
+                {
+                    ToaDo.HienThi(new Point(x, y), g);
+                    y += 5;
+                    if (p < 0)
+                    {
+                        x -= 5;
+                        p = p + 2 * (Dx + Dy);
+                    }
+                    else
+                        p = p + 2 * Dx;
+                }
+                return;
             }
         }
 
@@ -80,62 +206,24 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             this.ColorOfLine = (color);
         }
 
-
-        //public bool impact(Point p)
-        //{
-        //    int AB = (int)Math.sqrt(Math.pow((A.x - B.x), 2) + Math.pow(A.y - B.y, 2));
-        //    int AP = (int)Math.sqrt(Math.pow((A.x - p.x), 2) + Math.pow(A.y - p.y, 2));
-        //    int PB = (int)Math.sqrt(Math.pow((p.x - B.x), 2) + Math.pow(p.y - B.y, 2));
-        //    return (((AP + PB) - AB) < size);
-        //}
-
-
-        //public void move(Point start, Point end)
-        //{
-        //    int dx = end.x - start.x;
-        //    int dy = end.y - start.y;
-        //    this.setA(new Point(this.getA().x + dx, this.getA().y + dy));
-        //    this.setB(new Point(this.getB().x + dx, this.getB().y + dy));
-        //}
-
-
-        public void Rotate(Point a, Direction b)
+        public void Rotate(Point p, double alpha)
         {
-            //float a = Display.angleBetweenTwoLines(start, end);
-            //Point p1 = new Point(Display.rotateAround(this.getA(), a));
-            //Point p2 = new Point(Display.rotateAround(this.getB(), a));
-            //setA(p1);
-            //setB(p2);
-            //this.setAngle(this.getAngle() + a);
+            throw new NotImplementedException();
         }
 
-
-        public void Scale(Point start, Point end)
+        public void Shifting(Point pDest)
         {
-            //double AP = Math.sqrt(Math.pow((this.getA().x - start.x), 2) + Math.pow(this.getA().y - start.y, 2));
-            //double PB = Math.sqrt(Math.pow((start.x - this.getB().x), 2) + Math.pow(start.y - this.getB().y, 2));
-            //if (AP < PB)
-            //{
-            //    this.setA(this.getB());
-            //    this.setB(end);
-            //}
-            //else
-            //{
-            //    this.setA(this.getA());
-            //    this.setB(end);
-            //}
+            throw new NotImplementedException();
         }
 
-        public void Shifting(Direction dir)
+        public void Symmetry(Point orgin, SymmetryMode mode)
         {
-
+            throw new NotImplementedException();
         }
 
-        public void Symmetry()
+        public void Scale(SizeF scaleSize)
         {
-
+            throw new NotImplementedException();
         }
-
-        
     }
 }

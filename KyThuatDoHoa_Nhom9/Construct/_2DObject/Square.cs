@@ -80,7 +80,6 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             this.SizeOfPen = sizeOfPen;
         }
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -118,15 +117,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         }
 
         /// <summary>
-        ///
+        ///  Draw object in graphic.
         /// </summary>
         /// <param name="g"></param>
         public void Draw(System.Drawing.Graphics g)
         {
             Line line;
-            //		 Nếu size pixel == 1 thì dùng hàm của hệ thống để chạy nhanh hơn
-            // Còn > 1 phải dùng hàm tự định nghĩa mới set được size pixel
-            if (2 > 1)
+            if (this.SizeOfPen.Width > 1)
             {
                 //Draw line AB
                 line = new Line(A, B, this.SizeOfPen, this.ColorOfPen);
@@ -159,26 +156,74 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         /// </summary>
         /// <param name="p">Something point. Object will be rotate around.</param>
         /// <param name="dir">Direction of object will be rotate in next time.</param>
-        public void Rotate(Point p, Direction dir)
+        public void Rotate(Point p, double alpha)
         {
+            float[][] matrix_Trans = {
+                new float[] { (float)Math.Cos(alpha), -(float)Math.Sin(alpha), (float)(((1 - Math.Cos(alpha)) *  p.X) + Math.Sin(alpha) * p.Y) },
+                new float[] { (float)Math.Sin(alpha), (float)Math.Cos(alpha), (float)(-Math.Sin(alpha) * p.X  + ((1 - Math.Cos(alpha)) *  p.Y))},
+                new float[] { 0, 0, 1 }
+            };
 
+            CalAndUpdateNewLoca(matrix_Trans);
         }
 
         /// <summary>
         /// Shifting object.
         /// </summary>
         /// <param name="dir">Direction of object in the next time.</param>
-        public void Shifting(Direction dir)
+        public void Shifting(Point pDest)
         {
+            int _trx = pDest.X - this.A.X;
+            int _try = pDest.Y - this.A.Y;
 
+            float[][] matrix_Trans = {
+                new float[] { 1, 0, _trx },
+                new float[] { 0, 1, _try },
+                new float[] { 0, 0, 1 }
+            };
+
+            CalAndUpdateNewLoca(matrix_Trans);
         }
 
         /// <summary>
         /// Symmetry object.
         /// </summary>
-        public void Symmetry()
+        public void Symmetry(Point orgin, SymmetryMode mode)
         {
+            if (mode == SymmetryMode.X_Coordinate)
+            {
+                float[][] matrix_Trans = {
+                new float[] { 1, 0, 0 },
+                new float[] { 0, -1, 0 },
+                new float[] { 0, 0, 1 }
+                };
 
+                CalSymmetry(orgin, matrix_Trans, mode);
+            }
+            else if (mode == SymmetryMode.Y_Coordinate)
+            {
+                float[][] matrix_Trans = {
+                new float[] { -1, 0, 0 },
+                new float[] { 0, 1, 0 },
+                new float[] { 0, 0, 1 }
+                };
+
+                CalSymmetry(orgin, matrix_Trans, mode);
+            }
+            else if (mode == SymmetryMode.O_TheOrigin)
+            {
+                float[][] matrix_Trans = {
+                new float[] { -1, 0, 0 },
+                new float[] { 0, -1, 0 },
+                new float[] { 0, 0, 1 }
+                };
+
+                CalSymmetry(orgin, matrix_Trans, mode);
+            }
+            else
+            {
+                throw new Exception("The mode doesn't define.");
+            }
         }
 
         /// <summary>
@@ -186,9 +231,150 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         /// </summary>
         /// <param name="start"></param>
         /// <param name="end"></param>
-        public void Scale(Point start, Point end)
+        public void Scale(SizeF sizeScale)
         {
+            float[][] matrix_Trans = {
+                new float[] { sizeScale.Width, 0, 0 },
+                new float[] { 0, sizeScale.Height, 0 },
+                new float[] { 0, 0, 1 }
+            };
 
+            CalAndUpdateNewLoca(matrix_Trans);
+        }
+
+        private void CalAndUpdateNewLoca(float[][] matrix_Trans)
+        {
+            int[][] matrix_Point = {
+                new int[] {this.A.X},
+                new int[] {this.A.Y},
+                new int[] {1},
+             };
+
+            int[][] newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
+
+            _a.X = newPoint[0][0];
+            _a.Y = newPoint[1][0];
+
+            matrix_Point[0][0] = this.B.X;
+            matrix_Point[1][0] = this.B.Y;
+            newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
+            _b.X = newPoint[0][0];
+            _b.Y = newPoint[1][0];
+
+            matrix_Point[0][0] = this.C.X;
+            matrix_Point[1][0] = this.C.Y;
+            newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
+            _c.X = newPoint[0][0];
+            _c.Y = newPoint[1][0];
+
+            matrix_Point[0][0] = this.D.X;
+            matrix_Point[1][0] = this.D.Y;
+            newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
+            _d.X = newPoint[0][0];
+            _d.Y = newPoint[1][0];
+        }
+
+        private void CalSymmetry(Point orgin, float[][] matrix_Trans, SymmetryMode mode)
+        {
+            int[][] matrix_Point = {
+                new int[] {this.A.X},
+                new int[] {this.A.Y},
+                new int[] {1},
+             };
+            int buffer = 0;
+            int[][] newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
+
+            if (mode == SymmetryMode.X_Coordinate)
+            {
+                buffer = this.A.Y - orgin.Y;
+                _a.X = newPoint[0][0];
+                _a.Y = -(newPoint[1][0] + 2 * buffer);
+            }
+            else if (mode == SymmetryMode.Y_Coordinate)
+            {
+                buffer = this.A.X - orgin.X;
+                _a.X = -(newPoint[0][0] + 2 * buffer);
+                _a.Y = newPoint[1][0];
+            }
+            else if (mode == SymmetryMode.O_TheOrigin)
+            {
+                buffer = this.A.X - orgin.Y;
+                _a.X = -(newPoint[0][0] + 2 * buffer);
+                buffer = this.A.Y - orgin.Y;
+                _a.Y = -(newPoint[1][0] + 2 * buffer);
+            }
+
+            matrix_Point[0][0] = this.B.X;
+            matrix_Point[1][0] = this.B.Y;
+            newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
+
+            if (mode == SymmetryMode.X_Coordinate)
+            {
+                buffer = this.B.Y - orgin.Y;
+                _b.X = newPoint[0][0];
+                _b.Y = -(newPoint[1][0] + 2 * buffer);
+            }
+            else if (mode == SymmetryMode.Y_Coordinate)
+            {
+                buffer = this.B.X - orgin.X;
+                _b.X = -(newPoint[0][0] + 2 * buffer);
+                _b.Y = newPoint[1][0];
+            }
+            else if (mode == SymmetryMode.O_TheOrigin)
+            {
+                buffer = this.B.X - orgin.Y;
+                _b.X = -(newPoint[0][0] + 2 * buffer);
+                buffer = this.B.Y - orgin.Y;
+                _b.Y = -(newPoint[1][0] + 2 * buffer);
+            }
+
+            matrix_Point[0][0] = this.C.X;
+            matrix_Point[1][0] = this.C.Y;
+            newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
+
+            if (mode == SymmetryMode.X_Coordinate)
+            {
+                buffer = this.C.Y - orgin.Y;
+                _c.X = newPoint[0][0];
+                _c.Y = -(newPoint[1][0] + 2 * buffer);
+            }
+            else if (mode == SymmetryMode.Y_Coordinate)
+            {
+                buffer = this.C.X - orgin.X;
+                _c.X = -(newPoint[0][0] + 2 * buffer);
+                _c.Y = newPoint[1][0];
+            }
+            else if (mode == SymmetryMode.O_TheOrigin)
+            {
+                buffer = this.C.X - orgin.Y;
+                _c.X = -(newPoint[0][0] + 2 * buffer);
+                buffer = this.C.Y - orgin.Y;
+                _c.Y = -(newPoint[1][0] + 2 * buffer);
+            }
+
+            matrix_Point[0][0] = this.D.X;
+            matrix_Point[1][0] = this.D.Y;
+            newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
+
+            if (mode == SymmetryMode.X_Coordinate)
+            {
+                buffer = this.D.Y - orgin.Y;
+                _d.X = newPoint[0][0];
+                _d.Y = -(newPoint[1][0] + 2 * buffer);
+            }
+            else if (mode == SymmetryMode.Y_Coordinate)
+            {
+                buffer = this.D.X - orgin.X;
+                _d.X = -(newPoint[0][0] + 2 * buffer);
+                _d.Y = newPoint[1][0];
+            }
+            else if (mode == SymmetryMode.O_TheOrigin)
+            {
+                buffer = this.D.X - orgin.Y;
+                _d.X = -(newPoint[0][0] + 2 * buffer);
+                buffer = this.D.Y - orgin.Y;
+                _d.Y = -(newPoint[1][0] + 2 * buffer);
+            }
         }
     }
 }

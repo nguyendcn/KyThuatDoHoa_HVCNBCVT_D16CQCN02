@@ -25,26 +25,26 @@ namespace KyThuatDoHoa_Nhom9.Construct
         /// Rotate object.
         /// </summary>
         /// <param name="p">Something point. Object will be rotate around.</param>
-        /// <param name="dir">Direction of object will be rotate in next time.</param>
-        void Rotate(Point p, Direction dir);
+        /// <param name="alpha">Rotate around p an alpha angle.</param>
+        void Rotate(Point p, double alpha);
 
         /// <summary>
         /// Shifting object.
         /// </summary>
-        /// <param name="dir">Direction of object in the next time.</param>
-        void Shifting(Direction dir);
+        /// <param name="pDest">Translation from current point to destination point.</param>
+        void Shifting(Point pDest);
 
         /// <summary>
         /// Symmetry object.
         /// </summary>
-        void Symmetry();
+        /// <param name="orgin">O the orgin.</param>
+        /// <param name="mode">Mode symmetry.</param>
+        void Symmetry(Point orgin, SymmetryMode mode);
 
         /// <summary>
         /// Scale object.
         /// </summary>
-        /// <param name="start"></param>
-        /// <param name="end"></param>
-        void Scale(Point start, Point end);
-
+        /// <param name="scaleSize">Sx and Sy are called scaling coefficients in the x-axis and y-axis.</param>
+        void Scale(SizeF scaleSize);
     }
 }

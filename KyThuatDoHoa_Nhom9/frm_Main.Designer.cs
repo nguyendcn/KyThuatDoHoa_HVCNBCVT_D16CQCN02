@@ -82,20 +82,23 @@ namespace KyThuatDoHoa_Nhom9
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_Change = new System.Windows.Forms.Panel();
-            this.lblXcpt = new System.Windows.Forms.Label();
-            this.lblYcmt = new System.Windows.Forms.Label();
+            this.lblX3 = new System.Windows.Forms.Label();
+            this.lblY3 = new System.Windows.Forms.Label();
             this.chkLuoiPixel = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblY = new System.Windows.Forms.Label();
+            this.lblY1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblHeight = new System.Windows.Forms.Label();
-            this.lblWidth = new System.Windows.Forms.Label();
-            this.lblX = new System.Windows.Forms.Label();
+            this.lblY2 = new System.Windows.Forms.Label();
+            this.lblX2 = new System.Windows.Forms.Label();
+            this.lblX1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnl_WorkStation = new System.Windows.Forms.Panel();
-            this.button37 = new System.Windows.Forms.Button();
+            this.lblY4 = new System.Windows.Forms.Label();
+            this.lblX4 = new System.Windows.Forms.Label();
+            this.lblWidth = new System.Windows.Forms.Label();
+            this.lblHeight = new System.Windows.Forms.Label();
             this.pnl_Mode.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_ToolBox.SuspendLayout();
@@ -107,7 +110,6 @@ namespace KyThuatDoHoa_Nhom9
             this.grb_2DLine.SuspendLayout();
             this.panel6.SuspendLayout();
             this.pnl_Change.SuspendLayout();
-            this.pnl_WorkStation.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Mode
@@ -169,7 +171,6 @@ namespace KyThuatDoHoa_Nhom9
             this.btn_Menu.Text = "Menu";
             this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Menu.UseVisualStyleBackColor = true;
-            this.btn_Menu.Click += new System.EventHandler(this.Btn_Menu_Click);
             // 
             // btn_Toolbar
             // 
@@ -806,15 +807,19 @@ namespace KyThuatDoHoa_Nhom9
             // 
             this.pnl_Change.BackColor = System.Drawing.Color.MintCream;
             this.pnl_Change.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnl_Change.Controls.Add(this.lblXcpt);
-            this.pnl_Change.Controls.Add(this.lblYcmt);
+            this.pnl_Change.Controls.Add(this.lblWidth);
+            this.pnl_Change.Controls.Add(this.lblHeight);
+            this.pnl_Change.Controls.Add(this.lblX4);
+            this.pnl_Change.Controls.Add(this.lblY4);
+            this.pnl_Change.Controls.Add(this.lblX3);
+            this.pnl_Change.Controls.Add(this.lblY3);
             this.pnl_Change.Controls.Add(this.chkLuoiPixel);
             this.pnl_Change.Controls.Add(this.label3);
-            this.pnl_Change.Controls.Add(this.lblY);
+            this.pnl_Change.Controls.Add(this.lblY1);
             this.pnl_Change.Controls.Add(this.label6);
-            this.pnl_Change.Controls.Add(this.lblHeight);
-            this.pnl_Change.Controls.Add(this.lblWidth);
-            this.pnl_Change.Controls.Add(this.lblX);
+            this.pnl_Change.Controls.Add(this.lblY2);
+            this.pnl_Change.Controls.Add(this.lblX2);
+            this.pnl_Change.Controls.Add(this.lblX1);
             this.pnl_Change.Controls.Add(this.panel5);
             this.pnl_Change.Controls.Add(this.panel4);
             this.pnl_Change.Controls.Add(this.panel3);
@@ -824,23 +829,23 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Change.Size = new System.Drawing.Size(600, 49);
             this.pnl_Change.TabIndex = 2;
             // 
-            // lblXcpt
+            // lblX3
             // 
-            this.lblXcpt.AutoSize = true;
-            this.lblXcpt.Location = new System.Drawing.Point(312, 2);
-            this.lblXcpt.Name = "lblXcpt";
-            this.lblXcpt.Size = new System.Drawing.Size(45, 19);
-            this.lblXcpt.TabIndex = 7;
-            this.lblXcpt.Text = "label4";
+            this.lblX3.AutoSize = true;
+            this.lblX3.Location = new System.Drawing.Point(365, 2);
+            this.lblX3.Name = "lblX3";
+            this.lblX3.Size = new System.Drawing.Size(45, 19);
+            this.lblX3.TabIndex = 7;
+            this.lblX3.Text = "label4";
             // 
-            // lblYcmt
+            // lblY3
             // 
-            this.lblYcmt.AutoSize = true;
-            this.lblYcmt.Location = new System.Drawing.Point(312, 26);
-            this.lblYcmt.Name = "lblYcmt";
-            this.lblYcmt.Size = new System.Drawing.Size(45, 19);
-            this.lblYcmt.TabIndex = 7;
-            this.lblYcmt.Text = "label4";
+            this.lblY3.AutoSize = true;
+            this.lblY3.Location = new System.Drawing.Point(365, 25);
+            this.lblY3.Name = "lblY3";
+            this.lblY3.Size = new System.Drawing.Size(45, 19);
+            this.lblY3.TabIndex = 7;
+            this.lblY3.Text = "label4";
             // 
             // chkLuoiPixel
             // 
@@ -861,14 +866,14 @@ namespace KyThuatDoHoa_Nhom9
             this.label3.TabIndex = 5;
             this.label3.Text = "Lưới Pixel";
             // 
-            // lblY
+            // lblY1
             // 
-            this.lblY.AutoSize = true;
-            this.lblY.Location = new System.Drawing.Point(99, 25);
-            this.lblY.Name = "lblY";
-            this.lblY.Size = new System.Drawing.Size(45, 19);
-            this.lblY.TabIndex = 4;
-            this.lblY.Text = "label4";
+            this.lblY1.AutoSize = true;
+            this.lblY1.Location = new System.Drawing.Point(248, 25);
+            this.lblY1.Name = "lblY1";
+            this.lblY1.Size = new System.Drawing.Size(45, 19);
+            this.lblY1.TabIndex = 4;
+            this.lblY1.Text = "label4";
             // 
             // label6
             // 
@@ -879,32 +884,32 @@ namespace KyThuatDoHoa_Nhom9
             this.label6.TabIndex = 3;
             this.label6.Text = "label3";
             // 
-            // lblHeight
+            // lblY2
             // 
-            this.lblHeight.AutoSize = true;
-            this.lblHeight.Location = new System.Drawing.Point(248, 30);
-            this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(45, 19);
-            this.lblHeight.TabIndex = 3;
-            this.lblHeight.Text = "label3";
+            this.lblY2.AutoSize = true;
+            this.lblY2.Location = new System.Drawing.Point(301, 25);
+            this.lblY2.Name = "lblY2";
+            this.lblY2.Size = new System.Drawing.Size(45, 19);
+            this.lblY2.TabIndex = 3;
+            this.lblY2.Text = "label3";
             // 
-            // lblWidth
+            // lblX2
             // 
-            this.lblWidth.AutoSize = true;
-            this.lblWidth.Location = new System.Drawing.Point(248, 6);
-            this.lblWidth.Name = "lblWidth";
-            this.lblWidth.Size = new System.Drawing.Size(45, 19);
-            this.lblWidth.TabIndex = 3;
-            this.lblWidth.Text = "label3";
+            this.lblX2.AutoSize = true;
+            this.lblX2.Location = new System.Drawing.Point(301, 2);
+            this.lblX2.Name = "lblX2";
+            this.lblX2.Size = new System.Drawing.Size(45, 19);
+            this.lblX2.TabIndex = 3;
+            this.lblX2.Text = "label3";
             // 
-            // lblX
+            // lblX1
             // 
-            this.lblX.AutoSize = true;
-            this.lblX.Location = new System.Drawing.Point(99, 2);
-            this.lblX.Name = "lblX";
-            this.lblX.Size = new System.Drawing.Size(45, 19);
-            this.lblX.TabIndex = 3;
-            this.lblX.Text = "label3";
+            this.lblX1.AutoSize = true;
+            this.lblX1.Location = new System.Drawing.Point(248, 2);
+            this.lblX1.Name = "lblX1";
+            this.lblX1.Size = new System.Drawing.Size(45, 19);
+            this.lblX1.TabIndex = 3;
+            this.lblX1.Text = "label3";
             // 
             // panel5
             // 
@@ -934,24 +939,49 @@ namespace KyThuatDoHoa_Nhom9
             // 
             this.pnl_WorkStation.BackColor = System.Drawing.Color.LightGray;
             this.pnl_WorkStation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnl_WorkStation.Controls.Add(this.button37);
             this.pnl_WorkStation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_WorkStation.Location = new System.Drawing.Point(0, 98);
             this.pnl_WorkStation.Name = "pnl_WorkStation";
             this.pnl_WorkStation.Size = new System.Drawing.Size(600, 552);
             this.pnl_WorkStation.TabIndex = 3;
-            this.pnl_WorkStation.SizeChanged += new System.EventHandler(this.Pnl_WorkStation_SizeChanged);
             this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
             this.pnl_WorkStation.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseMove);
             // 
-            // button37
+            // lblY4
             // 
-            this.button37.Location = new System.Drawing.Point(236, 100);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(75, 23);
-            this.button37.TabIndex = 0;
-            this.button37.Text = "button37";
-            this.button37.UseVisualStyleBackColor = true;
+            this.lblY4.AutoSize = true;
+            this.lblY4.Location = new System.Drawing.Point(425, 25);
+            this.lblY4.Name = "lblY4";
+            this.lblY4.Size = new System.Drawing.Size(45, 19);
+            this.lblY4.TabIndex = 7;
+            this.lblY4.Text = "label4";
+            // 
+            // lblX4
+            // 
+            this.lblX4.AutoSize = true;
+            this.lblX4.Location = new System.Drawing.Point(425, 2);
+            this.lblX4.Name = "lblX4";
+            this.lblX4.Size = new System.Drawing.Size(45, 19);
+            this.lblX4.TabIndex = 7;
+            this.lblX4.Text = "label4";
+            // 
+            // lblWidth
+            // 
+            this.lblWidth.AutoSize = true;
+            this.lblWidth.Location = new System.Drawing.Point(99, 2);
+            this.lblWidth.Name = "lblWidth";
+            this.lblWidth.Size = new System.Drawing.Size(45, 19);
+            this.lblWidth.TabIndex = 8;
+            this.lblWidth.Text = "label4";
+            // 
+            // lblHeight
+            // 
+            this.lblHeight.AutoSize = true;
+            this.lblHeight.Location = new System.Drawing.Point(99, 25);
+            this.lblHeight.Name = "lblHeight";
+            this.lblHeight.Size = new System.Drawing.Size(45, 19);
+            this.lblHeight.TabIndex = 9;
+            this.lblHeight.Text = "label4";
             // 
             // frm_Main
             // 
@@ -985,7 +1015,6 @@ namespace KyThuatDoHoa_Nhom9
             this.panel6.PerformLayout();
             this.pnl_Change.ResumeLayout(false);
             this.pnl_Change.PerformLayout();
-            this.pnl_WorkStation.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1050,16 +1079,19 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblY;
-        private System.Windows.Forms.Label lblX;
+        private System.Windows.Forms.Label lblY1;
+        private System.Windows.Forms.Label lblX1;
         private System.Windows.Forms.CheckBox chkLuoiPixel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblHeight;
+        private System.Windows.Forms.Label lblY2;
+        private System.Windows.Forms.Label lblX2;
+        private System.Windows.Forms.Label lblX3;
+        private System.Windows.Forms.Label lblY3;
+        private System.Windows.Forms.Label lblX4;
+        private System.Windows.Forms.Label lblY4;
         private System.Windows.Forms.Label lblWidth;
-        private System.Windows.Forms.Label lblXcpt;
-        private System.Windows.Forms.Label lblYcmt;
-        private System.Windows.Forms.Button button37;
+        private System.Windows.Forms.Label lblHeight;
     }
 }
 

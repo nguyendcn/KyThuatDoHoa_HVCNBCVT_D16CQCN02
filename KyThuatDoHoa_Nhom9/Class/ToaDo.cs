@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing; 
+using System.Drawing;
 
 namespace KyThuatDoHoa_Nhom9
 {
@@ -12,53 +12,97 @@ namespace KyThuatDoHoa_Nhom9
         /// <summary>
         /// Chuyển từ tọa độ máy tính về tọa độ người dùng
         /// </summary>
-        public static Point MayTinhNguoiDung(int x, int y)
+        public static Point MayTinhNguoiDung(Point p)
         {
-            x = LuoiPixel(x) / 5;
-            y = LuoiPixel(y) / 5;
+            p = RoundPixel(p);
+            int width = Variables.Globals.widthPanel,
+                height = Variables.Globals.heightPanel,
+                x = p.X / 5,
+                y = p.Y / 5;
 
-            if (x > Variables.Globals.widthPanel / 2)
-                x -= Variables.Globals.widthPanel / 2;
-            else
-                x = (Variables.Globals.widthPanel / 2 - x) * -1;
+            x = x > width / 2 ? x - width / 2 : (width / 2 - x) * -1;
+            y = y > height / 2 ? (height / 2 - y) : height / 2 - y;
 
-            if (y > Variables.Globals.heightPanel / 2)
-                y = (Variables.Globals.heightPanel / 2 - y);
-            else
-                y = Variables.Globals.heightPanel / 2 - y;
-
-            //return new Point(x / 5 - Variables.Globals.widthPanel, Variables.Globals.heightPanel - y / 5);
             return new Point(x, y);
         }
         /// <summary>
         /// Làm tròn tọa độ khi click để hiển thị trên lưới pixel.
         /// </summary>
-        public static int LuoiPixel(double p)
+        public static int RoundPixel(int p)
         {
-            int n;
-            
-            double d = p % 5;
+            int d = p % 5;
             if (d >= 3)
-                return (int)(p - d + 5);
-           
-            return (int)(p - d);
+                return p - d + 5;
+
+            return p - d;
+        }
+        /// <summary>
+         /// Làm tròn tọa độ khi click để hiển thị trên lưới pixel.
+         /// </summary>
+        public static Point RoundPixel(Point p)
+        {
+            int x = p.X % 5,
+                y = p.Y % 5;
+
+            x = (x >= 3 ? p.X - x + 5 : p.X - x);
+            y = (y >= 3 ? y = p.Y - y + 5 : y = p.Y - y);
+
+            return new Point(x, y);
         }
 
         /// <summary>
-        /// Chuyển tọa độ người dùng về tọa độ máy tính * Hoãn
+        /// Chuyển tọa độ người dùng về tọa độ máy tính 
         /// </summary>
-        public static PointNguoiDungMayTinh(int x, int y)
+        public static Point NguoiDungMayTinh(Point p)
         {
-            //if (x > 0)
-            //{
-            //    x = (x + Variables.Globals.widthPanel/2) * 5;
-            //}
-            //else
-            //{ 
-            //    x = (Variables.Globals.widthPanel / 2 - x) * 5;
-            //}
-               
-            //return new Point(x, Variables.Globals.heightPanel - 5 * y);
+            int width = Variables.Globals.widthPanel,
+                height = Variables.Globals.heightPanel,
+                x = p.X,
+                y = p.Y;
+
+            x = x > 0 ? (x + width / 2) * 5 : (width / 2 - Math.Abs(x)) * 5;
+            y = y > 0 ? (height / 2 - y) * 5 : y = (height / 2 + Math.Abs(y)) * 5;
+
+            return new Point(x, y);
+        }
+        /// <summary>
+        /// Hiển thị 1 điểm lên màn hình ( Theo tọa độ máy tính)
+        /// </summary>
+        public static void HienThi(Point p, Graphics g)
+        {
+            int pointX = RoundPixel(p.X),
+                pointY = RoundPixel(p.Y);
+            Pen p1 = new Pen(Color.Green);
+            SolidBrush b = new SolidBrush(Color.Green);
+
+            g.DrawEllipse(p1, pointX, pointY, 2, 2);
+            g.FillEllipse(b, pointX, pointY, 2, 2);
+            g.DrawEllipse(p1, pointX - 2, pointY - 2, 2, 2);
+            g.FillEllipse(b, pointX - 2, pointY - 2, 2, 2);
+            g.DrawEllipse(p1, pointX, pointY - 2, 2, 2);
+            g.FillEllipse(b, pointX, pointY - 2, 2, 2);
+            g.DrawEllipse(p1, pointX - 2, pointY, 2, 2);
+            g.FillEllipse(b, pointX - 2, pointY, 2, 2);
+        }
+        /// <summary>
+        /// Hiển thị 1 điểm lên màn hình ( Theo tọa độ máy tính)
+        /// </summary>
+        public static void HienThi(int x, int y, Graphics g)
+        {
+            Point p = new Point(x, y);
+            int pointX = RoundPixel(p.X),
+                pointY = RoundPixel(p.Y);
+            Pen p1 = new Pen(Color.Green);
+            SolidBrush b = new SolidBrush(Color.Green);
+
+            g.DrawEllipse(p1, pointX, pointY, 2, 2);
+            g.FillEllipse(b, pointX, pointY, 2, 2);
+            g.DrawEllipse(p1, pointX - 2, pointY - 2, 2, 2);
+            g.FillEllipse(b, pointX - 2, pointY - 2, 2, 2);
+            g.DrawEllipse(p1, pointX, pointY - 2, 2, 2);
+            g.FillEllipse(b, pointX, pointY - 2, 2, 2);
+            g.DrawEllipse(p1, pointX - 2, pointY, 2, 2);
+            g.FillEllipse(b, pointX - 2, pointY, 2, 2);
         }
     }
 }
