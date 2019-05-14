@@ -82,6 +82,10 @@ namespace KyThuatDoHoa_Nhom9
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_Change = new System.Windows.Forms.Panel();
+            this.lblWidth = new System.Windows.Forms.Label();
+            this.lblHeight = new System.Windows.Forms.Label();
+            this.lblX4 = new System.Windows.Forms.Label();
+            this.lblY4 = new System.Windows.Forms.Label();
             this.lblX3 = new System.Windows.Forms.Label();
             this.lblY3 = new System.Windows.Forms.Label();
             this.chkLuoiPixel = new System.Windows.Forms.CheckBox();
@@ -95,10 +99,8 @@ namespace KyThuatDoHoa_Nhom9
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnl_WorkStation = new System.Windows.Forms.Panel();
-            this.lblY4 = new System.Windows.Forms.Label();
-            this.lblX4 = new System.Windows.Forms.Label();
-            this.lblWidth = new System.Windows.Forms.Label();
-            this.lblHeight = new System.Windows.Forms.Label();
+            this.picb_2DArea = new System.Windows.Forms.PictureBox();
+            this.picb_3DArea = new System.Windows.Forms.PictureBox();
             this.pnl_Mode.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_ToolBox.SuspendLayout();
@@ -110,6 +112,9 @@ namespace KyThuatDoHoa_Nhom9
             this.grb_2DLine.SuspendLayout();
             this.panel6.SuspendLayout();
             this.pnl_Change.SuspendLayout();
+            this.pnl_WorkStation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_3DArea)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Mode
@@ -829,6 +834,42 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Change.Size = new System.Drawing.Size(600, 49);
             this.pnl_Change.TabIndex = 2;
             // 
+            // lblWidth
+            // 
+            this.lblWidth.AutoSize = true;
+            this.lblWidth.Location = new System.Drawing.Point(99, 2);
+            this.lblWidth.Name = "lblWidth";
+            this.lblWidth.Size = new System.Drawing.Size(45, 19);
+            this.lblWidth.TabIndex = 8;
+            this.lblWidth.Text = "label4";
+            // 
+            // lblHeight
+            // 
+            this.lblHeight.AutoSize = true;
+            this.lblHeight.Location = new System.Drawing.Point(99, 25);
+            this.lblHeight.Name = "lblHeight";
+            this.lblHeight.Size = new System.Drawing.Size(45, 19);
+            this.lblHeight.TabIndex = 9;
+            this.lblHeight.Text = "label4";
+            // 
+            // lblX4
+            // 
+            this.lblX4.AutoSize = true;
+            this.lblX4.Location = new System.Drawing.Point(425, 2);
+            this.lblX4.Name = "lblX4";
+            this.lblX4.Size = new System.Drawing.Size(45, 19);
+            this.lblX4.TabIndex = 7;
+            this.lblX4.Text = "label4";
+            // 
+            // lblY4
+            // 
+            this.lblY4.AutoSize = true;
+            this.lblY4.Location = new System.Drawing.Point(425, 25);
+            this.lblY4.Name = "lblY4";
+            this.lblY4.Size = new System.Drawing.Size(45, 19);
+            this.lblY4.TabIndex = 7;
+            this.lblY4.Text = "label4";
+            // 
             // lblX3
             // 
             this.lblX3.AutoSize = true;
@@ -926,6 +967,7 @@ namespace KyThuatDoHoa_Nhom9
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(62, 45);
             this.panel4.TabIndex = 1;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel3
             // 
@@ -937,8 +979,11 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // pnl_WorkStation
             // 
+            this.pnl_WorkStation.AutoScroll = true;
             this.pnl_WorkStation.BackColor = System.Drawing.Color.LightGray;
             this.pnl_WorkStation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_WorkStation.Controls.Add(this.picb_2DArea);
+            this.pnl_WorkStation.Controls.Add(this.picb_3DArea);
             this.pnl_WorkStation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_WorkStation.Location = new System.Drawing.Point(0, 98);
             this.pnl_WorkStation.Name = "pnl_WorkStation";
@@ -947,41 +992,23 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
             this.pnl_WorkStation.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseMove);
             // 
-            // lblY4
+            // picb_2DArea
             // 
-            this.lblY4.AutoSize = true;
-            this.lblY4.Location = new System.Drawing.Point(425, 25);
-            this.lblY4.Name = "lblY4";
-            this.lblY4.Size = new System.Drawing.Size(45, 19);
-            this.lblY4.TabIndex = 7;
-            this.lblY4.Text = "label4";
+            this.picb_2DArea.BackColor = System.Drawing.Color.Maroon;
+            this.picb_2DArea.Location = new System.Drawing.Point(305, 100);
+            this.picb_2DArea.Name = "picb_2DArea";
+            this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
+            this.picb_2DArea.TabIndex = 1;
+            this.picb_2DArea.TabStop = false;
             // 
-            // lblX4
+            // picb_3DArea
             // 
-            this.lblX4.AutoSize = true;
-            this.lblX4.Location = new System.Drawing.Point(425, 2);
-            this.lblX4.Name = "lblX4";
-            this.lblX4.Size = new System.Drawing.Size(45, 19);
-            this.lblX4.TabIndex = 7;
-            this.lblX4.Text = "label4";
-            // 
-            // lblWidth
-            // 
-            this.lblWidth.AutoSize = true;
-            this.lblWidth.Location = new System.Drawing.Point(99, 2);
-            this.lblWidth.Name = "lblWidth";
-            this.lblWidth.Size = new System.Drawing.Size(45, 19);
-            this.lblWidth.TabIndex = 8;
-            this.lblWidth.Text = "label4";
-            // 
-            // lblHeight
-            // 
-            this.lblHeight.AutoSize = true;
-            this.lblHeight.Location = new System.Drawing.Point(99, 25);
-            this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(45, 19);
-            this.lblHeight.TabIndex = 9;
-            this.lblHeight.Text = "label4";
+            this.picb_3DArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.picb_3DArea.Location = new System.Drawing.Point(73, 100);
+            this.picb_3DArea.Name = "picb_3DArea";
+            this.picb_3DArea.Size = new System.Drawing.Size(220, 219);
+            this.picb_3DArea.TabIndex = 0;
+            this.picb_3DArea.TabStop = false;
             // 
             // frm_Main
             // 
@@ -1015,6 +1042,9 @@ namespace KyThuatDoHoa_Nhom9
             this.panel6.PerformLayout();
             this.pnl_Change.ResumeLayout(false);
             this.pnl_Change.PerformLayout();
+            this.pnl_WorkStation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_3DArea)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1092,6 +1122,8 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Label lblY4;
         private System.Windows.Forms.Label lblWidth;
         private System.Windows.Forms.Label lblHeight;
+        private System.Windows.Forms.PictureBox picb_2DArea;
+        private System.Windows.Forms.PictureBox picb_3DArea;
     }
 }
 

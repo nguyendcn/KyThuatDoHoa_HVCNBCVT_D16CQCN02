@@ -24,6 +24,8 @@ namespace KyThuatDoHoa_Nhom9
         {
             InitializeComponent();
 
+            picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
+
             //2D mode is startup;
             Setup_Toolbar(Globals._Mode_current);
 
@@ -125,6 +127,7 @@ namespace KyThuatDoHoa_Nhom9
                 if(Variables.Globals._btn_isShowDetails)
                     this.btn_Toolbar.Text = Collection_Strs._2D_shapes;
                 this.btn_Toolbar.Image = Image_Res._2D_Model_25px;
+                picb_2DArea.BringToFront();
             }
             else if (mode == Constants.Mode._3D)
             {
@@ -132,6 +135,7 @@ namespace KyThuatDoHoa_Nhom9
                 if (Variables.Globals._btn_isShowDetails)
                     this.btn_Toolbar.Text = Collection_Strs._3D_shapes;
                 this.btn_Toolbar.Image = Image_Res._3D_Model_25px;
+                picb_3DArea.BringToFront();
             }
 
         }
@@ -387,6 +391,11 @@ namespace KyThuatDoHoa_Nhom9
             p = ToaDo.NguoiDungMayTinh(p);
             lblX4.Text = p.X.ToString();
             lblY4.Text = p.Y.ToString();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
