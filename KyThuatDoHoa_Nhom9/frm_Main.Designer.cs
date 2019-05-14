@@ -82,19 +82,20 @@ namespace KyThuatDoHoa_Nhom9
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_Change = new System.Windows.Forms.Panel();
+            this.lblXcpt = new System.Windows.Forms.Label();
+            this.lblYcmt = new System.Windows.Forms.Label();
             this.chkLuoiPixel = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblY = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblHeight = new System.Windows.Forms.Label();
+            this.lblWidth = new System.Windows.Forms.Label();
             this.lblX = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnl_WorkStation = new System.Windows.Forms.Panel();
-            this.lblWidth = new System.Windows.Forms.Label();
-            this.lblHeight = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblYcmt = new System.Windows.Forms.Label();
-            this.lblXcpt = new System.Windows.Forms.Label();
+            this.button37 = new System.Windows.Forms.Button();
             this.pnl_Mode.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_ToolBox.SuspendLayout();
@@ -106,6 +107,7 @@ namespace KyThuatDoHoa_Nhom9
             this.grb_2DLine.SuspendLayout();
             this.panel6.SuspendLayout();
             this.pnl_Change.SuspendLayout();
+            this.pnl_WorkStation.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Mode
@@ -822,6 +824,24 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Change.Size = new System.Drawing.Size(600, 49);
             this.pnl_Change.TabIndex = 2;
             // 
+            // lblXcpt
+            // 
+            this.lblXcpt.AutoSize = true;
+            this.lblXcpt.Location = new System.Drawing.Point(312, 2);
+            this.lblXcpt.Name = "lblXcpt";
+            this.lblXcpt.Size = new System.Drawing.Size(45, 19);
+            this.lblXcpt.TabIndex = 7;
+            this.lblXcpt.Text = "label4";
+            // 
+            // lblYcmt
+            // 
+            this.lblYcmt.AutoSize = true;
+            this.lblYcmt.Location = new System.Drawing.Point(312, 26);
+            this.lblYcmt.Name = "lblYcmt";
+            this.lblYcmt.Size = new System.Drawing.Size(45, 19);
+            this.lblYcmt.TabIndex = 7;
+            this.lblYcmt.Text = "label4";
+            // 
             // chkLuoiPixel
             // 
             this.chkLuoiPixel.AutoSize = true;
@@ -849,6 +869,33 @@ namespace KyThuatDoHoa_Nhom9
             this.lblY.Size = new System.Drawing.Size(45, 19);
             this.lblY.TabIndex = 4;
             this.lblY.Text = "label4";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(604, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 19);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "label3";
+            // 
+            // lblHeight
+            // 
+            this.lblHeight.AutoSize = true;
+            this.lblHeight.Location = new System.Drawing.Point(248, 30);
+            this.lblHeight.Name = "lblHeight";
+            this.lblHeight.Size = new System.Drawing.Size(45, 19);
+            this.lblHeight.TabIndex = 3;
+            this.lblHeight.Text = "label3";
+            // 
+            // lblWidth
+            // 
+            this.lblWidth.AutoSize = true;
+            this.lblWidth.Location = new System.Drawing.Point(248, 6);
+            this.lblWidth.Name = "lblWidth";
+            this.lblWidth.Size = new System.Drawing.Size(45, 19);
+            this.lblWidth.TabIndex = 3;
+            this.lblWidth.Text = "label3";
             // 
             // lblX
             // 
@@ -887,6 +934,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             this.pnl_WorkStation.BackColor = System.Drawing.Color.LightGray;
             this.pnl_WorkStation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_WorkStation.Controls.Add(this.button37);
             this.pnl_WorkStation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_WorkStation.Location = new System.Drawing.Point(0, 98);
             this.pnl_WorkStation.Name = "pnl_WorkStation";
@@ -896,50 +944,14 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
             this.pnl_WorkStation.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseMove);
             // 
-            // lblWidth
+            // button37
             // 
-            this.lblWidth.AutoSize = true;
-            this.lblWidth.Location = new System.Drawing.Point(248, 6);
-            this.lblWidth.Name = "lblWidth";
-            this.lblWidth.Size = new System.Drawing.Size(45, 19);
-            this.lblWidth.TabIndex = 3;
-            this.lblWidth.Text = "label3";
-            // 
-            // lblHeight
-            // 
-            this.lblHeight.AutoSize = true;
-            this.lblHeight.Location = new System.Drawing.Point(248, 30);
-            this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(45, 19);
-            this.lblHeight.TabIndex = 3;
-            this.lblHeight.Text = "label3";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(604, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 19);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "label3";
-            // 
-            // lblYcmt
-            // 
-            this.lblYcmt.AutoSize = true;
-            this.lblYcmt.Location = new System.Drawing.Point(312, 26);
-            this.lblYcmt.Name = "lblYcmt";
-            this.lblYcmt.Size = new System.Drawing.Size(45, 19);
-            this.lblYcmt.TabIndex = 7;
-            this.lblYcmt.Text = "label4";
-            // 
-            // lblXcpt
-            // 
-            this.lblXcpt.AutoSize = true;
-            this.lblXcpt.Location = new System.Drawing.Point(312, 2);
-            this.lblXcpt.Name = "lblXcpt";
-            this.lblXcpt.Size = new System.Drawing.Size(45, 19);
-            this.lblXcpt.TabIndex = 7;
-            this.lblXcpt.Text = "label4";
+            this.button37.Location = new System.Drawing.Point(236, 100);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(75, 23);
+            this.button37.TabIndex = 0;
+            this.button37.Text = "button37";
+            this.button37.UseVisualStyleBackColor = true;
             // 
             // frm_Main
             // 
@@ -973,6 +985,7 @@ namespace KyThuatDoHoa_Nhom9
             this.panel6.PerformLayout();
             this.pnl_Change.ResumeLayout(false);
             this.pnl_Change.PerformLayout();
+            this.pnl_WorkStation.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1046,6 +1059,7 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Label lblWidth;
         private System.Windows.Forms.Label lblXcpt;
         private System.Windows.Forms.Label lblYcmt;
+        private System.Windows.Forms.Button button37;
     }
 }
 

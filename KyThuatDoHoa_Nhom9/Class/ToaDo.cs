@@ -47,7 +47,7 @@ namespace KyThuatDoHoa_Nhom9
         /// <summary>
         /// Chuyển tọa độ người dùng về tọa độ máy tính * Hoãn
         /// </summary>
-        public static Point NguoiDungMayTinh(int x, int y)
+        public static PointNguoiDungMayTinh(int x, int y)
         {
             //if (x > 0)
             //{
