@@ -375,6 +375,45 @@ namespace KyThuatDoHoa_Nhom9
         #endregion
 
 
+        Graphics g;
+        Graphics g1;
+        int y1 = 1, y2 = 5;
+        Point s = new Point(3, 3);
+        Point ep = new Point(15, 15);
+        Bitmap bmTemp;
+        bool test = false;
+        HinhChuNhat hinhChuNhat;
+        Line line;
+        Timer tm = new Timer
+        {
+            Interval = 300
+        };
+
+        private void button37_Click(object sender, EventArgs e)
+        {
+            hinhChuNhat = new HinhChuNhat(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
+            //line = new Line(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
+            tm.Tick += timer1_Tick;
+            tm.Start();
+        }
+
+        private void picb_2DArea_Paint(object sender, PaintEventArgs e)
+        {
+            if (test)
+            {
+                //line.Draw(e.Graphics);
+                //line.Rotate(new Point(550, 320), 20);
+                hinhChuNhat.Draw(e.Graphics);
+                hinhChuNhat.Rotate(new Point(550, 320), 90);
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            test = true;
+            //this.Invalidate();
+            this.picb_2DArea.Refresh();
+        }
 
         private void picb_2DArea_MouseMove(object sender, MouseEventArgs e)
         {

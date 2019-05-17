@@ -206,9 +206,15 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             this.ColorOfLine = (color);
         }
 
+        /// <summary>
+        /// Rotate line. Applies a clockwise rotation.
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="alpha"></param>
         public void Rotate(Point p, double alpha)
         {
-            throw new NotImplementedException();
+            this.A = this.A.RotateAt(p, (int)alpha);
+            this.B = this.B.RotateAt(p, (int)alpha);
         }
 
         public void Shifting(Point pDest)

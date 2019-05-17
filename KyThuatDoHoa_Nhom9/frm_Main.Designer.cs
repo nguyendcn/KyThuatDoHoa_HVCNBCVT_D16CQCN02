@@ -979,7 +979,6 @@ namespace KyThuatDoHoa_Nhom9
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(62, 45);
             this.panel4.TabIndex = 1;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel3
             // 
@@ -1001,7 +1000,6 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation.Name = "pnl_WorkStation";
             this.pnl_WorkStation.Size = new System.Drawing.Size(600, 552);
             this.pnl_WorkStation.TabIndex = 3;
-            this.pnl_WorkStation.SizeChanged += new System.EventHandler(this.pnl_WorkStation_SizeChanged);
             this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
             // 
             // picb_2DArea
