@@ -55,6 +55,7 @@
     <Compile Include="Construct\_2DObject\HinhElip.cs" />
     <Compile Include="Construct\_2DObject\HinhTamGiac.cs" />
     <Compile Include="Construct\_2DObject\HinhTron.cs" />
+    <Compile Include="Construct\_2DObject\HinhXe.cs" />
     <Compile Include="Construct\_2DObject\Line.cs" />
     <Compile Include="Construct\_2DObject\HinhChuNhat.cs" />
     <Compile Include="Construct\_2DObject\Square.cs" />

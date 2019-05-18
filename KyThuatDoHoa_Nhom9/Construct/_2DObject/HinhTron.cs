@@ -13,6 +13,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
     {
         private Point point;
         private int radius;
+        private Color color;
 
         public Point Point { get => point;
             set
@@ -57,6 +58,14 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             ToaDo.HienThi(x + point.X, -y + point.Y, g);
             ToaDo.HienThi(y + point.X, -x + point.Y, g); 
         }
+
+        public HinhTron(int bk, Point tamht, Color m)
+        {
+            Radius = bk;
+            point = new Point(tamht.X, tamht.Y);
+            color = m;
+        }
+
         public HinhTron(Point point,int R)
         {
             this.point = point;
