@@ -51,6 +51,7 @@
     <Compile Include="Construct\DefineType\Matrixs.cs" />
     <Compile Include="Construct\DefineType\SymmetryMode.cs" />
     <Compile Include="Construct\Shapes2DObject.cs" />
+    <Compile Include="Construct\_2DObject\Clock.cs" />
     <Compile Include="Construct\_2DObject\HinhElip.cs" />
     <Compile Include="Construct\_2DObject\HinhTamGiac.cs" />
     <Compile Include="Construct\_2DObject\HinhTron.cs" />

@@ -291,6 +291,11 @@ namespace KyThuatDoHoa_Nhom9
             btn.BackColor = Color.BlueViolet;
         }
 
+        private void Button_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
 
         #endregion
 
@@ -383,6 +388,7 @@ namespace KyThuatDoHoa_Nhom9
         Bitmap bmTemp;
         bool test = false;
         HinhChuNhat hinhChuNhat;
+        Clock cl;
         Line line;
         Timer tm = new Timer
         {
@@ -391,10 +397,21 @@ namespace KyThuatDoHoa_Nhom9
 
         private void button37_Click(object sender, EventArgs e)
         {
-            hinhChuNhat = new HinhChuNhat(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
-            //line = new Line(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
-            tm.Tick += timer1_Tick;
-            tm.Start();
+             cl = new Clock(new Point(550, 320), 10, DateTime.Now);
+            cl.PropertyChanged += Cl_PropertyChanged;
+
+            //hinhChuNhat = new HinhChuNhat(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
+            ////line = new Line(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
+            //tm.Tick += timer1_Tick;
+            //tm.Start();
+        }
+
+        private void Cl_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            label4.Text = cl.CurrentDatetime.ToString();
+            test = true;
+            //this.Invalidate();
+            this.picb_2DArea.Refresh();
         }
 
         private void picb_2DArea_Paint(object sender, PaintEventArgs e)
@@ -403,8 +420,10 @@ namespace KyThuatDoHoa_Nhom9
             {
                 //line.Draw(e.Graphics);
                 //line.Rotate(new Point(550, 320), 20);
-                hinhChuNhat.Draw(e.Graphics);
-                hinhChuNhat.Rotate(new Point(550, 320), 90);
+                //hinhChuNhat.Draw(e.Graphics);
+                //hinhChuNhat.Rotate(new Point(550, 320), 90);
+                //cl.CurrentDatetime = DateTime.Now;
+                cl.Draw(e.Graphics);
             }
         }
 
@@ -414,6 +433,14 @@ namespace KyThuatDoHoa_Nhom9
             //this.Invalidate();
             this.picb_2DArea.Refresh();
         }
+
+        private void button38_Click(object sender, EventArgs e)
+        {
+            cl.CurrentDatetime = new DateTime(2019, 05, 18, 12, 30, 15);
+            cl.A = new Point(570, 315);
+            cl.R = 30
+;        }
+
 
         private void picb_2DArea_MouseMove(object sender, MouseEventArgs e)
         {
