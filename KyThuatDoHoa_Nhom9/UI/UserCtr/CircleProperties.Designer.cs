@@ -33,9 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_Radius = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_CoorOriginalY = new System.Windows.Forms.TextBox();
-            this.txt_CoorOriginalX = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txt_CoorOriginal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -66,9 +64,7 @@
             // 
             this.panel2.Controls.Add(this.txt_Radius);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.txt_CoorOriginalY);
-            this.panel2.Controls.Add(this.txt_CoorOriginalX);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.txt_CoorOriginal);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -98,43 +94,27 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Radius";
             // 
-            // txt_CoorOriginalY
+            // txt_CoorOriginal
             // 
-            this.txt_CoorOriginalY.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CoorOriginalY.Location = new System.Drawing.Point(162, 45);
-            this.txt_CoorOriginalY.Name = "txt_CoorOriginalY";
-            this.txt_CoorOriginalY.Size = new System.Drawing.Size(40, 22);
-            this.txt_CoorOriginalY.TabIndex = 4;
-            this.txt_CoorOriginalY.Tag = "O_Y";
-            // 
-            // txt_CoorOriginalX
-            // 
-            this.txt_CoorOriginalX.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CoorOriginalX.Location = new System.Drawing.Point(64, 45);
-            this.txt_CoorOriginalX.Name = "txt_CoorOriginalX";
-            this.txt_CoorOriginalX.Size = new System.Drawing.Size(40, 22);
-            this.txt_CoorOriginalX.TabIndex = 3;
-            this.txt_CoorOriginalX.Tag = "O_X";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(174, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(15, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Y";
+            this.txt_CoorOriginal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CoorOriginal.Location = new System.Drawing.Point(64, 45);
+            this.txt_CoorOriginal.Name = "txt_CoorOriginal";
+            this.txt_CoorOriginal.Size = new System.Drawing.Size(76, 22);
+            this.txt_CoorOriginal.TabIndex = 3;
+            this.txt_CoorOriginal.Tag = "O_XY";
+            this.txt_CoorOriginal.TextChanged += new System.EventHandler(this.txt_CoorOriginal_TextChanged);
+            this.txt_CoorOriginal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CoorOriginal_KeyDown);
+            this.txt_CoorOriginal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CoorOriginal_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(75, 19);
+            this.label2.Location = new System.Drawing.Point(72, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 15);
+            this.label2.Size = new System.Drawing.Size(68, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "X";
+            this.label2.Text = "Format: x, y";
             // 
             // label1
             // 
@@ -169,9 +149,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_Radius;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_CoorOriginalY;
-        private System.Windows.Forms.TextBox txt_CoorOriginalX;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_CoorOriginal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }

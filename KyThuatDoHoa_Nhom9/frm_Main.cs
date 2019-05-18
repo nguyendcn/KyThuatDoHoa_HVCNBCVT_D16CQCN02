@@ -299,23 +299,35 @@ namespace KyThuatDoHoa_Nhom9
             {
                 CircleProperties circleProperties = new CircleProperties();
                 circleProperties.PropertyChanged += CircleProperties_PropertyChanged;
-                circleProperties.Size = this.pnl_ToolBox.Size;
-
                 this.pnl_ToolBox.Controls.Add(circleProperties);
                 circleProperties.BringToFront();
 
-                 ht = new HinhTron(new Point(550, 320), 10);
-                circleProperties.CoorOriginal = new Point(550, 320);
+                ht = new HinhTron(new Point(550, 320), 10);
+                circleProperties.CoorOriginal = ToaDo.MayTinhNguoiDung(new Point(550, 320));
                 circleProperties.Radius = 10;
                 ht.Draw(picb_2DArea.CreateGraphics());
                 ht.PropertyChanged += Ht_PropertyChanged;
             }
+            else if(btn.Tag.Equals("Clock"))
+            {
+
+            }
         }
+
+        #region Circle action
         HinhTron ht;
         private void CircleProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if(ht != null)
-                ht.Radius = (sender as CircleProperties).Radius;
+            if (ht != null)
+            {
+                CircleProperties cp = (sender as CircleProperties);
+                if (e.PropertyName.Equals("radius"))
+                    ht.Radius = cp.Radius;
+                else if(e.PropertyName.Equals("coorOriginal"))
+                {
+                    ht.Point = ToaDo.NguoiDungMayTinh(cp.CoorOriginal);
+                }
+            }
         }
 
         private void Ht_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -323,6 +335,7 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea.Refresh();
             (sender as HinhTron).Draw(this.picb_2DArea.CreateGraphics());
         }
+        #endregion
 
 
         #endregion
@@ -425,7 +438,7 @@ namespace KyThuatDoHoa_Nhom9
 
         private void button37_Click(object sender, EventArgs e)
         {
-            cl = new Clock(new Point(550, 320), 10, DateTime.Now);
+            cl = new Clock(new Point(550, 320), 20, DateTime.Now);
             cl.PropertyChanged += Cl_PropertyChanged;
 
             //hinhChuNhat = new HinhChuNhat(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
@@ -450,8 +463,8 @@ namespace KyThuatDoHoa_Nhom9
                 //line.Rotate(new Point(550, 320), 20);
                 //hinhChuNhat.Draw(e.Graphics);
                 //hinhChuNhat.Rotate(new Point(550, 320), 90);
-                //cl.CurrentDatetime = DateTime.Now;
-                //cl.Draw(e.Graphics);
+                cl.CurrentDatetime = DateTime.Now;
+                cl.Draw(e.Graphics);
             }
         }
 

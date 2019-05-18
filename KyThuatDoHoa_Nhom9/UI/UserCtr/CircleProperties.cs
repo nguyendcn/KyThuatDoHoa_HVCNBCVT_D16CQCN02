@@ -18,8 +18,7 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
         {
             InitializeComponent();
             this.AutoScroll = true;
-            txt_CoorOriginalX.Text = coorOriginal.X.ToString();
-            txt_CoorOriginalY.Text = coorOriginal.Y.ToString();
+            txt_CoorOriginal.Text = coorOriginal.X + ", " + coorOriginal.Y; 
             txt_Radius.Text = radius.ToString();
         }
 
@@ -54,10 +53,9 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
                 {
                     txt_Radius.Text = radius.ToString();
                 }
-                else
+                else if(PropertyName.Equals("coorOriginal"))
                 {
-                    txt_CoorOriginalX.Text = CoorOriginal.X.ToString();
-                    txt_CoorOriginalY.Text = CoorOriginal.Y.ToString();
+                    txt_CoorOriginal.Text = coorOriginal.X + "," + coorOriginal.Y;
                 }
                 PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));
             }
@@ -65,12 +63,34 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
 
         private void Txt_TextChanged(object sender, EventArgs e)
         {
-            int x = Convert.ToInt32(txt_CoorOriginalX.Text),
-                y = Convert.ToInt32(txt_CoorOriginalY.Text);
-            this.CoorOriginal = new Point( x, y );
-
             this.Radius = Convert.ToInt32(txt_Radius.Text);
         }
 
+        private void txt_CoorOriginal_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void txt_CoorOriginal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //if((e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == '-' || e.KeyChar == ',')
+            //{
+            //    e.Handled = false;
+            //}
+            //else if((Keys)e.KeyChar == Keys.Enter)
+            //{
+
+            //}
+            //else
+            //{
+            //    e.Handled = true;
+            //}
+        }
+
+        private void txt_CoorOriginal_TextChanged(object sender, EventArgs e)
+        {
+            string[] str = txt_CoorOriginal.Text.Split(',');
+            this.CoorOriginal = new Point(Convert.ToInt32(str[0]), Convert.ToInt32(str[1]));
+        }
     }
 }
