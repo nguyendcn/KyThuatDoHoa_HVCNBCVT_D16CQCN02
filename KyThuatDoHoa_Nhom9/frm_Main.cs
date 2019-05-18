@@ -297,7 +297,7 @@ namespace KyThuatDoHoa_Nhom9
             Button btn = sender as Button;
             if(btn.Tag.Equals("Circle"))
             {
-                CircleProperties circleProperties = new CircleProperties();
+                CircleProperties circleProperties = new CircleProperties(this.pnl_Tb_2D.Size);
                 circleProperties.PropertyChanged += CircleProperties_PropertyChanged;
                 this.pnl_ToolBox.Controls.Add(circleProperties);
                 circleProperties.BringToFront();
@@ -310,9 +310,38 @@ namespace KyThuatDoHoa_Nhom9
             }
             else if(btn.Tag.Equals("Clock"))
             {
+                clockProperties = new ClockProperties(this.pnl_ToolBox.Size);
 
+                clockProperties.PropertyChanged += ClockProperties_PropertyChanged;
+                this.pnl_ToolBox.Controls.Add(clockProperties);
+                clockProperties.BringToFront();
+
+                DateTime dt = DateTime.Now;
+                clock = new Clock(new Point(550, 320), 15, dt);
+                clock.CurrentDatetime = dt;
+                clock.Draw(this.picb_2DArea.CreateGraphics());
+                clock.PropertyChanged += Clock_PropertyChanged;
             }
         }
+
+        Clock clock;
+        ClockProperties clockProperties;
+        private void Clock_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.picb_2DArea.Refresh();
+            clockProperties.CurrenTime = clock.CurrentDatetime;
+            clockProperties.HHours = clock.HHours;
+            clockProperties.HMinute = clock.HMinute;
+            clockProperties.HSecond = clock.HSecond;
+        }
+
+
+        private void ClockProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            
+        }
+
+
 
         #region Circle action
         HinhTron ht;
@@ -457,15 +486,18 @@ namespace KyThuatDoHoa_Nhom9
 
         private void picb_2DArea_Paint(object sender, PaintEventArgs e)
         {
-            if (test)
-            {
-                //line.Draw(e.Graphics);
-                //line.Rotate(new Point(550, 320), 20);
-                //hinhChuNhat.Draw(e.Graphics);
-                //hinhChuNhat.Rotate(new Point(550, 320), 90);
-                cl.CurrentDatetime = DateTime.Now;
-                cl.Draw(e.Graphics);
-            }
+            //if (test)
+            //{
+            //    //line.Draw(e.Graphics);
+            //    //line.Rotate(new Point(550, 320), 20);
+            //    //hinhChuNhat.Draw(e.Graphics);
+            //    //hinhChuNhat.Rotate(new Point(550, 320), 90);
+            //    //cl.CurrentDatetime = DateTime.Now;
+            //    cl.Draw(e.Graphics);
+            //}
+            if(clock != null)
+                clock.Draw(e.Graphics);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

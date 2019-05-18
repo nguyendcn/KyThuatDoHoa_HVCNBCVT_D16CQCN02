@@ -14,12 +14,15 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
     {
         private Point coorOriginal;
         private int radius = 0;
-        public CircleProperties()
+        public CircleProperties(Size s)
         {
+            this.Size = new Size(250, 601);
             InitializeComponent();
-            this.AutoScroll = true;
+            
+
             txt_CoorOriginal.Text = coorOriginal.X + ", " + coorOriginal.Y; 
             txt_Radius.Text = radius.ToString();
+            label3.Text = this.Size.ToString();
         }
 
         public Point CoorOriginal { get => coorOriginal;

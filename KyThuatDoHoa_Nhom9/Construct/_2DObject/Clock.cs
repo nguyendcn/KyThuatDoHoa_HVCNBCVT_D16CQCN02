@@ -23,7 +23,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         };
 
         HinhTron ht;
-        Line hHours, hMinute, hSecond;
+        private Line hHours, hMinute, hSecond;
 
         /// <summary>
         /// Get or set current time of clock.
@@ -63,6 +63,37 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 {
                     _r = value;
                     OnPropertyChanged("_r");
+                }
+            }
+        }
+
+        public Line HHours { get => hHours;
+            set
+            {
+                if (value != hHours)
+                {
+                    hHours = value;
+                   //OnPropertyChanged("hHours");
+                }
+            }
+        }
+        public Line HMinute { get => hMinute;
+            set
+            {
+                if (value != hMinute)
+                {
+                    hMinute = value;
+                    //OnPropertyChanged("hMinute");
+                }
+            }
+        }
+        public Line HSecond { get => hSecond;
+            set
+            {
+                if (value != hSecond)
+                {
+                    hSecond = value;
+                    //OnPropertyChanged("hSecond");
                 }
             }
         }
@@ -107,7 +138,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             if(ht == null)
                 ht = new HinhTron(A, 11);
-            ht.Draw(g);
+            //ht.Draw(g);
             hHours.Draw(g);
             hMinute.Draw(g);
             hSecond.Draw(g);
@@ -142,9 +173,9 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         private void SetupClockwise(DateTime dt)
         {
             ht = new HinhTron(A, R);
-            hSecond = new Line(A, msCoord(dt.Second, R * 5 - 10));
-            hMinute = new Line(A, msCoord(dt.Minute, R * 5 - 20));
-            hHours = new Line(A, hrCoord(dt.Hour, dt.Minute, R * 5 - 30));
+            HSecond = new Line(A, msCoord(dt.Second, R * 5 - 10));
+            HMinute = new Line(A, msCoord(dt.Minute, R * 5 - 20));
+            HHours = new Line(A, hrCoord(dt.Hour, dt.Minute, R * 5 - 30));
         }
 
         private Point msCoord(int val, int hlen)
