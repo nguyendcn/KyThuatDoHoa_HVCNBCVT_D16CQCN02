@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using KyThuatDoHoa_Nhom9.UI;
 using KyThuatDoHoa_Nhom9.Variables;
 using KyThuatDoHoa_Nhom9.Construct._2DObject;
+using KyThuatDoHoa_Nhom9.UI.UserCtr;
 
 namespace KyThuatDoHoa_Nhom9
 {
@@ -293,7 +294,34 @@ namespace KyThuatDoHoa_Nhom9
 
         private void Button_MouseDown(object sender, MouseEventArgs e)
         {
-            
+            Button btn = sender as Button;
+            if(btn.Tag.Equals("Circle"))
+            {
+                CircleProperties circleProperties = new CircleProperties();
+                circleProperties.PropertyChanged += CircleProperties_PropertyChanged;
+                circleProperties.Size = this.pnl_ToolBox.Size;
+
+                this.pnl_ToolBox.Controls.Add(circleProperties);
+                circleProperties.BringToFront();
+
+                 ht = new HinhTron(new Point(550, 320), 10);
+                circleProperties.CoorOriginal = new Point(550, 320);
+                circleProperties.Radius = 10;
+                ht.Draw(picb_2DArea.CreateGraphics());
+                ht.PropertyChanged += Ht_PropertyChanged;
+            }
+        }
+        HinhTron ht;
+        private void CircleProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if(ht != null)
+                ht.Radius = (sender as CircleProperties).Radius;
+        }
+
+        private void Ht_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.picb_2DArea.Refresh();
+            (sender as HinhTron).Draw(this.picb_2DArea.CreateGraphics());
         }
 
 
@@ -397,7 +425,7 @@ namespace KyThuatDoHoa_Nhom9
 
         private void button37_Click(object sender, EventArgs e)
         {
-             cl = new Clock(new Point(550, 320), 10, DateTime.Now);
+            cl = new Clock(new Point(550, 320), 10, DateTime.Now);
             cl.PropertyChanged += Cl_PropertyChanged;
 
             //hinhChuNhat = new HinhChuNhat(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
@@ -423,7 +451,7 @@ namespace KyThuatDoHoa_Nhom9
                 //hinhChuNhat.Draw(e.Graphics);
                 //hinhChuNhat.Rotate(new Point(550, 320), 90);
                 //cl.CurrentDatetime = DateTime.Now;
-                cl.Draw(e.Graphics);
+                //cl.Draw(e.Graphics);
             }
         }
 
