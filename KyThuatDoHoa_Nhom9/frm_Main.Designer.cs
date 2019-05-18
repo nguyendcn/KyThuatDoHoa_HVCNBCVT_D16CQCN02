@@ -324,8 +324,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(50, 50);
             this.button12.TabIndex = 12;
+            this.button12.Tag = "Clock";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.Button_Click);
+            this.button12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button12.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button12.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
