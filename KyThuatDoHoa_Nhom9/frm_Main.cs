@@ -403,6 +403,5 @@ namespace KyThuatDoHoa_Nhom9
             lblX4.Text = p.X.ToString();
             lblY4.Text = p.Y.ToString();
         }
-
     }
 }

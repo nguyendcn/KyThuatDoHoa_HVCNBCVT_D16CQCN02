@@ -132,6 +132,13 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Mode.Size = new System.Drawing.Size(860, 49);
             this.pnl_Mode.TabIndex = 0;
             // 
+            // button37
+            // 
+            this.button37.Location = new System.Drawing.Point(0, 0);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(75, 23);
+            this.button37.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
