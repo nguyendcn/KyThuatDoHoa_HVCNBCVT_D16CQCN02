@@ -132,16 +132,6 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Mode.Size = new System.Drawing.Size(860, 49);
             this.pnl_Mode.TabIndex = 0;
             // 
-            // button37
-            // 
-            this.button37.Location = new System.Drawing.Point(444, 13);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(75, 23);
-            this.button37.TabIndex = 5;
-            this.button37.Text = "button37";
-            this.button37.UseVisualStyleBackColor = true;
-            this.button37.Click += new System.EventHandler(this.button37_Click);
-            // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -979,7 +969,6 @@ namespace KyThuatDoHoa_Nhom9
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(62, 45);
             this.panel4.TabIndex = 1;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel3
             // 
@@ -1001,7 +990,6 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation.Name = "pnl_WorkStation";
             this.pnl_WorkStation.Size = new System.Drawing.Size(600, 552);
             this.pnl_WorkStation.TabIndex = 3;
-            this.pnl_WorkStation.SizeChanged += new System.EventHandler(this.pnl_WorkStation_SizeChanged);
             this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
             // 
             // picb_2DArea
@@ -1013,7 +1001,6 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
             this.picb_2DArea.TabIndex = 1;
             this.picb_2DArea.TabStop = false;
-            this.picb_2DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.picb_2DArea_Paint);
             this.picb_2DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picb_2DArea_MouseMove);
             // 
             // picb_3DArea
