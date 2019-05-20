@@ -321,7 +321,7 @@ namespace KyThuatDoHoa_Nhom9
 
                 DateTime dt = DateTime.Now;
                 clock = new Clock(new Point(580, 315), 15, dt);
-                clock.CurrentDatetime = dt;
+                clock.CurrentDatetime = new DateTime(2019, 05, 19, 12, 30, 15);
                 clock.Draw(this.picb_2DArea.CreateGraphics());
                 clock.PropertyChanged += Clock_PropertyChanged;
             }
@@ -341,7 +341,7 @@ namespace KyThuatDoHoa_Nhom9
 
         private void ClockProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            
+            clock.CurrentDatetime = clockProperties.CurrenTime;
         }
 
 
