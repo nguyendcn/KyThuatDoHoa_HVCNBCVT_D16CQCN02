@@ -250,6 +250,8 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 new int[] {1},
              };
 
+            
+
             int[][] newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
 
             _a.X = newPoint[0][0];

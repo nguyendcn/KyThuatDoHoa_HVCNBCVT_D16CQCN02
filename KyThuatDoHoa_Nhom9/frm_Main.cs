@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using KyThuatDoHoa_Nhom9.UI;
 using KyThuatDoHoa_Nhom9.Variables;
 using KyThuatDoHoa_Nhom9.Construct._2DObject;
+using KyThuatDoHoa_Nhom9.UI.UserCtr;
 
 namespace KyThuatDoHoa_Nhom9
 {
@@ -24,6 +25,9 @@ namespace KyThuatDoHoa_Nhom9
         public frm_Main()
         {
             InitializeComponent();
+
+            flagTimer = false;
+            hinhXe = new HinhXe();
 
             picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
@@ -292,6 +296,80 @@ namespace KyThuatDoHoa_Nhom9
             btn.BackColor = Color.BlueViolet;
         }
 
+        private void Button_MouseDown(object sender, MouseEventArgs e)
+        {
+            Button btn = sender as Button;
+            if(btn.Tag.Equals("Circle"))
+            {
+                CircleProperties circleProperties = new CircleProperties(this.pnl_Tb_2D.Size);
+                circleProperties.PropertyChanged += CircleProperties_PropertyChanged;
+                this.pnl_ToolBox.Controls.Add(circleProperties);
+                circleProperties.BringToFront();
+
+                ht = new HinhTron(new Point(550, 320), 10);
+                circleProperties.CoorOriginal = ToaDo.MayTinhNguoiDung(new Point(550, 320));
+                circleProperties.Radius = 10;
+                ht.Draw(picb_2DArea.CreateGraphics());
+                ht.PropertyChanged += Ht_PropertyChanged;
+            }
+            else if(btn.Tag.Equals("Clock"))
+            {
+                clockProperties = new ClockProperties(this.pnl_ToolBox.Size);
+
+                clockProperties.PropertyChanged += ClockProperties_PropertyChanged;
+                this.pnl_ToolBox.Controls.Add(clockProperties);
+                clockProperties.BringToFront();
+
+                DateTime dt = DateTime.Now;
+                clock = new Clock(new Point(550, 320), 15, dt);
+                clock.CurrentDatetime = dt;
+                clock.Draw(this.picb_2DArea.CreateGraphics());
+                clock.PropertyChanged += Clock_PropertyChanged;
+            }
+        }
+
+        Clock clock;
+        ClockProperties clockProperties;
+        private void Clock_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.picb_2DArea.Refresh();
+            clockProperties.CurrenTime = clock.CurrentDatetime;
+            clockProperties.HHours = clock.HHours;
+            clockProperties.HMinute = clock.HMinute;
+            clockProperties.HSecond = clock.HSecond;
+        }
+
+
+        private void ClockProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            
+        }
+
+
+
+        #region Circle action
+        HinhTron ht;
+        private void CircleProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (ht != null)
+            {
+                CircleProperties cp = (sender as CircleProperties);
+                if (e.PropertyName.Equals("radius"))
+                    ht.Radius = cp.Radius;
+                else if(e.PropertyName.Equals("coorOriginal"))
+                {
+                    ht.Point = ToaDo.NguoiDungMayTinh(cp.CoorOriginal);
+                }
+            }
+        }
+
+        private void Ht_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.picb_2DArea.Refresh();
+            (sender as HinhTron).Draw(this.picb_2DArea.CreateGraphics());
+        }
+        #endregion
+
 
         #endregion
 
@@ -376,6 +454,84 @@ namespace KyThuatDoHoa_Nhom9
         #endregion
 
 
+        Graphics g;
+        Graphics g1;
+        int y1 = 1, y2 = 5;
+        Point s = new Point(3, 3);
+        Point ep = new Point(15, 15);
+        Bitmap bmTemp;
+        bool test = false;
+        HinhChuNhat hinhChuNhat;
+        Clock cl;
+        Line line;
+        Timer tm = new Timer
+        {
+            Interval = 300
+        };
+
+        int x;
+        int y;
+
+        private void button37_Click(object sender, EventArgs e)
+        {
+            cl = new Clock(new Point(550, 320), 20, DateTime.Now);
+            cl.PropertyChanged += Cl_PropertyChanged;
+
+            //hinhChuNhat = new HinhChuNhat(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
+            ////line = new Line(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
+            //tm.Tick += timer1_Tick;
+            //tm.Start();
+        }
+
+        private void Cl_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            label4.Text = cl.CurrentDatetime.ToString();
+            test = true;
+            //this.Invalidate();
+            this.picb_2DArea.Refresh();
+        }
+        int i = 0, j = 0;
+        HinhXe hinhXe;
+        private bool flagTimer;
+        private void picb_2DArea_Paint(object sender, PaintEventArgs e)
+        {
+            //if (test)
+            //{
+            //    //line.Draw(e.Graphics);
+            //    //line.Rotate(new Point(550, 320), 20);
+            //    //hinhChuNhat.Draw(e.Graphics);
+            //    //hinhChuNhat.Rotate(new Point(550, 320), 90);
+            //    //cl.CurrentDatetime = DateTime.Now;
+            //    cl.Draw(e.Graphics);
+            //}
+            if(clock != null)
+                clock.Draw(e.Graphics);
+
+            hinhXe.traslationXe(i, j);
+            hinhXe.drawCar(e.Graphics);
+            i = i + 2;
+            j++;
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            flagTimer = true;
+            this.picb_2DArea.Refresh();
+        }
+
+        private void button38_Click(object sender, EventArgs e)
+        {
+            cl.CurrentDatetime = new DateTime(2019, 05, 18, 12, 30, 15);
+            cl.A = new Point(570, 315);
+            cl.R = 30
+;        }
+
+        private void button39_Click(object sender, EventArgs e)
+        {
+            this.timer1.Start();
+        }
+  
 
         private void picb_2DArea_MouseMove(object sender, MouseEventArgs e)
         {
