@@ -1070,7 +1070,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // timer1
             // 
-            this.timer1.Interval = 800;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frm_Main
