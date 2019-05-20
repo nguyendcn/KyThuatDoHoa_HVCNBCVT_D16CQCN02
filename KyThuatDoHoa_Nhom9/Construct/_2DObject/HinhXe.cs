@@ -11,6 +11,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
     {
         // danh sách các points để vẽ hình xe
         private Point[] lsPoint = new Point[25];
+
         // bán kính bánh xe
         private int bkBanh;
 
@@ -46,28 +47,22 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             // tâm bánh xe trước
             lsPoint[14] = new Point(310, 200);
 
-            lsPoint[19] = new Point(100, 180);
+            lsPoint[19] = new Point(100, 175);
 
-            quayQuanhMotDiemBatKy(ref lsPoint[19],lsPoint[13]);
+
+
             lsPoint[20] = new Point(120, 220);
 
             lsPoint[21] = new Point(80, 220);
 
 
-            lsPoint[22] = new Point(310, 180);
+            lsPoint[22] = new Point(310, 175);
             lsPoint[23] = new Point(330, 220);
             lsPoint[24] = new Point(290, 220);
             bkBanh = 25;
         }
 
-        // phép tịnh tiếng xe theo tọa độ x, y
-        public void traslationXe(int x, int y)
-        {
-            for (int i = 0; i < this.lsPoint.Length; i++)
-            {
-                tinhTien(ref this.lsPoint[i], x, y);
-            }
-        }
+        
         public void drawCar(Graphics g)
         {
             // vẽ gầm Car
@@ -138,31 +133,55 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
         // Quay 1 diem (x,y)quanh diem(xo,yo)1 goc a;
         // hàm quay quanh một điểm bất kỳ
-        public void quayQuanhMotDiemBatKy(ref Point ptVien, Point ptTam)
+        //public void quayQuanhMotDiemBatKy(ref Point ptVien, Point ptTam)
+        //{
+        //    Point Vien, Tam;
+
+        //    chuyển đổi hệ tọa độ máy sang hệ tọa độ người dùng
+        //    Vien = ToaDo.MayTinhNguoiDung(ptVien);
+        //    Tam = ToaDo.MayTinhNguoiDung(ptTam);
+
+        //    tịnh tiến Tam về gốc tọa độ, và Vien tương ứng
+        //    tinhTien(ref Tam, -1 * Tam.X, -1 * Tam.Y);
+        //    tinhTien(ref Vien, -1 * Tam.X, -1 * Tam.Y);
+
+        //    quay Vien quanh gộc tọa độ một góc 45 *
+        //  quayQuanhGocToaDo(ref Vien, 180);
+
+        //    tịnh tiến Tam về vị trí cụ và Vien tương ứng
+        //    tinhTien(ref Tam, Tam.X, Tam.Y);
+        //    tinhTien(ref Vien, Tam.X, Tam.Y);
+
+        //    chuyển đổi hệ tọa độ người dùng về lại hệ tọa độ máy tính
+
+
+        //    ptVien = ToaDo.NguoiDungMayTinh(Vien);
+
+        //}
+
+
+        // phép tịnh tiếng xe theo tọa độ x, y
+        public void traslationXe(int x, int y)
         {
-            Point Vien, Tam;
-
-            //chuyển đổi hệ tọa độ máy sang hệ tọa độ người dùng
-            Vien = ToaDo.MayTinhNguoiDung(ptVien);
-            Tam = ToaDo.MayTinhNguoiDung(ptTam);
-
-            // tịnh tiến Tam về gốc tọa độ, và Vien tương ứng
-            tinhTien(ref Tam, -1* Tam.X, -1* Tam.Y);
-            tinhTien(ref Vien, -1 * Tam.X, -1 * Tam.Y);
-
-            // quay  Vien quanh gộc tọa độ một góc 45*
-            quayQuanhGocToaDo(ref Vien, 180);
-
-            // tịnh tiến Tam về vị trí cụ và Vien tương ứng
-            tinhTien(ref Tam, Tam.X, Tam.Y);
-            tinhTien(ref Vien, Tam.X, Tam.Y);
-
-            //chuyển đổi hệ tọa độ người dùng về lại hệ tọa độ máy tính
-      
-            ptVien =  ToaDo.NguoiDungMayTinh(Vien);
-
+            for (int i = 0; i < this.lsPoint.Length; i++)
+            {
+                tinhTien(ref this.lsPoint[i], x, y);
+            }
         }
 
+
+        public void quayBanhXe(int goc)
+        {
+
+            lsPoint[19] = lsPoint[19].RotateAt(lsPoint[13], goc);
+            lsPoint[20] = lsPoint[20].RotateAt(lsPoint[13], goc);
+            lsPoint[21] = lsPoint[21].RotateAt(lsPoint[13], goc);
+
+            lsPoint[22] = lsPoint[22].RotateAt(lsPoint[14], goc);
+            lsPoint[23] = lsPoint[23].RotateAt(lsPoint[14], goc);
+            lsPoint[24] = lsPoint[24].RotateAt(lsPoint[14], goc);
+
+        }
         private Point nhanMT(double[,] matran, double[] mang)
         {
             double[] mangtam = new double[3];
@@ -190,21 +209,21 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             pn = nhanMT(matran2, matran1);
         }
 
-        // hàm quay tọa độ pn một góc quanh gốc tọa độ
-        private void quayQuanhGocToaDo(ref Point pn, int goc)
-        {
-            double sin, cos;
+        //// hàm quay tọa độ pn một góc quanh gốc tọa độ
+        //private void quayQuanhGocToaDo(ref Point pn, int goc)
+        //{
+        //    double sin, cos;
 
-            // tính toán sin, cos với góc đổi thành radian
-            sin = Math.Sin((Math.PI * goc) / 180);
-            cos = Math.Cos((Math.PI * goc) / 180);
-            double[] matran1 = new double[3] { pn.X, pn.Y, 1 };
-            // khởi tạo ma trận tịnh tiến
-            double[,] matran2 = new double[3, 3] { { cos,  sin , 0 },
-                                             { -1 * sin,  cos , 0 },
-                                             { 0  ,    0    , 1} };
+        //    // tính toán sin, cos với góc đổi thành radian
+        //    sin = Math.Sin((Math.PI * goc) / 180);
+        //    cos = Math.Cos((Math.PI * goc) / 180);
+        //    double[] matran1 = new double[3] { pn.X, pn.Y, 1 };
+        //    // khởi tạo ma trận tịnh tiến
+        //    double[,] matran2 = new double[3, 3] { { cos,  sin , 0 },
+        //                                     { -1 * sin,  cos , 0 },
+        //                                     { 0  ,    0    , 1} };
 
-            pn = nhanMT(matran2, matran1);
-        }
+        //    pn = nhanMT(matran2, matran1);
+        //}
     }
 }

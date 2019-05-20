@@ -28,7 +28,7 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             {
                 currenTime = value;
                 lbl_TimeCurrent.Text = value.ToString();
-                btn_GetTimeSystem.PerformClick();
+                //btn_GetTimeSystem.PerformClick();
             }
         }
         public Line HHours { get => _hHours;
@@ -56,9 +56,9 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             }
         }
 
-        private void btn_GetTimeSystem_Click(object sender, EventArgs e)
+        private void Btn_GetTimeSystem_Click(object sender, EventArgs e)
         {
-            
+            this.CurrenTime = DateTime.Now;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
