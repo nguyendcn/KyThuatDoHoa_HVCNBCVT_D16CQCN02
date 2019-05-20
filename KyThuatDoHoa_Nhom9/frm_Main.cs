@@ -513,6 +513,7 @@ namespace KyThuatDoHoa_Nhom9
             hinhXe.drawCar(e.Graphics);
             i = i + 2;
             j++;
+            hinhXe.quayBanhXe(30);
 
         }
 
