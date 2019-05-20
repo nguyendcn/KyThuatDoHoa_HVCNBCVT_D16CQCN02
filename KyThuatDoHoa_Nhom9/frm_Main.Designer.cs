@@ -29,6 +29,7 @@ namespace KyThuatDoHoa_Nhom9
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnl_Mode = new System.Windows.Forms.Panel();
             this.button38 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -104,6 +105,8 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation = new System.Windows.Forms.Panel();
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button39 = new System.Windows.Forms.Button();
             this.pnl_Mode.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_ToolBox.SuspendLayout();
@@ -123,6 +126,7 @@ namespace KyThuatDoHoa_Nhom9
             // pnl_Mode
             // 
             this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.pnl_Mode.Controls.Add(this.button39);
             this.pnl_Mode.Controls.Add(this.button38);
             this.pnl_Mode.Controls.Add(this.label4);
             this.pnl_Mode.Controls.Add(this.button37);
@@ -1049,6 +1053,21 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_3DArea.TabIndex = 0;
             this.picb_3DArea.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 800;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button39
+            // 
+            this.button39.Location = new System.Drawing.Point(147, 11);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(75, 23);
+            this.button39.TabIndex = 8;
+            this.button39.Text = "button39";
+            this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1167,6 +1186,8 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Button button37;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button38;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button39;
     }
 }
 

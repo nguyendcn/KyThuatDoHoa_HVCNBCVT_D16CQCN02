@@ -25,6 +25,9 @@ namespace KyThuatDoHoa_Nhom9
         {
             InitializeComponent();
 
+            flagTimer = false;
+            hinhXe = new HinhXe();
+
             picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
             //2D mode is startup;
@@ -465,6 +468,9 @@ namespace KyThuatDoHoa_Nhom9
             Interval = 300
         };
 
+        int x;
+        int y;
+
         private void button37_Click(object sender, EventArgs e)
         {
             cl = new Clock(new Point(550, 320), 20, DateTime.Now);
@@ -483,7 +489,9 @@ namespace KyThuatDoHoa_Nhom9
             //this.Invalidate();
             this.picb_2DArea.Refresh();
         }
-
+        int i = 0, j = 0;
+        HinhXe hinhXe;
+        private bool flagTimer;
         private void picb_2DArea_Paint(object sender, PaintEventArgs e)
         {
             //if (test)
@@ -498,12 +506,16 @@ namespace KyThuatDoHoa_Nhom9
             if(clock != null)
                 clock.Draw(e.Graphics);
 
+            hinhXe.traslationXe(i, j);
+            hinhXe.drawCar(e.Graphics);
+            i = i + 2;
+            j++;
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            test = true;
-            //this.Invalidate();
+            flagTimer = true;
             this.picb_2DArea.Refresh();
         }
 
@@ -514,6 +526,11 @@ namespace KyThuatDoHoa_Nhom9
             cl.R = 30
 ;        }
 
+        private void button39_Click(object sender, EventArgs e)
+        {
+            this.timer1.Start();
+        }
+  
 
         private void picb_2DArea_MouseMove(object sender, MouseEventArgs e)
         {
