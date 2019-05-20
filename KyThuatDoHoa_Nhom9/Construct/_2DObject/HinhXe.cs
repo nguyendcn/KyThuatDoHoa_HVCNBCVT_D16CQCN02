@@ -47,7 +47,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             // tâm bánh xe trước
             lsPoint[14] = new Point(310, 200);
 
-            lsPoint[19] = new Point(100, 180);
+            lsPoint[19] = new Point(100, 175);
 
 
 
@@ -56,7 +56,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             lsPoint[21] = new Point(80, 220);
 
 
-            lsPoint[22] = new Point(310, 180);
+            lsPoint[22] = new Point(310, 175);
             lsPoint[23] = new Point(330, 220);
             lsPoint[24] = new Point(290, 220);
             bkBanh = 25;
