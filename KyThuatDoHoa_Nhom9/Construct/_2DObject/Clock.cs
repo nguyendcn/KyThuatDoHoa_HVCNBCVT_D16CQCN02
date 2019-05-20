@@ -14,7 +14,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
     public class Clock : Shapes2DObject, INotifyPropertyChanged
     {
         private Point _a;
-        private int _r = 0;
+        private int _r;
         private DateTime currentDatetime;
 
         Timer tm = new Timer
@@ -138,7 +138,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             if(ht == null)
                 ht = new HinhTron(A, 11);
-            //ht.Draw(g);
+            ht.Draw(g);
             hHours.Draw(g);
             hMinute.Draw(g);
             hSecond.Draw(g);

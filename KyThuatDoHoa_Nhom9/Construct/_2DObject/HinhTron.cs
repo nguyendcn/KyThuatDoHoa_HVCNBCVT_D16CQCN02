@@ -69,7 +69,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         public HinhTron(Point point,int R)
         {
             this.point = point;
-            this.Radius = Radius * 5;
+            this.radius = R * 5;
         }
         public void Draw(Graphics g)
         {

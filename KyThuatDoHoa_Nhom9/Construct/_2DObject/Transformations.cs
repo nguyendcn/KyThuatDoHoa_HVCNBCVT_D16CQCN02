@@ -77,6 +77,24 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             return matrix;
         }
 
+        private static double[,] SetUpForMatrixTranslate(this double[,] matrix, Point d)
+        {
+            if (matrix.Length == 0 || matrix == null)
+            {
+                matrix = new double[3, 3] {
+                   { 1, 0, d.X},
+                   { 0, 1, d.Y},
+                   { 0, 0, 1}
+                };
+                return matrix;
+            }
+
+            matrix[0, 0] = 1; matrix[0, 1] = 0; matrix[0, 2] = d.X;
+            matrix[1, 0] = 0; matrix[1, 1] = 1; matrix[1, 2] = d.Y;
+            matrix[2, 0] = 0; matrix[2, 1] = 0; matrix[2, 2] = 1;
+            return matrix;
+        }
+
         /// <summary>
         /// Matrix Translation To Original Coordinate
         /// </summary>
@@ -140,7 +158,18 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             Point kq = pt2.ToBig();
             return kq;
         }
-        
 
+        public static Point Translate(this Point d1, Point d2)
+        {
+            double[] arr = new double[3];
+            double[,] matrix = new double[3, 3];
+
+            arr = d1.ConvertToMatrix();
+            matrix = matrix.SetUpForMatrixTranslate(new Point(d2.X - d1.X, d2.Y - d1.Y));
+            Point p = GetNewPointByMulMatixs(matrix, arr);
+
+            return p;
+        }
+        
     }
 }
