@@ -12,7 +12,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
     {
         public static Point ToSmall(this Point p)
         {
-            return (new Point(p.X / 5 - 40, 40 - p.Y / 5));//voi x va y deu chia het cho 5
+            return (new Point(p.X / 5 - 40,  40 - p.Y / 5));//voi x va y deu chia het cho 5
         }
 
         public static Point ToBig(this Point p)//nho ra lon
