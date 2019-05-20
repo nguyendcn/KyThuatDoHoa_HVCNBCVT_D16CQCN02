@@ -312,6 +312,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 14;
+            this.button10.Tag = "TimePiece";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.Button_Click);
             this.button10.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
@@ -325,6 +326,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(50, 50);
             this.button11.TabIndex = 13;
+            this.button11.Tag = "Pendulum";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.Button_Click);
             this.button11.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
@@ -1053,6 +1055,7 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
             this.picb_2DArea.TabIndex = 1;
             this.picb_2DArea.TabStop = false;
+            this.picb_2DArea.SizeChanged += new System.EventHandler(this.picb_2DArea_SizeChanged);
             this.picb_2DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.picb_2DArea_Paint);
             this.picb_2DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picb_2DArea_MouseMove);
             // 

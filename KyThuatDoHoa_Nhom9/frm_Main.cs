@@ -20,12 +20,11 @@ namespace KyThuatDoHoa_Nhom9
     {
         private Bitmap bm;
         private Graphics grp;
-
-   
+         
         public frm_Main()
         {
             InitializeComponent();
-            
+
             flagTimer = false;
             hinhXe = new HinhXe();
 
@@ -35,7 +34,6 @@ namespace KyThuatDoHoa_Nhom9
             Setup_Toolbar(Globals._Mode_current);
 
             Setup_ToolTips();
-          
         }
 
 
@@ -134,7 +132,6 @@ namespace KyThuatDoHoa_Nhom9
                     this.btn_Toolbar.Text = Collection_Strs._2D_shapes;
                 this.btn_Toolbar.Image = Image_Res._2D_Model_25px;
                 picb_2DArea.BringToFront();
-
             }
             else if (mode == Constants.Mode._3D)
             {
@@ -323,7 +320,7 @@ namespace KyThuatDoHoa_Nhom9
                 clockProperties.BringToFront();
 
                 DateTime dt = DateTime.Now;
-                clock = new Clock(new Point(550, 320), 15, dt);
+                clock = new Clock(new Point(580, 315), 15, dt);
                 clock.CurrentDatetime = dt;
                 clock.Draw(this.picb_2DArea.CreateGraphics());
                 clock.PropertyChanged += Clock_PropertyChanged;
@@ -529,23 +526,17 @@ namespace KyThuatDoHoa_Nhom9
             cl.R = 30
 ;        }
 
-        private void lblX1_Click(object sender, EventArgs e)
+        private void picb_2DArea_SizeChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            Variables.Globals.sizeOfNewCoor_2D.Width = ReturnEvenNumber(picb_2DArea.Width / Variables.Globals.sizePerPoint.Width);
+            Variables.Globals.sizeOfNewCoor_2D.Height = ReturnEvenNumber(picb_2DArea.Height / Variables.Globals.sizePerPoint.Height);
         }
 
         private void button39_Click(object sender, EventArgs e)
         {
             this.timer1.Start();
-     
-
         }
-
+  
 
         private void picb_2DArea_MouseMove(object sender, MouseEventArgs e)
         {
@@ -573,7 +564,6 @@ namespace KyThuatDoHoa_Nhom9
             lblX4.Text = p.X.ToString();
             lblY4.Text = p.Y.ToString();
         }
-       
 
     }
 }

@@ -58,6 +58,7 @@
     <Compile Include="Construct\_2DObject\HinhXe.cs" />
     <Compile Include="Construct\_2DObject\Line.cs" />
     <Compile Include="Construct\_2DObject\HinhChuNhat.cs" />
+    <Compile Include="Construct\_2DObject\Pendulum.cs" />
     <Compile Include="Construct\_2DObject\Square.cs" />
     <Compile Include="Construct\_2DObject\Transformations.cs" />
     <Compile Include="UI\UserCtr\ChooseMode.cs">
