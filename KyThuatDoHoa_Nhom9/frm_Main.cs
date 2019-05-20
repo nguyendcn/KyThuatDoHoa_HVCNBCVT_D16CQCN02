@@ -511,11 +511,11 @@ namespace KyThuatDoHoa_Nhom9
 
             hinhXe.traslationXe(i, j);
             hinhXe.drawCar(e.Graphics);
+
             i = i + 5;
             j = j + 5;
-            
-            hinhXe.quayBanhXe(30);
 
+            hinhXe.quayBanhXe(30);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -540,11 +540,10 @@ namespace KyThuatDoHoa_Nhom9
         {
 
         }
-
         private void button39_Click(object sender, EventArgs e)
         {
             this.timer1.Start();
-     
+         
 
         }
 
