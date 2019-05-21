@@ -32,6 +32,7 @@ namespace KyThuatDoHoa_Nhom9
             // Tạo quả lắc theo kích thước cho trước
             pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
             pendulum.SetAlpha(-3); // set góc quay alpha 
+            pendulum.PropertyChanged += Pendulum_PropertyChanged;
 
             picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
@@ -40,6 +41,11 @@ namespace KyThuatDoHoa_Nhom9
 
             Setup_ToolTips();
           
+        }
+
+        private void Pendulum_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.picb_2DArea.Refresh();
         }
 
 
@@ -513,8 +519,8 @@ namespace KyThuatDoHoa_Nhom9
             //    cl.Draw(e.Graphics);
             //}
 
-            //if(clock != null)
-            //    clock.Draw(e.Graphics);
+            if (clock != null)
+                clock.Draw(e.Graphics);
 
             pendulum.Draw(e.Graphics);
 
@@ -557,9 +563,15 @@ namespace KyThuatDoHoa_Nhom9
         {
 
         }
+
+        private void button40_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button39_Click(object sender, EventArgs e)
         {
-            this.timer1.Start();
+            //this.timer1.Start();
          
 
         }
