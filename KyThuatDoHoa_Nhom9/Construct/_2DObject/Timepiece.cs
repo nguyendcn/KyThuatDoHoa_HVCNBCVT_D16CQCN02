@@ -11,7 +11,29 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 {
     public class Timepiece : Shapes2DObject, INotifyPropertyChanged
     {
+        private Point location;
+        private DateTime time;
+        private Clock clock;
+        private Pendulum pendulum;
+
+        public Point Location { get => location; set => location = value; }
+        public DateTime Time { get => time; set => time = value; }
+
         public event PropertyChangedEventHandler PropertyChanged;
+
+
+
+        public Timepiece()
+        {
+            this.Location = new Point(0, 0);
+            this.Time = DateTime.Now;
+        }
+
+        public Timepiece(DateTime time, Point location)
+        {
+            this.Location = location;
+            this.Time = time;
+        }
 
         public void Draw(Graphics g)
         {
