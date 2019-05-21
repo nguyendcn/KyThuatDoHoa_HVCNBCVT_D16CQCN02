@@ -13,12 +13,14 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         private Point point { get; set; }
         private int a { get; set; }
         private int b { get; set; }
+
+        private Color color { get; set; }
         public void Drawn4Point(int x,int y,Graphics g)
         {
-            ToaDo.HienThi(point.X + x, point.Y + y, g);
-            ToaDo.HienThi(point.X - x, point.Y + y, g);
-            ToaDo.HienThi(point.X - x, point.Y - y, g);
-            ToaDo.HienThi(point.X + x, point.Y - y, g);
+            ToaDo.HienThi(point.X + x, point.Y + y, g, color);
+            ToaDo.HienThi(point.X - x, point.Y + y, g, color);
+            ToaDo.HienThi(point.X - x, point.Y - y, g, color);
+            ToaDo.HienThi(point.X + x, point.Y - y, g, color);
         }
         public void Draw(Graphics g)
         {
@@ -65,6 +67,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             this.point = point;
             this.a = a * 5;
             this.b = b * 5;
+            this.color = Color.Black;
         }
         public void Init(Point start, Point end, Size sizeOfLine, Color color)
         {

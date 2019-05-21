@@ -511,12 +511,14 @@ namespace KyThuatDoHoa_Nhom9
                 clock.Draw(e.Graphics);
 
             hinhXe.traslationXe(i, j);
+            hinhXe.ToMau(e.Graphics);
             hinhXe.drawCar(e.Graphics);
+          
 
             i = i + 5;
             j = j + 5;
 
-            hinhXe.quayBanhXe(30);
+            hinhXe.quayBanhXe(45);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -527,10 +529,12 @@ namespace KyThuatDoHoa_Nhom9
 
         private void button38_Click(object sender, EventArgs e)
         {
-            cl.CurrentDatetime = new DateTime(2019, 05, 18, 12, 30, 15);
-            cl.A = new Point(570, 315);
-            cl.R = 30
-;        }
+            XeProperties x = new XeProperties();
+           //  x.Size = this.pnl_ToolBox.Size;
+            this.pnl_ToolBox.Controls.Add(x);
+            x.BringToFront();
+            
+        }
 
         private void picb_2DArea_SizeChanged(object sender, EventArgs e)
         {
