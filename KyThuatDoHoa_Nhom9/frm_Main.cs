@@ -29,6 +29,11 @@ namespace KyThuatDoHoa_Nhom9
             flagTimer = false;
             hinhXe = new HinhXe();
 
+            // Tạo quả lắc theo kích thước cho trước
+            pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
+            pendulum.SetAlpha(-3); // set góc quay alpha 
+            pendulum.PropertyChanged += Pendulum_PropertyChanged;
+
             picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
             //2D mode is startup;
@@ -36,6 +41,11 @@ namespace KyThuatDoHoa_Nhom9
 
             Setup_ToolTips();
           
+        }
+
+        private void Pendulum_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.picb_2DArea.Refresh();
         }
 
 
@@ -316,10 +326,11 @@ namespace KyThuatDoHoa_Nhom9
             }
             else if(btn.Tag.Equals("Clock"))
             {
-                clockProperties = new ClockProperties(this.pnl_ToolBox.Size);
+                clockProperties = new ClockProperties();
 
                 clockProperties.PropertyChanged += ClockProperties_PropertyChanged;
                 this.pnl_ToolBox.Controls.Add(clockProperties);
+                clockProperties.Refresh();
                 clockProperties.BringToFront();
 
                 DateTime dt = DateTime.Now;
@@ -335,7 +346,7 @@ namespace KyThuatDoHoa_Nhom9
         private void Clock_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             this.picb_2DArea.Refresh();
-            clockProperties.CurrenTime = clock.CurrentDatetime;
+            clockProperties.CurrentTime = clock.CurrentDatetime;
             clockProperties.HHours = clock.HHours;
             clockProperties.HMinute = clock.HMinute;
             clockProperties.HSecond = clock.HSecond;
@@ -344,7 +355,7 @@ namespace KyThuatDoHoa_Nhom9
 
         private void ClockProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            clock.CurrentDatetime = clockProperties.CurrenTime;
+            clock.CurrentDatetime = clockProperties.CurrentTime;
         }
 
 
@@ -446,7 +457,7 @@ namespace KyThuatDoHoa_Nhom9
             ////pnl_WorkStation.Refresh();
             //if (chkLuoiPixel.Checked)
             //{
-            //    VeLuoiPixel(new Pen(Color.Red));
+               // VeLuoiPixel(new Pen(Color.Red));
             //}
 
             //grp = picb_2DArea.CreateGraphics();
@@ -494,6 +505,7 @@ namespace KyThuatDoHoa_Nhom9
         }
         int i = 0, j = 0;
         HinhXe hinhXe;
+        Pendulum pendulum;
         private bool flagTimer;
         private void picb_2DArea_Paint(object sender, PaintEventArgs e)
         {
@@ -506,16 +518,19 @@ namespace KyThuatDoHoa_Nhom9
             //    //cl.CurrentDatetime = DateTime.Now;
             //    cl.Draw(e.Graphics);
             //}
-            if(clock != null)
+
+            if (clock != null)
                 clock.Draw(e.Graphics);
 
-            hinhXe.traslationXe(i, j);
-            hinhXe.drawCar(e.Graphics);
+            pendulum.Draw(e.Graphics);
 
-            i = i + 5;
-            j = j + 5;
+            //hinhXe.traslationXe(i, j);
+            //hinhXe.drawCar(e.Graphics);
 
-            hinhXe.quayBanhXe(30);
+            //i = i + 5;
+            //j = j + 5;
+
+            //hinhXe.quayBanhXe(30);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -526,10 +541,12 @@ namespace KyThuatDoHoa_Nhom9
 
         private void button38_Click(object sender, EventArgs e)
         {
-            cl.CurrentDatetime = new DateTime(2019, 05, 18, 12, 30, 15);
-            cl.A = new Point(570, 315);
-            cl.R = 30
-;        }
+            XeProperties x = new XeProperties();
+           //  x.Size = this.pnl_ToolBox.Size;
+            this.pnl_ToolBox.Controls.Add(x);
+            x.BringToFront();
+            
+        }
 
         private void picb_2DArea_SizeChanged(object sender, EventArgs e)
         {
@@ -546,9 +563,15 @@ namespace KyThuatDoHoa_Nhom9
         {
 
         }
+
+        private void button40_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button39_Click(object sender, EventArgs e)
         {
-            this.timer1.Start();
+            //this.timer1.Start();
          
 
         }

@@ -61,6 +61,13 @@
     <Compile Include="Construct\_2DObject\Pendulum.cs" />
     <Compile Include="Construct\_2DObject\Square.cs" />
     <Compile Include="Construct\_2DObject\Transformations.cs" />
+    <Compile Include="Construct\_3DObject\HinhHopChuNhat.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserCtr\ChooseMode.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,6 +85,12 @@
     </Compile>
     <Compile Include="UI\UserCtr\ClockProperties.Designer.cs">
       <DependentUpon>ClockProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserCtr\XeProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserCtr\XeProperties.Designer.cs">
+      <DependentUpon>XeProperties.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables\CodeFile1.cs" />
     <Compile Include="Variables\Collection_Strs.cs" />
@@ -102,6 +115,9 @@
     </Compile>
     <Compile Include="Variables\Constants.cs" />
     <Compile Include="Variables\Globals.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserCtr\ClockProperties.resx">
       <DependentUpon>ClockProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserCtr\XeProperties.resx">
+      <DependentUpon>XeProperties.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -227,9 +246,7 @@
   <ItemGroup>
     <None Include="Resources\Diamonds_32px.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Construct\_3DObject\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Note.txt" />
   </ItemGroup>
