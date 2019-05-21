@@ -69,3 +69,4 @@ D:\Git\C#\KyThuatDoHoa\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.pdb
 D:\Git\C#\KyThuatDoHoa\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.exe.config
 D:\Git\C#\KyThuatDoHoa\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.exe
 D:\Git\C#\KyThuatDoHoa\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.pdb
+D:\Git\C#\KyThuatDoHoa\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.Form1.resources

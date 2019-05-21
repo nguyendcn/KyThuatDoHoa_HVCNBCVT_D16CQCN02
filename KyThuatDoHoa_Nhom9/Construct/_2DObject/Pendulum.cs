@@ -35,17 +35,17 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             hinhNhat.Draw(g);
 
-            this.line.B = this.line.B.RotateAt(this.line.A, alpha);
-            this.hinhTron.Point = this.hinhTron.Point.RotateAt(this.line.A, alpha);
+            this.line.B = Transformations.RotateAt(this.line.B, this.line.A, alpha);
+            this.hinhTron.Point = Transformations.RotateAt(this.hinhTron.Point, this.line.A, alpha);
             if (!check())
             {
                 this.alpha = -this.alpha;
 
-                this.line.B = this.line.B.RotateAt(this.line.A, alpha);
-                this.hinhTron.Point = this.hinhTron.Point.RotateAt(this.line.A, alpha);
+                this.line.B = Transformations.RotateAt(this.line.B, this.line.A, alpha);
+                this.hinhTron.Point = Transformations.RotateAt(this.hinhTron.Point, this.line.A, alpha);
 
-                this.line.B = this.line.B.RotateAt(this.line.A, alpha);
-                this.hinhTron.Point = this.hinhTron.Point.RotateAt(this.line.A, alpha);
+                this.line.B = Transformations.RotateAt(this.line.B, this.line.A, alpha);
+                this.hinhTron.Point = Transformations.RotateAt(this.hinhTron.Point, this.line.A, alpha);
             }
 
             line.Draw(g);

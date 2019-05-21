@@ -450,7 +450,7 @@ namespace KyThuatDoHoa_Nhom9
             ////pnl_WorkStation.Refresh();
             //if (chkLuoiPixel.Checked)
             //{
-            //    VeLuoiPixel(new Pen(Color.Red));
+               // VeLuoiPixel(new Pen(Color.Red));
             //}
 
             //grp = picb_2DArea.CreateGraphics();
