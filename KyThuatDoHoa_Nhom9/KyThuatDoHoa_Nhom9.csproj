@@ -60,6 +60,7 @@
     <Compile Include="Construct\_2DObject\HinhChuNhat.cs" />
     <Compile Include="Construct\_2DObject\Pendulum.cs" />
     <Compile Include="Construct\_2DObject\Square.cs" />
+    <Compile Include="Construct\_2DObject\Timepiece.cs" />
     <Compile Include="Construct\_2DObject\Transformations.cs" />
     <Compile Include="Construct\_3DObject\HinhHopChuNhat.cs" />
     <Compile Include="Form1.cs">
