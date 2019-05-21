@@ -524,13 +524,13 @@ namespace KyThuatDoHoa_Nhom9
 
             pendulum.Draw(e.Graphics);
 
-            //hinhXe.traslationXe(i, j);
-            //hinhXe.drawCar(e.Graphics);
+            hinhXe.traslationXe(i, j);
+            hinhXe.drawCar(e.Graphics);
 
-            //i = i + 5;
-            //j = j + 5;
+            i = i + 5;
+            j = j + 5;
 
-            //hinhXe.quayBanhXe(30);
+            hinhXe.quayBanhXe(30);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
