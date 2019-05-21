@@ -16,13 +16,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
     {
         private Point _a, _b;
         private Size sizeOfLine;
-        private Color colorOfLine;
+        private Color color;
         private float angle = 0;
 
         public Point A { get => _a; set => _a = value; }
         public Point B { get => _b; set => _b = value; }
         public Size SizeOfLine { get => sizeOfLine; set => sizeOfLine = value; }
-        public Color ColorOfLine { get => colorOfLine; set => colorOfLine = value; }
+        public Color ColorOfLine { get => color; set => color = value; }
 
         /// <summary>
         /// Constructor of Line.
@@ -42,6 +42,8 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             this.A = a;
             this.B = b;
+            this.color = Color.Black;
+
         }
 
         public void setAngle(float angle)
@@ -78,7 +80,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 y = this.A.Y;
                 while (y <= this.B.Y)
                 {
-                    ToaDo.HienThi(new Point(this.A.X, y), g);
+                    ToaDo.HienThi(new Point(this.A.X, y), g, color);
                     y += 5;
                 }
                 return;
@@ -91,7 +93,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 x = this.A.X;
                 while (x <= this.B.X)
                 {
-                    ToaDo.HienThi(new Point(x, this.A.Y), g);
+                    ToaDo.HienThi(new Point(x, this.A.Y), g, color);
                     x += 5;
                 }
                 return;
@@ -110,7 +112,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 p = 2 * Dy - Dx;
                 while (x <= this.B.X)
                 {
-                    ToaDo.HienThi(new Point(x, y), g);
+                    ToaDo.HienThi(new Point(x, y), g, color);
                     x += 5;
                     if (p < 0)
                         p = p + 2 * Dy;
@@ -135,7 +137,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 p = 2 * Dy + Dx;
                 while (x <= this.B.X)
                 {
-                    ToaDo.HienThi(new Point(x, y), g);
+                    ToaDo.HienThi(new Point(x, y), g, color);
                     x += 5;
                     if (p < 0)
                     {
@@ -160,7 +162,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 p = 2 * Dx - Dy;
                 while (y <= this.B.Y)
                 {
-                    ToaDo.HienThi(new Point(x, y), g);
+                    ToaDo.HienThi(new Point(x, y), g, color);
                     y += 5;
                     if (p < 0)
                         p = p + 2 * Dx;
@@ -185,7 +187,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 p = 2 * Dx + Dy;
                 while (y <= this.B.Y)
                 {
-                    ToaDo.HienThi(new Point(x, y), g);
+                    ToaDo.HienThi(new Point(x, y), g, color);
                     y += 5;
                     if (p < 0)
                     {

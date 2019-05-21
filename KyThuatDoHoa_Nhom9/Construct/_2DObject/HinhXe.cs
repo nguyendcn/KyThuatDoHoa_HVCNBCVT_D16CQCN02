@@ -47,24 +47,26 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             // tâm bánh xe trước
             lsPoint[14] = new Point(310, 200);
 
-            lsPoint[19] = new Point(100, 175);
+            lsPoint[19] = new Point(100, 180);
 
 
 
-            lsPoint[20] = new Point(120, 220);
+            lsPoint[20] = new Point(120, 215);
 
-            lsPoint[21] = new Point(80, 220);
+            lsPoint[21] = new Point(80, 215);
 
 
-            lsPoint[22] = new Point(310, 175);
-            lsPoint[23] = new Point(330, 220);
-            lsPoint[24] = new Point(290, 220);
+            lsPoint[22] = new Point(310, 180);
+            lsPoint[23] = new Point(330, 215);
+            lsPoint[24] = new Point(290, 215);
             bkBanh = 25;
         }
 
         
         public void drawCar(Graphics g)
         {
+            // tô màu trước
+
             // vẽ gầm Car
             Line lnGamXe1 = new Line(this.lsPoint[1], this.lsPoint[15]);
             lnGamXe1.Draw(g);
@@ -113,10 +115,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
             // vẽ tăm bánh xe sau
             Line tamSau1 = new Line(this.lsPoint[13], this.lsPoint[19]);
+            tamSau1.ColorOfLine = Color.DarkRed;
             tamSau1.Draw(g);
             Line tamSau2 = new Line(this.lsPoint[13], this.lsPoint[20]);
+            tamSau2.ColorOfLine = Color.DarkRed;
             tamSau2.Draw(g);
             Line tamSau3 = new Line(this.lsPoint[13], this.lsPoint[21]);
+            tamSau3.ColorOfLine = Color.DarkRed;
             tamSau3.Draw(g);
             // vẽ bánh xe trước
             HinhTron htTruoc = new HinhTron(this.bkBanh, this.lsPoint[14], Color.Black);
@@ -124,41 +129,43 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
             // vẽ tăm bánh xe trước
             Line tamTruoc1 = new Line(this.lsPoint[14], this.lsPoint[22]);
+            tamTruoc1.ColorOfLine = Color.DarkRed;
             tamTruoc1.Draw(g);
             Line tamTruoc2 = new Line(this.lsPoint[14], this.lsPoint[23]);
+            tamTruoc2.ColorOfLine = Color.DarkRed;
             tamTruoc2.Draw(g);
             Line tamTruoc3 = new Line(this.lsPoint[14], this.lsPoint[24]);
+            tamTruoc3.ColorOfLine = Color.DarkRed;
             tamTruoc3.Draw(g);
         }
+        public void ToMau(Graphics g) 
+        {
+            // Create solid brush.
+            SolidBrush brush = new SolidBrush(Color.Purple);
+            SolidBrush brush1 = new SolidBrush(Color.LawnGreen);
+            SolidBrush  brush2 = new SolidBrush(Color.Orange);
+            SolidBrush brush3 = new SolidBrush(Color.Chocolate);
+            // Create points that define polygon.
+            // tô màu bên ngoài
+            Point[] curvePoints = { this.lsPoint[1], this.lsPoint[0],
+                this.lsPoint[2], this.lsPoint[3], this.lsPoint[4], this.lsPoint[5],
+                this.lsPoint[6], this.lsPoint[7], this.lsPoint[1] };
+            // tô màu hình chữ nhật
+            Point d1 = new Point(this.lsPoint[8].X, this.lsPoint[9].Y);
+            Point d2 = new Point(this.lsPoint[9].X, this.lsPoint[8].Y);
+            Point[] curvePoints1 = {this.lsPoint[8],  d1, this.lsPoint[9], d2, this.lsPoint[8] };
 
-        // Quay 1 diem (x,y)quanh diem(xo,yo)1 goc a;
-        // hàm quay quanh một điểm bất kỳ
-        //public void quayQuanhMotDiemBatKy(ref Point ptVien, Point ptTam)
-        //{
-        //    Point Vien, Tam;
+            // tô màu hình tam giác 
+            Point[] curvePoints2 = { this.lsPoint[10], this.lsPoint[11], this.lsPoint[12], this.lsPoint[10]};
 
-        //    chuyển đổi hệ tọa độ máy sang hệ tọa độ người dùng
-        //    Vien = ToaDo.MayTinhNguoiDung(ptVien);
-        //    Tam = ToaDo.MayTinhNguoiDung(ptTam);
-
-        //    tịnh tiến Tam về gốc tọa độ, và Vien tương ứng
-        //    tinhTien(ref Tam, -1 * Tam.X, -1 * Tam.Y);
-        //    tinhTien(ref Vien, -1 * Tam.X, -1 * Tam.Y);
-
-        //    quay Vien quanh gộc tọa độ một góc 45 *
-        //  quayQuanhGocToaDo(ref Vien, 180);
-
-        //    tịnh tiến Tam về vị trí cụ và Vien tương ứng
-        //    tinhTien(ref Tam, Tam.X, Tam.Y);
-        //    tinhTien(ref Vien, Tam.X, Tam.Y);
-
-        //    chuyển đổi hệ tọa độ người dùng về lại hệ tọa độ máy tính
-
-
-        //    ptVien = ToaDo.NguoiDungMayTinh(Vien);
-
-        //}
-
+            
+            // Draw polygon to screen.
+            g.FillPolygon(brush, curvePoints);
+            g.FillPolygon(brush1, curvePoints1);
+            g.FillPolygon(brush2, curvePoints2);
+            g.FillEllipse(brush3, this.lsPoint[13].X - 28, this.lsPoint[13].Y - 28, 55, 55);
+            g.FillEllipse(brush3, this.lsPoint[14].X - 28, this.lsPoint[14].Y - 28, 55, 55);
+        }
 
         // phép tịnh tiếng xe theo tọa độ x, y
         public void traslationXe(int x, int y)
@@ -209,21 +216,5 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             pn = nhanMT(matran2, matran1);
         }
 
-        //// hàm quay tọa độ pn một góc quanh gốc tọa độ
-        //private void quayQuanhGocToaDo(ref Point pn, int goc)
-        //{
-        //    double sin, cos;
-
-        //    // tính toán sin, cos với góc đổi thành radian
-        //    sin = Math.Sin((Math.PI * goc) / 180);
-        //    cos = Math.Cos((Math.PI * goc) / 180);
-        //    double[] matran1 = new double[3] { pn.X, pn.Y, 1 };
-        //    // khởi tạo ma trận tịnh tiến
-        //    double[,] matran2 = new double[3, 3] { { cos,  sin , 0 },
-        //                                     { -1 * sin,  cos , 0 },
-        //                                     { 0  ,    0    , 1} };
-
-        //    pn = nhanMT(matran2, matran1);
-        //}
     }
 }

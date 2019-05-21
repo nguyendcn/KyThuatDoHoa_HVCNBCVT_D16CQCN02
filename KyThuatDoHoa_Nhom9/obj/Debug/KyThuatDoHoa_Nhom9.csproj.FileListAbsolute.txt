@@ -54,3 +54,4 @@ C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDo
 C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.ChooseMode.resources
 C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.CircleProperties.resources
 C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.ClockProperties.resources
+C:\Users\PhongNT\source\repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.XeProperties.resources
