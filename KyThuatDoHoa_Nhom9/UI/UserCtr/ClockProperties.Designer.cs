@@ -124,6 +124,7 @@
             this.btn_GetTimeSystem.TabIndex = 8;
             this.btn_GetTimeSystem.Text = "Sys Time";
             this.btn_GetTimeSystem.UseVisualStyleBackColor = true;
+            this.btn_GetTimeSystem.Click += new System.EventHandler(this.Btn_GetTimeSystem_Click);
             // 
             // btn_ChangeTime
             // 

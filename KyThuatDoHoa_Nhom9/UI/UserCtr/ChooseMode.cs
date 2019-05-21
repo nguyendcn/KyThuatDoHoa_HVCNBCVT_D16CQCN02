@@ -22,7 +22,8 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
         public ChooseMode(Variables.Constants.Mode _mode)
         {
             InitializeComponent();
-
+            // xem cách sử dụng user control và component nữa, còn nhiều cái 
+            // phải học đối với C# ở trong đó.....
             this.Return_Mode = _mode;
             SetFocusButton(_mode);
 

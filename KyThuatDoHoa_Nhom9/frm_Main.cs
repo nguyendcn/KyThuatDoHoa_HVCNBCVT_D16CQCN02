@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -21,23 +20,24 @@ namespace KyThuatDoHoa_Nhom9
     {
         private Bitmap bm;
         private Graphics grp;
-         
+
+   
         public frm_Main()
         {
             InitializeComponent();
-
+            
             flagTimer = false;
             hinhXe = new HinhXe();
-            pendulum = new Pendulum(new Point(200,50), new Point(400,450));
-            //pendulum.SetAlpha(3);
+
             picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
             //2D mode is startup;
             Setup_Toolbar(Globals._Mode_current);
 
             Setup_ToolTips();
-            
+          
         }
+
 
         #region Function
 
@@ -134,6 +134,7 @@ namespace KyThuatDoHoa_Nhom9
                     this.btn_Toolbar.Text = Collection_Strs._2D_shapes;
                 this.btn_Toolbar.Image = Image_Res._2D_Model_25px;
                 picb_2DArea.BringToFront();
+
             }
             else if (mode == Constants.Mode._3D)
             {
@@ -323,7 +324,7 @@ namespace KyThuatDoHoa_Nhom9
 
                 DateTime dt = DateTime.Now;
                 clock = new Clock(new Point(580, 315), 15, dt);
-                clock.CurrentDatetime = dt;
+                clock.CurrentDatetime = new DateTime(2019, 05, 19, 12, 30, 15);
                 clock.Draw(this.picb_2DArea.CreateGraphics());
                 clock.PropertyChanged += Clock_PropertyChanged;
             }
@@ -343,7 +344,7 @@ namespace KyThuatDoHoa_Nhom9
 
         private void ClockProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            
+            clock.CurrentDatetime = clockProperties.CurrenTime;
         }
 
 
@@ -493,7 +494,6 @@ namespace KyThuatDoHoa_Nhom9
         }
         int i = 0, j = 0;
         HinhXe hinhXe;
-        Pendulum pendulum;
         private bool flagTimer;
         private void picb_2DArea_Paint(object sender, PaintEventArgs e)
         {
@@ -506,17 +506,16 @@ namespace KyThuatDoHoa_Nhom9
             //    //cl.CurrentDatetime = DateTime.Now;
             //    cl.Draw(e.Graphics);
             //}
+            if(clock != null)
+                clock.Draw(e.Graphics);
 
-            pendulum.Draw(e.Graphics);
+            hinhXe.traslationXe(i, j);
+            hinhXe.drawCar(e.Graphics);
 
-            //if (clock != null)
-            //    clock.Draw(e.Graphics);
+            i = i + 5;
+            j = j + 5;
 
-            //hinhXe.traslationXe(i, j);
-            //hinhXe.drawCar(e.Graphics);
-            //i = i + 2;
-            //j++;
-
+            hinhXe.quayBanhXe(30);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -538,17 +537,22 @@ namespace KyThuatDoHoa_Nhom9
             Variables.Globals.sizeOfNewCoor_2D.Height = ReturnEvenNumber(picb_2DArea.Height / Variables.Globals.sizePerPoint.Height);
         }
 
-        private void Button40_Click(object sender, EventArgs e)
+        private void lblX1_Click(object sender, EventArgs e)
         {
-            Graphics gzg = picb_2DArea.CreateGraphics();
-            pendulum.Draw(gzg);
+
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
         private void button39_Click(object sender, EventArgs e)
         {
             this.timer1.Start();
+         
+
         }
-  
+
 
         private void picb_2DArea_MouseMove(object sender, MouseEventArgs e)
         {
@@ -576,5 +580,7 @@ namespace KyThuatDoHoa_Nhom9
             lblX4.Text = p.X.ToString();
             lblY4.Text = p.Y.ToString();
         }
+       
+
     }
 }

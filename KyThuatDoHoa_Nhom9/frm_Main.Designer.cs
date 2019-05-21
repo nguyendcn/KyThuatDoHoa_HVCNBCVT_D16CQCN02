@@ -962,6 +962,7 @@ namespace KyThuatDoHoa_Nhom9
             this.label3.Size = new System.Drawing.Size(71, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Lưới Pixel";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblY1
             // 
@@ -1007,6 +1008,7 @@ namespace KyThuatDoHoa_Nhom9
             this.lblX1.Size = new System.Drawing.Size(45, 19);
             this.lblX1.TabIndex = 3;
             this.lblX1.Text = "label3";
+            this.lblX1.Click += new System.EventHandler(this.lblX1_Click);
             // 
             // panel5
             // 
@@ -1070,7 +1072,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // timer1
             // 
-            this.timer1.Interval = 800;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button40
