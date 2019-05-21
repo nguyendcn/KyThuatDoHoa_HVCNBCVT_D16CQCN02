@@ -78,37 +78,5 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             throw new NotImplementedException();
         }
-
-        private void CalAndUpdateNewLoca(float[][] matrix_Trans)
-        {
-            int[][] matrix_Point = {
-                new int[] {this.A.X},
-                new int[] {this.A.Y},
-                new int[] {1},
-             };
-
-            int[][] newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
-
-            _a.X = newPoint[0][0];
-            _a.Y = newPoint[1][0];
-
-            matrix_Point[0][0] = this.B.X;
-            matrix_Point[1][0] = this.B.Y;
-            newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
-            _b.X = newPoint[0][0];
-            _b.Y = newPoint[1][0];
-
-            matrix_Point[0][0] = this.C.X;
-            matrix_Point[1][0] = this.C.Y;
-            newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
-            _c.X = newPoint[0][0];
-            _c.Y = newPoint[1][0];
-
-            matrix_Point[0][0] = this.D.X;
-            matrix_Point[1][0] = this.D.Y;
-            newPoint = Matrixs.Multiply(matrix_Trans, matrix_Point);
-            _d.X = newPoint[0][0];
-            _d.Y = newPoint[1][0];
-        }
     }
 }

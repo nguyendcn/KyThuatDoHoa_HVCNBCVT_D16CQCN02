@@ -321,7 +321,7 @@ namespace KyThuatDoHoa_Nhom9
                 clockProperties.BringToFront();
 
                 DateTime dt = DateTime.Now;
-                clock = new Clock(new Point(550, 320), 15, dt);
+                clock = new Clock(new Point(580, 315), 15, dt);
                 clock.CurrentDatetime = dt;
                 clock.Draw(this.picb_2DArea.CreateGraphics());
                 clock.PropertyChanged += Clock_PropertyChanged;
@@ -526,6 +526,12 @@ namespace KyThuatDoHoa_Nhom9
             cl.A = new Point(570, 315);
             cl.R = 30
 ;        }
+
+        private void picb_2DArea_SizeChanged(object sender, EventArgs e)
+        {
+            Variables.Globals.sizeOfNewCoor_2D.Width = ReturnEvenNumber(picb_2DArea.Width / Variables.Globals.sizePerPoint.Width);
+            Variables.Globals.sizeOfNewCoor_2D.Height = ReturnEvenNumber(picb_2DArea.Height / Variables.Globals.sizePerPoint.Height);
+        }
 
         private void button39_Click(object sender, EventArgs e)
         {

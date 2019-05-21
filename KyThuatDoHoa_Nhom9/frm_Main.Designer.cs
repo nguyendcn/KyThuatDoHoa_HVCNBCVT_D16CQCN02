@@ -31,6 +31,7 @@ namespace KyThuatDoHoa_Nhom9
         {
             this.components = new System.ComponentModel.Container();
             this.pnl_Mode = new System.Windows.Forms.Panel();
+            this.button39 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.button37 = new System.Windows.Forms.Button();
@@ -106,7 +107,6 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button39 = new System.Windows.Forms.Button();
             this.pnl_Mode.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_ToolBox.SuspendLayout();
@@ -140,6 +140,16 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Mode.Size = new System.Drawing.Size(860, 49);
             this.pnl_Mode.TabIndex = 0;
             // 
+            // button39
+            // 
+            this.button39.Location = new System.Drawing.Point(147, 11);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(75, 23);
+            this.button39.TabIndex = 8;
+            this.button39.Text = "button39";
+            this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
+            // 
             // button38
             // 
             this.button38.Location = new System.Drawing.Point(273, 11);
@@ -161,10 +171,13 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // button37
             // 
-            this.button37.Location = new System.Drawing.Point(0, 0);
+            this.button37.Location = new System.Drawing.Point(444, 13);
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(75, 23);
-            this.button37.TabIndex = 0;
+            this.button37.TabIndex = 5;
+            this.button37.Text = "button37";
+            this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
             // panel2
             // 
@@ -299,6 +312,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 14;
+            this.button10.Tag = "TimePiece";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.Button_Click);
             this.button10.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
@@ -312,6 +326,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(50, 50);
             this.button11.TabIndex = 13;
+            this.button11.Tag = "Pendulum";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.Button_Click);
             this.button11.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
@@ -1038,6 +1053,8 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
             this.picb_2DArea.TabIndex = 1;
             this.picb_2DArea.TabStop = false;
+            this.picb_2DArea.SizeChanged += new System.EventHandler(this.picb_2DArea_SizeChanged);
+            this.picb_2DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.picb_2DArea_Paint);
             this.picb_2DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picb_2DArea_MouseMove);
             // 
             // picb_3DArea
@@ -1053,16 +1070,6 @@ namespace KyThuatDoHoa_Nhom9
             // 
             this.timer1.Interval = 800;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // button39
-            // 
-            this.button39.Location = new System.Drawing.Point(147, 11);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(75, 23);
-            this.button39.TabIndex = 8;
-            this.button39.Text = "button39";
-            this.button39.UseVisualStyleBackColor = true;
-            this.button39.Click += new System.EventHandler(this.button39_Click);
             // 
             // frm_Main
             // 
