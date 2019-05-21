@@ -28,7 +28,8 @@ namespace KyThuatDoHoa_Nhom9
 
             flagTimer = false;
             hinhXe = new HinhXe();
-
+            pendulum = new Pendulum(new Point(200,50), new Point(400,450));
+            //pendulum.SetAlpha(3);
             picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
             //2D mode is startup;
@@ -492,6 +493,7 @@ namespace KyThuatDoHoa_Nhom9
         }
         int i = 0, j = 0;
         HinhXe hinhXe;
+        Pendulum pendulum;
         private bool flagTimer;
         private void picb_2DArea_Paint(object sender, PaintEventArgs e)
         {
@@ -504,13 +506,16 @@ namespace KyThuatDoHoa_Nhom9
             //    //cl.CurrentDatetime = DateTime.Now;
             //    cl.Draw(e.Graphics);
             //}
-            if(clock != null)
-                clock.Draw(e.Graphics);
 
-            hinhXe.traslationXe(i, j);
-            hinhXe.drawCar(e.Graphics);
-            i = i + 2;
-            j++;
+            pendulum.Draw(e.Graphics);
+
+            //if (clock != null)
+            //    clock.Draw(e.Graphics);
+
+            //hinhXe.traslationXe(i, j);
+            //hinhXe.drawCar(e.Graphics);
+            //i = i + 2;
+            //j++;
 
         }
 
@@ -531,6 +536,12 @@ namespace KyThuatDoHoa_Nhom9
         {
             Variables.Globals.sizeOfNewCoor_2D.Width = ReturnEvenNumber(picb_2DArea.Width / Variables.Globals.sizePerPoint.Width);
             Variables.Globals.sizeOfNewCoor_2D.Height = ReturnEvenNumber(picb_2DArea.Height / Variables.Globals.sizePerPoint.Height);
+        }
+
+        private void Button40_Click(object sender, EventArgs e)
+        {
+            Graphics gzg = picb_2DArea.CreateGraphics();
+            pendulum.Draw(gzg);
         }
 
         private void button39_Click(object sender, EventArgs e)

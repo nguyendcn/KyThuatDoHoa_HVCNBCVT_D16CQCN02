@@ -107,6 +107,7 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button40 = new System.Windows.Forms.Button();
             this.pnl_Mode.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_ToolBox.SuspendLayout();
@@ -126,6 +127,7 @@ namespace KyThuatDoHoa_Nhom9
             // pnl_Mode
             // 
             this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.pnl_Mode.Controls.Add(this.button40);
             this.pnl_Mode.Controls.Add(this.button39);
             this.pnl_Mode.Controls.Add(this.button38);
             this.pnl_Mode.Controls.Add(this.label4);
@@ -1071,6 +1073,16 @@ namespace KyThuatDoHoa_Nhom9
             this.timer1.Interval = 800;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button40
+            // 
+            this.button40.Location = new System.Drawing.Point(536, 13);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(75, 23);
+            this.button40.TabIndex = 9;
+            this.button40.Text = "button40";
+            this.button40.UseVisualStyleBackColor = true;
+            this.button40.Click += new System.EventHandler(this.Button40_Click);
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1191,6 +1203,7 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button39;
+        private System.Windows.Forms.Button button40;
     }
 }
 
