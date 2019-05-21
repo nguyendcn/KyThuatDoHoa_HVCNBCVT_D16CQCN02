@@ -316,10 +316,11 @@ namespace KyThuatDoHoa_Nhom9
             }
             else if(btn.Tag.Equals("Clock"))
             {
-                clockProperties = new ClockProperties(this.pnl_ToolBox.Size);
+                clockProperties = new ClockProperties();
 
                 clockProperties.PropertyChanged += ClockProperties_PropertyChanged;
                 this.pnl_ToolBox.Controls.Add(clockProperties);
+                clockProperties.Refresh();
                 clockProperties.BringToFront();
 
                 DateTime dt = DateTime.Now;
@@ -335,7 +336,7 @@ namespace KyThuatDoHoa_Nhom9
         private void Clock_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             this.picb_2DArea.Refresh();
-            clockProperties.CurrenTime = clock.CurrentDatetime;
+            clockProperties.CurrentTime = clock.CurrentDatetime;
             clockProperties.HHours = clock.HHours;
             clockProperties.HMinute = clock.HMinute;
             clockProperties.HSecond = clock.HSecond;
@@ -344,7 +345,7 @@ namespace KyThuatDoHoa_Nhom9
 
         private void ClockProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            clock.CurrentDatetime = clockProperties.CurrenTime;
+            clock.CurrentDatetime = clockProperties.CurrentTime;
         }
 
 

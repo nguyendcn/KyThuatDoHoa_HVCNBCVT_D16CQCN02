@@ -13,22 +13,22 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
 {
     public partial class ClockProperties : UserControl, INotifyPropertyChanged
     {
-        private DateTime currenTime;
+        private DateTime currentTime;
         private Line _hHours, _hMinute, _hSecond;
 
-        public ClockProperties(Size s)
+        public ClockProperties()
         {
             InitializeComponent();
             //this.Size = s;
             Boder.Text = this.Size.ToString();
         }
 
-        public DateTime CurrenTime{ get => currenTime;
+        public DateTime CurrentTime{ get => currentTime;
             set
             {
-                currenTime = value;
+                currentTime = value;
                 lbl_TimeCurrent.Text = value.ToString();
-                //btn_GetTimeSystem.PerformClick();
+                OnPropertyChanged("currentTime");
             }
         }
         public Line HHours { get => _hHours;
@@ -58,7 +58,14 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
 
         private void Btn_GetTimeSystem_Click(object sender, EventArgs e)
         {
-            this.CurrenTime = DateTime.Now;
+            this.CurrentTime = DateTime.Now;
+        }
+
+        private void btn_ChangeTime_Click(object sender, EventArgs e)
+        {
+            this.CurrentTime = new DateTime(
+                this.CurrentTime.Year, this.CurrentTime.Month, this.CurrentTime.Day,
+                (int)numud_Hours.Value, (int)numud_Minute.Value, (int)numud_Second.Value);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
