@@ -27,13 +27,14 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 y = (point1.Y + point2.Y) / 2;
 
             this.alpha = -5;
-            this.hinhNhat=new HinhChuNhat(point1, point2);
-            this.line = new Line(new Point(x, point1.Y),new Point(x, y + (point2.Y - y) / 2));
-            this.hinhTron=new HinhTron(new Point(x, y + (point2.Y - y) / 2 + (point2.Y - y) / 4), (point2.Y - y) / (4 * 5)-1);
+            this.hinhNhat = new HinhChuNhat(point1, point2);
+            this.line = new Line(new Point(x, point1.Y), new Point(x, y + (point2.Y - y) / 2+1));
+            this.hinhTron = new HinhTron(new Point(x, y + (point2.Y - y) / 2 + (point2.Y - y) / 4), (point2.Y - y ) / (4 * 5) - 1);
         }
         public void Draw(Graphics g)
         {
-            VeKhung(g);
+            hinhNhat.Draw(g);
+
             this.line.B = this.line.B.RotateAt(this.line.A, alpha);
             this.hinhTron.Point = this.hinhTron.Point.RotateAt(this.line.A, alpha);
             if (!check())
@@ -49,20 +50,19 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
             line.Draw(g);
             hinhTron.Draw(g);
-      
+
         }
         public bool check()
         {
             int d1 = this.hinhNhat.C.X - this.hinhTron.Point.X,
                 d2 = this.hinhTron.Point.X - this.hinhNhat.A.X;
-            if (this.hinhTron.Radius > d1 || this.hinhTron.Radius > d2)
+            if (this.hinhTron.Radius >= d1 || this.hinhTron.Radius >= d2)
                 return false;
             return true;
         }
-        public void VeKhung(Graphics g)
-        {
-            hinhNhat.Draw(g);
-        }
+        /// <summary>
+        /// sset giá trị của góc quay alpha
+        /// </summary>
         public void SetAlpha(int n)
         {
             this.alpha = n;

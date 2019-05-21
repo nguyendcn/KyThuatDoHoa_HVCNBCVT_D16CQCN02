@@ -1083,8 +1083,8 @@ namespace KyThuatDoHoa_Nhom9
             this.button40.TabIndex = 9;
             this.button40.Text = "button40";
             this.button40.UseVisualStyleBackColor = true;
-            this.button40.Click += new System.EventHandler(this.Button40_Click);
-            // 
+            //this.button40.Click += new System.EventHandler(this.Button40_Click);
+
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);

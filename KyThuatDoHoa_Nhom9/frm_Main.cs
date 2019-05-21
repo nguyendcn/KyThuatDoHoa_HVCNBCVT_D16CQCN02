@@ -29,6 +29,10 @@ namespace KyThuatDoHoa_Nhom9
             flagTimer = false;
             hinhXe = new HinhXe();
 
+            // Tạo quả lắc theo kích thước cho trước
+            pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
+            pendulum.SetAlpha(-3); // set góc quay alpha 
+
             picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
             //2D mode is startup;
@@ -494,6 +498,7 @@ namespace KyThuatDoHoa_Nhom9
         }
         int i = 0, j = 0;
         HinhXe hinhXe;
+        Pendulum pendulum;
         private bool flagTimer;
         private void picb_2DArea_Paint(object sender, PaintEventArgs e)
         {
@@ -506,16 +511,19 @@ namespace KyThuatDoHoa_Nhom9
             //    //cl.CurrentDatetime = DateTime.Now;
             //    cl.Draw(e.Graphics);
             //}
-            if(clock != null)
-                clock.Draw(e.Graphics);
 
-            hinhXe.traslationXe(i, j);
-            hinhXe.drawCar(e.Graphics);
+            //if(clock != null)
+            //    clock.Draw(e.Graphics);
 
-            i = i + 5;
-            j = j + 5;
+            pendulum.Draw(e.Graphics);
 
-            hinhXe.quayBanhXe(30);
+            //hinhXe.traslationXe(i, j);
+            //hinhXe.drawCar(e.Graphics);
+
+            //i = i + 5;
+            //j = j + 5;
+
+            //hinhXe.quayBanhXe(30);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
