@@ -114,11 +114,11 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             if(this.clock == null)
             {
-                this.clock = new Clock(new Point(this.Location.X + 3, this.Location.Y + 5), 15, DateTime.Now);
+                this.clock = new Clock(new Point(this.Location.X + 20, this.Location.Y + 10), 15, DateTime.Now);
             }
             if(this.pendulum == null)
             {
-                this.pendulum = new Pendulum(ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 10, this.Location.Y - 13)), ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 50, this.Location.Y + -60)));
+                this.pendulum = new Pendulum(ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 1, this.Location.Y - 6)), ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 40, this.Location.Y + -60)));
             }
         }
 

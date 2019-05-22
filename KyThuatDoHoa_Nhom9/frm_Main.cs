@@ -525,6 +525,8 @@ namespace KyThuatDoHoa_Nhom9
             if (tp != null)
                 tp.Draw(e.Graphics);
 
+           // e.Graphics.DrawString("12", new Font("Time New Roman", 10), Brushes.Aquamarine, ToaDo.NguoiDungMayTinh(new Point(0, 0)));
+
             //pendulum.Draw(e.Graphics);
 
             //hinhXe.traslationXe(i, j);

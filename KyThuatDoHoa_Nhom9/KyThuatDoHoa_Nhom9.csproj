@@ -87,6 +87,12 @@
     <Compile Include="UI\UserCtr\ClockProperties.Designer.cs">
       <DependentUpon>ClockProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UserCtr\TimepieceProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserCtr\TimepieceProperties.Designer.cs">
+      <DependentUpon>TimepieceProperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserCtr\XeProperties.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserCtr\ClockProperties.resx">
       <DependentUpon>ClockProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserCtr\TimepieceProperties.resx">
+      <DependentUpon>TimepieceProperties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserCtr\XeProperties.resx">
       <DependentUpon>XeProperties.cs</DependentUpon>
