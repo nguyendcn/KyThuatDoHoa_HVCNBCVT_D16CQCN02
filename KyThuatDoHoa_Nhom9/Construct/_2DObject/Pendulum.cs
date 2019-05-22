@@ -19,12 +19,12 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         private Line rope;
         private HinhChuNhat rectangle;
         private bool nextStep;
-        private Timer timer = new Timer { Interval = 50 };
+        private Timer timer = new Timer { Interval = 90 };
 
         public int Alpha { get => alpha; set => alpha = value; }
         public Line Rope { get => rope; set => rope = value; }
-        internal HinhTron Circle { get => circle; set => circle = value; }
-        internal HinhChuNhat Rectangle { get => rectangle; set => rectangle = value; }
+        public HinhTron Circle { get => circle; set => circle = value; }
+        public HinhChuNhat Rectangle { get => rectangle; set => rectangle = value; }
 
         public bool NextStep { get => nextStep;
             set

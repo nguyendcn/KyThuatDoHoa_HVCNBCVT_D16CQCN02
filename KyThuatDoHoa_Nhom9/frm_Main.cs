@@ -522,7 +522,10 @@ namespace KyThuatDoHoa_Nhom9
             if (clock != null)
                 clock.Draw(e.Graphics);
 
-            pendulum.Draw(e.Graphics);
+            if (tp != null)
+                tp.Draw(e.Graphics);
+
+            //pendulum.Draw(e.Graphics);
 
             //hinhXe.traslationXe(i, j);
             //hinhXe.drawCar(e.Graphics);
@@ -564,9 +567,17 @@ namespace KyThuatDoHoa_Nhom9
 
         }
 
+        Timepiece tp;
         private void button40_Click(object sender, EventArgs e)
         {
+            tp = new Timepiece();
+            tp.PropertyChanged += Tp_PropertyChanged;
 
+        }
+
+        private void Tp_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.picb_2DArea.Refresh();
         }
 
         private void button39_Click(object sender, EventArgs e)
