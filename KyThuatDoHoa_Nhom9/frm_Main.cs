@@ -18,15 +18,15 @@ namespace KyThuatDoHoa_Nhom9
 
     public partial class frm_Main : Form
     {
-        private Bitmap bm;
-        private Graphics grp;
+        int i = 0, j = 0;
+        HinhXe hinhXe;
+        Pendulum pendulum;
 
-   
         public frm_Main()
         {
             InitializeComponent();
             
-            flagTimer = false;
+         
             hinhXe = new HinhXe();
 
             // Tạo quả lắc theo kích thước cho trước
@@ -503,10 +503,8 @@ namespace KyThuatDoHoa_Nhom9
             //this.Invalidate();
             this.picb_2DArea.Refresh();
         }
-        int i = 0, j = 0;
-        HinhXe hinhXe;
-        Pendulum pendulum;
-        private bool flagTimer;
+       
+       
         private void picb_2DArea_Paint(object sender, PaintEventArgs e)
         {
             //if (test)
@@ -519,18 +517,21 @@ namespace KyThuatDoHoa_Nhom9
             //    cl.Draw(e.Graphics);
             //}
 
-            if (clock != null)
-                clock.Draw(e.Graphics);
+            ////if (clock != null)
+            ////    clock.Draw(e.Graphics);
 
-            pendulum.Draw(e.Graphics);
+            ////pendulum.Draw(e.Graphics);
 
-            //hinhXe.traslationXe(i, j);
-            //hinhXe.drawCar(e.Graphics);
+            hinhXe.ToMau(e.Graphics);
 
+            hinhXe.traslationXe(i, j);
+            
+            hinhXe.drawCar(e.Graphics);
             //i = i + 5;
             //j = j + 5;
 
-            //hinhXe.quayBanhXe(30);
+
+            hinhXe.quayBanhXe(30);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -541,10 +542,11 @@ namespace KyThuatDoHoa_Nhom9
 
         private void button38_Click(object sender, EventArgs e)
         {
-            XeProperties x = new XeProperties();
-           //  x.Size = this.pnl_ToolBox.Size;
-            this.pnl_ToolBox.Controls.Add(x);
-            x.BringToFront();
+            XeProperties xe = new XeProperties();
+            this.pnl_ToolBox.Controls.Add(xe);
+            xe.BringToFront();
+
+
             
         }
 

@@ -38,5 +38,7 @@ namespace KyThuatDoHoa_Nhom9.Variables
         /// Chua toan bo hinh tren man hinh lap viec 2D.
         /// </summary>
         public static Stack<Object> sObject_2D = new Stack<object>();
+
+
     }
 }

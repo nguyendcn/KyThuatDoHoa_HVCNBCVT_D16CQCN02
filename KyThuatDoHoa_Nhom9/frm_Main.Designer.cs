@@ -30,6 +30,7 @@ namespace KyThuatDoHoa_Nhom9
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.pnl_Mode = new System.Windows.Forms.Panel();
             this.button40 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
@@ -126,7 +127,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // pnl_Mode
             // 
-            this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnl_Mode.Controls.Add(this.button40);
             this.pnl_Mode.Controls.Add(this.button39);
             this.pnl_Mode.Controls.Add(this.button38);
@@ -224,6 +225,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // btn_Menu
             // 
+            this.btn_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Menu.FlatAppearance.BorderSize = 0;
             this.btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Menu.ForeColor = System.Drawing.Color.White;
@@ -240,6 +242,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // btn_Toolbar
             // 
+            this.btn_Toolbar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Toolbar.FlatAppearance.BorderSize = 0;
             this.btn_Toolbar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Toolbar.ForeColor = System.Drawing.Color.White;
@@ -1062,6 +1065,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             this.picb_2DArea.BackColor = System.Drawing.Color.DarkGray;
             this.picb_2DArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picb_2DArea.Cursor = System.Windows.Forms.Cursors.Cross;
             this.picb_2DArea.Location = new System.Drawing.Point(305, 100);
             this.picb_2DArea.Name = "picb_2DArea";
             this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
@@ -1074,6 +1078,7 @@ namespace KyThuatDoHoa_Nhom9
             // picb_3DArea
             // 
             this.picb_3DArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.picb_3DArea.Cursor = System.Windows.Forms.Cursors.Cross;
             this.picb_3DArea.Location = new System.Drawing.Point(73, 100);
             this.picb_3DArea.Name = "picb_3DArea";
             this.picb_3DArea.Size = new System.Drawing.Size(220, 219);
@@ -1097,10 +1102,11 @@ namespace KyThuatDoHoa_Nhom9
             this.Controls.Add(this.pnl_Mode);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Main";
-            this.Text = "frm_main";
+            this.Text = "Đồ Họa N9";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Main_Load);
             this.pnl_Mode.ResumeLayout(false);
