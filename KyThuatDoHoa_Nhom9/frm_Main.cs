@@ -339,8 +339,51 @@ namespace KyThuatDoHoa_Nhom9
                 clock.Draw(this.picb_2DArea.CreateGraphics());
                 clock.PropertyChanged += Clock_PropertyChanged;
             }
+            else if(btn.Tag.Equals("TimePiece"))
+            {
+                timepieceProperties = new TimepieceProperties();
+                timepieceProperties.PropertyChanged += TimepieceProperties_PropertyChanged;
+                this.pnl_ToolBox.Controls.Add(timepieceProperties);
+                timepieceProperties.BringToFront();
+
+                timepiece = new Timepiece();
+                timepiece.PropertyChanged += Timepiece_PropertyChanged;
+            }
+   
         }
 
+        TimepieceProperties timepieceProperties;
+        Timepiece timepiece;
+        private void Timepiece_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if(e.PropertyName.Equals("location"))
+            {
+
+            }
+            else if(e.PropertyName.Equals("item_clock"))
+            {
+                this.picb_2DArea.Refresh();
+                timepieceProperties.ClockProperties.CurrentTime = timepiece.Item_clock.CurrentDatetime;
+                timepieceProperties.ClockProperties.HHours = timepiece.Item_clock.HHours;
+                timepieceProperties.ClockProperties.HMinute = timepiece.Item_clock.HMinute;
+                timepieceProperties.ClockProperties.HSecond = timepiece.Item_clock.HSecond;
+            }
+        }
+
+        private void TimepieceProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+           if(e.PropertyName.Equals("timeChanged"))
+            {
+                timepiece.Item_clock.CurrentDatetime = timepieceProperties.ClockProperties.CurrentTime;
+            }
+        }
+
+
+        #region Timepiece action
+        #endregion
+
+
+        #region Clock action
         Clock clock;
         ClockProperties clockProperties;
         private void Clock_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -357,8 +400,7 @@ namespace KyThuatDoHoa_Nhom9
         {
             clock.CurrentDatetime = clockProperties.CurrentTime;
         }
-
-
+        #endregion
 
         #region Circle action
         HinhTron ht;
@@ -521,9 +563,9 @@ namespace KyThuatDoHoa_Nhom9
 
             if (clock != null)
                 clock.Draw(e.Graphics);
-
-            if (tp != null)
-                tp.Draw(e.Graphics);
+            if (timepiece != null)
+                timepiece.Draw(e.Graphics);
+            
 
            // e.Graphics.DrawString("12", new Font("Time New Roman", 10), Brushes.Aquamarine, ToaDo.NguoiDungMayTinh(new Point(0, 0)));
 
@@ -569,18 +611,12 @@ namespace KyThuatDoHoa_Nhom9
 
         }
 
-        Timepiece tp;
+        
         private void button40_Click(object sender, EventArgs e)
         {
-            tp = new Timepiece();
-            tp.PropertyChanged += Tp_PropertyChanged;
-
+            
         }
-
-        private void Tp_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            this.picb_2DArea.Refresh();
-        }
+       
 
         private void button39_Click(object sender, EventArgs e)
         {

@@ -8,7 +8,7 @@ using KyThuatDoHoa_Nhom9.Construct.DefineType;
 
 namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 {
-    class HinhChuNhat : Shapes2DObject
+    public class HinhChuNhat : Shapes2DObject
     {
         private Point _a;
         private Point _b;

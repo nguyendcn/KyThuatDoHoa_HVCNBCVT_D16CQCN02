@@ -37,6 +37,8 @@
             this.numud_Second = new System.Windows.Forms.NumericUpDown();
             this.numud_Minute = new System.Windows.Forms.NumericUpDown();
             this.numud_Hours = new System.Windows.Forms.NumericUpDown();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numud_Second)).BeginInit();
@@ -60,9 +62,9 @@
             this.Clock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clock.Location = new System.Drawing.Point(11, 10);
             this.Clock.Name = "Clock";
-            this.Clock.Size = new System.Drawing.Size(34, 13);
+            this.Clock.Size = new System.Drawing.Size(56, 13);
             this.Clock.TabIndex = 0;
-            this.Clock.Text = "Clock";
+            this.Clock.Text = "Timepiece";
             // 
             // groupBox1
             // 
@@ -99,6 +101,7 @@
             this.btn_GetTimeSystem.TabIndex = 8;
             this.btn_GetTimeSystem.Text = "Sys Time";
             this.btn_GetTimeSystem.UseVisualStyleBackColor = true;
+            this.btn_GetTimeSystem.Click += new System.EventHandler(this.btn_GetTimeSystem_Click);
             // 
             // btn_ChangeTime
             // 
@@ -109,6 +112,7 @@
             this.btn_ChangeTime.TabIndex = 7;
             this.btn_ChangeTime.Text = "Change";
             this.btn_ChangeTime.UseVisualStyleBackColor = true;
+            this.btn_ChangeTime.Click += new System.EventHandler(this.btn_ChangeTime_Click);
             // 
             // numud_Second
             // 
@@ -134,10 +138,28 @@
             this.numud_Hours.Size = new System.Drawing.Size(25, 20);
             this.numud_Hours.TabIndex = 4;
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 48);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(197, 233);
+            this.panel2.TabIndex = 10;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 281);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(197, 256);
+            this.panel3.TabIndex = 11;
+            // 
             // TimepieceProperties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "TimepieceProperties";
@@ -164,5 +186,7 @@
         private System.Windows.Forms.NumericUpDown numud_Second;
         private System.Windows.Forms.NumericUpDown numud_Minute;
         private System.Windows.Forms.NumericUpDown numud_Hours;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

@@ -10,7 +10,7 @@ using KyThuatDoHoa_Nhom9.Construct.DefineType;
 
 namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 {
-    class Pendulum : Shapes2DObject, INotifyPropertyChanged
+    public class Pendulum : Shapes2DObject, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

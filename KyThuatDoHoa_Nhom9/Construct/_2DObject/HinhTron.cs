@@ -9,7 +9,7 @@ using KyThuatDoHoa_Nhom9.Construct.DefineType;
 
 namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 {
-    class HinhTron : Shapes2DObject, INotifyPropertyChanged
+    public class HinhTron : Shapes2DObject, INotifyPropertyChanged
     {
         private Point point;
         private int radius;
