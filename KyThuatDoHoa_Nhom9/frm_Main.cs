@@ -750,9 +750,9 @@ namespace KyThuatDoHoa_Nhom9
             //hinhHopChuNhat.Draw(e.Graphics);
 
 
-            HinhTru hinhTru = new HinhTru(10, 10, 0, 30, 40);
-            hinhTru.Draw(e.Graphics);
-            hinhTru.DrawElip(e.Graphics);
+            //HinhTru hinhTru = new HinhTru(10, 10, 0, 30, 40);
+            //hinhTru.Draw(e.Graphics);
+            //hinhTru.DrawElip(e.Graphics);
 
         }
 
@@ -820,27 +820,27 @@ namespace KyThuatDoHoa_Nhom9
             g.DrawLine(pen, new Point(x, y), new Point(x-y, y + y));                      // trục Oz
             System.Console.WriteLine((x - y) + " " + (y ));
 ;        }
-        
+
 
 
         #endregion
+
+        private void zoom_Click(object sender, EventArgs e)
+        {
+            hinhXe.doiXungQuaTruc();
         }
 
-    //private void zoom_Click(object sender, EventArgs e)
-    //{
+        private void button41_Click(object sender, EventArgs e)
+        {
+            hinhXe.doiXungQuaOx();
+        }
 
+        private void button42_Click(object sender, EventArgs e)
+        {
+            hinhXe.doiXungQuaOy();
+        }
+    }
 
-    //    hinhXe.doiXungQuaTruc();
-    //}
-
-    //private void button41_Click(object sender, EventArgs e)
-    //{
-    //    hinhXe.doiXungQuaOx();
-    //}
-
-    //private void button42_Click(object sender, EventArgs e)
-    //{
-    //    hinhXe.doiXungQuaOy();
-    //}
+ 
 }
 
