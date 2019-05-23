@@ -250,6 +250,10 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Note.txt" />
+    <None Include="Resources\history.png" />
+    <None Include="Resources\đồng hồ.PNG" />
+    <None Include="Resources\gnome_window_close.png" />
+    <None Include="Resources\cancel.png" />
     <None Include="Resources\xe ô tô.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

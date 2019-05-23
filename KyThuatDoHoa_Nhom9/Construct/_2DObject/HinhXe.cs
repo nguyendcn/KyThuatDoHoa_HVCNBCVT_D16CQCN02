@@ -11,6 +11,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 {
     class HinhXe : INotifyPropertyChanged
     {
+
         // danh sách các points để vẽ hình xe
         private Point[] lsPoint = new Point[25];
         // bán kính bánh xe
@@ -197,6 +198,8 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
         }
 
+        // thu phóng xe theo kích thước DonVi
+       
 
         public void quayBanhXe(int goc)
         {
@@ -238,5 +241,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             pn = nhanMT(matran2, matran1);
         }
 
+
+      
     }
 }

@@ -14,16 +14,26 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
     {
         public Point[] lsPoint = new Point[25];
         public int bankinh;
+        private bool flag = false;
         public XeProperties()
         {
             InitializeComponent();
-            HienThiThongTin();
+          
+            this.btnMay.BackColor = Color.Brown;
         }
 
         public void HienThiThongTin()
         {
             // in ra thông tin hình chữ nhật
       
+            if (flag)
+            {
+                // đổi tọa độ máy tính  sang người dùng
+                for (int i = 0; i < this.lsPoint.Length; i++)
+                {
+                    this.lsPoint[i] = ToaDo.MayTinhNguoiDung(this.lsPoint[i]);
+                }
+            }
             this.lblHcn1.Text = this.lsPoint[8].ToString();
             this.lblHcn2.Text = new Point(this.lsPoint[8].X, this.lsPoint[9].Y).ToString();
             this.lblHcn3.Text = this.lsPoint[9].ToString();
@@ -58,6 +68,7 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             this.lblKhac7.Text = this.lsPoint[6].ToString();
             this.lblKhac8.Text = this.lsPoint[7].ToString();
         }
+      
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -106,6 +117,30 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
         private void lblKhac2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.btnMay.BackColor = Color.Brown;
+            this.btnNguoidung.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            flag = false;
+         
+        }
+
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.btnNguoidung.BackColor = Color.Brown;
+            this.btnMay.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            flag = true;
+          
+          
         }
     }
 }

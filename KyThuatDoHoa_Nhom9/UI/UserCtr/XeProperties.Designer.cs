@@ -45,6 +45,8 @@
             this.lblBx2 = new System.Windows.Forms.Label();
             this.lblBx1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblBk1 = new System.Windows.Forms.Label();
+            this.lblBt3 = new System.Windows.Forms.Label();
             this.lblTam1 = new System.Windows.Forms.Label();
             this.lblBt2 = new System.Windows.Forms.Label();
             this.lblBt1 = new System.Windows.Forms.Label();
@@ -59,10 +61,12 @@
             this.lblHcn3 = new System.Windows.Forms.Label();
             this.lblHcn2 = new System.Windows.Forms.Label();
             this.lblHcn1 = new System.Windows.Forms.Label();
-            this.lblBt3 = new System.Windows.Forms.Label();
-            this.lblBk1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnMay = new System.Windows.Forms.Button();
+            this.btnNguoidung = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -70,10 +74,12 @@
             this.lblKhac1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.groupBox7);
             this.groupBox1.Controls.Add(this.groupBox4);
@@ -82,7 +88,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 36);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(171, 464);
+            this.groupBox1.Size = new System.Drawing.Size(171, 438);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "THÔNG SỐ";
@@ -261,6 +267,24 @@
             this.groupBox4.Text = "Bánh xe trước";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
+            // lblBk1
+            // 
+            this.lblBk1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblBk1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBk1.Location = new System.Drawing.Point(21, 45);
+            this.lblBk1.Name = "lblBk1";
+            this.lblBk1.Size = new System.Drawing.Size(94, 12);
+            this.lblBk1.TabIndex = 5;
+            // 
+            // lblBt3
+            // 
+            this.lblBt3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblBt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBt3.Location = new System.Drawing.Point(37, 30);
+            this.lblBt3.Name = "lblBt3";
+            this.lblBt3.Size = new System.Drawing.Size(61, 12);
+            this.lblBt3.TabIndex = 4;
+            // 
             // lblTam1
             // 
             this.lblTam1.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -402,24 +426,6 @@
             this.lblHcn1.Size = new System.Drawing.Size(61, 12);
             this.lblHcn1.TabIndex = 0;
             // 
-            // lblBt3
-            // 
-            this.lblBt3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblBt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBt3.Location = new System.Drawing.Point(37, 30);
-            this.lblBt3.Name = "lblBt3";
-            this.lblBt3.Size = new System.Drawing.Size(61, 12);
-            this.lblBt3.TabIndex = 4;
-            // 
-            // lblBk1
-            // 
-            this.lblBk1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblBk1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBk1.Location = new System.Drawing.Point(21, 45);
-            this.lblBk1.Name = "lblBk1";
-            this.lblBk1.Size = new System.Drawing.Size(94, 12);
-            this.lblBk1.TabIndex = 5;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -433,18 +439,67 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::KyThuatDoHoa_Nhom9.Properties.Resources.xe_ô_tô;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(64, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(86, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::KyThuatDoHoa_Nhom9.Properties.Resources.gnome_window_close;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(153, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(21, 19);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox3.Controls.Add(this.btnNguoidung);
+            this.groupBox3.Controls.Add(this.btnMay);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(16, 371);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(138, 71);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Chuyển tọa độ";
+            // 
+            // btnMay
+            // 
+            this.btnMay.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnMay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMay.Location = new System.Drawing.Point(29, 15);
+            this.btnMay.Name = "btnMay";
+            this.btnMay.Size = new System.Drawing.Size(79, 21);
+            this.btnMay.TabIndex = 0;
+            this.btnMay.Text = "Tọa độ máy";
+            this.btnMay.UseVisualStyleBackColor = false;
+            this.btnMay.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnNguoidung
+            // 
+            this.btnNguoidung.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNguoidung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNguoidung.Location = new System.Drawing.Point(2, 37);
+            this.btnNguoidung.Name = "btnNguoidung";
+            this.btnNguoidung.Size = new System.Drawing.Size(129, 21);
+            this.btnNguoidung.TabIndex = 1;
+            this.btnNguoidung.Text = "Tọa độ người dùng";
+            this.btnNguoidung.UseVisualStyleBackColor = false;
+            this.btnNguoidung.Click += new System.EventHandler(this.button3_Click);
+            // 
             // XeProperties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -458,6 +513,7 @@
             this.lblKhac1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,5 +556,9 @@
         private System.Windows.Forms.Label lblBt3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnNguoidung;
+        private System.Windows.Forms.Button btnMay;
     }
 }
