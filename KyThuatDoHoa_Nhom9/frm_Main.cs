@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using KyThuatDoHoa_Nhom9.UI;
 using KyThuatDoHoa_Nhom9.Variables;
 using KyThuatDoHoa_Nhom9.Construct._2DObject;
+using KyThuatDoHoa_Nhom9.Construct._3DObject;
 using KyThuatDoHoa_Nhom9.UI.UserCtr;
 
 namespace KyThuatDoHoa_Nhom9
@@ -25,19 +26,21 @@ namespace KyThuatDoHoa_Nhom9
         public frm_Main()
         {
             InitializeComponent();
-            
-            flagTimer = false;
-            hinhXe = new HinhXe();
 
-            // Tạo quả lắc theo kích thước cho trước
-            pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
-            pendulum.SetAlpha(-3); // set góc quay alpha 
-            pendulum.PropertyChanged += Pendulum_PropertyChanged;
+            //flagTimer = false;
+            //hinhXe = new HinhXe();
 
-            picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
+            //// Tạo quả lắc theo kích thước cho trước
+            //pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
+            //pendulum.SetAlpha(-3); // set góc quay alpha 
 
-            //2D mode is startup;
-            Setup_Toolbar(Globals._Mode_current);
+            //picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
+
+            ////2D mode is startup;
+            //Setup_Toolbar(Globals._Mode_current);
+
+            picb_3DArea.Dock = DockStyle.Fill;
+            picb_2DArea.Visible = false;
 
             Setup_ToolTips();
           
@@ -569,13 +572,12 @@ namespace KyThuatDoHoa_Nhom9
             //    cl.Draw(e.Graphics);
             //}
 
-            if (clock != null)
-                clock.Draw(e.Graphics);
-            if (timepiece != null)
-                timepiece.Draw(e.Graphics);
-            
+            HinhElip hinhElip = new HinhElip(new Point(550, 305), 30, 10);
+            hinhElip.NetDut(e.Graphics);
 
-           // e.Graphics.DrawString("12", new Font("Time New Roman", 10), Brushes.Aquamarine, ToaDo.NguoiDungMayTinh(new Point(0, 0)));
+
+            //if(clock != null)
+            //    clock.Draw(e.Graphics);
 
             //pendulum.Draw(e.Graphics);
 
@@ -628,12 +630,10 @@ namespace KyThuatDoHoa_Nhom9
 
         private void button39_Click(object sender, EventArgs e)
         {
-            //this.timer1.Start();
-         
-
+            this.timer1.Start();
         }
 
-
+       
         private void picb_2DArea_MouseMove(object sender, MouseEventArgs e)
         {
             Point p = e.Location;
@@ -659,8 +659,91 @@ namespace KyThuatDoHoa_Nhom9
             p = ToaDo.NguoiDungMayTinh(p);
             lblX4.Text = p.X.ToString();
             lblY4.Text = p.Y.ToString();
+            
         }
-       
+        #region Vẽ trên picb_3DArea sử dụng Cavalier
+        private void Picb_3DArea_Paint(object sender, PaintEventArgs e)
+        {
+            VeLuoi3D(e.Graphics);
+
+            //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
+            //hinhHopChuNhat.Draw(e.Graphics);
+
+
+            HinhTru hinhTru = new HinhTru(10, 10, 0, 30, 40);
+            hinhTru.Draw(e.Graphics);
+            hinhTru.DrawElip(e.Graphics);
+
+        }
+
+        private void Picb_3DArea_MouseMove(object sender, MouseEventArgs e)
+        {
+            Point p = e.Location;
+
+            //lblWidth.Text = picb_3DArea.Width.ToString();
+            //lblHeight.Text = picb_3DArea.Height.ToString();
+            lblWidth.Text = Variables.Globals.sizeOfNewCoor_3D.Width.ToString();
+            lblHeight.Text = Variables.Globals.sizeOfNewCoor_3D.Height.ToString();
+
+            // Tọa độ của chuột khi move
+            lblX1.Text = e.Location.X.ToString();
+            lblY1.Text = e.Location.Y.ToString();
+
+            // Làm tròn tọa độ trên lưới Pixel
+            p = ToaDo.RoundPixel(e.Location);
+            lblX2.Text = p.X.ToString();
+            lblY2.Text = p.Y.ToString();
+
+            // Chuyển từ tọa độ máy tính về tọa độ người dùng
+            p = ToaDo.MayTinhNguoiDung_3D(p);
+            lblX3.Text = p.X.ToString();
+            lblY3.Text = p.Y.ToString();
+
+        }
+
+        private void Picb_3DArea_SizeChanged(object sender, EventArgs e)
+        {
+            Variables.Globals.sizeOfNewCoor_3D.Width = ReturnEvenNumber(picb_3DArea.Width / Variables.Globals.sizePerPoint.Width);
+            Variables.Globals.sizeOfNewCoor_3D.Height = ReturnEvenNumber(picb_3DArea.Height / Variables.Globals.sizePerPoint.Height);
+
+            picb_3DArea.Width = Variables.Globals.sizeOfNewCoor_3D.Width * 5;
+            picb_3DArea.Height = Variables.Globals.sizeOfNewCoor_3D.Height * 5;
+        }
+
+        private void Picb_3DArea_MouseClick(object sender, MouseEventArgs e)
+        {
+            ToaDo.HienThi(e.Location, picb_3DArea.CreateGraphics());
+        }
+
+        public void VeLuoi3D(Graphics g)
+        {
+            Pen pen = new Pen(Color.Black);
+           
+
+            // Vẽ lưới 
+            for(int i = 0; i < picb_3DArea.Width; i += 5)
+            {
+                g.DrawLine(pen, new Point(i, 0), new Point(i, picb_3DArea.Height));
+            }
+            for (int i = 0; i < picb_3DArea.Height; i += 5)
+            {
+                g.DrawLine(pen, new Point(0, i), new Point(picb_3DArea.Width,i));
+            }
+
+            // Vẽ trục tọa độ
+            pen = new Pen(Color.Red);
+            int x = picb_3DArea.Width * 2 / 5,//365,
+               y = picb_3DArea.Height / 2; //305,
+
+            g.DrawLine(pen, new Point(x, y), new Point(picb_3DArea.Width, y));         // trục Ox
+            g.DrawLine(pen, new Point(x, y), new Point(x, 0));                          // trục Oy
+            g.DrawLine(pen, new Point(x, y), new Point(x-y, y + y));                      // trục Oz
+            System.Console.WriteLine((x - y) + " " + (y ));
+;        }
+        
+
+
+        #endregion
 
     }
 }

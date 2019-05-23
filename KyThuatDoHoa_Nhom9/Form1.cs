@@ -17,6 +17,9 @@ namespace KyThuatDoHoa_Nhom9
             InitializeComponent();
 
         }
+        /// <summary>
+        /// Phép chiếu Cavalier
+        /// </summary
         public void VeLuoi3D(Graphics grp)
         {
             int xCenter = picb3D.Width/2,

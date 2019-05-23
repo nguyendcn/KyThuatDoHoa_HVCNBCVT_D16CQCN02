@@ -33,6 +33,10 @@ namespace KyThuatDoHoa_Nhom9.Variables
         /// Size của hệ tòa độ người dùng khi chuyển từ tọa độ máy sang. Hệ tòa độ 2D.
         /// </summary>
         public static System.Drawing.Size sizeOfNewCoor_2D;
+        /// <summary>
+        /// Size của hệ tòa độ người dùng khi chuyển từ tọa độ máy sang. Hệ tòa độ 3D.
+        /// </summary>
+        public static System.Drawing.Size sizeOfNewCoor_3D;
 
         /// <summary>
         /// Chua toan bo hinh tren man hinh lap viec 2D.

@@ -22,52 +22,130 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             ToaDo.HienThi(point.X - x, point.Y - y, g, color);
             ToaDo.HienThi(point.X + x, point.Y - y, g, color);
         }
+        public void Drawn4Point_3D(int x, int y, Graphics g, Color color)
+        {
+            if (x % 10 != 0)
+            {
+                ToaDo.HienThi(new Point(point.X - x, point.Y - y), g, color);
+                ToaDo.HienThi(new Point(point.X + x, point.Y - y), g, color);
+            }
+
+                ToaDo.HienThi(new Point(point.X + x, point.Y + y), g, color);
+                ToaDo.HienThi(new Point(point.X - x, point.Y + y), g, color);
+        }
         public void Draw(Graphics g)
         {
-            double p, a2, b2;
-            int x, y;
-            a2 = Math.Pow(a, 2);
-            b2 = Math.Pow(b, 2);
+            int x, y, cx, cy, a, b;
+            cx = this.point.X;
+            cy = this.point.Y;
+            a = this.a;
+            b = this.b;
             x = 0;
             y = b;
-            p = 2 * ((double)b2 / a2) - (2 * b) + 1;
+            int A, B;
+            A = a * a;
+            B = b * b;
+            double p = B + A / 4 - A * b;
+            x = 0;
+            y = b;
+            int Dx = 0;
+            int Dy = 2 * A * y;
+            Drawn4Point(x, y,  g,Color.Green);
 
-            // Vẽ nhánh từ trên xuống
-            while (((double)b2 / a2) * x <= y)
+            while (Dx <= Dy)
             {
-                Drawn4Point(x, y, g);
+                x+=1;
+                Dx += 2 * B;
                 if (p < 0)
-                    p = p + 2 * ((double)b2 / a2) * (2 * x + 3);
+                    p += B + Dx;
                 else
                 {
-                    p = p - 4 * y + 2 * ((double)b2 / a2) * (2 * x + 3);
-                    y -= 5;
+                    y-=1;
+                    Dy -= 2 * A;
+                    p += B + Dx - Dy;
                 }
-                x += 5;
+                if(x%5==0)
+                    Drawn4Point(x, ToaDo.RoundPixel( y), g,Color.Green);
+
+
             }
-            // Vẽ nhánh từ dưới lên
-            y = 0;
-            x = a;
-            p = 2 * ((double)a2 / b2) - 2 * a + 1;
-            while (((double)a2 / b2) * y <= x)
+            p = Math.Round(B * (x + 0.5f) * (x + 0.5f) + A * (y - 1) * (y - 1) - A * B);
+            while (y >= 0)
             {
-                Drawn4Point(x, y, g);
-                if (p < 0)
-                    p = p + 2 * ((double)a2 / b2) * (2 * y + 3);
+                y-=1;
+                Dy -= A * 2;
+                if (p > 0)
+                    p += A - Dy;
                 else
                 {
-                    p = p - 4 * x + 2 * ((double)a2 / b2) * (2 * y + 3);
-                    x -= 5;
+                    x+=1;
+                    Dx += B * 2;
+                    p += A - Dy + Dx;
                 }
-                y += 5;
+                if(x%5==0)
+                    Drawn4Point(x, ToaDo.RoundPixel(y), g,Color.Green);
+
+            }
+        }
+        public void NetDut(Graphics g)
+        {
+            int x, y, cx, cy, a, b;
+            cx = this.point.X;
+            cy = this.point.Y;
+            a = this.a;
+            b = this.b;
+            x = 0;
+            y = b;
+            int A, B;
+            A = a * a;
+            B = b * b;
+            double p = B + A / 4 - A * b;
+            x = 0;
+            y = b;
+            int Dx = 0;
+            int Dy = 2 * A * y;
+            Drawn4Point_3D(x, y, g, Color.Green);
+
+            while (Dx <= Dy)
+            {
+                x += 1;
+                Dx += 2 * B;
+                if (p < 0)
+                    p += B + Dx;
+                else
+                {
+                    y -= 1;
+                    Dy -= 2 * A;
+                    p += B + Dx - Dy;
+                }
+                if (x % 5 == 0 )
+                    Drawn4Point_3D(x, ToaDo.RoundPixel(y), g, Color.Green);
+
+
+            }
+            p = Math.Round(B * (x + 0.5f) * (x + 0.5f) + A * (y - 1) * (y - 1) - A * B);
+            while (y >= 0)
+            {
+                y -= 1;
+                Dy -= A * 2;
+                if (p > 0)
+                    p += A - Dy;
+                else
+                {
+                    x += 1;
+                    Dx += B * 2;
+                    p += A - Dy + Dx;
+                }
+                if (x % 5 == 0)
+                    Drawn4Point_3D(x, ToaDo.RoundPixel(y), g, Color.Green);
+
             }
         }
         public HinhElip(Point point,int a,int b)
         {
             this.point = point;
-            this.a = a * 5;
-            this.b = b * 5;
-            this.color = Color.Black;
+            this.a = a*5;
+            this.b = b*5;
         }
         public void Init(Point start, Point end, Size sizeOfLine, Color color)
         {
