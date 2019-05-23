@@ -109,6 +109,9 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.zoom = new System.Windows.Forms.Button();
+            this.button41 = new System.Windows.Forms.Button();
+            this.button42 = new System.Windows.Forms.Button();
             this.pnl_Mode.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_ToolBox.SuspendLayout();
@@ -128,6 +131,9 @@ namespace KyThuatDoHoa_Nhom9
             // pnl_Mode
             // 
             this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnl_Mode.Controls.Add(this.button42);
+            this.pnl_Mode.Controls.Add(this.button41);
+            this.pnl_Mode.Controls.Add(this.zoom);
             this.pnl_Mode.Controls.Add(this.button40);
             this.pnl_Mode.Controls.Add(this.button39);
             this.pnl_Mode.Controls.Add(this.button38);
@@ -1093,7 +1099,38 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // timer1
             // 
+            this.timer1.Interval = 90;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // zoom
+            // 
+            this.zoom.Location = new System.Drawing.Point(653, 3);
+            this.zoom.Name = "zoom";
+            this.zoom.Size = new System.Drawing.Size(75, 23);
+            this.zoom.TabIndex = 10;
+            this.zoom.Text = "trục";
+            this.zoom.UseVisualStyleBackColor = true;
+            this.zoom.Click += new System.EventHandler(this.zoom_Click);
+            // 
+            // button41
+            // 
+            this.button41.Location = new System.Drawing.Point(634, 27);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(75, 23);
+            this.button41.TabIndex = 11;
+            this.button41.Text = "Ox";
+            this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
+            // 
+            // button42
+            // 
+            this.button42.Location = new System.Drawing.Point(715, 24);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(75, 26);
+            this.button42.TabIndex = 12;
+            this.button42.Text = "Oy";
+            this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
             // frm_Main
             // 
@@ -1217,6 +1254,9 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button zoom;
+        private System.Windows.Forms.Button button42;
+        private System.Windows.Forms.Button button41;
     }
 }
 

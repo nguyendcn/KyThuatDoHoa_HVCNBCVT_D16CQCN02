@@ -198,8 +198,48 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
         }
 
-        // thu phóng xe theo kích thước DonVi
-       
+        public void doiXungQuaOx()
+        {
+
+            for (int i = 0; i < this.LsPoint.Length; i++)
+            {
+                this.lsPoint[i] = ToaDo.MayTinhNguoiDung(this.lsPoint[i]);
+                doiXungOX(ref this.lsPoint[i]);
+                this.lsPoint[i] = ToaDo.NguoiDungMayTinh(this.lsPoint[i]);
+            }
+
+            NotifyPropertyChanged();
+
+        }
+
+        public void doiXungQuaOy()
+        {
+
+            for (int i = 0; i < this.LsPoint.Length; i++)
+            {
+                this.lsPoint[i] = ToaDo.MayTinhNguoiDung(this.lsPoint[i]);
+                doiXungOY(ref this.lsPoint[i]);
+                this.lsPoint[i] = ToaDo.NguoiDungMayTinh(this.lsPoint[i]);
+            }
+
+            NotifyPropertyChanged();
+
+        }
+        public void doiXungQuaTruc()
+        {
+
+            for (int i = 0; i < this.LsPoint.Length; i++)
+            {
+                this.lsPoint[i] = ToaDo.MayTinhNguoiDung(this.lsPoint[i]);
+                doiXungQuaTruc(ref this.lsPoint[i]);
+                this.lsPoint[i] = ToaDo.NguoiDungMayTinh(this.lsPoint[i]);
+            }
+
+            NotifyPropertyChanged();
+
+        }
+
+
 
         public void quayBanhXe(int goc)
         {
@@ -240,8 +280,41 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
             pn = nhanMT(matran2, matran1);
         }
+        private void doiXungOX(ref Point pn)
+        {
+            double[] matran1 = new double[3] { pn.X, pn.Y, 1 };
+            // khởi tạo ma trận tịnh tiến
+            double[,] matran2 = new double[3, 3] { { -1,  0 , 0 },
+                                             { 0,  1 , 0 },
+                                             { 0,  0, 1} };
 
+            pn = nhanMT(matran2, matran1);
+            
+        }
 
-      
+        private void doiXungOY(ref Point pn)
+        {
+            double[] matran1 = new double[3] { pn.X, pn.Y, 1 };
+            // khởi tạo ma trận tịnh tiến
+            double[,] matran2 = new double[3, 3] { { 1,  0 , 0 },
+                                             { 0,  -1 , 0 },
+                                             { 0,  0, 1} };
+
+            pn = nhanMT(matran2, matran1);
+
+        }
+
+        private void doiXungQuaTruc(ref Point pn)
+        {
+            double[] matran1 = new double[3] { pn.X, pn.Y, 1 };
+            // khởi tạo ma trận tịnh tiến
+            double[,] matran2 = new double[3, 3] { {- 1,  0 , 0 },
+                                             { 0,  -1 , 0 },
+                                             { 0,  0, 1} };
+
+            pn = nhanMT(matran2, matran1);
+
+        }
+
     }
 }

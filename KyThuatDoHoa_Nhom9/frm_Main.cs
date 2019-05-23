@@ -677,7 +677,22 @@ namespace KyThuatDoHoa_Nhom9
             lblX4.Text = p.X.ToString();
             lblY4.Text = p.Y.ToString();
         }
-       
 
+        private void zoom_Click(object sender, EventArgs e)
+        {
+           
+            
+            hinhXe.doiXungQuaTruc();
+        }
+
+        private void button41_Click(object sender, EventArgs e)
+        {
+            hinhXe.doiXungQuaOx();
+        }
+
+        private void button42_Click(object sender, EventArgs e)
+        {
+            hinhXe.doiXungQuaOy();
+        }
     }
 }
