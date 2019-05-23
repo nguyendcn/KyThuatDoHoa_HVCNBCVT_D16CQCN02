@@ -68,6 +68,16 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
                 (int)numud_Hours.Value, (int)numud_Minute.Value, (int)numud_Second.Value);
         }
 
+        private void btn_Destroy_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btn_Hide_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string PropertyName)

@@ -60,6 +60,7 @@
     <Compile Include="Construct\_2DObject\HinhChuNhat.cs" />
     <Compile Include="Construct\_2DObject\Pendulum.cs" />
     <Compile Include="Construct\_2DObject\Square.cs" />
+    <Compile Include="Construct\_2DObject\Timepiece.cs" />
     <Compile Include="Construct\_2DObject\Transformations.cs" />
     <Compile Include="Construct\_3DObject\HinhHopChuNhat.cs" />
     <Compile Include="Form1.cs">
@@ -85,6 +86,12 @@
     </Compile>
     <Compile Include="UI\UserCtr\ClockProperties.Designer.cs">
       <DependentUpon>ClockProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserCtr\TimepieceProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserCtr\TimepieceProperties.Designer.cs">
+      <DependentUpon>TimepieceProperties.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UserCtr\XeProperties.cs">
       <SubType>UserControl</SubType>
@@ -145,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserCtr\ClockProperties.resx">
       <DependentUpon>ClockProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserCtr\TimepieceProperties.resx">
+      <DependentUpon>TimepieceProperties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserCtr\XeProperties.resx">
       <DependentUpon>XeProperties.cs</DependentUpon>
@@ -249,6 +259,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Note.txt" />
+    <None Include="Resources\Dispose_32px.png" />
+    <None Include="Resources\Hide_32px.png" />
+    <None Include="Resources\Old_Clock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
