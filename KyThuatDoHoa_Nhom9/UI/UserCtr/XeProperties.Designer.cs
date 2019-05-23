@@ -30,284 +30,492 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblKhac2 = new System.Windows.Forms.Label();
+            this.lblK = new System.Windows.Forms.Label();
+            this.lblKhac8 = new System.Windows.Forms.Label();
+            this.lblKhac7 = new System.Windows.Forms.Label();
+            this.lblKhac6 = new System.Windows.Forms.Label();
+            this.lblKhac5 = new System.Windows.Forms.Label();
+            this.lblKhac3 = new System.Windows.Forms.Label();
+            this.lblKhac4 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.lblTam2 = new System.Windows.Forms.Label();
+            this.lblBk2 = new System.Windows.Forms.Label();
+            this.lblBx3 = new System.Windows.Forms.Label();
+            this.lblBx2 = new System.Windows.Forms.Label();
+            this.lblBx1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblBk1 = new System.Windows.Forms.Label();
+            this.lblBt3 = new System.Windows.Forms.Label();
+            this.lblTam1 = new System.Windows.Forms.Label();
+            this.lblBt2 = new System.Windows.Forms.Label();
+            this.lblBt1 = new System.Windows.Forms.Label();
+            this.lblKhac1 = new System.Windows.Forms.GroupBox();
+            this.lblTG3 = new System.Windows.Forms.Label();
+            this.lblTG2 = new System.Windows.Forms.Label();
+            this.lblTG1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblHcn6 = new System.Windows.Forms.Label();
+            this.lblHcn5 = new System.Windows.Forms.Label();
+            this.lblHcn4 = new System.Windows.Forms.Label();
+            this.lblHcn3 = new System.Windows.Forms.Label();
+            this.lblHcn2 = new System.Windows.Forms.Label();
+            this.lblHcn1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnMay = new System.Windows.Forms.Button();
+            this.btnNguoidung = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.lblKhac1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox6);
-            this.groupBox1.Controls.Add(this.groupBox5);
-            this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.groupBox6);
+            this.groupBox1.Controls.Add(this.groupBox7);
+            this.groupBox1.Controls.Add(this.groupBox4);
+            this.groupBox1.Controls.Add(this.lblKhac1);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 36);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(171, 497);
+            this.groupBox1.Size = new System.Drawing.Size(171, 438);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông số";
+            this.groupBox1.Text = "THÔNG SỐ";
             // 
             // groupBox6
             // 
-            this.groupBox6.Location = new System.Drawing.Point(18, 402);
+            this.groupBox6.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.groupBox6.Controls.Add(this.lblKhac2);
+            this.groupBox6.Controls.Add(this.lblK);
+            this.groupBox6.Controls.Add(this.lblKhac8);
+            this.groupBox6.Controls.Add(this.lblKhac7);
+            this.groupBox6.Controls.Add(this.lblKhac6);
+            this.groupBox6.Controls.Add(this.lblKhac5);
+            this.groupBox6.Controls.Add(this.lblKhac3);
+            this.groupBox6.Controls.Add(this.lblKhac4);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.groupBox6.Location = new System.Drawing.Point(18, 284);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(135, 61);
+            this.groupBox6.Size = new System.Drawing.Size(135, 84);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Các tọa độ khác";
             // 
-            // groupBox5
+            // lblKhac2
             // 
-            this.groupBox5.Controls.Add(this.label19);
-            this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.label17);
-            this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Location = new System.Drawing.Point(18, 290);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(135, 57);
-            this.groupBox5.TabIndex = 3;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Bánh xe sau";
+            this.lblKhac2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblKhac2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhac2.Location = new System.Drawing.Point(70, 16);
+            this.lblKhac2.Name = "lblKhac2";
+            this.lblKhac2.Size = new System.Drawing.Size(61, 12);
+            this.lblKhac2.TabIndex = 12;
+            this.lblKhac2.Click += new System.EventHandler(this.lblKhac2_Click);
             // 
-            // label19
+            // lblK
             // 
-            this.label19.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label19.Location = new System.Drawing.Point(94, 29);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(41, 13);
-            this.label19.TabIndex = 5;
+            this.lblK.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblK.Location = new System.Drawing.Point(5, 16);
+            this.lblK.Name = "lblK";
+            this.lblK.Size = new System.Drawing.Size(61, 12);
+            this.lblK.TabIndex = 11;
             // 
-            // label18
+            // lblKhac8
             // 
-            this.label18.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label18.Location = new System.Drawing.Point(58, 29);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 13);
-            this.label18.TabIndex = 4;
+            this.lblKhac8.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblKhac8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhac8.Location = new System.Drawing.Point(70, 66);
+            this.lblKhac8.Name = "lblKhac8";
+            this.lblKhac8.Size = new System.Drawing.Size(61, 12);
+            this.lblKhac8.TabIndex = 10;
             // 
-            // label17
+            // lblKhac7
             // 
-            this.label17.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label17.Location = new System.Drawing.Point(12, 29);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(41, 13);
-            this.label17.TabIndex = 3;
+            this.lblKhac7.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblKhac7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhac7.Location = new System.Drawing.Point(5, 66);
+            this.lblKhac7.Name = "lblKhac7";
+            this.lblKhac7.Size = new System.Drawing.Size(61, 12);
+            this.lblKhac7.TabIndex = 8;
             // 
-            // label16
+            // lblKhac6
             // 
-            this.label16.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label16.Location = new System.Drawing.Point(59, 16);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 13);
-            this.label16.TabIndex = 2;
+            this.lblKhac6.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblKhac6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhac6.Location = new System.Drawing.Point(70, 49);
+            this.lblKhac6.Name = "lblKhac6";
+            this.lblKhac6.Size = new System.Drawing.Size(61, 12);
+            this.lblKhac6.TabIndex = 7;
             // 
-            // label15
+            // lblKhac5
             // 
-            this.label15.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label15.Location = new System.Drawing.Point(6, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 13);
-            this.label15.TabIndex = 1;
+            this.lblKhac5.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblKhac5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhac5.Location = new System.Drawing.Point(5, 49);
+            this.lblKhac5.Name = "lblKhac5";
+            this.lblKhac5.Size = new System.Drawing.Size(61, 12);
+            this.lblKhac5.TabIndex = 6;
+            // 
+            // lblKhac3
+            // 
+            this.lblKhac3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblKhac3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhac3.Location = new System.Drawing.Point(5, 32);
+            this.lblKhac3.Name = "lblKhac3";
+            this.lblKhac3.Size = new System.Drawing.Size(61, 12);
+            this.lblKhac3.TabIndex = 5;
+            // 
+            // lblKhac4
+            // 
+            this.lblKhac4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblKhac4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhac4.Location = new System.Drawing.Point(70, 31);
+            this.lblKhac4.Name = "lblKhac4";
+            this.lblKhac4.Size = new System.Drawing.Size(61, 12);
+            this.lblKhac4.TabIndex = 4;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.groupBox7.Controls.Add(this.lblTam2);
+            this.groupBox7.Controls.Add(this.lblBk2);
+            this.groupBox7.Controls.Add(this.lblBx3);
+            this.groupBox7.Controls.Add(this.lblBx2);
+            this.groupBox7.Controls.Add(this.lblBx1);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(19, 204);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(135, 77);
+            this.groupBox7.TabIndex = 3;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Bánh xe sau";
+            this.groupBox7.Enter += new System.EventHandler(this.groupBox5_Enter);
+            // 
+            // lblTam2
+            // 
+            this.lblTam2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblTam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTam2.Location = new System.Drawing.Point(41, 60);
+            this.lblTam2.Name = "lblTam2";
+            this.lblTam2.Size = new System.Drawing.Size(61, 12);
+            this.lblTam2.TabIndex = 5;
+            this.lblTam2.Click += new System.EventHandler(this.lblTam2_Click);
+            // 
+            // lblBk2
+            // 
+            this.lblBk2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblBk2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBk2.Location = new System.Drawing.Point(23, 45);
+            this.lblBk2.Name = "lblBk2";
+            this.lblBk2.Size = new System.Drawing.Size(94, 12);
+            this.lblBk2.TabIndex = 4;
+            // 
+            // lblBx3
+            // 
+            this.lblBx3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblBx3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBx3.Location = new System.Drawing.Point(41, 30);
+            this.lblBx3.Name = "lblBx3";
+            this.lblBx3.Size = new System.Drawing.Size(61, 12);
+            this.lblBx3.TabIndex = 3;
+            this.lblBx3.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // lblBx2
+            // 
+            this.lblBx2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblBx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBx2.Location = new System.Drawing.Point(79, 16);
+            this.lblBx2.Name = "lblBx2";
+            this.lblBx2.Size = new System.Drawing.Size(61, 12);
+            this.lblBx2.TabIndex = 2;
+            // 
+            // lblBx1
+            // 
+            this.lblBx1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblBx1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBx1.Location = new System.Drawing.Point(16, 16);
+            this.lblBx1.Name = "lblBx1";
+            this.lblBx1.Size = new System.Drawing.Size(61, 12);
+            this.lblBx1.TabIndex = 1;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Location = new System.Drawing.Point(18, 165);
+            this.groupBox4.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.groupBox4.Controls.Add(this.lblBk1);
+            this.groupBox4.Controls.Add(this.lblBt3);
+            this.groupBox4.Controls.Add(this.lblTam1);
+            this.groupBox4.Controls.Add(this.lblBt2);
+            this.groupBox4.Controls.Add(this.lblBt1);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(18, 128);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(135, 93);
+            this.groupBox4.Size = new System.Drawing.Size(135, 74);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bánh xe trước";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
-            // label14
+            // lblBk1
             // 
-            this.label14.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label14.Location = new System.Drawing.Point(48, 34);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 13);
-            this.label14.TabIndex = 4;
+            this.lblBk1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblBk1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBk1.Location = new System.Drawing.Point(21, 45);
+            this.lblBk1.Name = "lblBk1";
+            this.lblBk1.Size = new System.Drawing.Size(94, 12);
+            this.lblBk1.TabIndex = 5;
             // 
-            // label13
+            // lblBt3
             // 
-            this.label13.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label13.Location = new System.Drawing.Point(20, 70);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Bán kính";
+            this.lblBt3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblBt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBt3.Location = new System.Drawing.Point(37, 30);
+            this.lblBt3.Name = "lblBt3";
+            this.lblBt3.Size = new System.Drawing.Size(61, 12);
+            this.lblBt3.TabIndex = 4;
             // 
-            // label12
+            // lblTam1
             // 
-            this.label12.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label12.Location = new System.Drawing.Point(74, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 2;
+            this.lblTam1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblTam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTam1.Location = new System.Drawing.Point(37, 59);
+            this.lblTam1.Name = "lblTam1";
+            this.lblTam1.Size = new System.Drawing.Size(61, 12);
+            this.lblTam1.TabIndex = 3;
             // 
-            // label11
+            // lblBt2
             // 
-            this.label11.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label11.Location = new System.Drawing.Point(20, 52);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Tâm";
+            this.lblBt2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblBt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBt2.Location = new System.Drawing.Point(69, 16);
+            this.lblBt2.Name = "lblBt2";
+            this.lblBt2.Size = new System.Drawing.Size(61, 12);
+            this.lblBt2.TabIndex = 2;
             // 
-            // label10
+            // lblBt1
             // 
-            this.label10.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label10.Location = new System.Drawing.Point(17, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 0;
+            this.lblBt1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblBt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBt1.Location = new System.Drawing.Point(6, 16);
+            this.lblBt1.Name = "lblBt1";
+            this.lblBt1.Size = new System.Drawing.Size(61, 12);
+            this.lblBt1.TabIndex = 0;
+            this.lblBt1.Click += new System.EventHandler(this.lblBtrc1_Click);
             // 
-            // groupBox3
+            // lblKhac1
             // 
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(18, 102);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(135, 57);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Hình tam giác";
+            this.lblKhac1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lblKhac1.Controls.Add(this.lblTG3);
+            this.lblKhac1.Controls.Add(this.lblTG2);
+            this.lblKhac1.Controls.Add(this.lblTG1);
+            this.lblKhac1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhac1.Location = new System.Drawing.Point(18, 78);
+            this.lblKhac1.Name = "lblKhac1";
+            this.lblKhac1.Size = new System.Drawing.Size(135, 47);
+            this.lblKhac1.TabIndex = 1;
+            this.lblKhac1.TabStop = false;
+            this.lblKhac1.Text = "Hình tam giác";
             // 
-            // label9
+            // lblTG3
             // 
-            this.label9.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label9.Location = new System.Drawing.Point(54, 35);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 2;
+            this.lblTG3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblTG3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTG3.Location = new System.Drawing.Point(37, 31);
+            this.lblTG3.Name = "lblTG3";
+            this.lblTG3.Size = new System.Drawing.Size(61, 12);
+            this.lblTG3.TabIndex = 2;
             // 
-            // label8
+            // lblTG2
             // 
-            this.label8.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label8.Location = new System.Drawing.Point(79, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 1;
+            this.lblTG2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblTG2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTG2.Location = new System.Drawing.Point(70, 16);
+            this.lblTG2.Name = "lblTG2";
+            this.lblTG2.Size = new System.Drawing.Size(61, 12);
+            this.lblTG2.TabIndex = 1;
             // 
-            // label7
+            // lblTG1
             // 
-            this.label7.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label7.Location = new System.Drawing.Point(24, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 0;
+            this.lblTG1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblTG1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTG1.Location = new System.Drawing.Point(6, 16);
+            this.lblTG1.Name = "lblTG1";
+            this.lblTG1.Size = new System.Drawing.Size(61, 12);
+            this.lblTG1.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(18, 17);
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.groupBox2.Controls.Add(this.lblHcn6);
+            this.groupBox2.Controls.Add(this.lblHcn5);
+            this.groupBox2.Controls.Add(this.lblHcn4);
+            this.groupBox2.Controls.Add(this.lblHcn3);
+            this.groupBox2.Controls.Add(this.lblHcn2);
+            this.groupBox2.Controls.Add(this.lblHcn1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(18, 14);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(135, 79);
+            this.groupBox2.Size = new System.Drawing.Size(135, 62);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hình chữ nhật";
             // 
-            // label6
+            // lblHcn6
             // 
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label6.Location = new System.Drawing.Point(71, 55);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Chiều rộng";
+            this.lblHcn6.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblHcn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHcn6.Location = new System.Drawing.Point(70, 46);
+            this.lblHcn6.Name = "lblHcn6";
+            this.lblHcn6.Size = new System.Drawing.Size(61, 12);
+            this.lblHcn6.TabIndex = 5;
             // 
-            // label5
+            // lblHcn5
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label5.Location = new System.Drawing.Point(3, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Chiều dài";
+            this.lblHcn5.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblHcn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHcn5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblHcn5.Location = new System.Drawing.Point(5, 46);
+            this.lblHcn5.Name = "lblHcn5";
+            this.lblHcn5.Size = new System.Drawing.Size(61, 12);
+            this.lblHcn5.TabIndex = 4;
             // 
-            // label4
+            // lblHcn4
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label4.Location = new System.Drawing.Point(75, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 3;
+            this.lblHcn4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblHcn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHcn4.Location = new System.Drawing.Point(70, 31);
+            this.lblHcn4.Name = "lblHcn4";
+            this.lblHcn4.Size = new System.Drawing.Size(61, 12);
+            this.lblHcn4.TabIndex = 3;
             // 
-            // label3
+            // lblHcn3
             // 
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label3.Location = new System.Drawing.Point(15, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 2;
+            this.lblHcn3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblHcn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHcn3.Location = new System.Drawing.Point(5, 31);
+            this.lblHcn3.Name = "lblHcn3";
+            this.lblHcn3.Size = new System.Drawing.Size(61, 12);
+            this.lblHcn3.TabIndex = 2;
             // 
-            // label2
+            // lblHcn2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(75, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 1;
+            this.lblHcn2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblHcn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHcn2.Location = new System.Drawing.Point(70, 16);
+            this.lblHcn2.Name = "lblHcn2";
+            this.lblHcn2.Size = new System.Drawing.Size(61, 12);
+            this.lblHcn2.TabIndex = 1;
+            // 
+            // lblHcn1
+            // 
+            this.lblHcn1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblHcn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHcn1.Location = new System.Drawing.Point(5, 16);
+            this.lblHcn1.Name = "lblHcn1";
+            this.lblHcn1.Size = new System.Drawing.Size(61, 12);
+            this.lblHcn1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label1.Location = new System.Drawing.Point(15, 16);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 0;
+            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "XE Ô TÔ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::KyThuatDoHoa_Nhom9.Properties.Resources.xe_ô_tô;
+            this.pictureBox1.Location = new System.Drawing.Point(64, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(86, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::KyThuatDoHoa_Nhom9.Properties.Resources.gnome_window_close;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(153, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(21, 19);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox3.Controls.Add(this.btnNguoidung);
+            this.groupBox3.Controls.Add(this.btnMay);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(16, 371);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(138, 71);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Chuyển tọa độ";
+            // 
+            // btnMay
+            // 
+            this.btnMay.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnMay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMay.Location = new System.Drawing.Point(29, 15);
+            this.btnMay.Name = "btnMay";
+            this.btnMay.Size = new System.Drawing.Size(79, 21);
+            this.btnMay.TabIndex = 0;
+            this.btnMay.Text = "Tọa độ máy";
+            this.btnMay.UseVisualStyleBackColor = false;
+            this.btnMay.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnNguoidung
+            // 
+            this.btnNguoidung.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNguoidung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNguoidung.Location = new System.Drawing.Point(2, 37);
+            this.btnNguoidung.Name = "btnNguoidung";
+            this.btnNguoidung.Size = new System.Drawing.Size(129, 21);
+            this.btnNguoidung.TabIndex = 1;
+            this.btnNguoidung.Text = "Tọa độ người dùng";
+            this.btnNguoidung.UseVisualStyleBackColor = false;
+            this.btnNguoidung.Click += new System.EventHandler(this.button3_Click);
             // 
             // XeProperties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "XeProperties";
             this.Size = new System.Drawing.Size(198, 601);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.lblKhac1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -315,28 +523,42 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblHcn6;
+        private System.Windows.Forms.Label lblHcn5;
+        private System.Windows.Forms.Label lblHcn4;
+        private System.Windows.Forms.Label lblHcn3;
+        private System.Windows.Forms.Label lblHcn2;
+        private System.Windows.Forms.Label lblHcn1;
+        private System.Windows.Forms.GroupBox lblKhac1;
+        private System.Windows.Forms.Label lblTG3;
+        private System.Windows.Forms.Label lblTG2;
+        private System.Windows.Forms.Label lblTG1;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblTam1;
+        private System.Windows.Forms.Label lblBt2;
+        private System.Windows.Forms.Label lblBt1;
+        private System.Windows.Forms.Label lblKhac2;
+        private System.Windows.Forms.Label lblK;
+        private System.Windows.Forms.Label lblKhac8;
+        private System.Windows.Forms.Label lblKhac7;
+        private System.Windows.Forms.Label lblKhac6;
+        private System.Windows.Forms.Label lblKhac5;
+        private System.Windows.Forms.Label lblKhac3;
+        private System.Windows.Forms.Label lblKhac4;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label lblTam2;
+        private System.Windows.Forms.Label lblBk2;
+        private System.Windows.Forms.Label lblBx3;
+        private System.Windows.Forms.Label lblBx2;
+        private System.Windows.Forms.Label lblBx1;
+        private System.Windows.Forms.Label lblBk1;
+        private System.Windows.Forms.Label lblBt3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnNguoidung;
+        private System.Windows.Forms.Button btnMay;
     }
 }

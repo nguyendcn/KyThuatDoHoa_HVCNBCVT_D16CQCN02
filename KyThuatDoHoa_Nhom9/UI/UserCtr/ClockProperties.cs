@@ -78,6 +78,11 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             this.Visible = false;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string PropertyName)
