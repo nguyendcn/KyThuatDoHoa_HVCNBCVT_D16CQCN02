@@ -102,20 +102,20 @@ namespace KyThuatDoHoa_Nhom9
             #region Set tooltip for button inside pnl_2D
 
             //grb 2D
-            foreach(Control ctr in this.grb_2DShapes.Controls)
-            {
-                if(ctr is Button)
-                {
-                    if (ctr.Tag == null)
-                    {
-                        tt.SetToolTip(ctr, "Tag_name null");
-                    }
-                    else
-                    {
-                        tt.SetToolTip(ctr, ctr.Tag.ToString());
-                    }
-                }
-            }
+            //foreach (Control ctr in this.grb_2DShapes.Controls)
+            //{
+            //    if (ctr is Button)
+            //    {
+            //        if (ctr.Tag == null)
+            //        {
+            //            tt.SetToolTip(ctr, "Tag_name null");
+            //        }
+            //        else
+            //        {
+            //            tt.SetToolTip(ctr, ctr.Tag.ToString());
+            //        }
+            //    }
+            //}
 
             //grb line
             foreach (Control ctr in this.grb_2DLine.Controls)
