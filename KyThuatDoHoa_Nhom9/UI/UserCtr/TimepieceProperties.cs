@@ -12,9 +12,9 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
 {
     public partial class TimepieceProperties : UserControl, INotifyPropertyChanged
     {
-        private DateTime currentTime;
         private Point mainLocation;
         private ClockProperties _clockProperties;
+        private bool dispose;
 
         public TimepieceProperties()
         {
@@ -29,30 +29,20 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             OnPropertyChanged("timeChanged");
         }
 
-        public DateTime CurrentTime { get => currentTime;
-            set
-            {
-                if(value != this.currentTime)
-                {
-                    this.currentTime = value;
-                    
-                    ClockProperties.CurrentTime = value;
-                    OnPropertyChanged("currentTime");
-                }
-            }
-        }
         public Point MainLocation { get => mainLocation;
             set
             {
                 if(value != this.mainLocation)
                 {
                     this.mainLocation = value;
+                    lbl_Location.Text = value.ToString();
                     OnPropertyChanged("mainLocation");
                 }
             }
         }
 
         public ClockProperties ClockProperties { get => _clockProperties; set => _clockProperties = value; }
+        public bool DisposeObject { set { OnPropertyChanged("dispose"); } }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -64,15 +54,21 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             }
         }
 
-        private void btn_GetTimeSystem_Click(object sender, EventArgs e)
+        private void btn_Destroy_Click(object sender, EventArgs e)
         {
-            this.CurrentTime = DateTime.Now;
+            this.Dispose();
+            this.DisposeObject = true;
         }
 
-        private void btn_ChangeTime_Click(object sender, EventArgs e)
+        private void btn_ChangeLocation_Click(object sender, EventArgs e)
         {
-            this.CurrentTime = new DateTime(this.CurrentTime.Year, this.CurrentTime.Month, this.CurrentTime.Day,
-                                            (int)this.numud_Hours.Value, (int)this.numud_Minute.Value, (int)this.numud_Second.Value);
+            string[] arr = txt_Location.Text.Split(',');
+            this.MainLocation = new Point(int.Parse(arr[0]), int.Parse(arr[1]));
+        }
+
+        private void btn_Hide_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }

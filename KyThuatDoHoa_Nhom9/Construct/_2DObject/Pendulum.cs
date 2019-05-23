@@ -20,6 +20,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         private HinhChuNhat rectangle;
         private bool nextStep;
         private Timer timer = new Timer { Interval = 90 };
+        private Point mainLocation;
 
         public int Alpha { get => alpha; set => alpha = value; }
         public Line Rope { get => rope; set => rope = value; }
@@ -31,6 +32,17 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             {
                 this.nextStep = value;
                 OnPropertyChanged("nextStep");
+            }
+        }
+
+        public Point MainLocation { get => mainLocation;
+            set
+            {
+                if(value != this.mainLocation)
+                {
+                    ChangeAllObject(value);
+                    this.mainLocation = value;
+                }
             }
         }
 
@@ -49,8 +61,9 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
             int x = (point1.X + point2.X) / 2,
                 y = (point1.Y + point2.Y) / 2;
-
+            
             this.Alpha = -5;
+            this.mainLocation = point1;
             this.Rectangle = new HinhChuNhat(point1, point2);
             this.Rope = new Line(new Point(x, point1.Y), new Point(x, y + (point2.Y - y) / 2+1));
             this.Circle = new HinhTron(new Point(x, y + (point2.Y - y) / 2 + (point2.Y - y) / 4), (point2.Y - y ) / (4 * 5) - 1);
@@ -62,6 +75,15 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         private void Timer_Tick(object sender, EventArgs e)
         {
             this.NextStep = true;
+        }
+
+        private void ChangeAllObject(Point p)
+        {
+            int dx =p.X - this.mainLocation.X,
+                dy =p.Y - this.mainLocation.Y;
+            this.Rectangle.Shifting(dx, dy);
+            this.Rope.Shifting(dx, dy);
+            this.Circle.Shifting(dx, dy);
         }
 
         public void Draw(Graphics g)

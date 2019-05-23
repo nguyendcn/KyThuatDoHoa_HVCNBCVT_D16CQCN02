@@ -22,6 +22,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 if(value != this.location)
                 {
                     this.location = value;
+                    Setup(this.Item_clock.CurrentDatetime, value);
                     OnPropertyChanged("location");
                 }
             }
@@ -150,11 +151,17 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             if (this.Item_clock == null)
             {
-                this.Item_clock = new Clock(ToaDo.NguoiDungMayTinh(new Point(p.X + 30, p.Y + 5)), 15, time);
+                this.Item_clock = new Clock(ToaDo.NguoiDungMayTinh(new Point(p.X + 20, p.Y + 10)), 15, time);
             }
             if (this.Item_pendulum == null)
             {
-                this.Item_pendulum = new Pendulum(ToaDo.NguoiDungMayTinh(new Point(p.X + 10, p.Y - 13)), ToaDo.NguoiDungMayTinh(new Point(p.X + 50, p.Y + -60)));
+                this.Item_pendulum = new Pendulum(ToaDo.NguoiDungMayTinh(new Point(p.X + 1, p.Y - 6)), ToaDo.NguoiDungMayTinh(new Point(p.X + 40, p.Y + -60)));
+            }
+            
+            if(this.Item_clock != null && this.Item_pendulum != null)
+            {
+                this.Item_clock.A = new Point(p.X + 20, p.Y + 10);
+                this.Item_pendulum.MainLocation = ToaDo.NguoiDungMayTinh(new Point(p.X + 1, p.Y - 6));
             }
         }
 

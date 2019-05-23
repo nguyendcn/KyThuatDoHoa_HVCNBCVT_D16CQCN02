@@ -106,12 +106,17 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             throw new NotImplementedException();
         }
 
-        public void Shifting(Point pDest)
+        public void Shifting(int dx, int dy)
+        {
+            this.Point = this.Point.Translate(dx, dy);
+        }
+
+        public void Symmetry(Point orgin, SymmetryMode mode)
         {
             throw new NotImplementedException();
         }
 
-        public void Symmetry(Point orgin, SymmetryMode mode)
+        public void Shifting(Point pDest)
         {
             throw new NotImplementedException();
         }

@@ -334,7 +334,7 @@ namespace KyThuatDoHoa_Nhom9
                 clockProperties.BringToFront();
 
                 DateTime dt = DateTime.Now;
-                clock = new Clock(new Point(580, 315), 15, dt);
+                clock = new Clock(new Point(0, 0), 15, dt);
                 clock.CurrentDatetime = new DateTime(2019, 05, 19, 12, 30, 15);
                 clock.Draw(this.picb_2DArea.CreateGraphics());
                 clock.PropertyChanged += Clock_PropertyChanged;
@@ -352,6 +352,7 @@ namespace KyThuatDoHoa_Nhom9
    
         }
 
+        #region Timepiece action
         TimepieceProperties timepieceProperties;
         Timepiece timepiece;
         private void Timepiece_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -363,25 +364,32 @@ namespace KyThuatDoHoa_Nhom9
             else if(e.PropertyName.Equals("item_clock"))
             {
                 this.picb_2DArea.Refresh();
-                timepieceProperties.ClockProperties.CurrentTime = timepiece.Item_clock.CurrentDatetime;
-                timepieceProperties.ClockProperties.HHours = timepiece.Item_clock.HHours;
-                timepieceProperties.ClockProperties.HMinute = timepiece.Item_clock.HMinute;
-                timepieceProperties.ClockProperties.HSecond = timepiece.Item_clock.HSecond;
+                if (timepieceProperties != null && timepiece != null)
+                {
+                    timepieceProperties.ClockProperties.CurrentTime = timepiece.Item_clock.CurrentDatetime;
+                    timepieceProperties.ClockProperties.HHours = timepiece.Item_clock.HHours;
+                    timepieceProperties.ClockProperties.HMinute = timepiece.Item_clock.HMinute;
+                    timepieceProperties.ClockProperties.HSecond = timepiece.Item_clock.HSecond;
+                }
             }
         }
-
         private void TimepieceProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-           if(e.PropertyName.Equals("timeChanged"))
+            if (e.PropertyName.Equals("timeChanged"))
             {
                 timepiece.Item_clock.CurrentDatetime = timepieceProperties.ClockProperties.CurrentTime;
             }
+            else if (e.PropertyName.Equals("mainLocation"))
+            {
+                timepiece.Location = timepieceProperties.MainLocation;
+            }
+            else if (e.PropertyName.Equals("dispose"))
+            {
+                this.timepiece = null;
+                this.timepieceProperties = null;
+            }
         }
-
-
-        #region Timepiece action
         #endregion
-
 
         #region Clock action
         Clock clock;
