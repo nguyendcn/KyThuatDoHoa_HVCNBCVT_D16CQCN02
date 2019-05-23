@@ -13,7 +13,6 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
     {
         // danh sách các points để vẽ hình xe
         private Point[] lsPoint = new Point[25];
-
         // bán kính bánh xe
         private int bkBanh;
         public Point[] LsPoint
@@ -21,7 +20,6 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
           set
             {
                 lsPoint = value;
-                NotifyPropertyChanged();
             }
         }
         public int BkBanh { get => bkBanh; set => bkBanh = value; }
@@ -79,9 +77,11 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             LsPoint[23] = new Point(330, 215);
             LsPoint[24] = new Point(290, 215);
             BkBanh = 25;
+            NotifyPropertyChanged();
+
         }
 
-        
+
         public void drawCar(Graphics g)
         {
             // tô màu trước
@@ -193,6 +193,8 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             {
                 tinhTien(ref this.LsPoint[i], x, y);
             }
+            NotifyPropertyChanged();
+
         }
 
 
@@ -206,6 +208,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             LsPoint[22] = LsPoint[22].RotateAt(LsPoint[14], goc);
             LsPoint[23] = LsPoint[23].RotateAt(LsPoint[14], goc);
             LsPoint[24] = LsPoint[24].RotateAt(LsPoint[14], goc);
+            NotifyPropertyChanged();
 
         }
         private Point nhanMT(double[,] matran, double[] mang)

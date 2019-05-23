@@ -133,6 +133,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\frm_ChangeMode.resx">
       <DependentUpon>frm_ChangeMode.cs</DependentUpon>
@@ -249,6 +250,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Note.txt" />
+    <None Include="Resources\xe ô tô.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -21,6 +21,7 @@ namespace KyThuatDoHoa_Nhom9
         int i = 0, j = 0;
         HinhXe hinhXe;
         Pendulum pendulum;
+        XeProperties xe;
 
         public frm_Main()
         {
@@ -28,7 +29,7 @@ namespace KyThuatDoHoa_Nhom9
             
          
             hinhXe = new HinhXe();
-
+            xe = new XeProperties();
             // Tạo quả lắc theo kích thước cho trước
             pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
             pendulum.SetAlpha(-3); // set góc quay alpha 
@@ -467,23 +468,15 @@ namespace KyThuatDoHoa_Nhom9
         #endregion
 
 
-        Graphics g;
-        Graphics g1;
-        int y1 = 1, y2 = 5;
         Point s = new Point(3, 3);
         Point ep = new Point(15, 15);
-        Bitmap bmTemp;
-        bool test = false;
-        HinhChuNhat hinhChuNhat;
         Clock cl;
-        Line line;
         Timer tm = new Timer
         {
             Interval = 300
         };
 
-        int x;
-        int y;
+      
 
         private void button37_Click(object sender, EventArgs e)
         {
@@ -499,7 +492,6 @@ namespace KyThuatDoHoa_Nhom9
         private void Cl_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             label4.Text = cl.CurrentDatetime.ToString();
-            test = true;
             //this.Invalidate();
             this.picb_2DArea.Refresh();
         }
@@ -522,6 +514,8 @@ namespace KyThuatDoHoa_Nhom9
 
             ////pendulum.Draw(e.Graphics);
 
+
+            hinhXe.PropertyChanged += HinhXe_PropertyChanged;
             hinhXe.ToMau(e.Graphics);
 
             hinhXe.traslationXe(i, j);
@@ -534,15 +528,24 @@ namespace KyThuatDoHoa_Nhom9
             hinhXe.quayBanhXe(30);
         }
 
+        private void HinhXe_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+
+            // cập nhật lspoint từ class HinhXe vào class Xeproperties
+            xe.lsPoint = hinhXe.LsPoint;
+            xe.bankinh = hinhXe.BkBanh;
+            xe.HienThiThongTin();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            flagTimer = true;
+       
             this.picb_2DArea.Refresh();
         }
 
         private void button38_Click(object sender, EventArgs e)
         {
-            XeProperties xe = new XeProperties();
+        
             this.pnl_ToolBox.Controls.Add(xe);
             xe.BringToFront();
 
