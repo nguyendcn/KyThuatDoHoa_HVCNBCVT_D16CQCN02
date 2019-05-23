@@ -50,6 +50,7 @@
             this.Controls.Add(this.picb3D);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.picb3D)).EndInit();
             this.ResumeLayout(false);
 

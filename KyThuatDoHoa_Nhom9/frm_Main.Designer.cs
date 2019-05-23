@@ -31,6 +31,7 @@ namespace KyThuatDoHoa_Nhom9
         {
             this.components = new System.ComponentModel.Container();
             this.pnl_Mode = new System.Windows.Forms.Panel();
+            this.button40 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -107,7 +108,6 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button40 = new System.Windows.Forms.Button();
             this.pnl_Mode.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_ToolBox.SuspendLayout();
@@ -141,6 +141,15 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Mode.Name = "pnl_Mode";
             this.pnl_Mode.Size = new System.Drawing.Size(860, 49);
             this.pnl_Mode.TabIndex = 0;
+            // 
+            // button40
+            // 
+            this.button40.Location = new System.Drawing.Point(536, 13);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(75, 23);
+            this.button40.TabIndex = 9;
+            this.button40.Text = "button40";
+            this.button40.UseVisualStyleBackColor = true;
             // 
             // button39
             // 
@@ -1069,22 +1078,16 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_3DArea.Size = new System.Drawing.Size(220, 219);
             this.picb_3DArea.TabIndex = 0;
             this.picb_3DArea.TabStop = false;
+            this.picb_3DArea.SizeChanged += new System.EventHandler(this.Picb_3DArea_SizeChanged);
+            this.picb_3DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.Picb_3DArea_Paint);
+            this.picb_3DArea.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseClick);
+            this.picb_3DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseMove);
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button40
-            // 
-            this.button40.Location = new System.Drawing.Point(536, 13);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(75, 23);
-            this.button40.TabIndex = 9;
-            this.button40.Text = "button40";
-            this.button40.UseVisualStyleBackColor = true;
-            //this.button40.Click += new System.EventHandler(this.Button40_Click);
-
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);

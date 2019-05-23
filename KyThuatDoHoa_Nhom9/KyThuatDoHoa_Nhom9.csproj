@@ -62,6 +62,7 @@
     <Compile Include="Construct\_2DObject\Square.cs" />
     <Compile Include="Construct\_2DObject\Transformations.cs" />
     <Compile Include="Construct\_3DObject\HinhHopChuNhat.cs" />
+    <Compile Include="Construct\_3DObject\HinhTru.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
