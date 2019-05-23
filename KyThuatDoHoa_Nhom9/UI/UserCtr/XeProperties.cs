@@ -38,8 +38,8 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             this.lblHcn2.Text = new Point(this.lsPoint[8].X, this.lsPoint[9].Y).ToString();
             this.lblHcn3.Text = this.lsPoint[9].ToString();
             this.lblHcn4.Text = new Point(this.lsPoint[9].X, this.lsPoint[8].Y).ToString();
-            this.lblHcn5.Text = "Chiều rộng: " + (this.lsPoint[9].Y - this.lsPoint[8].Y).ToString();
-            this.lblHcn6.Text = "Chiều dài : " + (this.lsPoint[9].X - this.lsPoint[8].X).ToString();
+            this.lblHcn5.Text = "Chiều rộng: 35";
+            this.lblHcn6.Text = "Chiều dài : 125";
             // in thông tin hình tam giác
             this.lblTG1.Text = this.lsPoint[10].ToString();
             this.lblTG2.Text = this.lsPoint[11].ToString();
