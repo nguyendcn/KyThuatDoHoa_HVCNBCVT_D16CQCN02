@@ -35,9 +35,9 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
                 if(value != this.mainLocation)
                 {
                     this.mainLocation = value;
-                    lbl_Location.Text = value.ToString();
                     OnPropertyChanged("mainLocation");
                 }
+                lbl_Location.Text = value.ToString();
             }
         }
 

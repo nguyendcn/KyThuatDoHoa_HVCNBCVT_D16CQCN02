@@ -133,9 +133,9 @@
             this.lbl_Location.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Location.Location = new System.Drawing.Point(58, 28);
             this.lbl_Location.Name = "lbl_Location";
-            this.lbl_Location.Size = new System.Drawing.Size(50, 15);
+            this.lbl_Location.Size = new System.Drawing.Size(65, 15);
             this.lbl_Location.TabIndex = 2;
-            this.lbl_Location.Text = "location";
+            this.lbl_Location.Text = "{X=0,Y=0}";
             // 
             // btn_ChangeLocation
             // 

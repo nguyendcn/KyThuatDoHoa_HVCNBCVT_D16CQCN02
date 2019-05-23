@@ -359,7 +359,7 @@ namespace KyThuatDoHoa_Nhom9
         {
             if(e.PropertyName.Equals("location"))
             {
-
+                timepieceProperties.MainLocation = timepiece.Location;
             }
             else if(e.PropertyName.Equals("item_clock"))
             {

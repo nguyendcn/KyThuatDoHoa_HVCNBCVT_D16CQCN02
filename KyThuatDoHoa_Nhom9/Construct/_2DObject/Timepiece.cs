@@ -19,12 +19,11 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         public Point Location { get => location;
             set
             {
-                if(value != this.location)
-                {
+                
                     this.location = value;
                     Setup(this.Item_clock.CurrentDatetime, value);
                     OnPropertyChanged("location");
-                }
+              
             }
         }
 
