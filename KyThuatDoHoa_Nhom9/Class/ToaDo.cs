@@ -90,28 +90,28 @@ namespace KyThuatDoHoa_Nhom9
         /// <summary>
         /// Hiển thị 1 điểm lên màn hình ( Theo tọa độ máy tính)
         /// </summary>
-        public static void HienThi(Point p, Graphics g, Color color)
-        {
-            if (g == null)
-                return;
-            int pointX = RoundPixel(p.X),
-                pointY = RoundPixel(p.Y);
-            Pen p1 = new Pen(color);
-            SolidBrush b = new SolidBrush(color);
+        //public static void HienThi(Point p, Graphics g, Color color)
+        //{
+        //    if (g == null)
+        //        return;
+        //    int pointX = RoundPixel(p.X),
+        //        pointY = RoundPixel(p.Y);
+        //    Pen p1 = new Pen(color);
+        //    SolidBrush b = new SolidBrush(color);
 
-            g.DrawEllipse(p1, pointX, pointY, 2, 2);
-            g.FillEllipse(b, pointX, pointY, 2, 2);
-            g.DrawEllipse(p1, pointX - 2, pointY - 2, 2, 2);
-            g.FillEllipse(b, pointX - 2, pointY - 2, 2, 2);
-            g.DrawEllipse(p1, pointX, pointY - 2, 2, 2);
-            g.FillEllipse(b, pointX, pointY - 2, 2, 2);
-            g.DrawEllipse(p1, pointX - 2, pointY, 2, 2);
-            g.FillEllipse(b, pointX - 2, pointY, 2, 2);
-        }
+        //    g.DrawEllipse(p1, pointX, pointY, 2, 2);
+        //    g.FillEllipse(b, pointX, pointY, 2, 2);
+        //    g.DrawEllipse(p1, pointX - 2, pointY - 2, 2, 2);
+        //    g.FillEllipse(b, pointX - 2, pointY - 2, 2, 2);
+        //    g.DrawEllipse(p1, pointX, pointY - 2, 2, 2);
+        //    g.FillEllipse(b, pointX, pointY - 2, 2, 2);
+        //    g.DrawEllipse(p1, pointX - 2, pointY, 2, 2);
+        //    g.FillEllipse(b, pointX - 2, pointY, 2, 2);
+        //}
         /// <summary>
         /// Hiển thị 1 điểm lên màn hình ( Theo tọa độ máy tính)
         /// </summary>
-        public static void HienThi(int x, int y, Graphics g)
+        public static void HienThi(int x, int y, Graphics g, Color color)
         {
             Point p = new Point(x, y);
             int pointX = RoundPixel(p.X),

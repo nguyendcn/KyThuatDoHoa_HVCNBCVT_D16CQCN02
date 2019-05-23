@@ -1702,7 +1702,7 @@ namespace KyThuatDoHoa_Nhom9
             this.zoom.TabIndex = 10;
             this.zoom.Text = "trục";
             this.zoom.UseVisualStyleBackColor = true;
-            this.zoom.Click += new System.EventHandler(this.zoom_Click);
+            //this.zoom.Click += new System.EventHandler(this.zoom_Click);
             // 
             // button41
             // 
@@ -1712,7 +1712,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button41.TabIndex = 11;
             this.button41.Text = "Ox";
             this.button41.UseVisualStyleBackColor = true;
-            this.button41.Click += new System.EventHandler(this.button41_Click);
+            //this.button41.Click += new System.EventHandler(this.button41_Click);
             // 
             // button42
             // 
@@ -1722,7 +1722,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button42.TabIndex = 12;
             this.button42.Text = "Oy";
             this.button42.UseVisualStyleBackColor = true;
-            this.button42.Click += new System.EventHandler(this.button42_Click);
+         //   this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
             // frm_Main
             // 
