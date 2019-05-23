@@ -32,6 +32,7 @@ namespace KyThuatDoHoa_Nhom9
             // Tạo quả lắc theo kích thước cho trước
             pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
             pendulum.SetAlpha(-3); // set góc quay alpha 
+            pendulum.PropertyChanged += Pendulum_PropertyChanged;
 
             picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
@@ -40,6 +41,11 @@ namespace KyThuatDoHoa_Nhom9
 
             Setup_ToolTips();
           
+        }
+
+        private void Pendulum_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.picb_2DArea.Refresh();
         }
 
 
@@ -328,13 +334,64 @@ namespace KyThuatDoHoa_Nhom9
                 clockProperties.BringToFront();
 
                 DateTime dt = DateTime.Now;
-                clock = new Clock(new Point(580, 315), 15, dt);
+                clock = new Clock(new Point(0, 0), 15, dt);
                 clock.CurrentDatetime = new DateTime(2019, 05, 19, 12, 30, 15);
                 clock.Draw(this.picb_2DArea.CreateGraphics());
                 clock.PropertyChanged += Clock_PropertyChanged;
             }
+            else if(btn.Tag.Equals("TimePiece"))
+            {
+                timepieceProperties = new TimepieceProperties();
+                timepieceProperties.PropertyChanged += TimepieceProperties_PropertyChanged;
+                this.pnl_ToolBox.Controls.Add(timepieceProperties);
+                timepieceProperties.BringToFront();
+
+                timepiece = new Timepiece();
+                timepiece.PropertyChanged += Timepiece_PropertyChanged;
+            }
+   
         }
 
+        #region Timepiece action
+        TimepieceProperties timepieceProperties;
+        Timepiece timepiece;
+        private void Timepiece_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if(e.PropertyName.Equals("location"))
+            {
+                timepieceProperties.MainLocation = timepiece.Location;
+            }
+            else if(e.PropertyName.Equals("item_clock"))
+            {
+                this.picb_2DArea.Refresh();
+                if (timepieceProperties != null && timepiece != null)
+                {
+                    timepieceProperties.ClockProperties.CurrentTime = timepiece.Item_clock.CurrentDatetime;
+                    timepieceProperties.ClockProperties.HHours = timepiece.Item_clock.HHours;
+                    timepieceProperties.ClockProperties.HMinute = timepiece.Item_clock.HMinute;
+                    timepieceProperties.ClockProperties.HSecond = timepiece.Item_clock.HSecond;
+                }
+            }
+        }
+        private void TimepieceProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals("timeChanged"))
+            {
+                timepiece.Item_clock.CurrentDatetime = timepieceProperties.ClockProperties.CurrentTime;
+            }
+            else if (e.PropertyName.Equals("mainLocation"))
+            {
+                timepiece.Location = timepieceProperties.MainLocation;
+            }
+            else if (e.PropertyName.Equals("dispose"))
+            {
+                this.timepiece = null;
+                this.timepieceProperties = null;
+            }
+        }
+        #endregion
+
+        #region Clock action
         Clock clock;
         ClockProperties clockProperties;
         private void Clock_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -351,8 +408,7 @@ namespace KyThuatDoHoa_Nhom9
         {
             clock.CurrentDatetime = clockProperties.CurrentTime;
         }
-
-
+        #endregion
 
         #region Circle action
         HinhTron ht;
@@ -513,18 +569,23 @@ namespace KyThuatDoHoa_Nhom9
             //    cl.Draw(e.Graphics);
             //}
 
-            //if(clock != null)
-            //    clock.Draw(e.Graphics);
+            if (clock != null)
+                clock.Draw(e.Graphics);
+            if (timepiece != null)
+                timepiece.Draw(e.Graphics);
+            
 
-            pendulum.Draw(e.Graphics);
+           // e.Graphics.DrawString("12", new Font("Time New Roman", 10), Brushes.Aquamarine, ToaDo.NguoiDungMayTinh(new Point(0, 0)));
 
-            hinhXe.traslationXe(i, j);
-            hinhXe.drawCar(e.Graphics);
+            //pendulum.Draw(e.Graphics);
 
-            i = i + 5;
-            j = j + 5;
+            //hinhXe.traslationXe(i, j);
+            //hinhXe.drawCar(e.Graphics);
 
-            hinhXe.quayBanhXe(30);
+            //i = i + 5;
+            //j = j + 5;
+
+            //hinhXe.quayBanhXe(30);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -557,9 +618,17 @@ namespace KyThuatDoHoa_Nhom9
         {
 
         }
+
+        
+        private void button40_Click(object sender, EventArgs e)
+        {
+            
+        }
+       
+
         private void button39_Click(object sender, EventArgs e)
         {
-            this.timer1.Start();
+            //this.timer1.Start();
          
 
         }

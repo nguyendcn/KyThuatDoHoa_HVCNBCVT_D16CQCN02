@@ -172,10 +172,10 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
         private void SetupClockwise(DateTime dt)
         {
-            ht = new HinhTron(A, R);
-            HSecond = new Line(A, msCoord(dt.Second, R * 5 - 10));
-            HMinute = new Line(A, msCoord(dt.Minute, R * 5 - 20));
-            HHours = new Line(A, hrCoord(dt.Hour, dt.Minute, R * 5 - 30));
+            ht = new HinhTron(ToaDo.NguoiDungMayTinh(A), R);
+            HSecond = new Line(ToaDo.NguoiDungMayTinh(A), (msCoord(dt.Second, R * 5 - 10)) );
+            HMinute = new Line(ToaDo.NguoiDungMayTinh(A), (msCoord(dt.Minute, R * 5 - 20)) );
+            HHours = new Line (ToaDo.NguoiDungMayTinh(A), (hrCoord(dt.Hour, dt.Minute, R * 5 - 30)));
         }
 
         private Point msCoord(int val, int hlen)
@@ -184,13 +184,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             val *= 6; // note: each minute and seconds make a 6 degree  
             if (val >= 0 && val <= 100)
             {
-                p.X = A.X + (int)(hlen * Math.Sin(Math.PI * val / 180));
-                p.Y = A.Y - (int)(hlen * Math.Cos(Math.PI * val / 180));
+                p.X = ToaDo.NguoiDungMayTinh(A).X + (int)(hlen * Math.Sin(Math.PI * val / 180));
+                p.Y = ToaDo.NguoiDungMayTinh(A).Y - (int)(hlen * Math.Cos(Math.PI * val / 180));
             }
             else
             {
-                p.X = A.X - (int)(hlen * -Math.Sin(Math.PI * val / 180));
-                p.Y = A.Y - (int)(hlen * Math.Cos(Math.PI * val / 180));
+                p.X = ToaDo.NguoiDungMayTinh(A).X - (int)(hlen * -Math.Sin(Math.PI * val / 180));
+                p.Y = ToaDo.NguoiDungMayTinh(A).Y - (int)(hlen * Math.Cos(Math.PI * val / 180));
             }
             return p;
         }
@@ -202,13 +202,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             int val = (int)((hval * 30) + (mval * 0.5));
             if (val >= 0 && val <= 180)
             {
-                p.X = A.X + (int)(hlen * Math.Sin(Math.PI * val / 180));
-                p.Y = A.Y - (int)(hlen * Math.Cos(Math.PI * val / 180));
+                p.X = ToaDo.NguoiDungMayTinh(A).X + (int)(hlen * Math.Sin(Math.PI * val / 180));
+                p.Y = ToaDo.NguoiDungMayTinh(A).Y - (int)(hlen * Math.Cos(Math.PI * val / 180));
             }
             else
             {
-                p.X = A.X - (int)(hlen * -Math.Sin(Math.PI * val / 180));
-                p.Y = A.Y - (int)(hlen * Math.Cos(Math.PI * val / 180));
+                p.X = ToaDo.NguoiDungMayTinh(A).X - (int)(hlen * -Math.Sin(Math.PI * val / 180));
+                p.Y = ToaDo.NguoiDungMayTinh(A).Y - (int)(hlen * Math.Cos(Math.PI * val / 180));
             }
             return p;
 

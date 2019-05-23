@@ -8,7 +8,7 @@ using KyThuatDoHoa_Nhom9.Construct.DefineType;
 
 namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 {
-    class HinhChuNhat : Shapes2DObject
+    public class HinhChuNhat : Shapes2DObject
     {
         private Point _a;
         private Point _b;
@@ -80,12 +80,20 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             throw new NotImplementedException();
         }
 
-        public void Shifting(Point pDest)
+        public void Shifting(int dx, int dy)
+        {
+            this.A = this.A.Translate(dx, dy);
+            this.B = this.B.Translate(dx, dy);
+            this.C = this.C.Translate(dx, dy);
+            this.D = this.D.Translate(dx, dy);
+        }
+
+        public void Symmetry(Point orgin, SymmetryMode mode)
         {
             throw new NotImplementedException();
         }
 
-        public void Symmetry(Point orgin, SymmetryMode mode)
+        public void Shifting(Point pDest)
         {
             throw new NotImplementedException();
         }
