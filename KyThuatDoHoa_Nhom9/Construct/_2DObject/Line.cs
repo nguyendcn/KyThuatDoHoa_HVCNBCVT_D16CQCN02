@@ -219,9 +219,10 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             this.B = this.B.RotateAt(p, (int)alpha);
         }
 
-        public void Shifting(Point pDest)
+        public void Shifting(int dx, int dy)
         {
-            throw new NotImplementedException();
+            this.A = this.A.Translate(dx, dy);
+            this.B = this.B.Translate(dx, dy);
         }
 
         public void Symmetry(Point orgin, SymmetryMode mode)
@@ -230,6 +231,11 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         }
 
         public void Scale(SizeF scaleSize)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Shifting(Point pDest)
         {
             throw new NotImplementedException();
         }

@@ -136,6 +136,9 @@
   <data name="Diamonds_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Diamonds_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Dispose_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Dispose_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Expand_Arrow_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Expand Arrow_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,6 +148,9 @@
   <data name="Hexagon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Hexagon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hide_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Hide_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Left_triangle_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Left triangle_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +159,9 @@
   </data>
   <data name="Moon_Star_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Moon Star_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Old_Clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pentagon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Pentagon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
