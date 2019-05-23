@@ -5,11 +5,6 @@
 
 
 
-Gộp cái nhánh của em với Hoàng đi anh ơi, please...............................
-
-
-
-
 
 
 
