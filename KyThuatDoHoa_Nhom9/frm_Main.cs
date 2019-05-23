@@ -426,8 +426,8 @@ namespace KyThuatDoHoa_Nhom9
         #endregion
 
         #region Clock action
-        Clock clock;
-        ClockProperties clockProperties;
+        //Clock clock;
+        //ClockProperties clockProperties;
         private void Clock_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             
@@ -792,7 +792,7 @@ namespace KyThuatDoHoa_Nhom9
 
         private void Picb_3DArea_MouseClick(object sender, MouseEventArgs e)
         {
-            ToaDo.HienThi(e.Location, picb_3DArea.CreateGraphics());
+            ToaDo.HienThi(e.Location, picb_3DArea.CreateGraphics(), Color.Black);
         }
 
         public void VeLuoi3D(Graphics g)
@@ -826,21 +826,21 @@ namespace KyThuatDoHoa_Nhom9
         #endregion
         }
 
-        private void zoom_Click(object sender, EventArgs e)
-        {
-           
-            
-            hinhXe.doiXungQuaTruc();
-        }
+    //private void zoom_Click(object sender, EventArgs e)
+    //{
 
-        private void button41_Click(object sender, EventArgs e)
-        {
-            hinhXe.doiXungQuaOx();
-        }
 
-        private void button42_Click(object sender, EventArgs e)
-        {
-            hinhXe.doiXungQuaOy();
-        }
-    }
+    //    hinhXe.doiXungQuaTruc();
+    //}
+
+    //private void button41_Click(object sender, EventArgs e)
+    //{
+    //    hinhXe.doiXungQuaOx();
+    //}
+
+    //private void button42_Click(object sender, EventArgs e)
+    //{
+    //    hinhXe.doiXungQuaOy();
+    //}
 }
+
