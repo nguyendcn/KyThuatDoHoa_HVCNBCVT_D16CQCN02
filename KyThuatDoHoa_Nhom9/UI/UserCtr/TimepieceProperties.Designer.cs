@@ -58,6 +58,8 @@
             // 
             // btn_Hide
             // 
+            this.btn_Hide.BackgroundImage = global::KyThuatDoHoa_Nhom9.Image_Res.Hide_32px;
+            this.btn_Hide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_Hide.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_Hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Hide.Location = new System.Drawing.Point(113, 0);
@@ -69,6 +71,8 @@
             // 
             // btn_Destroy
             // 
+            this.btn_Destroy.BackgroundImage = global::KyThuatDoHoa_Nhom9.Image_Res.Dispose_32px;
+            this.btn_Destroy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_Destroy.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_Destroy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Destroy.Location = new System.Drawing.Point(146, 0);

@@ -259,6 +259,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Note.txt" />
+    <None Include="Resources\Dispose_32px.png" />
+    <None Include="Resources\Hide_32px.png" />
+    <None Include="Resources\Old_Clock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

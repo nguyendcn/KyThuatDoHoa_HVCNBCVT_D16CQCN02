@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Hide = new System.Windows.Forms.Button();
+            this.btn_Destroy = new System.Windows.Forms.Button();
             this.Clock = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -49,8 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.hMinute = new System.Windows.Forms.Label();
             this.lbl_1 = new System.Windows.Forms.Label();
-            this.btn_Hide = new System.Windows.Forms.Button();
-            this.btn_Destroy = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -72,6 +72,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(175, 30);
             this.panel1.TabIndex = 1;
+            // 
+            // btn_Hide
+            // 
+            this.btn_Hide.BackgroundImage = global::KyThuatDoHoa_Nhom9.Image_Res.Hide_32px;
+            this.btn_Hide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_Hide.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Hide.Location = new System.Drawing.Point(113, 0);
+            this.btn_Hide.Name = "btn_Hide";
+            this.btn_Hide.Size = new System.Drawing.Size(33, 30);
+            this.btn_Hide.TabIndex = 4;
+            this.btn_Hide.UseVisualStyleBackColor = true;
+            this.btn_Hide.Click += new System.EventHandler(this.btn_Hide_Click);
+            // 
+            // btn_Destroy
+            // 
+            this.btn_Destroy.BackgroundImage = global::KyThuatDoHoa_Nhom9.Image_Res.Dispose_32px;
+            this.btn_Destroy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_Destroy.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Destroy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Destroy.Location = new System.Drawing.Point(146, 0);
+            this.btn_Destroy.Name = "btn_Destroy";
+            this.btn_Destroy.Size = new System.Drawing.Size(29, 30);
+            this.btn_Destroy.TabIndex = 3;
+            this.btn_Destroy.UseVisualStyleBackColor = true;
+            this.btn_Destroy.Click += new System.EventHandler(this.btn_Destroy_Click);
             // 
             // Clock
             // 
@@ -286,28 +312,6 @@
             this.lbl_1.Size = new System.Drawing.Size(57, 16);
             this.lbl_1.TabIndex = 0;
             this.lbl_1.Text = "hHours";
-            // 
-            // btn_Hide
-            // 
-            this.btn_Hide.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Hide.Location = new System.Drawing.Point(113, 0);
-            this.btn_Hide.Name = "btn_Hide";
-            this.btn_Hide.Size = new System.Drawing.Size(33, 30);
-            this.btn_Hide.TabIndex = 4;
-            this.btn_Hide.UseVisualStyleBackColor = true;
-            this.btn_Hide.Click += new System.EventHandler(this.btn_Hide_Click);
-            // 
-            // btn_Destroy
-            // 
-            this.btn_Destroy.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Destroy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Destroy.Location = new System.Drawing.Point(146, 0);
-            this.btn_Destroy.Name = "btn_Destroy";
-            this.btn_Destroy.Size = new System.Drawing.Size(29, 30);
-            this.btn_Destroy.TabIndex = 3;
-            this.btn_Destroy.UseVisualStyleBackColor = true;
-            this.btn_Destroy.Click += new System.EventHandler(this.btn_Destroy_Click);
             // 
             // ClockProperties
             // 
