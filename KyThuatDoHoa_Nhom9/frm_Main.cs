@@ -21,8 +21,11 @@ namespace KyThuatDoHoa_Nhom9
     {
 
         HinhXe hinhXe;
+        HinhTru hinhTru;
         Pendulum pendulum;
         XeProperties xe;
+        HinhTruProperties tru;
+        HinhHopChuNhatProperties hopCN;
         bool flagXe;
         Clock clock;
         ClockProperties clockProperties;
@@ -44,6 +47,8 @@ namespace KyThuatDoHoa_Nhom9
 
          
           
+            hinhTru = new HinhTru();
+            tru = new HinhTruProperties();
             // Tạo quả lắc theo kích thước cho trước
             pendulum = new Pendulum(new Point(100, 20), new Point(400, 220));
             pendulum.SetAlpha(-3); // set góc quay alpha 
@@ -688,6 +693,7 @@ namespace KyThuatDoHoa_Nhom9
             //if (clock != null)
             //    clock.Draw(e.Graphics);
 
+
             //pendulum.Draw(e.Graphics);
 
 
@@ -751,7 +757,6 @@ namespace KyThuatDoHoa_Nhom9
             //pendulum.Draw(e.Graphics);
 
         }
-
         private void HinhXe_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
 
@@ -760,6 +765,10 @@ namespace KyThuatDoHoa_Nhom9
             xe.bankinh = hinhXe.BkBanh;
             xe.HienThiThongTin();
              
+        }
+        private void HinhTru_PropertyChange(object sender,PropertyChangedEventArgs e)
+        {
+            tru.Dinh = hinhTru.TamDay;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -784,7 +793,12 @@ namespace KyThuatDoHoa_Nhom9
 
 
         }
-
+        private void Button43_Click(object sender, EventArgs e)
+        {
+            this.pnl_ToolBox.Controls.Add(tru);
+            tru.BringToFront();
+            tru.Visible = true;
+        }
         private void picb_2DArea_SizeChanged(object sender, EventArgs e)
         {
             Variables.Globals.sizeOfNewCoor_2D.Width = ReturnEvenNumber(picb_2DArea.Width / Variables.Globals.sizePerPoint.Width);
@@ -852,8 +866,8 @@ namespace KyThuatDoHoa_Nhom9
         {
             VeLuoi3D(e.Graphics);
 
-            //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -20, 0, 20, 20, 20);
-            //hinhHopChuNhat.Draw(e.Graphics);
+            HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
+            hinhHopChuNhat.Draw(e.Graphics);
 
 
             HinhTru hinhTru = new HinhTru(10, -10, 0, 30, 40);
@@ -923,19 +937,26 @@ namespace KyThuatDoHoa_Nhom9
 
             g.DrawLine(pen, new Point(x, y), new Point(picb_3DArea.Width, y));         // trục Ox
             g.DrawLine(pen, new Point(x, y), new Point(x, 0));                          // trục Oy
-            g.DrawLine(pen, new Point(x, y), new Point(x - y, y + y));                      // trục Oz
-            System.Console.WriteLine((x - y) + " " + (y));
-            ;
-        }
+            g.DrawLine(pen, new Point(x, y), new Point(x-y, y + y));                      // trục Oz
+            System.Console.WriteLine((x - y) + " " + (y ));
+;        }
 
 
 
         #endregion
 
-        private void btn_Author_Click(object sender, EventArgs e)
+        private void Button40_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Nhom 9 nha", "Hahahah", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
+
+        private void button44_Click(object sender, EventArgs e)
+        {
+            this.pnl_ToolBox.Controls.Add(hopCN);
+            hopCN.BringToFront();
+            hopCN.Visible = true;
+        }
+    }
 
         private void btn_Help_Click(object sender, EventArgs e)
         {

@@ -166,5 +166,10 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
         {
            
         }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

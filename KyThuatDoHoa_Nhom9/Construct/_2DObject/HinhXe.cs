@@ -88,38 +88,38 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             // tô màu trước
 
             // vẽ gầm Car
-            Line lnGamXe1 = new Line(this.LsPoint[1], this.LsPoint[15]);
+            Line lnGamXe1 = new Line(this.LsPoint[1], this.LsPoint[15], Color.Black);
             lnGamXe1.Draw(g);
-            Line lnGamXe2 = new Line(this.LsPoint[16], this.LsPoint[17]);
+            Line lnGamXe2 = new Line(this.LsPoint[16], this.LsPoint[17], Color.Black);
             lnGamXe2.Draw(g);
-            Line lnGamXe3 = new Line(this.LsPoint[0], this.LsPoint[18]);
+            Line lnGamXe3 = new Line(this.LsPoint[0], this.LsPoint[18], Color.Black);
             lnGamXe3.Draw(g);
 
 
             // vẽ  đuôi
-            Line lnDuoi = new Line(this.LsPoint[0], this.LsPoint[2]);
+            Line lnDuoi = new Line(this.LsPoint[0], this.LsPoint[2], Color.Black);
             lnDuoi.Draw(g);
 
             // vẽ hông đuôi
-            Line lnHDuoi = new Line(this.LsPoint[2], this.LsPoint[3]);
+            Line lnHDuoi = new Line(this.LsPoint[2], this.LsPoint[3], Color.Black);
             lnHDuoi.Draw(g);
 
             // vẽ hông đuôi trên
-            Line lnHDuoiTren = new Line(this.LsPoint[3], this.LsPoint[4]);
+            Line lnHDuoiTren = new Line(this.LsPoint[3], this.LsPoint[4], Color.Black);
             lnHDuoiTren.Draw(g);
 
             // vẽ trần xe
-            Line lnTran = new Line(this.LsPoint[4], this.LsPoint[5]);
+            Line lnTran = new Line(this.LsPoint[4], this.LsPoint[5], Color.Black);
             lnTran.Draw(g);
 
             // vẽ hông đầu trên
-            Line lnHDau = new Line(this.LsPoint[5], this.LsPoint[6]);
+            Line lnHDau = new Line(this.LsPoint[5], this.LsPoint[6], Color.Black);
             lnHDau.Draw(g);
             // vẽ hông đầu dưới
-            Line lnHDauDuoi = new Line(this.LsPoint[6], this.LsPoint[7]);
+            Line lnHDauDuoi = new Line(this.LsPoint[6], this.LsPoint[7], Color.Black);
             lnHDauDuoi.Draw(g);
             // vẽ đầu
-            Line lnDau = new Line(this.LsPoint[1], this.LsPoint[7]);
+            Line lnDau = new Line(this.LsPoint[1], this.LsPoint[7], Color.Black);
             lnDau.Draw(g);
             // vẽ hình chữ nhật
             HinhChuNhat hcn = new HinhChuNhat(this.LsPoint[8], this.LsPoint[9]);
@@ -134,13 +134,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             htSau.Draw(g);
 
             // vẽ tăm bánh xe sau
-            Line tamSau1 = new Line(this.LsPoint[13], this.LsPoint[19]);
+            Line tamSau1 = new Line(this.LsPoint[13], this.LsPoint[19], Color.Black);
             tamSau1.ColorOfLine = Color.DarkRed;
             tamSau1.Draw(g);
-            Line tamSau2 = new Line(this.LsPoint[13], this.LsPoint[20]);
+            Line tamSau2 = new Line(this.LsPoint[13], this.LsPoint[20], Color.Black);
             tamSau2.ColorOfLine = Color.DarkRed;
             tamSau2.Draw(g);
-            Line tamSau3 = new Line(this.LsPoint[13], this.LsPoint[21]);
+            Line tamSau3 = new Line(this.LsPoint[13], this.LsPoint[21], Color.Black);
             tamSau3.ColorOfLine = Color.DarkRed;
             tamSau3.Draw(g);
             // vẽ bánh xe trước
@@ -148,13 +148,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             htTruoc.Draw(g);
 
             // vẽ tăm bánh xe trước
-            Line tamTruoc1 = new Line(this.LsPoint[14], this.LsPoint[22]);
+            Line tamTruoc1 = new Line(this.LsPoint[14], this.LsPoint[22], Color.Black);
             tamTruoc1.ColorOfLine = Color.DarkRed;
             tamTruoc1.Draw(g);
-            Line tamTruoc2 = new Line(this.LsPoint[14], this.LsPoint[23]);
+            Line tamTruoc2 = new Line(this.LsPoint[14], this.LsPoint[23], Color.Black);
             tamTruoc2.ColorOfLine = Color.DarkRed;
             tamTruoc2.Draw(g);
-            Line tamTruoc3 = new Line(this.LsPoint[14], this.LsPoint[24]);
+            Line tamTruoc3 = new Line(this.LsPoint[14], this.LsPoint[24], Color.Black);
             tamTruoc3.ColorOfLine = Color.DarkRed;
             tamTruoc3.Draw(g);
         }

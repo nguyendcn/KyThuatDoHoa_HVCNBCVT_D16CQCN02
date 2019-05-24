@@ -17,12 +17,12 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         private Color color { get; set; }
         public void Drawn4Point(int x,int y,Graphics g)
         {
-            ToaDo.HienThi(point.X + x, point.Y + y, g, color);
-            ToaDo.HienThi(point.X - x, point.Y + y, g, color);
-            ToaDo.HienThi(point.X - x, point.Y - y, g, color);
-            ToaDo.HienThi(point.X + x, point.Y - y, g, color);
+            ToaDo.HienThi(new Point(point.X + x, point.Y + y), g,color);
+            ToaDo.HienThi(new Point(point.X - x, point.Y + y), g, color);
+            ToaDo.HienThi(new Point(point.X - x, point.Y - y), g, color);
+            ToaDo.HienThi(new Point(point.X + x, point.Y - y), g, color);
         }
-        public void Drawn4Point_3D(int x, int y, Graphics g, Color color)
+        public void Drawn4Point_3D(int x, int y, Graphics g)
         {
             if (x % 10 != 0)
             {
@@ -141,11 +141,18 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
             }
         }
-        public HinhElip(Point point,int a,int b)
+        public HinhElip(Point point,int a,int b,Color color)
         {
             this.point = point;
             this.a = a*5;
             this.b = b*5;
+            this.color = color;
+        }
+        public HinhElip(Point point, int a, int b)
+        {
+            this.point = point;
+            this.a = a * 5;
+            this.b = b * 5;
             this.color = Color.Black;
         }
         public void Init(Point start, Point end, Size sizeOfLine, Color color)

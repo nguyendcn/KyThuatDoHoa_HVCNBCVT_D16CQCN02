@@ -43,21 +43,29 @@ namespace KyThuatDoHoa_Nhom9.Construct._3DObject
         }
         public void Draw(Graphics g)
         {
-
-            DrawLine(g, 0, 1,2); //
+            // Vẽ nét đứt
+            DrawLine(g, 0, 1,2); 
+            DrawLine(g, 3, 0,2); 
+            DrawLine(g, 0, 4,2); 
+            // Vẽ nét liền
             DrawLine(g, 1, 2);
             DrawLine(g, 2, 3);
-            DrawLine(g, 3, 0,2); // 
-
             DrawLine(g, 4, 5);
             DrawLine(g, 5, 6);
             DrawLine(g, 6, 7);
             DrawLine(g, 7, 4);
-
-            DrawLine(g, 0, 4,2); //
             DrawLine(g, 1, 5);
             DrawLine(g, 2, 6);
             DrawLine(g, 3, 7);
+
+            Point point;
+            for (int i = 0; i < 8; i++)
+            {
+                point = ToaDo.NguoiDungMayTinh_3D(this.Dinh[i, 0], this.Dinh[i, 1], this.Dinh[i, 2]);
+                ToaDo.HienThi(point, g, Color.Pink);
+                char c = (char)(65 + i);
+                g.DrawString(c.ToString(), new Font("Verdana", 14), Brushes.Pink, point);
+            }
         }
         /// <summary>
         /// Vẽ đường thẳng nối liền giữa 2 điểm A và B
@@ -70,7 +78,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._3DObject
 
             //ToaDo.HienThi(point1, g);
             //ToaDo.HienThi(point2, g);
-            Line line = new Line(point1, point2);
+            Line line = new Line(point1, point2,Color.Black);
             if (n == 2)
             {
                 line.NetDut(g);
