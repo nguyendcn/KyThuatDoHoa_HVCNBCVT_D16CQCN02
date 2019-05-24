@@ -138,7 +138,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             if(ht == null)
                 ht = new HinhTron(A, 11);
-            ht.Draw(g);
+            ht.Draw(g, Color.Beige);
             hHours.Draw(g);
             hMinute.Draw(g);
             hSecond.Draw(g);

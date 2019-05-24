@@ -33,18 +33,41 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             //line = new Line(this.A, new Point(this.A.X, this.B.Y));
             //line.Draw(g);
 
+            FillColor(g, Color.Red);
             Line line;
             line = new Line(this.A, this.B);
             line.Draw(g);
             line = new Line(this.B, this.C);
             line.Draw(g);
-            line = new Line( this.D, this.C);
+            line = new Line(this.D, this.C);
             line.Draw(g);
             line = new Line(this.A, this.D);
             line.Draw(g);
+            
 
 
         }
+
+        public void Draw(Graphics g, Color c)
+        {
+            FillColor(g, c);
+            Line line;
+            line = new Line(this.A, this.B);
+            line.Draw(g);
+            line = new Line(this.B, this.C);
+            line.Draw(g);
+            line = new Line(this.D, this.C);
+            line.Draw(g);
+            line = new Line(this.A, this.D);
+            line.Draw(g);
+        }
+
+        private void FillColor(Graphics g, Color c)
+        {
+            Point[] curvePoints = { this.A, this.B, this.C, this.D };
+            g.FillPolygon(new SolidBrush(c), curvePoints);
+        }
+
         public HinhChuNhat(Point start, Point end)
         {
             this.A = start;

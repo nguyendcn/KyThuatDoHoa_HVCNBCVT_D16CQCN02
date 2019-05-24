@@ -21,6 +21,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         }
         public void Draw(Graphics g)
         {
+            FillColor(g, Color.AliceBlue);
             Line line;
             line = new Line(this.point1, this.point2);
             line.Draw(g);
@@ -28,6 +29,25 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             line.Draw(g);
             line = new Line(this.point3, this.point1);
             line.Draw(g);
+        }
+
+        public void Draw(Graphics g, Color c)
+        {
+            FillColor(g, c);
+            Line line;
+            line = new Line(this.point1, this.point2);
+            line.Draw(g);
+            line = new Line(this.point2, this.point3);
+            line.Draw(g);
+            line = new Line(this.point3, this.point1);
+            line.Draw(g);
+        }
+
+        private void FillColor(Graphics g, Color c)
+        {
+            
+            Point[] curvePoints = { this.point1, this.point2, this.point3 };
+            g.FillPolygon(new SolidBrush(c), curvePoints);
         }
 
         public void Init(Point start, Point end, Size sizeOfLine, Color color)

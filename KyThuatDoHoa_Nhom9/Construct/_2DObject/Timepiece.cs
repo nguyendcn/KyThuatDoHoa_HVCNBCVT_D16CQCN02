@@ -107,10 +107,11 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
         public void Draw(Graphics g)
         {
+            this.item_triangle.Draw(g, Color.Red);
+            this.item_rectangle.Draw(g, Color.Blue);
             this.Item_clock.Draw(g);
             this.Item_pendulum.Draw(g);
-            this.item_triangle.Draw(g);
-            this.item_rectangle.Draw(g);
+            
         }
 
         public void Init(Point start, Point end, Size sizeOfLine, Color color)
