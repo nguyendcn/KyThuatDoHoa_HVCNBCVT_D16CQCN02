@@ -77,6 +77,15 @@ namespace KyThuatDoHoa_Nhom9.Construct._3DObject
             }
             else
                 line.Draw(g);
+
+            Point point;
+            for (int i = 0; i < 8; i++)
+            {
+                point = ToaDo.NguoiDungMayTinh_3D(this.Dinh[i, 0], this.Dinh[i, 1], this.Dinh[i, 2]);
+                ToaDo.HienThi(point, g, Color.Pink);
+                char c = (char)(65 + i);
+                g.DrawString(c.ToString(), new Font("Verdana", 14), Brushes.Pink, point);
+            }
         }
     }
 }

@@ -599,52 +599,60 @@ namespace KyThuatDoHoa_Nhom9
             //    clock.Draw(e.Graphics);
 
             //pendulum.Draw(e.Graphics);
-           
-            if (flagXe)
-            {
-              
-                // biểu diễn các hoạt động của xe
-                hinhXe.PropertyChanged += HinhXe_PropertyChanged;
-                hinhXe.ToMau(e.Graphics);
-                hinhXe.drawCar(e.Graphics);
 
-                if (dem <= 30)
-                {
-                    dem++;
-                    // tịnh tiến 5 đơn vị
-                    // đi phải qua trái
-                    hinhXe.traslationXe(5, 0);
-                    hinhXe.quayBanhXe(30);
-              
+            // Vẽ tam giác
+            Point point = new Point(0, 0);
 
-                }
-                else if (dem <= 60)
-                {
-                    dem++;
-                    //tịnh tiến 5 đơn vị
-                    // đi phải qua trái
-                    hinhXe.traslationXe(0, 5);
-                    hinhXe.quayBanhXe(30);
-                }
-                else if (dem <= 90)
-                {
-                    dem++;
-                    // đi từ trên xuống dưới
-                    hinhXe.traslationXe(-5, 0);
-                    hinhXe.quayBanhXe(-30);
-                }
-                else if (dem <= 120)
-                {
-                    dem++;
-                    // đi từ dưới lên trên
-                    hinhXe.traslationXe(0, -5);
-                    hinhXe.quayBanhXe(-30);
-                }else
-                {
-                    // cập nhật lại
-                    dem = 0;
-                }
-            }
+            HinhTamGiac hinhTamGiac = new HinhTamGiac(ToaDo.NguoiDungMayTinh(new Point(0, 0)),
+                                                      ToaDo.NguoiDungMayTinh(new Point(-10, -10)),
+                                                      ToaDo.NguoiDungMayTinh(new Point(10, -10)));
+            hinhTamGiac.Draw(e.Graphics);
+
+            //if (flagXe)
+            //{
+
+            //    // biểu diễn các hoạt động của xe
+            //    hinhXe.PropertyChanged += HinhXe_PropertyChanged;
+            //    hinhXe.ToMau(e.Graphics);
+            //    hinhXe.drawCar(e.Graphics);
+
+            //    if (dem <= 30)
+            //    {
+            //        dem++;
+            //        // tịnh tiến 5 đơn vị
+            //        // đi phải qua trái
+            //        hinhXe.traslationXe(5, 0);
+            //        hinhXe.quayBanhXe(30);
+
+
+            //    }
+            //    else if (dem <= 60)
+            //    {
+            //        dem++;
+            //        //tịnh tiến 5 đơn vị
+            //        // đi phải qua trái
+            //        hinhXe.traslationXe(0, 5);
+            //        hinhXe.quayBanhXe(30);
+            //    }
+            //    else if (dem <= 90)
+            //    {
+            //        dem++;
+            //        // đi từ trên xuống dưới
+            //        hinhXe.traslationXe(-5, 0);
+            //        hinhXe.quayBanhXe(-30);
+            //    }
+            //    else if (dem <= 120)
+            //    {
+            //        dem++;
+            //        // đi từ dưới lên trên
+            //        hinhXe.traslationXe(0, -5);
+            //        hinhXe.quayBanhXe(-30);
+            //    }else
+            //    {
+            //        // cập nhật lại
+            //        dem = 0;
+            //    }
+            //}
 
 
 
@@ -745,11 +753,11 @@ namespace KyThuatDoHoa_Nhom9
         {
             VeLuoi3D(e.Graphics);
 
-            //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
+            //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -20, 0, 20, 20, 20);
             //hinhHopChuNhat.Draw(e.Graphics);
 
 
-            HinhTru hinhTru = new HinhTru(10, 10, 0, 30, 40);
+            HinhTru hinhTru = new HinhTru(10, -10, 0, 30, 40);
             hinhTru.Draw(e.Graphics);
             hinhTru.DrawElip(e.Graphics);
 
