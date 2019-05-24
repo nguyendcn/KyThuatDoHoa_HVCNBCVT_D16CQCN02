@@ -56,13 +56,13 @@ namespace KyThuatDoHoa_Nhom9
             //pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
             //pendulum.SetAlpha(-3); // set góc quay alpha 
 
-            //picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
+            picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
-            ////2D mode is startup;
-            //Setup_Toolbar(Globals._Mode_current);
+            //2D mode is startup;
+            Setup_Toolbar(Globals._Mode_current);
 
-            picb_3DArea.Dock = DockStyle.Fill;
-            picb_2DArea.Visible = false;
+            //picb_3DArea.Dock = DockStyle.Fill;
+            //picb_2DArea.Visible = false;
 
             Setup_ToolTips();
             flagXe = false;

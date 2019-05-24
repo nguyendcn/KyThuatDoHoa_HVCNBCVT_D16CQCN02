@@ -148,6 +148,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             this.b = b*5;
             this.color = color;
         }
+        public HinhElip(Point point, int a, int b)
+        {
+            this.point = point;
+            this.a = a * 5;
+            this.b = b * 5;
+            this.color = Color.Black;
+        }
         public void Init(Point start, Point end, Size sizeOfLine, Color color)
         {
             throw new NotImplementedException();
