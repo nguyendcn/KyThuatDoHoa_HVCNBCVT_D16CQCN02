@@ -34,12 +34,8 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Mode = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btn_Author = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.zoom = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.button37 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -148,12 +144,8 @@ namespace KyThuatDoHoa_Nhom9
             // 
             this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnl_Mode.Controls.Add(this.panel8);
-            this.pnl_Mode.Controls.Add(this.button42);
-            this.pnl_Mode.Controls.Add(this.button41);
-            this.pnl_Mode.Controls.Add(this.zoom);
             this.pnl_Mode.Controls.Add(this.button40);
             this.pnl_Mode.Controls.Add(this.button39);
-            this.pnl_Mode.Controls.Add(this.button38);
             this.pnl_Mode.Controls.Add(this.label4);
             this.pnl_Mode.Controls.Add(this.button37);
             this.pnl_Mode.Controls.Add(this.panel2);
@@ -192,36 +184,6 @@ namespace KyThuatDoHoa_Nhom9
             this.btn_Author.UseVisualStyleBackColor = true;
             this.btn_Author.Click += new System.EventHandler(this.btn_Author_Click);
             // 
-            // button42
-            // 
-            this.button42.Location = new System.Drawing.Point(585, 19);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(75, 26);
-            this.button42.TabIndex = 12;
-            this.button42.Text = "Oy";
-            this.button42.UseVisualStyleBackColor = true;
-            this.button42.Click += new System.EventHandler(this.button42_Click);
-            // 
-            // button41
-            // 
-            this.button41.Location = new System.Drawing.Point(523, 23);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(75, 23);
-            this.button41.TabIndex = 11;
-            this.button41.Text = "Ox";
-            this.button41.UseVisualStyleBackColor = true;
-            this.button41.Click += new System.EventHandler(this.button41_Click);
-            // 
-            // zoom
-            // 
-            this.zoom.Location = new System.Drawing.Point(556, 3);
-            this.zoom.Name = "zoom";
-            this.zoom.Size = new System.Drawing.Size(75, 23);
-            this.zoom.TabIndex = 10;
-            this.zoom.Text = "trục";
-            this.zoom.UseVisualStyleBackColor = true;
-            this.zoom.Click += new System.EventHandler(this.zoom_Click);
-            // 
             // button40
             // 
             this.button40.Location = new System.Drawing.Point(475, 9);
@@ -240,16 +202,6 @@ namespace KyThuatDoHoa_Nhom9
             this.button39.Text = "button39";
             this.button39.UseVisualStyleBackColor = true;
             this.button39.Click += new System.EventHandler(this.button39_Click);
-            // 
-            // button38
-            // 
-            this.button38.Location = new System.Drawing.Point(273, 11);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(75, 23);
-            this.button38.TabIndex = 7;
-            this.button38.Text = "button38";
-            this.button38.UseVisualStyleBackColor = true;
-            this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
             // label4
             // 
@@ -1235,6 +1187,7 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation.Name = "pnl_WorkStation";
             this.pnl_WorkStation.Size = new System.Drawing.Size(600, 552);
             this.pnl_WorkStation.TabIndex = 3;
+            this.pnl_WorkStation.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_WorkStation_Paint);
             this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
             // 
             // picb_2DArea
@@ -1394,14 +1347,10 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.PictureBox picb_2DArea;
         private System.Windows.Forms.PictureBox picb_3DArea;
         private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button zoom;
-        private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Button button41;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btn_Author;
         private System.Windows.Forms.Button btn_Help;

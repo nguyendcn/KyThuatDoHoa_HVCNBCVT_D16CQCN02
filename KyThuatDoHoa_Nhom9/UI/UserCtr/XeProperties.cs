@@ -10,36 +10,35 @@ using System.Windows.Forms;
 
 namespace KyThuatDoHoa_Nhom9.UI.UserCtr
 {
-    public partial class XeProperties : UserControl
+    public partial class XeProperties : UserControl, INotifyPropertyChanged
     {
         public Point[] lsPoint = new Point[25];
         public int bankinh;
-        private bool flag = false;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public XeProperties()
         {
             InitializeComponent();
-          
-            this.btnMay.BackColor = Color.Brown;
+ 
         }
 
         public void HienThiThongTin()
         {
-            // in ra thông tin hình chữ nhật
-      
-            if (flag)
-            {
+           
+     
                 // đổi tọa độ máy tính  sang người dùng
                 for (int i = 0; i < this.lsPoint.Length; i++)
                 {
                     this.lsPoint[i] = ToaDo.MayTinhNguoiDung(this.lsPoint[i]);
                 }
-            }
+            // in ra thông tin hình chữ nhật
             this.lblHcn1.Text = this.lsPoint[8].ToString();
             this.lblHcn2.Text = new Point(this.lsPoint[8].X, this.lsPoint[9].Y).ToString();
             this.lblHcn3.Text = this.lsPoint[9].ToString();
             this.lblHcn4.Text = new Point(this.lsPoint[9].X, this.lsPoint[8].Y).ToString();
-            this.lblHcn5.Text = "Chiều rộng: 35";
-            this.lblHcn6.Text = "Chiều dài : 125";
+            this.lblHcn5.Text = "   Width: 35";
+            this.lblHcn6.Text = "   Length : 125";
             // in thông tin hình tam giác
             this.lblTG1.Text = this.lsPoint[10].ToString();
             this.lblTG2.Text = this.lsPoint[11].ToString();
@@ -48,15 +47,15 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             this.lblBt1.Text = this.lsPoint[19].ToString();
             this.lblBt2.Text = this.lsPoint[20].ToString();
             this.lblBt3.Text = this.lsPoint[21].ToString();
-            this.lblTam1.Text = "Bánh Kính: " + this.bankinh.ToString();
-            this.lblBk1.Text = "   Tâm: " + this.lsPoint[13].ToString();
+            this.lblTam1.Text = "Radius: " + this.bankinh.ToString();
+            this.lblBk1.Text = "    Center: " + this.lsPoint[13].ToString();
 
             // in thông tin bánh xe sau
             this.lblBx1.Text = this.lsPoint[22].ToString();
             this.lblBx2.Text = this.lsPoint[23].ToString();
             this.lblBx3.Text = this.lsPoint[24].ToString();
-            this.lblTam2.Text = "Bánh Kính: " + this.bankinh.ToString();
-            this.lblBk2.Text = "   Tâm: " + this.lsPoint[14].ToString();
+            this.lblTam2.Text = "Radius: " + this.bankinh.ToString();
+            this.lblBk2.Text = "   Center: " + this.lsPoint[14].ToString();
 
             // in thông tin các điểm khác
             this.lblK.Text = this.lsPoint[0].ToString();
@@ -122,25 +121,50 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+            OnPropertyChanged("xoa");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.btnMay.BackColor = Color.Brown;
-            this.btnNguoidung.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            flag = false;
-         
+            OnPropertyChanged("goc");
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OnPropertyChanged("ox");
+        }
 
+        private void XeProperties_Load(object sender, EventArgs e)
+        {
+
+        }
+
+     
+
+        protected void OnPropertyChanged(string PropertyName)
+        {
+            if (PropertyChanged != null)
+            {
+
+                PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));
+            }
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.btnNguoidung.BackColor = Color.Brown;
-            this.btnMay.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            flag = true;
-          
-          
+            OnPropertyChanged("oy");
+        }
+
+        private void btn_Destroy_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            OnPropertyChanged("xoa");
+        }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

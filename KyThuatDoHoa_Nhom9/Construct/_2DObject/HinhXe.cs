@@ -82,7 +82,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
         }
 
-
+       
         public void drawCar(Graphics g)
         {
             // tô màu trước
@@ -225,13 +225,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             NotifyPropertyChanged();
 
         }
-        public void doiXungQuaTruc()
+        public void doiXungQuaGoc()
         {
 
             for (int i = 0; i < this.LsPoint.Length; i++)
             {
                 this.lsPoint[i] = ToaDo.MayTinhNguoiDung(this.lsPoint[i]);
-                doiXungQuaTruc(ref this.lsPoint[i]);
+                doiXungQuaGoc(ref this.lsPoint[i]);
                 this.lsPoint[i] = ToaDo.NguoiDungMayTinh(this.lsPoint[i]);
             }
 
@@ -304,7 +304,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
         }
 
-        private void doiXungQuaTruc(ref Point pn)
+        private void doiXungQuaGoc(ref Point pn)
         {
             double[] matran1 = new double[3] { pn.X, pn.Y, 1 };
             // khởi tạo ma trận tịnh tiến

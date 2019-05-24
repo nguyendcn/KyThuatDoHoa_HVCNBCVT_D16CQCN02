@@ -42,8 +42,8 @@ namespace KyThuatDoHoa_Nhom9
             InitializeComponent();
 
 
-            hinhXe = new HinhXe();
-            xe = new XeProperties();
+         
+          
             // Tạo quả lắc theo kích thước cho trước
             pendulum = new Pendulum(new Point(100, 20), new Point(400, 220));
             pendulum.SetAlpha(-3); // set góc quay alpha 
@@ -397,12 +397,14 @@ namespace KyThuatDoHoa_Nhom9
             }
             else if (btn.Tag.Equals("Car"))
             {
+                this.timer1.Start();
+                xe =  new XeProperties();
                 flagXe = true;
+                hinhXe = new HinhXe();
                 this.pnl_ToolBox.Controls.Add(xe);
                 xe.BringToFront();
                 xe.Visible = true;
-                this.timer1.Start();
-                //this.picb_2DArea.Refresh();
+                xe.PropertyChanged += Xe_PropertyChanged;
 
                 //if (flagXe)
                 //{
@@ -491,7 +493,27 @@ namespace KyThuatDoHoa_Nhom9
             }
         }
         #endregion
-
+        private void Xe_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals("ox"))
+            {
+                hinhXe.doiXungQuaOx();
+            }
+            else if (e.PropertyName.Equals("oy"))
+            {
+                hinhXe.doiXungQuaOy();
+            }
+            else if (e.PropertyName.Equals("goc"))
+            {
+                hinhXe.doiXungQuaGoc();
+            }
+            else if (e.PropertyName.Equals("xoa"))
+            {
+                flagXe = false;
+                
+            }
+        }
+        #endregion
         #region Clock action
         //Clock clock;
         //ClockProperties clockProperties;
@@ -543,7 +565,7 @@ namespace KyThuatDoHoa_Nhom9
         #endregion
 
 
-        #endregion
+
 
 
         #region Vẽ trên pnl_WorkStation
@@ -737,6 +759,7 @@ namespace KyThuatDoHoa_Nhom9
             xe.lsPoint = (Point[])hinhXe.LsPoint.Clone();
             xe.bankinh = hinhXe.BkBanh;
             xe.HienThiThongTin();
+             
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -919,21 +942,30 @@ namespace KyThuatDoHoa_Nhom9
             MessageBox.Show("Nhom 9 nha", "Hoi cham", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void button41_Click(object sender, EventArgs e)
+        //private void button41_Click(object sender, EventArgs e)
+       
+
+        //private void zoom_Click_1(object sender, EventArgs e)
+        //{
+        //    hinhXe.doiXungQuaGoc();
+        //}
+
+        private void button41_Click_1(object sender, EventArgs e)
         {
             hinhXe.doiXungQuaOx();
         }
 
-        private void button42_Click(object sender, EventArgs e)
+        private void button42_Click_1(object sender, EventArgs e)
         {
             hinhXe.doiXungQuaOy();
         }
 
-        private void zoom_Click(object sender, EventArgs e)
+        private void pnl_WorkStation_Paint(object sender, PaintEventArgs e)
         {
-            hinhXe.doiXungQuaTruc();
+
         }
     }
 
+    
 }
 
