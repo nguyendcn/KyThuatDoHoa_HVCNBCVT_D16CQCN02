@@ -22,11 +22,11 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         public void Draw(Graphics g)
         {
             Line line;
-            line = new Line(this.point1, this.point2);
+            line = new Line(this.point1, this.point2, Color.Black);
             line.Draw(g);
-            line = new Line(this.point2, this.point3);
+            line = new Line(this.point2, this.point3, Color.Black);
             line.Draw(g);
-            line = new Line(this.point3, this.point1);
+            line = new Line(this.point3, this.point1, Color.Black);
             line.Draw(g);
         }
 

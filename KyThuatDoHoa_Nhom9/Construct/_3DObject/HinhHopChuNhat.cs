@@ -78,7 +78,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._3DObject
 
             //ToaDo.HienThi(point1, g);
             //ToaDo.HienThi(point2, g);
-            Line line = new Line(point1, point2);
+            Line line = new Line(point1, point2,Color.Black);
             if (n == 2)
             {
                 line.NetDut(g);

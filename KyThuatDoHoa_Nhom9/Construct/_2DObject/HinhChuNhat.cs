@@ -23,24 +23,14 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
         public void Draw(Graphics g)
         {
-            //Line line;
-            //line = new Line(this.A, new Point(this.B.X,this.A.Y));
-            //line.Draw(g);
-            //line = new Line(new Point(this.B.X, this.A.Y), this.B);
-            //line.Draw(g);
-            //line = new Line( new Point(this.A.X, this.B.Y),this.B);
-            //line.Draw(g);
-            //line = new Line(this.A, new Point(this.A.X, this.B.Y));
-            //line.Draw(g);
-
             Line line;
-            line = new Line(this.A, this.B);
+            line = new Line(this.A, this.B, Color.Black);
             line.Draw(g);
-            line = new Line(this.B, this.C);
+            line = new Line(this.B, this.C, Color.Black);
             line.Draw(g);
-            line = new Line( this.D, this.C);
+            line = new Line( this.D, this.C, Color.Black);
             line.Draw(g);
-            line = new Line(this.A, this.D);
+            line = new Line(this.A, this.D, Color.Black);
             line.Draw(g);
 
 

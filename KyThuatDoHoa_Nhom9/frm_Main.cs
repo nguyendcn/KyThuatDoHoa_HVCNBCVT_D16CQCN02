@@ -681,7 +681,6 @@ namespace KyThuatDoHoa_Nhom9
             xe.BringToFront();
             xe.Visible = true;
             
-
             
         }
 
@@ -746,12 +745,12 @@ namespace KyThuatDoHoa_Nhom9
         {
             VeLuoi3D(e.Graphics);
 
-            //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
-            //hinhHopChuNhat.Draw(e.Graphics);
+            HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 30, 20, 20, 20);
+            hinhHopChuNhat.Draw(e.Graphics);
 
 
-            //HinhTru hinhTru = new HinhTru(10, 10, 0, 30, 40);
-            //hinhTru.Draw(e.Graphics);
+            HinhTru hinhTru = new HinhTru(10, 10, 0, 30, 40);
+            hinhTru.Draw(e.Graphics);
             //hinhTru.DrawElip(e.Graphics);
 
         }
@@ -800,15 +799,15 @@ namespace KyThuatDoHoa_Nhom9
             Pen pen = new Pen(Color.Black);
            
 
-            // Vẽ lưới 
-            for(int i = 0; i < picb_3DArea.Width; i += 5)
-            {
-                g.DrawLine(pen, new Point(i, 0), new Point(i, picb_3DArea.Height));
-            }
-            for (int i = 0; i < picb_3DArea.Height; i += 5)
-            {
-                g.DrawLine(pen, new Point(0, i), new Point(picb_3DArea.Width,i));
-            }
+            //// Vẽ lưới 
+            //for(int i = 0; i < picb_3DArea.Width; i += 5)
+            //{
+            //    g.DrawLine(pen, new Point(i, 0), new Point(i, picb_3DArea.Height));
+            //}
+            //for (int i = 0; i < picb_3DArea.Height; i += 5)
+            //{
+            //    g.DrawLine(pen, new Point(0, i), new Point(picb_3DArea.Width,i));
+            //}
 
             // Vẽ trục tọa độ
             pen = new Pen(Color.Red);

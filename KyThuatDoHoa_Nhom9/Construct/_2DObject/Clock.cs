@@ -173,9 +173,9 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         private void SetupClockwise(DateTime dt)
         {
             ht = new HinhTron(ToaDo.NguoiDungMayTinh(A), R);
-            HSecond = new Line(ToaDo.NguoiDungMayTinh(A), (msCoord(dt.Second, R * 5 - 10)) );
-            HMinute = new Line(ToaDo.NguoiDungMayTinh(A), (msCoord(dt.Minute, R * 5 - 20)) );
-            HHours = new Line (ToaDo.NguoiDungMayTinh(A), (hrCoord(dt.Hour, dt.Minute, R * 5 - 30)));
+            HSecond = new Line(ToaDo.NguoiDungMayTinh(A), (msCoord(dt.Second, R * 5 - 10)),Color.Black);
+            HMinute = new Line(ToaDo.NguoiDungMayTinh(A), (msCoord(dt.Minute, R * 5 - 20)), Color.Black);
+            HHours = new Line (ToaDo.NguoiDungMayTinh(A), (hrCoord(dt.Hour, dt.Minute, R * 5 - 30)), Color.Black);
         }
 
         private Point msCoord(int val, int hlen)
