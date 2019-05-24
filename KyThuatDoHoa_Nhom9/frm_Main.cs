@@ -19,10 +19,24 @@ namespace KyThuatDoHoa_Nhom9
 
     public partial class frm_Main : Form
     {
-        private Bitmap bm;
-        private Graphics grp;
+       
+        HinhXe hinhXe;
+        Pendulum pendulum;
+        XeProperties xe;
+        bool flagXe;
+        Clock clock;
+        ClockProperties clockProperties;
 
-   
+        Point s = new Point(3, 3);
+        Point ep = new Point(15, 15);
+        Clock cl;
+        Timer tm = new Timer
+        {
+            Interval = 300
+        };
+
+        HinhTron ht;
+
         public frm_Main()
         {
             InitializeComponent();
@@ -43,7 +57,7 @@ namespace KyThuatDoHoa_Nhom9
             picb_2DArea.Visible = false;
 
             Setup_ToolTips();
-          
+            flagXe = false;
         }
 
         private void Pendulum_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -309,6 +323,7 @@ namespace KyThuatDoHoa_Nhom9
             //Focus button clicked
             Button btn = sender as Button;
             btn.BackColor = Color.BlueViolet;
+
         }
 
         private void Button_MouseDown(object sender, MouseEventArgs e)
@@ -333,7 +348,11 @@ namespace KyThuatDoHoa_Nhom9
 
                 clockProperties.PropertyChanged += ClockProperties_PropertyChanged;
                 this.pnl_ToolBox.Controls.Add(clockProperties);
-                clockProperties.Refresh();
+                if (flagXe == false)
+                {
+                    clockProperties.Refresh();
+                }
+              
                 clockProperties.BringToFront();
 
                 DateTime dt = DateTime.Now;
@@ -399,7 +418,11 @@ namespace KyThuatDoHoa_Nhom9
         ClockProperties clockProperties;
         private void Clock_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            this.picb_2DArea.Refresh();
+            
+            if (flagXe == false)
+            {
+                this.picb_2DArea.Refresh();
+            }
             clockProperties.CurrentTime = clock.CurrentDatetime;
             clockProperties.HHours = clock.HHours;
             clockProperties.HMinute = clock.HMinute;
@@ -414,7 +437,7 @@ namespace KyThuatDoHoa_Nhom9
         #endregion
 
         #region Circle action
-        HinhTron ht;
+
         private void CircleProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (ht != null)
@@ -431,7 +454,11 @@ namespace KyThuatDoHoa_Nhom9
 
         private void Ht_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            this.picb_2DArea.Refresh();
+            if (flagXe == false)
+            {
+                this.picb_2DArea.Refresh();
+            }
+
             (sender as HinhTron).Draw(this.picb_2DArea.CreateGraphics());
         }
         #endregion
@@ -520,23 +547,8 @@ namespace KyThuatDoHoa_Nhom9
         #endregion
 
 
-        Graphics g;
-        Graphics g1;
-        int y1 = 1, y2 = 5;
-        Point s = new Point(3, 3);
-        Point ep = new Point(15, 15);
-        Bitmap bmTemp;
-        bool test = false;
-        HinhChuNhat hinhChuNhat;
-        Clock cl;
-        Line line;
-        Timer tm = new Timer
-        {
-            Interval = 300
-        };
-
-        int x;
-        int y;
+       
+      
 
         private void button37_Click(object sender, EventArgs e)
         {
@@ -552,25 +564,77 @@ namespace KyThuatDoHoa_Nhom9
         private void Cl_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             label4.Text = cl.CurrentDatetime.ToString();
-            test = true;
             //this.Invalidate();
-            this.picb_2DArea.Refresh();
+            if (flagXe == false)
+            {
+                this.picb_2DArea.Refresh();
+            }
         }
-        int i = 0, j = 0;
-        HinhXe hinhXe;
-        Pendulum pendulum;
-        private bool flagTimer;
+
+        int dem = 0;
         private void picb_2DArea_Paint(object sender, PaintEventArgs e)
         {
             //if (test)
             //{
-            //    //line.Draw(e.Graphics);
-            //    //line.Rotate(new Point(550, 320), 20);
-            //    //hinhChuNhat.Draw(e.Graphics);
-            //    //hinhChuNhat.Rotate(new Point(550, 320), 90);
-            //    //cl.CurrentDatetime = DateTime.Now;
+            //    line.Draw(e.Graphics);
+            //    line.Rotate(new Point(550, 320), 20);
+            //    hinhChuNhat.Draw(e.Graphics);
+            //    hinhChuNhat.Rotate(new Point(550, 320), 90);
+            //    cl.CurrentDatetime = DateTime.Now;
             //    cl.Draw(e.Graphics);
             //}
+
+            //if (clock != null)
+            //    clock.Draw(e.Graphics);
+
+            //pendulum.Draw(e.Graphics);
+           
+            if (flagXe)
+            {
+              
+                // biểu diễn các hoạt động của xe
+                hinhXe.PropertyChanged += HinhXe_PropertyChanged;
+                hinhXe.ToMau(e.Graphics);
+                hinhXe.drawCar(e.Graphics);
+
+                if (dem <= 30)
+                {
+                    dem++;
+                    // tịnh tiến 5 đơn vị
+                    // đi phải qua trái
+                    hinhXe.traslationXe(5, 0);
+                    hinhXe.quayBanhXe(30);
+              
+
+                }
+                else if (dem <= 60)
+                {
+                    dem++;
+                    //tịnh tiến 5 đơn vị
+                    // đi phải qua trái
+                    hinhXe.traslationXe(0, 5);
+                    hinhXe.quayBanhXe(30);
+                }
+                else if (dem <= 90)
+                {
+                    dem++;
+                    // đi từ trên xuống dưới
+                    hinhXe.traslationXe(-5, 0);
+                    hinhXe.quayBanhXe(-30);
+                }
+                else if (dem <= 120)
+                {
+                    dem++;
+                    // đi từ dưới lên trên
+                    hinhXe.traslationXe(0, -5);
+                    hinhXe.quayBanhXe(-30);
+                }else
+                {
+                    // cập nhật lại
+                    dem = 0;
+                }
+            }
+
 
             HinhElip hinhElip = new HinhElip(new Point(550, 305), 30, 10);
             hinhElip.NetDut(e.Graphics);
@@ -581,27 +645,37 @@ namespace KyThuatDoHoa_Nhom9
 
             //pendulum.Draw(e.Graphics);
 
-            //hinhXe.traslationXe(i, j);
-            //hinhXe.drawCar(e.Graphics);
+        }
 
-            //i = i + 5;
-            //j = j + 5;
+        private void HinhXe_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
 
-            //hinhXe.quayBanhXe(30);
+            // cập nhật lspoint từ class HinhXe vào class Xeproperties
+            xe.lsPoint = (Point[])hinhXe.LsPoint.Clone();
+            xe.bankinh = hinhXe.BkBanh;
+            xe.HienThiThongTin();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            flagTimer = true;
+       
             this.picb_2DArea.Refresh();
         }
 
         private void button38_Click(object sender, EventArgs e)
         {
-            XeProperties x = new XeProperties();
-           //  x.Size = this.pnl_ToolBox.Size;
-            this.pnl_ToolBox.Controls.Add(x);
-            x.BringToFront();
+            if(flagXe == false)
+            {
+                this.timer1.Start();
+              
+            }
+            // bật chế độ của xe
+            flagXe = true;
+            this.pnl_ToolBox.Controls.Add(xe);
+            xe.BringToFront();
+            xe.Visible = true;
+            
+
             
         }
 
@@ -744,6 +818,23 @@ namespace KyThuatDoHoa_Nhom9
 
 
         #endregion
+        }
 
+        private void zoom_Click(object sender, EventArgs e)
+        {
+           
+            
+            hinhXe.doiXungQuaTruc();
+        }
+
+        private void button41_Click(object sender, EventArgs e)
+        {
+            hinhXe.doiXungQuaOx();
+        }
+
+        private void button42_Click(object sender, EventArgs e)
+        {
+            hinhXe.doiXungQuaOy();
+        }
     }
 }

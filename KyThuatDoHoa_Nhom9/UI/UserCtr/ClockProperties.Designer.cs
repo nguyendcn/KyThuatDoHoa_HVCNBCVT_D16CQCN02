@@ -51,6 +51,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.hMinute = new System.Windows.Forms.Label();
             this.lbl_1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -58,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numud_Minute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numud_Hours)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -152,7 +155,7 @@
             this.btn_GetTimeSystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_GetTimeSystem.Location = new System.Drawing.Point(99, 29);
             this.btn_GetTimeSystem.Name = "btn_GetTimeSystem";
-            this.btn_GetTimeSystem.Size = new System.Drawing.Size(68, 23);
+            this.btn_GetTimeSystem.Size = new System.Drawing.Size(60, 23);
             this.btn_GetTimeSystem.TabIndex = 8;
             this.btn_GetTimeSystem.Text = "Sys Time";
             this.btn_GetTimeSystem.UseVisualStyleBackColor = true;
@@ -313,6 +316,27 @@
             this.lbl_1.TabIndex = 0;
             this.lbl_1.Text = "hHours";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::KyThuatDoHoa_Nhom9.Properties.Resources.gnome_window_close;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(153, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(22, 20);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::KyThuatDoHoa_Nhom9.Properties.Resources.history;
+            this.pictureBox1.Location = new System.Drawing.Point(51, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(84, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // ClockProperties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,6 +356,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numud_Hours)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
