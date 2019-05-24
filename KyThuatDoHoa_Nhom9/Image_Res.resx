@@ -121,8 +121,17 @@
   <data name="Capsule_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Capsule_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Car_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Car_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Circle_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Circle_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClockWall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ClockWall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Clock_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Clock_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Collapse_Arrow_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Collapse Arrow_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -132,6 +141,9 @@
   </data>
   <data name="Cylinder_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Cylinder_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dashed_Line_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Dashed Line_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Diamonds_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Diamonds_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +157,9 @@
   <data name="Heart_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Heart_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Help_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Help_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hexagon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Hexagon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,17 +169,23 @@
   <data name="Left_triangle_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Left triangle_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Line_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Line_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Line_Chart_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Line Chart_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="List_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\List_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Moon_Star_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Moon Star_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Old_Clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Old_Clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Pentagon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Pentagon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Polyline_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Polyline_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pyramid_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Pyramid_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -174,6 +195,9 @@
   </data>
   <data name="Rounded_Rectangle_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Rounded Rectangle_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sand_Timer_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Sand Timer_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sphere_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Sphere_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
