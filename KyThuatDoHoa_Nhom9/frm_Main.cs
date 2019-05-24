@@ -730,6 +730,9 @@ namespace KyThuatDoHoa_Nhom9
         {
             Point p = e.Location;
 
+            
+            lbl_SizeGird.Text = picb_2DArea.ToString();
+
             lblWidth.Text = picb_2DArea.Width.ToString();
             lblHeight.Text = picb_2DArea.Height.ToString();
 
@@ -746,6 +749,9 @@ namespace KyThuatDoHoa_Nhom9
             p = ToaDo.MayTinhNguoiDung(p);
             lblX3.Text = p.X.ToString();
             lblY3.Text = p.Y.ToString();
+
+            lbl_SizeGird.Text = ((picb_2DArea.Size.Width / 5) / 2) + ", " + ((picb_2DArea.Size.Height / 5) / 2);
+            lbl_LocationInGird.Text = p.X + ", " + p.Y;
 
             // Chuyển từ tọa độ người dùng về tọa độ máy tính
             p = ToaDo.NguoiDungMayTinh(p);
@@ -832,11 +838,21 @@ namespace KyThuatDoHoa_Nhom9
             g.DrawLine(pen, new Point(x, y), new Point(x-y, y + y));                      // trục Oz
             System.Console.WriteLine((x - y) + " " + (y ));
 ;        }
-        
+
 
 
         #endregion
+
+        private void btn_Author_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nhom 9 nha", "Hahahah", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void btn_Help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nhom 9 nha", "Hoi cham", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
 
     //private void zoom_Click(object sender, EventArgs e)
     //{

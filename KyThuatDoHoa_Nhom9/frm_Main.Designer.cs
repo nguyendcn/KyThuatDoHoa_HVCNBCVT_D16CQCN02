@@ -110,11 +110,17 @@ namespace KyThuatDoHoa_Nhom9
             this.lblX1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pnl_WorkStation = new System.Windows.Forms.Panel();
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.lbl_LocationInGird = new System.Windows.Forms.Label();
+            this.lbl_SizeGird = new System.Windows.Forms.Label();
             this.pnl_Mode.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -131,6 +137,11 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_3DArea)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Mode
@@ -179,6 +190,7 @@ namespace KyThuatDoHoa_Nhom9
             this.btn_Author.Text = "Author";
             this.btn_Author.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Author.UseVisualStyleBackColor = true;
+            this.btn_Author.Click += new System.EventHandler(this.btn_Author_Click);
             // 
             // button42
             // 
@@ -279,6 +291,7 @@ namespace KyThuatDoHoa_Nhom9
             this.btn_Help.Text = "Help";
             this.btn_Help.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Help.UseVisualStyleBackColor = true;
+            this.btn_Help.Click += new System.EventHandler(this.btn_Help_Click);
             // 
             // panel1
             // 
@@ -975,8 +988,9 @@ namespace KyThuatDoHoa_Nhom9
             // 
             this.pnl_Change.BackColor = System.Drawing.Color.MintCream;
             this.pnl_Change.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnl_Change.Controls.Add(this.lblWidth);
+            this.pnl_Change.Controls.Add(this.panel9);
             this.pnl_Change.Controls.Add(this.lblHeight);
+            this.pnl_Change.Controls.Add(this.lblWidth);
             this.pnl_Change.Controls.Add(this.lblX4);
             this.pnl_Change.Controls.Add(this.lblY4);
             this.pnl_Change.Controls.Add(this.lblX3);
@@ -990,7 +1004,6 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Change.Controls.Add(this.lblX1);
             this.pnl_Change.Controls.Add(this.panel5);
             this.pnl_Change.Controls.Add(this.panel4);
-            this.pnl_Change.Controls.Add(this.panel3);
             this.pnl_Change.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Change.Location = new System.Drawing.Point(0, 49);
             this.pnl_Change.Name = "pnl_Change";
@@ -1000,7 +1013,7 @@ namespace KyThuatDoHoa_Nhom9
             // lblWidth
             // 
             this.lblWidth.AutoSize = true;
-            this.lblWidth.Location = new System.Drawing.Point(99, 2);
+            this.lblWidth.Location = new System.Drawing.Point(108, -2);
             this.lblWidth.Name = "lblWidth";
             this.lblWidth.Size = new System.Drawing.Size(45, 19);
             this.lblWidth.TabIndex = 8;
@@ -1009,7 +1022,7 @@ namespace KyThuatDoHoa_Nhom9
             // lblHeight
             // 
             this.lblHeight.AutoSize = true;
-            this.lblHeight.Location = new System.Drawing.Point(99, 25);
+            this.lblHeight.Location = new System.Drawing.Point(108, 25);
             this.lblHeight.Name = "lblHeight";
             this.lblHeight.Size = new System.Drawing.Size(45, 19);
             this.lblHeight.TabIndex = 9;
@@ -1133,14 +1146,6 @@ namespace KyThuatDoHoa_Nhom9
             this.panel4.Size = new System.Drawing.Size(62, 45);
             this.panel4.TabIndex = 1;
             // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(93, 45);
-            this.panel3.TabIndex = 0;
-            // 
             // pnl_WorkStation
             // 
             this.pnl_WorkStation.AutoScroll = true;
@@ -1188,6 +1193,78 @@ namespace KyThuatDoHoa_Nhom9
             this.timer1.Interval = 90;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.panel3);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(106, 45);
+            this.panel9.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(24, 45);
+            this.panel3.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cursor_25px;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 21);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Size_Page_25px;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.lbl_SizeGird);
+            this.panel10.Controls.Add(this.lbl_LocationInGird);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(24, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(82, 45);
+            this.panel10.TabIndex = 10;
+            // 
+            // lbl_LocationInGird
+            // 
+            this.lbl_LocationInGird.AutoSize = true;
+            this.lbl_LocationInGird.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_LocationInGird.Location = new System.Drawing.Point(3, 25);
+            this.lbl_LocationInGird.Name = "lbl_LocationInGird";
+            this.lbl_LocationInGird.Size = new System.Drawing.Size(48, 19);
+            this.lbl_LocationInGird.TabIndex = 8;
+            this.lbl_LocationInGird.Text = "InGird";
+            // 
+            // lbl_SizeGird
+            // 
+            this.lbl_SizeGird.AutoSize = true;
+            this.lbl_SizeGird.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SizeGird.Location = new System.Drawing.Point(6, 2);
+            this.lbl_SizeGird.Name = "lbl_SizeGird";
+            this.lbl_SizeGird.Size = new System.Drawing.Size(58, 19);
+            this.lbl_SizeGird.TabIndex = 9;
+            this.lbl_SizeGird.Text = "sizeGird";
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1227,6 +1304,12 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_3DArea)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1247,7 +1330,6 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox grb_2DShapes;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
@@ -1318,6 +1400,13 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btn_Author;
         private System.Windows.Forms.Button btn_Help;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbl_LocationInGird;
+        private System.Windows.Forms.Label lbl_SizeGird;
     }
 }
 

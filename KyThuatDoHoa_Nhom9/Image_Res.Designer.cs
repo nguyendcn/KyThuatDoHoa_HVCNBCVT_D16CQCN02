@@ -163,6 +163,16 @@ namespace KyThuatDoHoa_Nhom9 {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cursor_25px {
+            get {
+                object obj = ResourceManager.GetObject("Cursor_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cylinder_32px {
             get {
                 object obj = ResourceManager.GetObject("Cylinder_32px", resourceCulture);
@@ -376,6 +386,16 @@ namespace KyThuatDoHoa_Nhom9 {
         internal static System.Drawing.Bitmap Sand_Timer_32px {
             get {
                 object obj = ResourceManager.GetObject("Sand_Timer_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Size_Page_25px {
+            get {
+                object obj = ResourceManager.GetObject("Size_Page_25px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
