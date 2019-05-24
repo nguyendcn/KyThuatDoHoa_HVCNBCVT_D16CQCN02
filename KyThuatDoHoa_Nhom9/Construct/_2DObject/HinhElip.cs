@@ -104,7 +104,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             y = b;
             int Dx = 0;
             int Dy = 2 * A * y;
-            Drawn4Point_3D(x, y, g, this.color);
+            Drawn4Point_3D(x, y, g);
 
             while (Dx <= Dy)
             {
@@ -119,7 +119,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                     p += B + Dx - Dy;
                 }
                 if (x % 5 == 0 )
-                    Drawn4Point_3D(x, ToaDo.RoundPixel(y), g, this.color);
+                    Drawn4Point_3D(x, ToaDo.RoundPixel(y), g);
 
 
             }
@@ -137,7 +137,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                     p += A - Dy + Dx;
                 }
                 if (x % 5 == 0)
-                    Drawn4Point_3D(x, ToaDo.RoundPixel(y), g, this.color);
+                    Drawn4Point_3D(x, ToaDo.RoundPixel(y), g);
 
             }
         }

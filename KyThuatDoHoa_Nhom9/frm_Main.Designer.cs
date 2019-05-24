@@ -80,9 +80,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -113,6 +111,8 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button41 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
             this.pnl_Mode.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -139,6 +139,8 @@ namespace KyThuatDoHoa_Nhom9
             // pnl_Mode
             // 
             this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnl_Mode.Controls.Add(this.button21);
+            this.pnl_Mode.Controls.Add(this.button41);
             this.pnl_Mode.Controls.Add(this.panel8);
             this.pnl_Mode.Controls.Add(this.panel2);
             this.pnl_Mode.Controls.Add(this.panel1);
@@ -262,8 +264,8 @@ namespace KyThuatDoHoa_Nhom9
             // pnl_ToolBox
             // 
             this.pnl_ToolBox.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_ToolBox.Controls.Add(this.pnl_Tb_2D);
             this.pnl_ToolBox.Controls.Add(this.pnl_Tb_3D);
+            this.pnl_ToolBox.Controls.Add(this.pnl_Tb_2D);
             this.pnl_ToolBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_ToolBox.Location = new System.Drawing.Point(600, 49);
             this.pnl_ToolBox.Name = "pnl_ToolBox";
@@ -646,9 +648,7 @@ namespace KyThuatDoHoa_Nhom9
             this.grb_3Dobject.Controls.Add(this.button26);
             this.grb_3Dobject.Controls.Add(this.button27);
             this.grb_3Dobject.Controls.Add(this.button28);
-            this.grb_3Dobject.Controls.Add(this.button21);
             this.grb_3Dobject.Controls.Add(this.button22);
-            this.grb_3Dobject.Controls.Add(this.button23);
             this.grb_3Dobject.Controls.Add(this.button24);
             this.grb_3Dobject.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.grb_3Dobject.Location = new System.Drawing.Point(0, 67);
@@ -814,50 +814,20 @@ namespace KyThuatDoHoa_Nhom9
             this.button28.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button28.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
-            // button21
-            // 
-            this.button21.FlatAppearance.BorderSize = 0;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Pyramid_32px;
-            this.button21.Location = new System.Drawing.Point(200, 28);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(50, 50);
-            this.button21.TabIndex = 11;
-            this.button21.Tag = "Pyramid";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.Button_Click);
-            this.button21.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button21.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
             // button22
             // 
             this.button22.FlatAppearance.BorderSize = 0;
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button22.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cylinder_32px;
-            this.button22.Location = new System.Drawing.Point(138, 28);
+            this.button22.Location = new System.Drawing.Point(66, 28);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(50, 50);
+            this.button22.Size = new System.Drawing.Size(60, 50);
             this.button22.TabIndex = 10;
             this.button22.Tag = "Cylinder";
             this.button22.UseVisualStyleBackColor = true;
             this.button22.Click += new System.EventHandler(this.Button_Click);
             this.button22.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button22.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button23
-            // 
-            this.button23.FlatAppearance.BorderSize = 0;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Sphere_32px;
-            this.button23.Location = new System.Drawing.Point(76, 28);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(50, 50);
-            this.button23.TabIndex = 9;
-            this.button23.Tag = "Sphere";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.Button_Click);
-            this.button23.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button23.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // button24
             // 
@@ -1141,7 +1111,6 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation.Name = "pnl_WorkStation";
             this.pnl_WorkStation.Size = new System.Drawing.Size(600, 552);
             this.pnl_WorkStation.TabIndex = 3;
-            this.pnl_WorkStation.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_WorkStation_Paint);
             this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
             // 
             // picb_2DArea
@@ -1176,6 +1145,26 @@ namespace KyThuatDoHoa_Nhom9
             // 
             this.timer1.Interval = 90;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button41
+            // 
+            this.button41.Location = new System.Drawing.Point(475, 13);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(75, 23);
+            this.button41.TabIndex = 14;
+            this.button41.Text = "button41";
+            this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(296, 13);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(75, 23);
+            this.button21.TabIndex = 15;
+            this.button21.Text = "button21";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // frm_Main
             // 
@@ -1278,9 +1267,7 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;
@@ -1310,6 +1297,8 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_LocationInGird;
         private System.Windows.Forms.Label lbl_SizeGird;
+        private System.Windows.Forms.Button button41;
+        private System.Windows.Forms.Button button21;
     }
 }
 
