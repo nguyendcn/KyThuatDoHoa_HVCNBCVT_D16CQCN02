@@ -49,6 +49,7 @@ namespace KyThuatDoHoa_Nhom9
           
             hinhTru = new HinhTru();
             tru = new HinhTruProperties();
+            hopCN = new HinhHopChuNhatProperties();
             // Tạo quả lắc theo kích thước cho trước
             pendulum = new Pendulum(new Point(100, 20), new Point(400, 220));
             pendulum.SetAlpha(-3); // set góc quay alpha 
@@ -777,6 +778,16 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea.Refresh();
         }
 
+        private void btn_Author_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nhom 9 nha", "Hahahah", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btn_Help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nhom 9 nha", "Hoi cham", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
         private void button38_Click(object sender, EventArgs e)
         {
             if (flagXe == false)
@@ -793,12 +804,7 @@ namespace KyThuatDoHoa_Nhom9
 
 
         }
-        private void Button43_Click(object sender, EventArgs e)
-        {
-            this.pnl_ToolBox.Controls.Add(tru);
-            tru.BringToFront();
-            tru.Visible = true;
-        }
+    
         private void picb_2DArea_SizeChanged(object sender, EventArgs e)
         {
             Variables.Globals.sizeOfNewCoor_2D.Width = ReturnEvenNumber(picb_2DArea.Width / Variables.Globals.sizePerPoint.Width);
@@ -950,42 +956,27 @@ namespace KyThuatDoHoa_Nhom9
 
         }
 
-        private void button44_Click(object sender, EventArgs e)
+
+        private void button41_Click(object sender, EventArgs e)
         {
             this.pnl_ToolBox.Controls.Add(hopCN);
             hopCN.BringToFront();
             hopCN.Visible = true;
         }
-    }
 
-        private void btn_Help_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Nhom 9 nha", "Hoi cham", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        //private void button41_Click(object sender, EventArgs e)
-       
-
-        //private void zoom_Click_1(object sender, EventArgs e)
-        //{
-        //    hinhXe.doiXungQuaGoc();
-        //}
-
-        private void button41_Click_1(object sender, EventArgs e)
-        {
-            hinhXe.doiXungQuaOx();
-        }
-
-        private void button42_Click_1(object sender, EventArgs e)
-        {
-            hinhXe.doiXungQuaOy();
-        }
-
-        private void pnl_WorkStation_Paint(object sender, PaintEventArgs e)
+        private void button21_Click(object sender, EventArgs e)
         {
 
+            this.pnl_ToolBox.Controls.Add(tru);
+            tru.BringToFront();
+            tru.Visible = true;
         }
     }
+    
+
+     
+
+
 
     
 }
