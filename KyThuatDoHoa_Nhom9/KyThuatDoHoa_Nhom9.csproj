@@ -261,6 +261,15 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Note.txt" />
+    <None Include="Resources\ClockWall.png" />
+    <None Include="Resources\Dashed Line_32px.png" />
+    <None Include="Resources\Help_32px.png" />
+    <None Include="Resources\Line Chart_32px.png" />
+    <None Include="Resources\Line_32px.png" />
+    <None Include="Resources\Polyline_32px.png" />
+    <None Include="Resources\Car_32px.png" />
+    <None Include="Resources\Sand Timer_32px.png" />
+    <None Include="Resources\Clock_32px.png" />
     <None Include="Resources\Dispose_32px.png" />
     <None Include="Resources\Hide_32px.png" />
     <None Include="Resources\Old_Clock.png" />
