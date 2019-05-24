@@ -9,7 +9,7 @@ using KyThuatDoHoa_Nhom9.Construct.DefineType;
 
 namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 {
-    class HinhTron : Shapes2DObject, INotifyPropertyChanged
+    public class HinhTron : Shapes2DObject, INotifyPropertyChanged
     {
         private Point point;
         private int radius;
@@ -47,16 +47,16 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             }
         }
 
-        public void Drawn8Point( int x,int y, Graphics g)
+        public void Drawn8Point( int x,int y, Graphics g, Color color)
         {
-            ToaDo.HienThi(x + point.X, y + point.Y, g);
-            ToaDo.HienThi(y + point.X, x + point.Y, g);
-            ToaDo.HienThi(-x + point.X, -y + point.Y, g);
-            ToaDo.HienThi(-y + point.X, -x + point.Y, g);
-            ToaDo.HienThi(-x + point.X, y + point.Y, g);
-            ToaDo.HienThi(-y + point.X, x + point.Y, g);
-            ToaDo.HienThi(x + point.X, -y + point.Y, g);
-            ToaDo.HienThi(y + point.X, -x + point.Y, g); 
+            ToaDo.HienThi(x + point.X, y + point.Y, g, color);
+            ToaDo.HienThi(y + point.X, x + point.Y, g, color);
+            ToaDo.HienThi(-x + point.X, -y + point.Y, g, color);
+            ToaDo.HienThi(-y + point.X, -x + point.Y, g, color);
+            ToaDo.HienThi(-x + point.X, y + point.Y, g, color);
+            ToaDo.HienThi(-y + point.X, x + point.Y, g, color);
+            ToaDo.HienThi(x + point.X, -y + point.Y, g, color);
+            ToaDo.HienThi(y + point.X, -x + point.Y, g, color); 
         }
 
         public HinhTron(int bk, Point tamht, Color m)
@@ -70,6 +70,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             this.point = point;
             this.radius = R * 5;
+            this.color = Color.Black;
         }
         public void Draw(Graphics g)
         {
@@ -85,7 +86,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                     y -= 5;
                     p = p + 4 * (x - y) + 10;
                 }
-                Drawn8Point( x, y, g);
+                Drawn8Point( x, y, g, color);
                 x += 5;
             }
         }
@@ -105,12 +106,17 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             throw new NotImplementedException();
         }
 
-        public void Shifting(Point pDest)
+        public void Shifting(int dx, int dy)
+        {
+            this.Point = this.Point.Translate(dx, dy);
+        }
+
+        public void Symmetry(Point orgin, SymmetryMode mode)
         {
             throw new NotImplementedException();
         }
 
-        public void Symmetry(Point orgin, SymmetryMode mode)
+        public void Shifting(Point pDest)
         {
             throw new NotImplementedException();
         }

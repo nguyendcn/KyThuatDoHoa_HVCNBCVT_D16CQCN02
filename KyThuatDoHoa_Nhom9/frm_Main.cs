@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using KyThuatDoHoa_Nhom9.UI;
 using KyThuatDoHoa_Nhom9.Variables;
 using KyThuatDoHoa_Nhom9.Construct._2DObject;
+using KyThuatDoHoa_Nhom9.Construct._3DObject;
 using KyThuatDoHoa_Nhom9.UI.UserCtr;
 
 namespace KyThuatDoHoa_Nhom9
@@ -25,21 +26,29 @@ namespace KyThuatDoHoa_Nhom9
         public frm_Main()
         {
             InitializeComponent();
-            
-            flagTimer = false;
-            hinhXe = new HinhXe();
 
-            // Tạo quả lắc theo kích thước cho trước
-            pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
-            pendulum.SetAlpha(-3); // set góc quay alpha 
+            //flagTimer = false;
+            //hinhXe = new HinhXe();
 
-            picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
+            //// Tạo quả lắc theo kích thước cho trước
+            //pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
+            //pendulum.SetAlpha(-3); // set góc quay alpha 
 
-            //2D mode is startup;
-            Setup_Toolbar(Globals._Mode_current);
+            //picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
+
+            ////2D mode is startup;
+            //Setup_Toolbar(Globals._Mode_current);
+
+            picb_3DArea.Dock = DockStyle.Fill;
+            picb_2DArea.Visible = false;
 
             Setup_ToolTips();
           
+        }
+
+        private void Pendulum_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.picb_2DArea.Refresh();
         }
 
 
@@ -320,26 +329,78 @@ namespace KyThuatDoHoa_Nhom9
             }
             else if(btn.Tag.Equals("Clock"))
             {
-                clockProperties = new ClockProperties(this.pnl_ToolBox.Size);
+                clockProperties = new ClockProperties();
 
                 clockProperties.PropertyChanged += ClockProperties_PropertyChanged;
                 this.pnl_ToolBox.Controls.Add(clockProperties);
+                clockProperties.Refresh();
                 clockProperties.BringToFront();
 
                 DateTime dt = DateTime.Now;
-                clock = new Clock(new Point(580, 315), 15, dt);
+                clock = new Clock(new Point(0, 0), 15, dt);
                 clock.CurrentDatetime = new DateTime(2019, 05, 19, 12, 30, 15);
                 clock.Draw(this.picb_2DArea.CreateGraphics());
                 clock.PropertyChanged += Clock_PropertyChanged;
             }
+            else if(btn.Tag.Equals("TimePiece"))
+            {
+                timepieceProperties = new TimepieceProperties();
+                timepieceProperties.PropertyChanged += TimepieceProperties_PropertyChanged;
+                this.pnl_ToolBox.Controls.Add(timepieceProperties);
+                timepieceProperties.BringToFront();
+
+                timepiece = new Timepiece();
+                timepiece.PropertyChanged += Timepiece_PropertyChanged;
+            }
+   
         }
 
+        #region Timepiece action
+        TimepieceProperties timepieceProperties;
+        Timepiece timepiece;
+        private void Timepiece_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if(e.PropertyName.Equals("location"))
+            {
+                timepieceProperties.MainLocation = timepiece.Location;
+            }
+            else if(e.PropertyName.Equals("item_clock"))
+            {
+                this.picb_2DArea.Refresh();
+                if (timepieceProperties != null && timepiece != null)
+                {
+                    timepieceProperties.ClockProperties.CurrentTime = timepiece.Item_clock.CurrentDatetime;
+                    timepieceProperties.ClockProperties.HHours = timepiece.Item_clock.HHours;
+                    timepieceProperties.ClockProperties.HMinute = timepiece.Item_clock.HMinute;
+                    timepieceProperties.ClockProperties.HSecond = timepiece.Item_clock.HSecond;
+                }
+            }
+        }
+        private void TimepieceProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals("timeChanged"))
+            {
+                timepiece.Item_clock.CurrentDatetime = timepieceProperties.ClockProperties.CurrentTime;
+            }
+            else if (e.PropertyName.Equals("mainLocation"))
+            {
+                timepiece.Location = timepieceProperties.MainLocation;
+            }
+            else if (e.PropertyName.Equals("dispose"))
+            {
+                this.timepiece = null;
+                this.timepieceProperties = null;
+            }
+        }
+        #endregion
+
+        #region Clock action
         Clock clock;
         ClockProperties clockProperties;
         private void Clock_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             this.picb_2DArea.Refresh();
-            clockProperties.CurrenTime = clock.CurrentDatetime;
+            clockProperties.CurrentTime = clock.CurrentDatetime;
             clockProperties.HHours = clock.HHours;
             clockProperties.HMinute = clock.HMinute;
             clockProperties.HSecond = clock.HSecond;
@@ -348,10 +409,9 @@ namespace KyThuatDoHoa_Nhom9
 
         private void ClockProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            clock.CurrentDatetime = clockProperties.CurrenTime;
+            clock.CurrentDatetime = clockProperties.CurrentTime;
         }
-
-
+        #endregion
 
         #region Circle action
         HinhTron ht;
@@ -450,7 +510,7 @@ namespace KyThuatDoHoa_Nhom9
             ////pnl_WorkStation.Refresh();
             //if (chkLuoiPixel.Checked)
             //{
-            //    VeLuoiPixel(new Pen(Color.Red));
+               // VeLuoiPixel(new Pen(Color.Red));
             //}
 
             //grp = picb_2DArea.CreateGraphics();
@@ -512,10 +572,14 @@ namespace KyThuatDoHoa_Nhom9
             //    cl.Draw(e.Graphics);
             //}
 
+            HinhElip hinhElip = new HinhElip(new Point(550, 305), 30, 10);
+            hinhElip.NetDut(e.Graphics);
+
+
             //if(clock != null)
             //    clock.Draw(e.Graphics);
 
-            pendulum.Draw(e.Graphics);
+            //pendulum.Draw(e.Graphics);
 
             //hinhXe.traslationXe(i, j);
             //hinhXe.drawCar(e.Graphics);
@@ -534,10 +598,12 @@ namespace KyThuatDoHoa_Nhom9
 
         private void button38_Click(object sender, EventArgs e)
         {
-            cl.CurrentDatetime = new DateTime(2019, 05, 18, 12, 30, 15);
-            cl.A = new Point(570, 315);
-            cl.R = 30
-;        }
+            XeProperties x = new XeProperties();
+           //  x.Size = this.pnl_ToolBox.Size;
+            this.pnl_ToolBox.Controls.Add(x);
+            x.BringToFront();
+            
+        }
 
         private void picb_2DArea_SizeChanged(object sender, EventArgs e)
         {
@@ -554,14 +620,20 @@ namespace KyThuatDoHoa_Nhom9
         {
 
         }
+
+        
+        private void button40_Click(object sender, EventArgs e)
+        {
+            
+        }
+       
+
         private void button39_Click(object sender, EventArgs e)
         {
             this.timer1.Start();
-         
-
         }
 
-
+       
         private void picb_2DArea_MouseMove(object sender, MouseEventArgs e)
         {
             Point p = e.Location;
@@ -587,8 +659,91 @@ namespace KyThuatDoHoa_Nhom9
             p = ToaDo.NguoiDungMayTinh(p);
             lblX4.Text = p.X.ToString();
             lblY4.Text = p.Y.ToString();
+            
         }
-       
+        #region Vẽ trên picb_3DArea sử dụng Cavalier
+        private void Picb_3DArea_Paint(object sender, PaintEventArgs e)
+        {
+            VeLuoi3D(e.Graphics);
+
+            //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
+            //hinhHopChuNhat.Draw(e.Graphics);
+
+
+            HinhTru hinhTru = new HinhTru(10, 10, 0, 30, 40);
+            hinhTru.Draw(e.Graphics);
+            hinhTru.DrawElip(e.Graphics);
+
+        }
+
+        private void Picb_3DArea_MouseMove(object sender, MouseEventArgs e)
+        {
+            Point p = e.Location;
+
+            //lblWidth.Text = picb_3DArea.Width.ToString();
+            //lblHeight.Text = picb_3DArea.Height.ToString();
+            lblWidth.Text = Variables.Globals.sizeOfNewCoor_3D.Width.ToString();
+            lblHeight.Text = Variables.Globals.sizeOfNewCoor_3D.Height.ToString();
+
+            // Tọa độ của chuột khi move
+            lblX1.Text = e.Location.X.ToString();
+            lblY1.Text = e.Location.Y.ToString();
+
+            // Làm tròn tọa độ trên lưới Pixel
+            p = ToaDo.RoundPixel(e.Location);
+            lblX2.Text = p.X.ToString();
+            lblY2.Text = p.Y.ToString();
+
+            // Chuyển từ tọa độ máy tính về tọa độ người dùng
+            p = ToaDo.MayTinhNguoiDung_3D(p);
+            lblX3.Text = p.X.ToString();
+            lblY3.Text = p.Y.ToString();
+
+        }
+
+        private void Picb_3DArea_SizeChanged(object sender, EventArgs e)
+        {
+            Variables.Globals.sizeOfNewCoor_3D.Width = ReturnEvenNumber(picb_3DArea.Width / Variables.Globals.sizePerPoint.Width);
+            Variables.Globals.sizeOfNewCoor_3D.Height = ReturnEvenNumber(picb_3DArea.Height / Variables.Globals.sizePerPoint.Height);
+
+            picb_3DArea.Width = Variables.Globals.sizeOfNewCoor_3D.Width * 5;
+            picb_3DArea.Height = Variables.Globals.sizeOfNewCoor_3D.Height * 5;
+        }
+
+        private void Picb_3DArea_MouseClick(object sender, MouseEventArgs e)
+        {
+            ToaDo.HienThi(e.Location, picb_3DArea.CreateGraphics());
+        }
+
+        public void VeLuoi3D(Graphics g)
+        {
+            Pen pen = new Pen(Color.Black);
+           
+
+            // Vẽ lưới 
+            for(int i = 0; i < picb_3DArea.Width; i += 5)
+            {
+                g.DrawLine(pen, new Point(i, 0), new Point(i, picb_3DArea.Height));
+            }
+            for (int i = 0; i < picb_3DArea.Height; i += 5)
+            {
+                g.DrawLine(pen, new Point(0, i), new Point(picb_3DArea.Width,i));
+            }
+
+            // Vẽ trục tọa độ
+            pen = new Pen(Color.Red);
+            int x = picb_3DArea.Width * 2 / 5,//365,
+               y = picb_3DArea.Height / 2; //305,
+
+            g.DrawLine(pen, new Point(x, y), new Point(picb_3DArea.Width, y));         // trục Ox
+            g.DrawLine(pen, new Point(x, y), new Point(x, 0));                          // trục Oy
+            g.DrawLine(pen, new Point(x, y), new Point(x-y, y + y));                      // trục Oz
+            System.Console.WriteLine((x - y) + " " + (y ));
+;        }
+        
+
+
+        #endregion
 
     }
 }

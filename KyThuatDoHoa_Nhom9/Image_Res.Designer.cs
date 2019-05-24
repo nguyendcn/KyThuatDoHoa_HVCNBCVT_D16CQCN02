@@ -143,6 +143,16 @@ namespace KyThuatDoHoa_Nhom9 {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dispose_32px {
+            get {
+                object obj = ResourceManager.GetObject("Dispose_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Expand_Arrow_25px {
             get {
                 object obj = ResourceManager.GetObject("Expand_Arrow_25px", resourceCulture);
@@ -173,6 +183,16 @@ namespace KyThuatDoHoa_Nhom9 {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hide_32px {
+            get {
+                object obj = ResourceManager.GetObject("Hide_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Left_triangle_32px {
             get {
                 object obj = ResourceManager.GetObject("Left_triangle_32px", resourceCulture);
@@ -196,6 +216,16 @@ namespace KyThuatDoHoa_Nhom9 {
         internal static System.Drawing.Bitmap Moon_Star_32px {
             get {
                 object obj = ResourceManager.GetObject("Moon_Star_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Clock {
+            get {
+                object obj = ResourceManager.GetObject("Old_Clock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

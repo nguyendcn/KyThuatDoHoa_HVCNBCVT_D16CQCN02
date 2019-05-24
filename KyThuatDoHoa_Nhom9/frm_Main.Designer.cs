@@ -31,14 +31,13 @@ namespace KyThuatDoHoa_Nhom9
         {
             this.components = new System.ComponentModel.Container();
             this.pnl_Mode = new System.Windows.Forms.Panel();
+            this.button40 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.button37 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_ShowBtnDetails = new System.Windows.Forms.Button();
-            this.btn_Menu = new System.Windows.Forms.Button();
             this.btn_Toolbar = new System.Windows.Forms.Button();
             this.pnl_ToolBox = new System.Windows.Forms.Panel();
             this.pnl_Tb_2D = new System.Windows.Forms.Panel();
@@ -47,18 +46,6 @@ namespace KyThuatDoHoa_Nhom9
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.grb_2DLine = new System.Windows.Forms.GroupBox();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
@@ -80,10 +67,6 @@ namespace KyThuatDoHoa_Nhom9
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pnl_Change = new System.Windows.Forms.Panel();
@@ -104,10 +87,27 @@ namespace KyThuatDoHoa_Nhom9
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnl_WorkStation = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button40 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.btn_ShowBtnDetails = new System.Windows.Forms.Button();
+            this.btn_Menu = new System.Windows.Forms.Button();
             this.pnl_Mode.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_ToolBox.SuspendLayout();
@@ -141,6 +141,15 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Mode.Name = "pnl_Mode";
             this.pnl_Mode.Size = new System.Drawing.Size(860, 49);
             this.pnl_Mode.TabIndex = 0;
+            // 
+            // button40
+            // 
+            this.button40.Location = new System.Drawing.Point(536, 13);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(75, 23);
+            this.button40.TabIndex = 9;
+            this.button40.Text = "button40";
+            this.button40.UseVisualStyleBackColor = true;
             // 
             // button39
             // 
@@ -310,6 +319,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Old_Clock;
             this.button10.Location = new System.Drawing.Point(138, 209);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(50, 50);
@@ -317,6 +327,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button10.Tag = "TimePiece";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.Button_Click);
+            this.button10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button10.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button10.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -1048,9 +1059,14 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation.TabIndex = 3;
             this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // picb_2DArea
             // 
-            this.picb_2DArea.BackColor = System.Drawing.Color.White;
+            this.picb_2DArea.BackColor = System.Drawing.Color.DarkGray;
             this.picb_2DArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picb_2DArea.Location = new System.Drawing.Point(305, 100);
             this.picb_2DArea.Name = "picb_2DArea";
@@ -1069,22 +1085,273 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_3DArea.Size = new System.Drawing.Size(220, 219);
             this.picb_3DArea.TabIndex = 0;
             this.picb_3DArea.TabStop = false;
+            this.picb_3DArea.SizeChanged += new System.EventHandler(this.Picb_3DArea_SizeChanged);
+            this.picb_3DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.Picb_3DArea_Paint);
+            this.picb_3DArea.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseClick);
+            this.picb_3DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseMove);
             // 
-            // timer1
+            // button13
             // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Moon_Star_32px;
+            this.button13.Location = new System.Drawing.Point(200, 153);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(50, 50);
+            this.button13.TabIndex = 11;
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.Button_Click);
+            this.button13.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button13.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
-            // button40
+            // button14
             // 
-            this.button40.Location = new System.Drawing.Point(536, 13);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(75, 23);
-            this.button40.TabIndex = 9;
-            this.button40.Text = "button40";
-            this.button40.UseVisualStyleBackColor = true;
-            //this.button40.Click += new System.EventHandler(this.Button40_Click);
-
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Heart_32px;
+            this.button14.Location = new System.Drawing.Point(138, 153);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(50, 50);
+            this.button14.TabIndex = 10;
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.Button_Click);
+            this.button14.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button14.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button15
+            // 
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Star_32px;
+            this.button15.Location = new System.Drawing.Point(76, 153);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(50, 50);
+            this.button15.TabIndex = 9;
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.Button_Click);
+            this.button15.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button15.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button16
+            // 
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Triangle_32px;
+            this.button16.Location = new System.Drawing.Point(10, 153);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(50, 50);
+            this.button16.TabIndex = 8;
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.Button_Click);
+            this.button16.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button16.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button8
+            // 
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Pentagon_32px;
+            this.button8.Location = new System.Drawing.Point(200, 97);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(50, 50);
+            this.button8.TabIndex = 7;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.Button_Click);
+            this.button8.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button8.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Left_triangle_32px;
+            this.button7.Location = new System.Drawing.Point(138, 97);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(50, 50);
+            this.button7.TabIndex = 6;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.Button_Click);
+            this.button7.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button7.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Hexagon_32px;
+            this.button6.Location = new System.Drawing.Point(76, 97);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(50, 50);
+            this.button6.TabIndex = 5;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.Button_Click);
+            this.button6.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button6.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Diamonds_32px;
+            this.button5.Location = new System.Drawing.Point(10, 97);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(50, 50);
+            this.button5.TabIndex = 4;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button_Click);
+            this.button5.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button5.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Rounded_Rectangle_32px;
+            this.button4.Location = new System.Drawing.Point(200, 41);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(50, 50);
+            this.button4.TabIndex = 3;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button_Click);
+            this.button4.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button4.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Capsule_32px;
+            this.button3.Location = new System.Drawing.Point(138, 41);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 50);
+            this.button3.TabIndex = 2;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button_Click);
+            this.button3.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button3.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Circle_32px;
+            this.button2.Location = new System.Drawing.Point(76, 41);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 1;
+            this.button2.Tag = "Circle";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button_Click);
+            this.button2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
+            this.button2.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button2.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Square_32px;
+            this.button1.Location = new System.Drawing.Point(10, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 0;
+            this.button1.Tag = "Squre";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button_Click);
+            this.button1.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button21
+            // 
+            this.button21.FlatAppearance.BorderSize = 0;
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button21.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Pyramid_32px;
+            this.button21.Location = new System.Drawing.Point(200, 28);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(50, 50);
+            this.button21.TabIndex = 11;
+            this.button21.Tag = "Pyramid";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.Button_Click);
+            this.button21.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button21.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button22
+            // 
+            this.button22.FlatAppearance.BorderSize = 0;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button22.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cylinder_32px;
+            this.button22.Location = new System.Drawing.Point(138, 28);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(50, 50);
+            this.button22.TabIndex = 10;
+            this.button22.Tag = "Cylinder";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.Button_Click);
+            this.button22.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button22.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button23
+            // 
+            this.button23.FlatAppearance.BorderSize = 0;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button23.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Sphere_32px;
+            this.button23.Location = new System.Drawing.Point(76, 28);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(50, 50);
+            this.button23.TabIndex = 9;
+            this.button23.Tag = "Sphere";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.Button_Click);
+            this.button23.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button23.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button24
+            // 
+            this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button24.FlatAppearance.BorderSize = 0;
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cube_32px;
+            this.button24.Location = new System.Drawing.Point(10, 28);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(50, 50);
+            this.button24.TabIndex = 8;
+            this.button24.Tag = "Cube";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.Button_Click);
+            this.button24.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button24.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // btn_ShowBtnDetails
+            // 
+            this.btn_ShowBtnDetails.FlatAppearance.BorderSize = 0;
+            this.btn_ShowBtnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowBtnDetails.ForeColor = System.Drawing.Color.White;
+            this.btn_ShowBtnDetails.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Expand_Arrow_25px;
+            this.btn_ShowBtnDetails.Location = new System.Drawing.Point(0, 0);
+            this.btn_ShowBtnDetails.Name = "btn_ShowBtnDetails";
+            this.btn_ShowBtnDetails.Size = new System.Drawing.Size(35, 50);
+            this.btn_ShowBtnDetails.TabIndex = 1;
+            this.btn_ShowBtnDetails.Tag = "Show or hide name on the menu";
+            this.btn_ShowBtnDetails.UseVisualStyleBackColor = true;
+            this.btn_ShowBtnDetails.Click += new System.EventHandler(this.Btn_ShowBtnDetails_Click);
+            // 
+            // btn_Menu
+            // 
+            this.btn_Menu.FlatAppearance.BorderSize = 0;
+            this.btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Menu.ForeColor = System.Drawing.Color.White;
+            this.btn_Menu.Image = global::KyThuatDoHoa_Nhom9.Image_Res.List_25px;
+            this.btn_Menu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Menu.Location = new System.Drawing.Point(10, 0);
+            this.btn_Menu.Name = "btn_Menu";
+            this.btn_Menu.Size = new System.Drawing.Size(60, 50);
+            this.btn_Menu.TabIndex = 2;
+            this.btn_Menu.Tag = "Menu";
+            this.btn_Menu.Text = "Menu";
+            this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Menu.UseVisualStyleBackColor = true;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
