@@ -141,6 +141,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\frm_ChangeMode.resx">
       <DependentUpon>frm_ChangeMode.cs</DependentUpon>
@@ -263,6 +264,11 @@
     <None Include="Resources\Dispose_32px.png" />
     <None Include="Resources\Hide_32px.png" />
     <None Include="Resources\Old_Clock.png" />
+    <None Include="Resources\history.png" />
+    <None Include="Resources\đồng hồ.PNG" />
+    <None Include="Resources\gnome_window_close.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\xe ô tô.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

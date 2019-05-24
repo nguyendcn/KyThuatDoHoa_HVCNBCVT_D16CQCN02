@@ -152,7 +152,7 @@
             this.btn_GetTimeSystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_GetTimeSystem.Location = new System.Drawing.Point(99, 29);
             this.btn_GetTimeSystem.Name = "btn_GetTimeSystem";
-            this.btn_GetTimeSystem.Size = new System.Drawing.Size(68, 23);
+            this.btn_GetTimeSystem.Size = new System.Drawing.Size(60, 23);
             this.btn_GetTimeSystem.TabIndex = 8;
             this.btn_GetTimeSystem.Text = "Sys Time";
             this.btn_GetTimeSystem.UseVisualStyleBackColor = true;
