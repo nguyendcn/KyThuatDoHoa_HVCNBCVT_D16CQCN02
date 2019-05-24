@@ -141,7 +141,7 @@
             // 
             this.lbl_TimeCurrent.AutoSize = true;
             this.lbl_TimeCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TimeCurrent.Location = new System.Drawing.Point(1, 33);
+            this.lbl_TimeCurrent.Location = new System.Drawing.Point(0, 33);
             this.lbl_TimeCurrent.Name = "lbl_TimeCurrent";
             this.lbl_TimeCurrent.Size = new System.Drawing.Size(86, 16);
             this.lbl_TimeCurrent.TabIndex = 9;

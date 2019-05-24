@@ -659,7 +659,14 @@ namespace KyThuatDoHoa_Nhom9
                 }
             }
 
-
+            if (clock != null)
+            {
+                clock.Draw(e.Graphics);
+            }
+            else if(timepiece != null)
+            {
+                timepiece.Draw(e.Graphics);
+            }
 
             //pendulum.Draw(e.Graphics);
 
