@@ -88,7 +88,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
         public void Draw(Graphics g)
         {
-            this.Rectangle.Draw(g);
+            this.Rectangle.Draw(g, Color.Aqua);
 
             this.Rope.B = this.Rope.B.RotateAt(this.Rope.A, Alpha);
             this.Circle.Point = this.Circle.Point.RotateAt( this.Rope.A, Alpha);
@@ -104,9 +104,9 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             }
 
             this.Rope.Draw(g);
-            this.Circle.Draw(g);
-
+            this.Circle.Draw(g, Color.Yellow);
         }
+
         public bool check()
         {
             int d1 = this.Rectangle.C.X - this.Circle.Point.X,

@@ -91,6 +91,32 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             }
         }
 
+        public void Draw(Graphics g, Color c)
+        {
+            FillColor(g, c);
+            int x = 0,
+             y = Radius,
+             p = 3 - 2 * Radius;
+            while (x <= y)
+            {
+                if (p < 0)
+                    p = p + 4 * x - 6;
+                else
+                {
+                    y -= 5;
+                    p = p + 4 * (x - y) + 10;
+                }
+                Drawn8Point(x, y, g, color);
+                x += 5;
+            }
+        }
+
+        private void FillColor(Graphics g, Color c)
+        {
+            //Point p = ToaDo
+            g.FillEllipse(new SolidBrush(c), this.point.X - radius, this.point.Y - radius, radius * 2 + 3, radius * 2 + 3);
+        }
+
         public void Init(Point start, Point end, Size sizeOfLine, Color color)
         {
             throw new NotImplementedException();
