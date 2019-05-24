@@ -81,13 +81,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 if (this.A.Y > this.B.Y)
                     SwapPoint();
                 y = this.A.Y;
-                ToaDo.HienThi(new Point(x, y), g);
+                ToaDo.HienThi(new Point(x, y), g, Color.Black);
                 while (y < this.B.Y)
                 {
                     y += 5;
                     if (y % 10 == 0)
                         continue;
-                    ToaDo.HienThi(new Point(this.A.X, y), g);
+                    ToaDo.HienThi(new Point(this.A.X, y), g, Color.Black);
                 }
                 return;
             }
@@ -97,13 +97,13 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 if (this.A.X > this.B.X)
                     SwapPoint();
                 x = this.A.X;
-                ToaDo.HienThi(new Point(x, y), g);
+                ToaDo.HienThi(new Point(x, y), g, Color.Black);
                 while (x < this.B.X)
                 {
                     x += 5;
                     if (x % 10 == 0)
                         continue;
-                    ToaDo.HienThi(new Point(x, this.A.Y), g);
+                    ToaDo.HienThi(new Point(x, this.A.Y), g, Color.Black);
                 }
                 return;
             }
@@ -119,7 +119,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                     y = this.A.Y;
                 }
                 p = 2 * Dy - Dx;
-                ToaDo.HienThi(new Point(x, y), g);
+                ToaDo.HienThi(new Point(x, y), g, Color.Black);
                 while (x < this.B.X)
                 {
                     x += 5;
@@ -132,7 +132,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                     }
                     if (x % 10 == 0)
                         continue;
-                    ToaDo.HienThi(new Point(x, y), g);
+                    ToaDo.HienThi(new Point(x, y), g, Color.Black);
                 }
                 return;
             }
@@ -147,7 +147,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                     y = this.A.Y;
                 }
                 p = 2 * Dy + Dx;
-                ToaDo.HienThi(new Point(x, y), g);
+                ToaDo.HienThi(new Point(x, y), g, Color.Black);
                 while (x < this.B.X)
                 {
                     x += 5;
@@ -160,7 +160,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                         p = p + 2 * Dy;
                     if (x % 10 == 0)
                         continue;
-                    ToaDo.HienThi(new Point(x, y), g);
+                    ToaDo.HienThi(new Point(x, y), g, Color.Black);
                 }
                 return;
             }
@@ -175,7 +175,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                     y = this.A.Y;
                 }
                 p = 2 * Dx - Dy;
-                ToaDo.HienThi(new Point(x, y), g);
+                ToaDo.HienThi(new Point(x, y), g, Color.Black);
                 while (y < this.B.Y)
                 {
                     y += 5;
@@ -188,7 +188,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                     }
                     if (y % 10 == 0)
                         continue;
-                    ToaDo.HienThi(new Point(x, y), g);
+                    ToaDo.HienThi(new Point(x, y), g, Color.Black);
                 }
                 return;
             }
@@ -203,7 +203,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                     y = this.A.Y;
                 }
                 p = 2 * Dx + Dy;
-                ToaDo.HienThi(new Point(x, y), g);
+                ToaDo.HienThi(new Point(x, y), g, Color.Black);
                 while (y < this.B.Y)
                 {
                     y += 5;
@@ -216,7 +216,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                         p = p + 2 * Dx;
                     if (y % 10 == 0)
                         continue;
-                    ToaDo.HienThi(new Point(x, y), g);
+                    ToaDo.HienThi(new Point(x, y), g, Color.Black);
                 }
                 return;
             }

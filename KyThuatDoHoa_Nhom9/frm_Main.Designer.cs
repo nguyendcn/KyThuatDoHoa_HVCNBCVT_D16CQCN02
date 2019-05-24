@@ -42,53 +42,18 @@ namespace KyThuatDoHoa_Nhom9
             this.btn_Toolbar = new System.Windows.Forms.Button();
             this.pnl_ToolBox = new System.Windows.Forms.Panel();
             this.pnl_Tb_2D = new System.Windows.Forms.Panel();
-            this.grb_2DShapes = new System.Windows.Forms.GroupBox();
+            
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.grb_2DLine = new System.Windows.Forms.GroupBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnl_Tb_3D = new System.Windows.Forms.Panel();
+          
+           
+            
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.grb_3Dobject = new System.Windows.Forms.GroupBox();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.pnl_Tb_2D = new System.Windows.Forms.Panel();
+           
+            
+           
+           
             this.grb_2DShapes = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -113,8 +78,8 @@ namespace KyThuatDoHoa_Nhom9
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            
+            
             this.pnl_Change = new System.Windows.Forms.Panel();
             this.lblWidth = new System.Windows.Forms.Label();
             this.lblHeight = new System.Windows.Forms.Label();
@@ -133,7 +98,7 @@ namespace KyThuatDoHoa_Nhom9
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnl_WorkStation = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -1423,7 +1388,7 @@ namespace KyThuatDoHoa_Nhom9
             this.zoom.TabIndex = 10;
             this.zoom.Text = "trục";
             this.zoom.UseVisualStyleBackColor = true;
-            this.zoom.Click += new System.EventHandler(this.zoom_Click);
+
             // 
             // button41
             // 
@@ -1433,7 +1398,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button41.TabIndex = 11;
             this.button41.Text = "Ox";
             this.button41.UseVisualStyleBackColor = true;
-            this.button41.Click += new System.EventHandler(this.button41_Click);
+
             // 
             // button42
             // 
@@ -1443,7 +1408,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button42.TabIndex = 12;
             this.button42.Text = "Oy";
             this.button42.UseVisualStyleBackColor = true;
-            this.button42.Click += new System.EventHandler(this.button42_Click);
+
             // 
             // frm_Main
             // 

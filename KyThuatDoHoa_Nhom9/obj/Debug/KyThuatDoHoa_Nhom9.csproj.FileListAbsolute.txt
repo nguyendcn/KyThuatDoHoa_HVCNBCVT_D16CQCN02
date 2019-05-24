@@ -74,3 +74,4 @@ C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDo
 C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.XeProperties.resources
 C:\Users\PhongNT\source\repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.Form1.resources
 C:\Users\PhongNT\source\repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.XeProperties.resources
+C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.TimepieceProperties.resources
