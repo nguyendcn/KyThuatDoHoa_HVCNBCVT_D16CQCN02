@@ -37,8 +37,8 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             this.lblHcn2.Text = new Point(this.lsPoint[8].X, this.lsPoint[9].Y).ToString();
             this.lblHcn3.Text = this.lsPoint[9].ToString();
             this.lblHcn4.Text = new Point(this.lsPoint[9].X, this.lsPoint[8].Y).ToString();
-            this.lblHcn5.Text = "Chiều rộng: 35";
-            this.lblHcn6.Text = "Chiều dài : 125";
+            this.lblHcn5.Text = "   Width: 35";
+            this.lblHcn6.Text = "   Length : 125";
             // in thông tin hình tam giác
             this.lblTG1.Text = this.lsPoint[10].ToString();
             this.lblTG2.Text = this.lsPoint[11].ToString();
@@ -47,15 +47,15 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             this.lblBt1.Text = this.lsPoint[19].ToString();
             this.lblBt2.Text = this.lsPoint[20].ToString();
             this.lblBt3.Text = this.lsPoint[21].ToString();
-            this.lblTam1.Text = "Bánh Kính: " + this.bankinh.ToString();
-            this.lblBk1.Text = "   Tâm: " + this.lsPoint[13].ToString();
+            this.lblTam1.Text = "Radius: " + this.bankinh.ToString();
+            this.lblBk1.Text = "    Center: " + this.lsPoint[13].ToString();
 
             // in thông tin bánh xe sau
             this.lblBx1.Text = this.lsPoint[22].ToString();
             this.lblBx2.Text = this.lsPoint[23].ToString();
             this.lblBx3.Text = this.lsPoint[24].ToString();
-            this.lblTam2.Text = "Bánh Kính: " + this.bankinh.ToString();
-            this.lblBk2.Text = "   Tâm: " + this.lsPoint[14].ToString();
+            this.lblTam2.Text = "Radius: " + this.bankinh.ToString();
+            this.lblBk2.Text = "   Center: " + this.lsPoint[14].ToString();
 
             // in thông tin các điểm khác
             this.lblK.Text = this.lsPoint[0].ToString();
@@ -121,11 +121,12 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+            OnPropertyChanged("xoa");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OnPropertyChanged("truc");
+            OnPropertyChanged("goc");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -152,6 +153,18 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
         private void button3_Click(object sender, EventArgs e)
         {
             OnPropertyChanged("oy");
+        }
+
+        private void btn_Destroy_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            OnPropertyChanged("xoa");
+        }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

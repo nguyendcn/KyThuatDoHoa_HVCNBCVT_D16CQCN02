@@ -103,7 +103,7 @@
             // 
             this.Clock.AutoSize = true;
             this.Clock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clock.Location = new System.Drawing.Point(10, 8);
+            this.Clock.Location = new System.Drawing.Point(7, 8);
             this.Clock.Name = "Clock";
             this.Clock.Size = new System.Drawing.Size(47, 16);
             this.Clock.TabIndex = 0;
