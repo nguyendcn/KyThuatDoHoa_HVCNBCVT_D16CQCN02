@@ -668,13 +668,7 @@ namespace KyThuatDoHoa_Nhom9
 
             //pendulum.Draw(e.Graphics);
 
-            // Vẽ tam giác
-            Point point = new Point(0, 0);
 
-            HinhTamGiac hinhTamGiac = new HinhTamGiac(ToaDo.NguoiDungMayTinh(new Point(0, 0)),
-                                                      ToaDo.NguoiDungMayTinh(new Point(-10, -10)),
-                                                      ToaDo.NguoiDungMayTinh(new Point(10, -10)));
-            hinhTamGiac.Draw(e.Graphics);
 
             if (flagXe)
             {

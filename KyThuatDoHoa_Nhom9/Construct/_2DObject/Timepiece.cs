@@ -14,6 +14,8 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         private Point location;
         private Clock item_clock;
         private Pendulum item_pendulum;
+        private HinhTamGiac item_triangle;
+        private HinhChuNhat item_rectangle;
         private bool displayNow;
 
         public Point Location { get => location;
@@ -57,7 +59,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         public Timepiece()
         {
             Setup();
-            this.Location = new Point(0, 0);
+            this.Location = new Point(0, 50);
             this.Item_clock.PropertyChanged += Item_clock_PropertyChanged;
             this.Item_clock.CurrentDatetime = DateTime.Now;
             if(this.Item_clock != null && this.Item_pendulum != null)
@@ -107,6 +109,8 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             this.Item_clock.Draw(g);
             this.Item_pendulum.Draw(g);
+            this.item_triangle.Draw(g);
+            this.item_rectangle.Draw(g);
         }
 
         public void Init(Point start, Point end, Size sizeOfLine, Color color)
@@ -142,7 +146,17 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             }
             if(this.Item_pendulum == null)
             {
-                this.Item_pendulum = new Pendulum(ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 1, this.Location.Y - 6)), ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 40, this.Location.Y + -60)));
+                this.Item_pendulum = new Pendulum(ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 1, this.Location.Y - 36)), ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 40, this.Location.Y + -80)));
+            }
+            if (this.item_triangle == null)
+            {
+                this.item_triangle = new HinhTamGiac(ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 20, this.Location.Y + 10)),
+                    ToaDo.NguoiDungMayTinh(new Point(this.Location.X - 3, this.Location.Y)),
+                    ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 3 + 40, this.Location.Y)));
+            }
+            if (this.item_rectangle == null)
+            {
+                this.item_rectangle = new HinhChuNhat(ToaDo.NguoiDungMayTinh(this.Location), ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 31, this.Location.Y + -50)));
             }
         }
 
@@ -150,17 +164,33 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             if (this.Item_clock == null)
             {
-                this.Item_clock = new Clock(ToaDo.NguoiDungMayTinh(new Point(p.X + 20, p.Y + 10)), 15, time);
+                this.Item_clock = new Clock(ToaDo.NguoiDungMayTinh(new Point(p.X + 20, p.Y - 17)), 15, time);
             }
             if (this.Item_pendulum == null)
             {
-                this.Item_pendulum = new Pendulum(ToaDo.NguoiDungMayTinh(new Point(p.X + 1, p.Y - 6)), ToaDo.NguoiDungMayTinh(new Point(p.X + 40, p.Y + -60)));
+                this.Item_pendulum = new Pendulum(ToaDo.NguoiDungMayTinh(new Point(p.X + 1, p.Y - 36)), ToaDo.NguoiDungMayTinh(new Point(p.X + 40, p.Y + -80)));
+            }
+            if(this.item_triangle == null)
+            {
+                this.item_triangle = new HinhTamGiac(ToaDo.NguoiDungMayTinh(new Point(p.X + 20, p.Y - 17)),
+                    ToaDo.NguoiDungMayTinh(new Point(p.X - 3, p.Y)),
+                    ToaDo.NguoiDungMayTinh(new Point(p.X + 3 + 40, p.Y)));
+            }
+            if(this.item_rectangle == null)
+            {
+                this.item_rectangle = new HinhChuNhat(ToaDo.NguoiDungMayTinh(p), ToaDo.NguoiDungMayTinh(new Point(p.X + 41, p.Y + -80)));
             }
             
             if(this.Item_clock != null && this.Item_pendulum != null)
             {
-                this.Item_clock.A = new Point(p.X + 20, p.Y + 10);
-                this.Item_pendulum.MainLocation = ToaDo.NguoiDungMayTinh(new Point(p.X + 1, p.Y - 6));
+                this.Item_clock.A = new Point(p.X + 20, p.Y - 17);
+                this.Item_pendulum.MainLocation = ToaDo.NguoiDungMayTinh(new Point(p.X + 1, p.Y - 36));
+
+                this.item_triangle = new HinhTamGiac(ToaDo.NguoiDungMayTinh(new Point(p.X + 20, p.Y + 10)),
+                    ToaDo.NguoiDungMayTinh(new Point(p.X - 3, p.Y)),
+                    ToaDo.NguoiDungMayTinh(new Point(p.X + 3 + 40, p.Y)));
+
+                this.item_rectangle = new HinhChuNhat(ToaDo.NguoiDungMayTinh(this.Location), ToaDo.NguoiDungMayTinh(new Point(this.Location.X + 41, this.Location.Y + -80)));
             }
         }
 

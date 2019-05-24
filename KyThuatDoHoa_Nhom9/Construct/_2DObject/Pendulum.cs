@@ -66,7 +66,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             this.mainLocation = point1;
             this.Rectangle = new HinhChuNhat(point1, point2);
             this.Rope = new Line(new Point(x, point1.Y), new Point(x, y + (point2.Y - y) / 2+1));
-            this.Circle = new HinhTron(new Point(x, y + (point2.Y - y) / 2 + (point2.Y - y) / 4), (point2.Y - y ) / (4 * 5) - 1);
+            this.Circle = new HinhTron(new Point(x, y + (point2.Y - y) / 2 + (point2.Y - y) / 4), (point2.Y - y ) / (4 * 5));
 
             this.timer.Tick += Timer_Tick;
             this.timer.Start();
