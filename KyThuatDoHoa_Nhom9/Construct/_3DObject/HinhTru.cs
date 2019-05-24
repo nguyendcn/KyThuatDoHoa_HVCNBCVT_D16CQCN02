@@ -40,6 +40,14 @@ namespace KyThuatDoHoa_Nhom9.Construct._3DObject
 
             DrawElip(g);
 
+            for (int i = 0; i < 6; i++)
+            {
+                point = ToaDo.NguoiDungMayTinh_3D(this.TamDay[i, 0], this.TamDay[i, 1], this.TamDay[i, 2]);
+                ToaDo.HienThi(point, g, Color.Pink);
+                char c = (char)(65 + i);
+                g.DrawString(c.ToString(), new Font("Verdana", 14), Brushes.Pink, point);
+            }
+
         }
         public void DrawLine(Graphics g,int A,int B,int n = 1)
         {

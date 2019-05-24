@@ -14,6 +14,7 @@ namespace KyThuatDoHoa_Nhom9.Variables
         public static string _Menu { get { return "Menu"; } }
         public static string _3D_shapes { get { return "3D shapes"; } }
         public static string _2D_shapes { get { return "2D shapes"; } }
-        public static string _s { get { return "Menu"; } }
+        public static string _Author { get { return "Author"; } }
+        public static string _Help { get { return "Help"; } }
     }
 }
