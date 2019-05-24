@@ -93,9 +93,39 @@ namespace KyThuatDoHoa_Nhom9 {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Car_32px {
+            get {
+                object obj = ResourceManager.GetObject("Car_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Circle_32px {
             get {
                 object obj = ResourceManager.GetObject("Circle_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Clock_32px {
+            get {
+                object obj = ResourceManager.GetObject("Clock_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClockWall {
+            get {
+                object obj = ResourceManager.GetObject("ClockWall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +156,16 @@ namespace KyThuatDoHoa_Nhom9 {
         internal static System.Drawing.Bitmap Cylinder_32px {
             get {
                 object obj = ResourceManager.GetObject("Cylinder_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dashed_Line_32px {
+            get {
+                object obj = ResourceManager.GetObject("Dashed_Line_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +213,16 @@ namespace KyThuatDoHoa_Nhom9 {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Help_32px {
+            get {
+                object obj = ResourceManager.GetObject("Help_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hexagon_32px {
             get {
                 object obj = ResourceManager.GetObject("Hexagon_32px", resourceCulture);
@@ -203,6 +253,26 @@ namespace KyThuatDoHoa_Nhom9 {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Line_32px {
+            get {
+                object obj = ResourceManager.GetObject("Line_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Line_Chart_32px {
+            get {
+                object obj = ResourceManager.GetObject("Line_Chart_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap List_25px {
             get {
                 object obj = ResourceManager.GetObject("List_25px", resourceCulture);
@@ -223,9 +293,9 @@ namespace KyThuatDoHoa_Nhom9 {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Old_Clock {
+        internal static System.Drawing.Bitmap Pentagon_32px {
             get {
-                object obj = ResourceManager.GetObject("Old_Clock", resourceCulture);
+                object obj = ResourceManager.GetObject("Pentagon_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +303,9 @@ namespace KyThuatDoHoa_Nhom9 {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Pentagon_32px {
+        internal static System.Drawing.Bitmap Polyline_32px {
             get {
-                object obj = ResourceManager.GetObject("Pentagon_32px", resourceCulture);
+                object obj = ResourceManager.GetObject("Polyline_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +336,16 @@ namespace KyThuatDoHoa_Nhom9 {
         internal static System.Drawing.Bitmap Rounded_Rectangle_32px {
             get {
                 object obj = ResourceManager.GetObject("Rounded_Rectangle_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sand_Timer_32px {
+            get {
+                object obj = ResourceManager.GetObject("Sand_Timer_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

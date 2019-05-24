@@ -56,13 +56,10 @@ namespace KyThuatDoHoa_Nhom9
             //pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
             //pendulum.SetAlpha(-3); // set góc quay alpha 
 
-            picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
             //2D mode is startup;
             Setup_Toolbar(Globals._Mode_current);
-
-            //picb_3DArea.Dock = DockStyle.Fill;
-            //picb_2DArea.Visible = false;
+            picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
             Setup_ToolTips();
             flagXe = false;
@@ -102,20 +99,20 @@ namespace KyThuatDoHoa_Nhom9
             #region Set tooltip for button inside pnl_2D
 
             //grb 2D
-            //foreach (Control ctr in this.grb_2DShapes.Controls)
-            //{
-            //    if (ctr is Button)
-            //    {
-            //        if (ctr.Tag == null)
-            //        {
-            //            tt.SetToolTip(ctr, "Tag_name null");
-            //        }
-            //        else
-            //        {
-            //            tt.SetToolTip(ctr, ctr.Tag.ToString());
-            //        }
-            //    }
-            //}
+            foreach(Control ctr in this.grb_2DShapes.Controls)
+            {
+                if(ctr is Button)
+                {
+                    if (ctr.Tag == null)
+                    {
+                        tt.SetToolTip(ctr, "Tag_name null");
+                    }
+                    else
+                    {
+                        tt.SetToolTip(ctr, ctr.Tag.ToString());
+                    }
+                }
+            }
 
             //grb line
             foreach (Control ctr in this.grb_2DLine.Controls)
@@ -172,6 +169,7 @@ namespace KyThuatDoHoa_Nhom9
                 if(Variables.Globals._btn_isShowDetails)
                     this.btn_Toolbar.Text = Collection_Strs._2D_shapes;
                 this.btn_Toolbar.Image = Image_Res._2D_Model_25px;
+                this.picb_2DArea.Dock = DockStyle.Fill;
                 picb_2DArea.BringToFront();
 
             }
@@ -181,6 +179,7 @@ namespace KyThuatDoHoa_Nhom9
                 if (Variables.Globals._btn_isShowDetails)
                     this.btn_Toolbar.Text = Collection_Strs._3D_shapes;
                 this.btn_Toolbar.Image = Image_Res._3D_Model_25px;
+                this.picb_3DArea.Dock = DockStyle.Fill;
                 picb_3DArea.BringToFront();
             }
 
@@ -681,6 +680,7 @@ namespace KyThuatDoHoa_Nhom9
             xe.BringToFront();
             xe.Visible = true;
             
+
             
         }
 
@@ -745,13 +745,13 @@ namespace KyThuatDoHoa_Nhom9
         {
             VeLuoi3D(e.Graphics);
 
-            HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 30, 20, 20, 20);
-            hinhHopChuNhat.Draw(e.Graphics);
+            //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
+            //hinhHopChuNhat.Draw(e.Graphics);
 
 
             HinhTru hinhTru = new HinhTru(10, 10, 0, 30, 40);
             hinhTru.Draw(e.Graphics);
-            //hinhTru.DrawElip(e.Graphics);
+            hinhTru.DrawElip(e.Graphics);
 
         }
 
@@ -799,15 +799,15 @@ namespace KyThuatDoHoa_Nhom9
             Pen pen = new Pen(Color.Black);
            
 
-            //// Vẽ lưới 
-            //for(int i = 0; i < picb_3DArea.Width; i += 5)
-            //{
-            //    g.DrawLine(pen, new Point(i, 0), new Point(i, picb_3DArea.Height));
-            //}
-            //for (int i = 0; i < picb_3DArea.Height; i += 5)
-            //{
-            //    g.DrawLine(pen, new Point(0, i), new Point(picb_3DArea.Width,i));
-            //}
+            // Vẽ lưới 
+            for(int i = 0; i < picb_3DArea.Width; i += 5)
+            {
+                g.DrawLine(pen, new Point(i, 0), new Point(i, picb_3DArea.Height));
+            }
+            for (int i = 0; i < picb_3DArea.Height; i += 5)
+            {
+                g.DrawLine(pen, new Point(0, i), new Point(picb_3DArea.Width,i));
+            }
 
             // Vẽ trục tọa độ
             pen = new Pen(Color.Red);
@@ -819,27 +819,27 @@ namespace KyThuatDoHoa_Nhom9
             g.DrawLine(pen, new Point(x, y), new Point(x-y, y + y));                      // trục Oz
             System.Console.WriteLine((x - y) + " " + (y ));
 ;        }
-
+        
 
 
         #endregion
-
-        private void zoom_Click(object sender, EventArgs e)
-        {
-            hinhXe.doiXungQuaTruc();
         }
 
-        private void button41_Click(object sender, EventArgs e)
-        {
-            hinhXe.doiXungQuaOx();
-        }
+    //private void zoom_Click(object sender, EventArgs e)
+    //{
 
-        private void button42_Click(object sender, EventArgs e)
-        {
-            hinhXe.doiXungQuaOy();
-        }
-    }
 
- 
+    //    hinhXe.doiXungQuaTruc();
+    //}
+
+    //private void button41_Click(object sender, EventArgs e)
+    //{
+    //    hinhXe.doiXungQuaOx();
+    //}
+
+    //private void button42_Click(object sender, EventArgs e)
+    //{
+    //    hinhXe.doiXungQuaOy();
+    //}
 }
 

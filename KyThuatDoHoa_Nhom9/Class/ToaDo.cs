@@ -38,8 +38,8 @@ namespace KyThuatDoHoa_Nhom9
             return (int)(p - d);
         }
         /// <summary>
-         /// Làm tròn tọa độ khi click để hiển thị trên lưới pixel.
-         /// </summary>
+        /// Làm tròn tọa độ khi click để hiển thị trên lưới pixel.
+        /// </summary>
         public static Point RoundPixel(Point p)
         {
             int x = p.X % 5,
@@ -165,7 +165,7 @@ namespace KyThuatDoHoa_Nhom9
                 x = p.X / 5,
                 y = p.Y / 5;
 
-            x = x > width *2/ 5 ? x - width *2/ 5 : (width *2/ 5 - x) * -1;
+            x = x > width * 2 / 5 ? x - width * 2 / 5 : (width * 2 / 5 - x) * -1;
             y = y > height / 2 ? (height / 2 - y) : height / 2 - y;
 
             return new Point(x, y);
@@ -173,10 +173,10 @@ namespace KyThuatDoHoa_Nhom9
         /// <summary>
         /// Chuyển tọa độ người dùng về tọa độ máy tính trong 3D
         /// </summary>
-        public static Point NguoiDungMayTinh_3D(int X,int Y,int Z)
+        public static Point NguoiDungMayTinh_3D(int X, int Y, int Z)
         {
             Point point = new Point();
-            point = Chuyen3DThanh2D(X,Y,Z);
+            point = Chuyen3DThanh2D(X, Y, Z);
             int width = Variables.Globals.sizeOfNewCoor_3D.Width,
                 height = Variables.Globals.sizeOfNewCoor_3D.Height,
                 x = point.X,
