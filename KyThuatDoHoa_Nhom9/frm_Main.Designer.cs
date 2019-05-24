@@ -95,8 +95,15 @@ namespace KyThuatDoHoa_Nhom9
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pnl_Change = new System.Windows.Forms.Panel();
-            this.lblWidth = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.lbl_SizeGird = new System.Windows.Forms.Label();
+            this.lbl_LocationInGird = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblHeight = new System.Windows.Forms.Label();
+            this.lblWidth = new System.Windows.Forms.Label();
             this.lblX4 = new System.Windows.Forms.Label();
             this.lblY4 = new System.Windows.Forms.Label();
             this.lblX3 = new System.Windows.Forms.Label();
@@ -114,13 +121,6 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.lbl_LocationInGird = new System.Windows.Forms.Label();
-            this.lbl_SizeGird = new System.Windows.Forms.Label();
             this.pnl_Mode.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -134,14 +134,14 @@ namespace KyThuatDoHoa_Nhom9
             this.grb_3Dobject.SuspendLayout();
             this.panel7.SuspendLayout();
             this.pnl_Change.SuspendLayout();
-            this.pnl_WorkStation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_3DArea)).BeginInit();
             this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel10.SuspendLayout();
+            this.pnl_WorkStation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_3DArea)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Mode
@@ -200,6 +200,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button42.TabIndex = 12;
             this.button42.Text = "Oy";
             this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
             // button41
             // 
@@ -209,6 +210,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button41.TabIndex = 11;
             this.button41.Text = "Ox";
             this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
             // 
             // zoom
             // 
@@ -218,6 +220,7 @@ namespace KyThuatDoHoa_Nhom9
             this.zoom.TabIndex = 10;
             this.zoom.Text = "trục";
             this.zoom.UseVisualStyleBackColor = true;
+            this.zoom.Click += new System.EventHandler(this.zoom_Click);
             // 
             // button40
             // 
@@ -410,8 +413,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(50, 50);
             this.button9.TabIndex = 15;
+            this.button9.Tag = "Car";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.Button_Click);
+            this.button9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button9.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button9.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -1010,14 +1015,77 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Change.Size = new System.Drawing.Size(600, 49);
             this.pnl_Change.TabIndex = 2;
             // 
-            // lblWidth
+            // panel9
             // 
-            this.lblWidth.AutoSize = true;
-            this.lblWidth.Location = new System.Drawing.Point(108, -2);
-            this.lblWidth.Name = "lblWidth";
-            this.lblWidth.Size = new System.Drawing.Size(45, 19);
-            this.lblWidth.TabIndex = 8;
-            this.lblWidth.Text = "label4";
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.panel3);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(106, 45);
+            this.panel9.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.lbl_SizeGird);
+            this.panel10.Controls.Add(this.lbl_LocationInGird);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(24, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(82, 45);
+            this.panel10.TabIndex = 10;
+            // 
+            // lbl_SizeGird
+            // 
+            this.lbl_SizeGird.AutoSize = true;
+            this.lbl_SizeGird.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SizeGird.Location = new System.Drawing.Point(6, 2);
+            this.lbl_SizeGird.Name = "lbl_SizeGird";
+            this.lbl_SizeGird.Size = new System.Drawing.Size(58, 19);
+            this.lbl_SizeGird.TabIndex = 9;
+            this.lbl_SizeGird.Text = "sizeGird";
+            // 
+            // lbl_LocationInGird
+            // 
+            this.lbl_LocationInGird.AutoSize = true;
+            this.lbl_LocationInGird.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_LocationInGird.Location = new System.Drawing.Point(3, 25);
+            this.lbl_LocationInGird.Name = "lbl_LocationInGird";
+            this.lbl_LocationInGird.Size = new System.Drawing.Size(48, 19);
+            this.lbl_LocationInGird.TabIndex = 8;
+            this.lbl_LocationInGird.Text = "InGird";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(24, 45);
+            this.panel3.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cursor_25px;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 21);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Size_Page_25px;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // lblHeight
             // 
@@ -1027,6 +1095,15 @@ namespace KyThuatDoHoa_Nhom9
             this.lblHeight.Size = new System.Drawing.Size(45, 19);
             this.lblHeight.TabIndex = 9;
             this.lblHeight.Text = "label4";
+            // 
+            // lblWidth
+            // 
+            this.lblWidth.AutoSize = true;
+            this.lblWidth.Location = new System.Drawing.Point(108, -2);
+            this.lblWidth.Name = "lblWidth";
+            this.lblWidth.Size = new System.Drawing.Size(45, 19);
+            this.lblWidth.TabIndex = 8;
+            this.lblWidth.Text = "label4";
             // 
             // lblX4
             // 
@@ -1193,78 +1270,6 @@ namespace KyThuatDoHoa_Nhom9
             this.timer1.Interval = 90;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.panel3);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(106, 45);
-            this.panel9.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(24, 45);
-            this.panel3.TabIndex = 1;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cursor_25px;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 21);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Size_Page_25px;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.lbl_SizeGird);
-            this.panel10.Controls.Add(this.lbl_LocationInGird);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(24, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(82, 45);
-            this.panel10.TabIndex = 10;
-            // 
-            // lbl_LocationInGird
-            // 
-            this.lbl_LocationInGird.AutoSize = true;
-            this.lbl_LocationInGird.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_LocationInGird.Location = new System.Drawing.Point(3, 25);
-            this.lbl_LocationInGird.Name = "lbl_LocationInGird";
-            this.lbl_LocationInGird.Size = new System.Drawing.Size(48, 19);
-            this.lbl_LocationInGird.TabIndex = 8;
-            this.lbl_LocationInGird.Text = "InGird";
-            // 
-            // lbl_SizeGird
-            // 
-            this.lbl_SizeGird.AutoSize = true;
-            this.lbl_SizeGird.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SizeGird.Location = new System.Drawing.Point(6, 2);
-            this.lbl_SizeGird.Name = "lbl_SizeGird";
-            this.lbl_SizeGird.Size = new System.Drawing.Size(58, 19);
-            this.lbl_SizeGird.TabIndex = 9;
-            this.lbl_SizeGird.Text = "sizeGird";
-            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1301,15 +1306,15 @@ namespace KyThuatDoHoa_Nhom9
             this.panel7.PerformLayout();
             this.pnl_Change.ResumeLayout(false);
             this.pnl_Change.PerformLayout();
-            this.pnl_WorkStation.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_3DArea)).EndInit();
             this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.pnl_WorkStation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_3DArea)).EndInit();
             this.ResumeLayout(false);
 
         }
