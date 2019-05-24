@@ -64,6 +64,7 @@
     <Compile Include="Construct\_2DObject\Transformations.cs" />
     <Compile Include="Construct\_3DObject\HinhHopChuNhat.cs" />
     <Compile Include="Construct\_3DObject\HinhTru.cs" />
+    <Compile Include="Construct\_3DObject\INotifyPropertyChangeds.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,11 +89,23 @@
     <Compile Include="UI\UserCtr\ClockProperties.Designer.cs">
       <DependentUpon>ClockProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UserCtr\HinhTruProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserCtr\HinhTruProperties.Designer.cs">
+      <DependentUpon>HinhTruProperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserCtr\TimepieceProperties.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\UserCtr\TimepieceProperties.Designer.cs">
       <DependentUpon>TimepieceProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserCtr\HinhHopChuNhatProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserCtr\HinhHopChuNhatProperties.Designer.cs">
+      <DependentUpon>HinhHopChuNhatProperties.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UserCtr\XeProperties.cs">
       <SubType>UserControl</SubType>
@@ -154,6 +167,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserCtr\ClockProperties.resx">
       <DependentUpon>ClockProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserCtr\HinhHopChuNhatProperties.resx">
+      <DependentUpon>HinhHopChuNhatProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserCtr\HinhTruProperties.resx">
+      <DependentUpon>HinhTruProperties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserCtr\TimepieceProperties.resx">
       <DependentUpon>TimepieceProperties.cs</DependentUpon>

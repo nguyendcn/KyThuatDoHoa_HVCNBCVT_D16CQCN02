@@ -5,14 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using KyThuatDoHoa_Nhom9.Construct._2DObject;
+using System.ComponentModel;
 
 namespace KyThuatDoHoa_Nhom9.Construct._3DObject
 {
     class HinhTru
     {
-        private int ChieuCao { get; set; }
-        private int BanKinhDay { get; set; }
-        private int[,] TamDay { get; set; }
+        private int _chieuCao;
+        public int ChieuCao { get; set; }
+        public int BanKinhDay { get; set; }
+        public int[,] TamDay { get; set; }
 
 
         public HinhTru(int x,int y,int z,int chieuCao,int banKinhDay)
@@ -27,6 +29,10 @@ namespace KyThuatDoHoa_Nhom9.Construct._3DObject
                             { x+banKinhDay,y+chieuCao,z} };
             this.TamDay = temp;
 
+        }
+
+        public HinhTru()
+        {
         }
         public void Draw(Graphics g )
         {
