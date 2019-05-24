@@ -659,6 +659,7 @@ namespace KyThuatDoHoa_Nhom9
             xe.lsPoint = (Point[])hinhXe.LsPoint.Clone();
             xe.bankinh = hinhXe.BkBanh;
             xe.HienThiThongTin();
+             
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -823,17 +824,19 @@ namespace KyThuatDoHoa_Nhom9
 
         #endregion
 
-        private void button41_Click(object sender, EventArgs e)
-        {
-            hinhXe.doiXungQuaOx();
-        }
+       
 
-        private void zoom_Click(object sender, EventArgs e)
+        private void zoom_Click_1(object sender, EventArgs e)
         {
             hinhXe.doiXungQuaTruc();
         }
 
-        private void button42_Click(object sender, EventArgs e)
+        private void button41_Click_1(object sender, EventArgs e)
+        {
+            hinhXe.doiXungQuaOx();
+        }
+
+        private void button42_Click_1(object sender, EventArgs e)
         {
             hinhXe.doiXungQuaOy();
         }

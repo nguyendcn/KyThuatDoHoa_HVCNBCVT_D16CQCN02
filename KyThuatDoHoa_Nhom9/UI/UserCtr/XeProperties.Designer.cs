@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.lblKhac2 = new System.Windows.Forms.Label();
             this.lblK = new System.Windows.Forms.Label();
@@ -64,17 +65,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnMay = new System.Windows.Forms.Button();
-            this.btnNguoidung = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.lblKhac1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -92,6 +93,20 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "THÔNG SỐ";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(16, 371);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(138, 46);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Hiệu Ứng";
             // 
             // groupBox6
             // 
@@ -457,42 +472,40 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // groupBox3
+            // button2
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox3.Controls.Add(this.btnNguoidung);
-            this.groupBox3.Controls.Add(this.btnMay);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(16, 371);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(138, 71);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Chuyển tọa độ";
+            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Location = new System.Drawing.Point(49, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(45, 16);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Trục";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnMay
+            // button3
             // 
-            this.btnMay.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnMay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMay.Location = new System.Drawing.Point(29, 15);
-            this.btnMay.Name = "btnMay";
-            this.btnMay.Size = new System.Drawing.Size(79, 21);
-            this.btnMay.TabIndex = 0;
-            this.btnMay.Text = "Tọa độ máy";
-            this.btnMay.UseVisualStyleBackColor = false;
-            this.btnMay.Click += new System.EventHandler(this.button2_Click);
+            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(85, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(45, 16);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Ox";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnNguoidung
+            // button4
             // 
-            this.btnNguoidung.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnNguoidung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNguoidung.Location = new System.Drawing.Point(2, 37);
-            this.btnNguoidung.Name = "btnNguoidung";
-            this.btnNguoidung.Size = new System.Drawing.Size(129, 21);
-            this.btnNguoidung.TabIndex = 1;
-            this.btnNguoidung.Text = "Tọa độ người dùng";
-            this.btnNguoidung.UseVisualStyleBackColor = false;
-            this.btnNguoidung.Click += new System.EventHandler(this.button3_Click);
+            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(15, 13);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(45, 16);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Oy";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // XeProperties
             // 
@@ -506,14 +519,15 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "XeProperties";
             this.Size = new System.Drawing.Size(198, 601);
+            this.Load += new System.EventHandler(this.XeProperties_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.lblKhac1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -558,7 +572,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnNguoidung;
-        private System.Windows.Forms.Button btnMay;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }

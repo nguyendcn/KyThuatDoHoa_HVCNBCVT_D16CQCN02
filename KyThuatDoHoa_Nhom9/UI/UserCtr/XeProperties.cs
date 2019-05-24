@@ -10,30 +10,29 @@ using System.Windows.Forms;
 
 namespace KyThuatDoHoa_Nhom9.UI.UserCtr
 {
-    public partial class XeProperties : UserControl
+    public partial class XeProperties : UserControl, INotifyPropertyChanged
     {
         public Point[] lsPoint = new Point[25];
         public int bankinh;
-        private bool flag = false;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public XeProperties()
         {
             InitializeComponent();
-          
-            this.btnMay.BackColor = Color.Brown;
+ 
         }
 
         public void HienThiThongTin()
         {
-            // in ra thông tin hình chữ nhật
-      
-            if (flag)
-            {
+           
+     
                 // đổi tọa độ máy tính  sang người dùng
                 for (int i = 0; i < this.lsPoint.Length; i++)
                 {
                     this.lsPoint[i] = ToaDo.MayTinhNguoiDung(this.lsPoint[i]);
                 }
-            }
+            // in ra thông tin hình chữ nhật
             this.lblHcn1.Text = this.lsPoint[8].ToString();
             this.lblHcn2.Text = new Point(this.lsPoint[8].X, this.lsPoint[9].Y).ToString();
             this.lblHcn3.Text = this.lsPoint[9].ToString();
@@ -126,21 +125,33 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.btnMay.BackColor = Color.Brown;
-            this.btnNguoidung.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            flag = false;
-         
+            OnPropertyChanged("truc");
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OnPropertyChanged("ox");
+        }
 
+        private void XeProperties_Load(object sender, EventArgs e)
+        {
+
+        }
+
+     
+
+        protected void OnPropertyChanged(string PropertyName)
+        {
+            if (PropertyChanged != null)
+            {
+
+                PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));
+            }
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.btnNguoidung.BackColor = Color.Brown;
-            this.btnMay.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            flag = true;
-          
-          
+            OnPropertyChanged("oy");
         }
     }
 }
