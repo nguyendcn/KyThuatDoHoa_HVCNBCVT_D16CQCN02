@@ -56,13 +56,10 @@ namespace KyThuatDoHoa_Nhom9
             //pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
             //pendulum.SetAlpha(-3); // set góc quay alpha 
 
-            //picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
-            ////2D mode is startup;
-            //Setup_Toolbar(Globals._Mode_current);
-
-            picb_3DArea.Dock = DockStyle.Fill;
-            picb_2DArea.Visible = false;
+            //2D mode is startup;
+            Setup_Toolbar(Globals._Mode_current);
+            picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
             Setup_ToolTips();
             flagXe = false;
@@ -172,6 +169,7 @@ namespace KyThuatDoHoa_Nhom9
                 if(Variables.Globals._btn_isShowDetails)
                     this.btn_Toolbar.Text = Collection_Strs._2D_shapes;
                 this.btn_Toolbar.Image = Image_Res._2D_Model_25px;
+                this.picb_2DArea.Dock = DockStyle.Fill;
                 picb_2DArea.BringToFront();
 
             }
@@ -181,6 +179,7 @@ namespace KyThuatDoHoa_Nhom9
                 if (Variables.Globals._btn_isShowDetails)
                     this.btn_Toolbar.Text = Collection_Strs._3D_shapes;
                 this.btn_Toolbar.Image = Image_Res._3D_Model_25px;
+                this.picb_3DArea.Dock = DockStyle.Fill;
                 picb_3DArea.BringToFront();
             }
 
@@ -713,7 +712,6 @@ namespace KyThuatDoHoa_Nhom9
             this.timer1.Start();
         }
 
-       
         private void picb_2DArea_MouseMove(object sender, MouseEventArgs e)
         {
             Point p = e.Location;
@@ -820,27 +818,27 @@ namespace KyThuatDoHoa_Nhom9
             g.DrawLine(pen, new Point(x, y), new Point(x-y, y + y));                      // trục Oz
             System.Console.WriteLine((x - y) + " " + (y ));
 ;        }
-        
+
 
 
         #endregion
+
+        private void button41_Click(object sender, EventArgs e)
+        {
+            hinhXe.doiXungQuaOx();
         }
 
-    //private void zoom_Click(object sender, EventArgs e)
-    //{
+        private void zoom_Click(object sender, EventArgs e)
+        {
+            hinhXe.doiXungQuaTruc();
+        }
 
+        private void button42_Click(object sender, EventArgs e)
+        {
+            hinhXe.doiXungQuaOy();
+        }
+    }
 
-    //    hinhXe.doiXungQuaTruc();
-    //}
-
-    //private void button41_Click(object sender, EventArgs e)
-    //{
-    //    hinhXe.doiXungQuaOx();
-    //}
-
-    //private void button42_Click(object sender, EventArgs e)
-    //{
-    //    hinhXe.doiXungQuaOy();
-    //}
+    
 }
 
