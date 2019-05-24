@@ -110,7 +110,7 @@ namespace KyThuatDoHoa_Nhom9
         /// <summary>
         /// Hiển thị 1 điểm lên màn hình ( Theo tọa độ máy tính)
         /// </summary>
-        public static void HienThi(int x, int y, Graphics g)
+        public static void HienThi(int x, int y, Graphics g,Color color)
         {
             Point p = new Point(x, y);
             int pointX = RoundPixel(p.X),

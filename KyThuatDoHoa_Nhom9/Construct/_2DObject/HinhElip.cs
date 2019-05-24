@@ -13,12 +13,14 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         private Point point { get; set; }
         private int a { get; set; }
         private int b { get; set; }
-        public void Drawn4Point(int x,int y,Graphics g, Color color)
+
+        private Color color { get; set; }
+        public void Drawn4Point(int x,int y,Graphics g)
         {
-            ToaDo.HienThi(new Point(point.X + x, point.Y + y), g, color);
-            ToaDo.HienThi(new Point(point.X - x, point.Y + y), g, color);
-            ToaDo.HienThi(new Point(point.X - x, point.Y - y), g, color);
-            ToaDo.HienThi(new Point(point.X + x, point.Y - y), g, color);
+            ToaDo.HienThi(new Point(point.X + x, point.Y + y), g);
+            ToaDo.HienThi(new Point(point.X - x, point.Y + y), g);
+            ToaDo.HienThi(new Point(point.X - x, point.Y - y), g);
+            ToaDo.HienThi(new Point(point.X + x, point.Y - y), g);
         }
         public void Drawn4Point_3D(int x, int y, Graphics g, Color color)
         {
@@ -48,7 +50,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             y = b;
             int Dx = 0;
             int Dy = 2 * A * y;
-            Drawn4Point(x, y,  g,Color.Green);
+            Drawn4Point(x, y,  g);
 
             while (Dx <= Dy)
             {
@@ -63,7 +65,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                     p += B + Dx - Dy;
                 }
                 if(x%5==0)
-                    Drawn4Point(x, ToaDo.RoundPixel( y), g,Color.Green);
+                    Drawn4Point(x, ToaDo.RoundPixel( y), g);
 
 
             }
@@ -81,7 +83,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                     p += A - Dy + Dx;
                 }
                 if(x%5==0)
-                    Drawn4Point(x, ToaDo.RoundPixel(y), g,Color.Green);
+                    Drawn4Point(x, ToaDo.RoundPixel(y), g);
 
             }
         }
