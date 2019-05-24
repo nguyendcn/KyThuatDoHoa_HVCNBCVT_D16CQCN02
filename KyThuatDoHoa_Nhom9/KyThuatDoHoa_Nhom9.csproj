@@ -261,6 +261,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Note.txt" />
+    <None Include="Resources\Author_25px.png" />
+    <None Include="Resources\Help_25px.png" />
+    <None Include="Resources\paint_palette_50px_Yan_icon.ico" />
     <None Include="Resources\ClockWall.png" />
     <None Include="Resources\Dashed Line_32px.png" />
     <None Include="Resources\Help_32px.png" />

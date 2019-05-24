@@ -197,6 +197,14 @@ namespace KyThuatDoHoa_Nhom9
                 btn_Menu.Text = Collection_Strs._Menu;
                 btn_Menu.ImageAlign = ContentAlignment.TopCenter;
 
+                //set btn_Author
+                btn_Author.Text = Collection_Strs._Author;
+                btn_Author.ImageAlign = ContentAlignment.TopCenter;
+
+                //set btn_Help
+                btn_Help.Text = Collection_Strs._Help;
+                btn_Help.ImageAlign = ContentAlignment.TopCenter;
+
                 //set btn_Toolbar theo mode hien tai
                 btn_Toolbar.ImageAlign = ContentAlignment.TopCenter;
                 if (Globals._Mode_current == Constants.Mode._2D)
@@ -220,6 +228,11 @@ namespace KyThuatDoHoa_Nhom9
                         
                     }
                 }
+                btn_Author.Text = "";
+                btn_Author.ImageAlign = ContentAlignment.MiddleCenter;
+
+                btn_Help.Text = "";
+                btn_Help.ImageAlign = ContentAlignment.MiddleCenter;
             }
         }
 

@@ -32,6 +32,8 @@ namespace KyThuatDoHoa_Nhom9
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.pnl_Mode = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btn_Author = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
             this.button41 = new System.Windows.Forms.Button();
             this.zoom = new System.Windows.Forms.Button();
@@ -41,17 +43,38 @@ namespace KyThuatDoHoa_Nhom9
             this.label4 = new System.Windows.Forms.Label();
             this.button37 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Help = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_ShowBtnDetails = new System.Windows.Forms.Button();
+            this.btn_Menu = new System.Windows.Forms.Button();
             this.btn_Toolbar = new System.Windows.Forms.Button();
             this.pnl_ToolBox = new System.Windows.Forms.Panel();
             this.pnl_Tb_2D = new System.Windows.Forms.Panel();
             this.grb_2DShapes = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.grb_2DLine = new System.Windows.Forms.GroupBox();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_Tb_3D = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.grb_3Dobject = new System.Windows.Forms.GroupBox();
             this.button33 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
@@ -65,6 +88,12 @@ namespace KyThuatDoHoa_Nhom9
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnl_Change = new System.Windows.Forms.Panel();
             this.lblWidth = new System.Windows.Forms.Label();
             this.lblHeight = new System.Windows.Forms.Label();
@@ -83,36 +112,12 @@ namespace KyThuatDoHoa_Nhom9
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnl_WorkStation = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button10 = new System.Windows.Forms.Button();
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.btn_ShowBtnDetails = new System.Windows.Forms.Button();
-            this.btn_Menu = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnl_Mode.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_ToolBox.SuspendLayout();
             this.pnl_Tb_2D.SuspendLayout();
@@ -120,8 +125,8 @@ namespace KyThuatDoHoa_Nhom9
             this.grb_2DLine.SuspendLayout();
             this.panel6.SuspendLayout();
             this.pnl_Tb_3D.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.grb_3Dobject.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.pnl_Change.SuspendLayout();
             this.pnl_WorkStation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).BeginInit();
@@ -131,6 +136,7 @@ namespace KyThuatDoHoa_Nhom9
             // pnl_Mode
             // 
             this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnl_Mode.Controls.Add(this.panel8);
             this.pnl_Mode.Controls.Add(this.button42);
             this.pnl_Mode.Controls.Add(this.button41);
             this.pnl_Mode.Controls.Add(this.zoom);
@@ -149,9 +155,34 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Mode.Size = new System.Drawing.Size(860, 49);
             this.pnl_Mode.TabIndex = 0;
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btn_Author);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(681, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(68, 49);
+            this.panel8.TabIndex = 13;
+            // 
+            // btn_Author
+            // 
+            this.btn_Author.FlatAppearance.BorderSize = 0;
+            this.btn_Author.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Author.ForeColor = System.Drawing.Color.White;
+            this.btn_Author.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Author_25px;
+            this.btn_Author.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Author.Location = new System.Drawing.Point(6, -1);
+            this.btn_Author.Name = "btn_Author";
+            this.btn_Author.Size = new System.Drawing.Size(60, 50);
+            this.btn_Author.TabIndex = 2;
+            this.btn_Author.Tag = "Author";
+            this.btn_Author.Text = "Author";
+            this.btn_Author.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Author.UseVisualStyleBackColor = true;
+            // 
             // button42
             // 
-            this.button42.Location = new System.Drawing.Point(715, 24);
+            this.button42.Location = new System.Drawing.Point(585, 19);
             this.button42.Name = "button42";
             this.button42.Size = new System.Drawing.Size(75, 26);
             this.button42.TabIndex = 12;
@@ -160,7 +191,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // button41
             // 
-            this.button41.Location = new System.Drawing.Point(634, 27);
+            this.button41.Location = new System.Drawing.Point(523, 23);
             this.button41.Name = "button41";
             this.button41.Size = new System.Drawing.Size(75, 23);
             this.button41.TabIndex = 11;
@@ -169,7 +200,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // zoom
             // 
-            this.zoom.Location = new System.Drawing.Point(653, 3);
+            this.zoom.Location = new System.Drawing.Point(556, 3);
             this.zoom.Name = "zoom";
             this.zoom.Size = new System.Drawing.Size(75, 23);
             this.zoom.TabIndex = 10;
@@ -178,7 +209,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // button40
             // 
-            this.button40.Location = new System.Drawing.Point(536, 13);
+            this.button40.Location = new System.Drawing.Point(475, 9);
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(75, 23);
             this.button40.TabIndex = 9;
@@ -216,7 +247,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // button37
             // 
-            this.button37.Location = new System.Drawing.Point(444, 13);
+            this.button37.Location = new System.Drawing.Point(371, 14);
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(75, 23);
             this.button37.TabIndex = 5;
@@ -226,11 +257,28 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btn_Help);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(738, 0);
+            this.panel2.Location = new System.Drawing.Point(749, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(77, 49);
+            this.panel2.Size = new System.Drawing.Size(66, 49);
             this.panel2.TabIndex = 4;
+            // 
+            // btn_Help
+            // 
+            this.btn_Help.FlatAppearance.BorderSize = 0;
+            this.btn_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Help.ForeColor = System.Drawing.Color.White;
+            this.btn_Help.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Help_25px;
+            this.btn_Help.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Help.Location = new System.Drawing.Point(6, -1);
+            this.btn_Help.Name = "btn_Help";
+            this.btn_Help.Size = new System.Drawing.Size(60, 50);
+            this.btn_Help.TabIndex = 2;
+            this.btn_Help.Tag = "Help";
+            this.btn_Help.Text = "Help";
+            this.btn_Help.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Help.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -240,6 +288,37 @@ namespace KyThuatDoHoa_Nhom9
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(45, 49);
             this.panel1.TabIndex = 3;
+            // 
+            // btn_ShowBtnDetails
+            // 
+            this.btn_ShowBtnDetails.FlatAppearance.BorderSize = 0;
+            this.btn_ShowBtnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowBtnDetails.ForeColor = System.Drawing.Color.White;
+            this.btn_ShowBtnDetails.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Expand_Arrow_25px;
+            this.btn_ShowBtnDetails.Location = new System.Drawing.Point(0, 0);
+            this.btn_ShowBtnDetails.Name = "btn_ShowBtnDetails";
+            this.btn_ShowBtnDetails.Size = new System.Drawing.Size(35, 50);
+            this.btn_ShowBtnDetails.TabIndex = 1;
+            this.btn_ShowBtnDetails.Tag = "Show or hide name on the menu";
+            this.btn_ShowBtnDetails.UseVisualStyleBackColor = true;
+            this.btn_ShowBtnDetails.Click += new System.EventHandler(this.Btn_ShowBtnDetails_Click);
+            // 
+            // btn_Menu
+            // 
+            this.btn_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Menu.FlatAppearance.BorderSize = 0;
+            this.btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Menu.ForeColor = System.Drawing.Color.White;
+            this.btn_Menu.Image = global::KyThuatDoHoa_Nhom9.Image_Res.List_25px;
+            this.btn_Menu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Menu.Location = new System.Drawing.Point(10, 0);
+            this.btn_Menu.Name = "btn_Menu";
+            this.btn_Menu.Size = new System.Drawing.Size(60, 50);
+            this.btn_Menu.TabIndex = 2;
+            this.btn_Menu.Tag = "Menu";
+            this.btn_Menu.Text = "Menu";
+            this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Menu.UseVisualStyleBackColor = true;
             // 
             // btn_Toolbar
             // 
@@ -307,441 +386,21 @@ namespace KyThuatDoHoa_Nhom9
             this.grb_2DShapes.TabStop = false;
             this.grb_2DShapes.Text = "2D Shapes";
             // 
-            // grb_2DLine
-            // 
-            this.grb_2DLine.Controls.Add(this.button17);
-            this.grb_2DLine.Controls.Add(this.button18);
-            this.grb_2DLine.Controls.Add(this.button19);
-            this.grb_2DLine.Controls.Add(this.button20);
-            this.grb_2DLine.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.grb_2DLine.Location = new System.Drawing.Point(0, 55);
-            this.grb_2DLine.Name = "grb_2DLine";
-            this.grb_2DLine.Size = new System.Drawing.Size(260, 100);
-            this.grb_2DLine.TabIndex = 0;
-            this.grb_2DLine.TabStop = false;
-            this.grb_2DLine.Text = "Line";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(260, 49);
-            this.panel6.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(6, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "2D Shapes";
-            // 
-            // pnl_Tb_3D
-            // 
-            this.pnl_Tb_3D.BackColor = System.Drawing.Color.Honeydew;
-            this.pnl_Tb_3D.Controls.Add(this.grb_3Dobject);
-            this.pnl_Tb_3D.Controls.Add(this.panel7);
-            this.pnl_Tb_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Tb_3D.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Tb_3D.Name = "pnl_Tb_3D";
-            this.pnl_Tb_3D.Size = new System.Drawing.Size(260, 601);
-            this.pnl_Tb_3D.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(260, 49);
-            this.panel7.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(15, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "3D Shapes";
-            // 
-            // grb_3Dobject
-            // 
-            this.grb_3Dobject.Controls.Add(this.button33);
-            this.grb_3Dobject.Controls.Add(this.button34);
-            this.grb_3Dobject.Controls.Add(this.button35);
-            this.grb_3Dobject.Controls.Add(this.button36);
-            this.grb_3Dobject.Controls.Add(this.button29);
-            this.grb_3Dobject.Controls.Add(this.button30);
-            this.grb_3Dobject.Controls.Add(this.button31);
-            this.grb_3Dobject.Controls.Add(this.button32);
-            this.grb_3Dobject.Controls.Add(this.button25);
-            this.grb_3Dobject.Controls.Add(this.button26);
-            this.grb_3Dobject.Controls.Add(this.button27);
-            this.grb_3Dobject.Controls.Add(this.button28);
-            this.grb_3Dobject.Controls.Add(this.button21);
-            this.grb_3Dobject.Controls.Add(this.button22);
-            this.grb_3Dobject.Controls.Add(this.button23);
-            this.grb_3Dobject.Controls.Add(this.button24);
-            this.grb_3Dobject.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.grb_3Dobject.Location = new System.Drawing.Point(0, 67);
-            this.grb_3Dobject.Name = "grb_3Dobject";
-            this.grb_3Dobject.Size = new System.Drawing.Size(260, 318);
-            this.grb_3Dobject.TabIndex = 1;
-            this.grb_3Dobject.TabStop = false;
-            this.grb_3Dobject.Text = "3D Object";
-            // 
-            // button33
-            // 
-            this.button33.FlatAppearance.BorderSize = 0;
-            this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button33.Location = new System.Drawing.Point(200, 196);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(50, 50);
-            this.button33.TabIndex = 23;
-            this.button33.UseVisualStyleBackColor = true;
-            this.button33.Click += new System.EventHandler(this.Button_Click);
-            this.button33.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button33.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button34
-            // 
-            this.button34.FlatAppearance.BorderSize = 0;
-            this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button34.Location = new System.Drawing.Point(138, 196);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(50, 50);
-            this.button34.TabIndex = 22;
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.Button_Click);
-            this.button34.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button34.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button35
-            // 
-            this.button35.FlatAppearance.BorderSize = 0;
-            this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button35.Location = new System.Drawing.Point(76, 196);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(50, 50);
-            this.button35.TabIndex = 21;
-            this.button35.UseVisualStyleBackColor = true;
-            this.button35.Click += new System.EventHandler(this.Button_Click);
-            this.button35.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button35.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button36
-            // 
-            this.button36.FlatAppearance.BorderSize = 0;
-            this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button36.Location = new System.Drawing.Point(10, 196);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(50, 50);
-            this.button36.TabIndex = 20;
-            this.button36.UseVisualStyleBackColor = true;
-            this.button36.Click += new System.EventHandler(this.Button_Click);
-            this.button36.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button36.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button29
-            // 
-            this.button29.FlatAppearance.BorderSize = 0;
-            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button29.Location = new System.Drawing.Point(200, 140);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(50, 50);
-            this.button29.TabIndex = 19;
-            this.button29.UseVisualStyleBackColor = true;
-            this.button29.Click += new System.EventHandler(this.Button_Click);
-            this.button29.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button29.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button30
-            // 
-            this.button30.FlatAppearance.BorderSize = 0;
-            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button30.Location = new System.Drawing.Point(138, 140);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(50, 50);
-            this.button30.TabIndex = 18;
-            this.button30.UseVisualStyleBackColor = true;
-            this.button30.Click += new System.EventHandler(this.Button_Click);
-            this.button30.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button30.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button31
-            // 
-            this.button31.FlatAppearance.BorderSize = 0;
-            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button31.Location = new System.Drawing.Point(76, 140);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(50, 50);
-            this.button31.TabIndex = 17;
-            this.button31.UseVisualStyleBackColor = true;
-            this.button31.Click += new System.EventHandler(this.Button_Click);
-            this.button31.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button31.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button32
-            // 
-            this.button32.FlatAppearance.BorderSize = 0;
-            this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button32.Location = new System.Drawing.Point(10, 140);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(50, 50);
-            this.button32.TabIndex = 16;
-            this.button32.UseVisualStyleBackColor = true;
-            this.button32.Click += new System.EventHandler(this.Button_Click);
-            this.button32.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button32.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button25
-            // 
-            this.button25.FlatAppearance.BorderSize = 0;
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Location = new System.Drawing.Point(200, 84);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(50, 50);
-            this.button25.TabIndex = 15;
-            this.button25.UseVisualStyleBackColor = true;
-            this.button25.Click += new System.EventHandler(this.Button_Click);
-            this.button25.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button25.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button26
-            // 
-            this.button26.FlatAppearance.BorderSize = 0;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Location = new System.Drawing.Point(138, 84);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(50, 50);
-            this.button26.TabIndex = 14;
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.Button_Click);
-            this.button26.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button26.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button27
-            // 
-            this.button27.FlatAppearance.BorderSize = 0;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Location = new System.Drawing.Point(76, 84);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(50, 50);
-            this.button27.TabIndex = 13;
-            this.button27.UseVisualStyleBackColor = true;
-            this.button27.Click += new System.EventHandler(this.Button_Click);
-            this.button27.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button27.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button28
-            // 
-            this.button28.FlatAppearance.BorderSize = 0;
-            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button28.Location = new System.Drawing.Point(10, 84);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(50, 50);
-            this.button28.TabIndex = 12;
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.Button_Click);
-            this.button28.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button28.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // pnl_Change
-            // 
-            this.pnl_Change.BackColor = System.Drawing.Color.MintCream;
-            this.pnl_Change.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnl_Change.Controls.Add(this.lblWidth);
-            this.pnl_Change.Controls.Add(this.lblHeight);
-            this.pnl_Change.Controls.Add(this.lblX4);
-            this.pnl_Change.Controls.Add(this.lblY4);
-            this.pnl_Change.Controls.Add(this.lblX3);
-            this.pnl_Change.Controls.Add(this.lblY3);
-            this.pnl_Change.Controls.Add(this.chkLuoiPixel);
-            this.pnl_Change.Controls.Add(this.label3);
-            this.pnl_Change.Controls.Add(this.lblY1);
-            this.pnl_Change.Controls.Add(this.label6);
-            this.pnl_Change.Controls.Add(this.lblY2);
-            this.pnl_Change.Controls.Add(this.lblX2);
-            this.pnl_Change.Controls.Add(this.lblX1);
-            this.pnl_Change.Controls.Add(this.panel5);
-            this.pnl_Change.Controls.Add(this.panel4);
-            this.pnl_Change.Controls.Add(this.panel3);
-            this.pnl_Change.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_Change.Location = new System.Drawing.Point(0, 49);
-            this.pnl_Change.Name = "pnl_Change";
-            this.pnl_Change.Size = new System.Drawing.Size(600, 49);
-            this.pnl_Change.TabIndex = 2;
-            // 
-            // lblWidth
-            // 
-            this.lblWidth.AutoSize = true;
-            this.lblWidth.Location = new System.Drawing.Point(99, 2);
-            this.lblWidth.Name = "lblWidth";
-            this.lblWidth.Size = new System.Drawing.Size(45, 19);
-            this.lblWidth.TabIndex = 8;
-            this.lblWidth.Text = "label4";
-            // 
-            // lblHeight
-            // 
-            this.lblHeight.AutoSize = true;
-            this.lblHeight.Location = new System.Drawing.Point(99, 25);
-            this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(45, 19);
-            this.lblHeight.TabIndex = 9;
-            this.lblHeight.Text = "label4";
-            // 
-            // lblX4
-            // 
-            this.lblX4.AutoSize = true;
-            this.lblX4.Location = new System.Drawing.Point(425, 2);
-            this.lblX4.Name = "lblX4";
-            this.lblX4.Size = new System.Drawing.Size(45, 19);
-            this.lblX4.TabIndex = 7;
-            this.lblX4.Text = "label4";
-            // 
-            // lblY4
-            // 
-            this.lblY4.AutoSize = true;
-            this.lblY4.Location = new System.Drawing.Point(425, 25);
-            this.lblY4.Name = "lblY4";
-            this.lblY4.Size = new System.Drawing.Size(45, 19);
-            this.lblY4.TabIndex = 7;
-            this.lblY4.Text = "label4";
-            // 
-            // lblX3
-            // 
-            this.lblX3.AutoSize = true;
-            this.lblX3.Location = new System.Drawing.Point(365, 2);
-            this.lblX3.Name = "lblX3";
-            this.lblX3.Size = new System.Drawing.Size(45, 19);
-            this.lblX3.TabIndex = 7;
-            this.lblX3.Text = "label4";
-            // 
-            // lblY3
-            // 
-            this.lblY3.AutoSize = true;
-            this.lblY3.Location = new System.Drawing.Point(365, 25);
-            this.lblY3.Name = "lblY3";
-            this.lblY3.Size = new System.Drawing.Size(45, 19);
-            this.lblY3.TabIndex = 7;
-            this.lblY3.Text = "label4";
-            // 
-            // chkLuoiPixel
-            // 
-            this.chkLuoiPixel.AutoSize = true;
-            this.chkLuoiPixel.Location = new System.Drawing.Point(227, 18);
-            this.chkLuoiPixel.Name = "chkLuoiPixel";
-            this.chkLuoiPixel.Size = new System.Drawing.Size(15, 14);
-            this.chkLuoiPixel.TabIndex = 6;
-            this.chkLuoiPixel.UseVisualStyleBackColor = true;
-            this.chkLuoiPixel.CheckedChanged += new System.EventHandler(this.ChkLuoiPixel_CheckedChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(150, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Lưới Pixel";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // lblY1
-            // 
-            this.lblY1.AutoSize = true;
-            this.lblY1.Location = new System.Drawing.Point(248, 25);
-            this.lblY1.Name = "lblY1";
-            this.lblY1.Size = new System.Drawing.Size(45, 19);
-            this.lblY1.TabIndex = 4;
-            this.lblY1.Text = "label4";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(604, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 19);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "label3";
-            // 
-            // lblY2
-            // 
-            this.lblY2.AutoSize = true;
-            this.lblY2.Location = new System.Drawing.Point(301, 25);
-            this.lblY2.Name = "lblY2";
-            this.lblY2.Size = new System.Drawing.Size(45, 19);
-            this.lblY2.TabIndex = 3;
-            this.lblY2.Text = "label3";
-            // 
-            // lblX2
-            // 
-            this.lblX2.AutoSize = true;
-            this.lblX2.Location = new System.Drawing.Point(301, 2);
-            this.lblX2.Name = "lblX2";
-            this.lblX2.Size = new System.Drawing.Size(45, 19);
-            this.lblX2.TabIndex = 3;
-            this.lblX2.Text = "label3";
-            // 
-            // lblX1
-            // 
-            this.lblX1.AutoSize = true;
-            this.lblX1.Location = new System.Drawing.Point(248, 2);
-            this.lblX1.Name = "lblX1";
-            this.lblX1.Size = new System.Drawing.Size(45, 19);
-            this.lblX1.TabIndex = 3;
-            this.lblX1.Text = "label3";
-            this.lblX1.Click += new System.EventHandler(this.lblX1_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(473, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(61, 45);
-            this.panel5.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(534, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(62, 45);
-            this.panel4.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(93, 45);
-            this.panel3.TabIndex = 0;
-            // 
-            // pnl_WorkStation
-            // 
-            this.pnl_WorkStation.AutoScroll = true;
-            this.pnl_WorkStation.BackColor = System.Drawing.Color.LightGray;
-            this.pnl_WorkStation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnl_WorkStation.Controls.Add(this.picb_2DArea);
-            this.pnl_WorkStation.Controls.Add(this.picb_3DArea);
-            this.pnl_WorkStation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_WorkStation.Location = new System.Drawing.Point(0, 98);
-            this.pnl_WorkStation.Name = "pnl_WorkStation";
-            this.pnl_WorkStation.Size = new System.Drawing.Size(600, 552);
-            this.pnl_WorkStation.TabIndex = 3;
-            this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 90;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Car_32px;
+            this.button9.Location = new System.Drawing.Point(200, 209);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(50, 50);
+            this.button9.TabIndex = 15;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.Button_Click);
+            this.button9.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button9.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // button10
             // 
@@ -759,50 +418,6 @@ namespace KyThuatDoHoa_Nhom9
             this.button10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button10.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button10.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // picb_2DArea
-            // 
-            this.picb_2DArea.BackColor = System.Drawing.Color.DarkGray;
-            this.picb_2DArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picb_2DArea.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.picb_2DArea.Location = new System.Drawing.Point(305, 100);
-            this.picb_2DArea.Name = "picb_2DArea";
-            this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
-            this.picb_2DArea.TabIndex = 1;
-            this.picb_2DArea.TabStop = false;
-            this.picb_2DArea.SizeChanged += new System.EventHandler(this.picb_2DArea_SizeChanged);
-            this.picb_2DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.picb_2DArea_Paint);
-            this.picb_2DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picb_2DArea_MouseMove);
-            // 
-            // picb_3DArea
-            // 
-            this.picb_3DArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.picb_3DArea.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.picb_3DArea.Location = new System.Drawing.Point(73, 100);
-            this.picb_3DArea.Name = "picb_3DArea";
-            this.picb_3DArea.Size = new System.Drawing.Size(220, 219);
-            this.picb_3DArea.TabIndex = 0;
-            this.picb_3DArea.TabStop = false;
-            this.picb_3DArea.SizeChanged += new System.EventHandler(this.Picb_3DArea_SizeChanged);
-            this.picb_3DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.Picb_3DArea_Paint);
-            this.picb_3DArea.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseClick);
-            this.picb_3DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseMove);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Car_32px;
-            this.button9.Location = new System.Drawing.Point(200, 209);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(50, 50);
-            this.button9.TabIndex = 15;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.Button_Click);
-            this.button9.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button9.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // button11
             // 
@@ -1008,6 +623,20 @@ namespace KyThuatDoHoa_Nhom9
             this.button1.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button1.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
+            // grb_2DLine
+            // 
+            this.grb_2DLine.Controls.Add(this.button17);
+            this.grb_2DLine.Controls.Add(this.button18);
+            this.grb_2DLine.Controls.Add(this.button19);
+            this.grb_2DLine.Controls.Add(this.button20);
+            this.grb_2DLine.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.grb_2DLine.Location = new System.Drawing.Point(0, 55);
+            this.grb_2DLine.Name = "grb_2DLine";
+            this.grb_2DLine.Size = new System.Drawing.Size(260, 100);
+            this.grb_2DLine.TabIndex = 0;
+            this.grb_2DLine.TabStop = false;
+            this.grb_2DLine.Text = "Line";
+            // 
             // button17
             // 
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1047,6 +676,219 @@ namespace KyThuatDoHoa_Nhom9
             this.button20.Size = new System.Drawing.Size(50, 50);
             this.button20.TabIndex = 4;
             this.button20.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(260, 49);
+            this.panel6.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(6, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "2D Shapes";
+            // 
+            // pnl_Tb_3D
+            // 
+            this.pnl_Tb_3D.BackColor = System.Drawing.Color.Honeydew;
+            this.pnl_Tb_3D.Controls.Add(this.grb_3Dobject);
+            this.pnl_Tb_3D.Controls.Add(this.panel7);
+            this.pnl_Tb_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Tb_3D.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Tb_3D.Name = "pnl_Tb_3D";
+            this.pnl_Tb_3D.Size = new System.Drawing.Size(260, 601);
+            this.pnl_Tb_3D.TabIndex = 1;
+            // 
+            // grb_3Dobject
+            // 
+            this.grb_3Dobject.Controls.Add(this.button33);
+            this.grb_3Dobject.Controls.Add(this.button34);
+            this.grb_3Dobject.Controls.Add(this.button35);
+            this.grb_3Dobject.Controls.Add(this.button36);
+            this.grb_3Dobject.Controls.Add(this.button29);
+            this.grb_3Dobject.Controls.Add(this.button30);
+            this.grb_3Dobject.Controls.Add(this.button31);
+            this.grb_3Dobject.Controls.Add(this.button32);
+            this.grb_3Dobject.Controls.Add(this.button25);
+            this.grb_3Dobject.Controls.Add(this.button26);
+            this.grb_3Dobject.Controls.Add(this.button27);
+            this.grb_3Dobject.Controls.Add(this.button28);
+            this.grb_3Dobject.Controls.Add(this.button21);
+            this.grb_3Dobject.Controls.Add(this.button22);
+            this.grb_3Dobject.Controls.Add(this.button23);
+            this.grb_3Dobject.Controls.Add(this.button24);
+            this.grb_3Dobject.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.grb_3Dobject.Location = new System.Drawing.Point(0, 67);
+            this.grb_3Dobject.Name = "grb_3Dobject";
+            this.grb_3Dobject.Size = new System.Drawing.Size(260, 318);
+            this.grb_3Dobject.TabIndex = 1;
+            this.grb_3Dobject.TabStop = false;
+            this.grb_3Dobject.Text = "3D Object";
+            // 
+            // button33
+            // 
+            this.button33.FlatAppearance.BorderSize = 0;
+            this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button33.Location = new System.Drawing.Point(200, 196);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(50, 50);
+            this.button33.TabIndex = 23;
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.Button_Click);
+            this.button33.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button33.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button34
+            // 
+            this.button34.FlatAppearance.BorderSize = 0;
+            this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button34.Location = new System.Drawing.Point(138, 196);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(50, 50);
+            this.button34.TabIndex = 22;
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.Button_Click);
+            this.button34.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button34.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button35
+            // 
+            this.button35.FlatAppearance.BorderSize = 0;
+            this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button35.Location = new System.Drawing.Point(76, 196);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(50, 50);
+            this.button35.TabIndex = 21;
+            this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.Button_Click);
+            this.button35.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button35.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button36
+            // 
+            this.button36.FlatAppearance.BorderSize = 0;
+            this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button36.Location = new System.Drawing.Point(10, 196);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(50, 50);
+            this.button36.TabIndex = 20;
+            this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.Button_Click);
+            this.button36.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button36.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button29
+            // 
+            this.button29.FlatAppearance.BorderSize = 0;
+            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button29.Location = new System.Drawing.Point(200, 140);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(50, 50);
+            this.button29.TabIndex = 19;
+            this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.Button_Click);
+            this.button29.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button29.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button30
+            // 
+            this.button30.FlatAppearance.BorderSize = 0;
+            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button30.Location = new System.Drawing.Point(138, 140);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(50, 50);
+            this.button30.TabIndex = 18;
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.Button_Click);
+            this.button30.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button30.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button31
+            // 
+            this.button31.FlatAppearance.BorderSize = 0;
+            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button31.Location = new System.Drawing.Point(76, 140);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(50, 50);
+            this.button31.TabIndex = 17;
+            this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.Button_Click);
+            this.button31.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button31.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button32
+            // 
+            this.button32.FlatAppearance.BorderSize = 0;
+            this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button32.Location = new System.Drawing.Point(10, 140);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(50, 50);
+            this.button32.TabIndex = 16;
+            this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.Button_Click);
+            this.button32.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button32.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button25
+            // 
+            this.button25.FlatAppearance.BorderSize = 0;
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button25.Location = new System.Drawing.Point(200, 84);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(50, 50);
+            this.button25.TabIndex = 15;
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.Button_Click);
+            this.button25.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button25.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button26
+            // 
+            this.button26.FlatAppearance.BorderSize = 0;
+            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button26.Location = new System.Drawing.Point(138, 84);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(50, 50);
+            this.button26.TabIndex = 14;
+            this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.Button_Click);
+            this.button26.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button26.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button27
+            // 
+            this.button27.FlatAppearance.BorderSize = 0;
+            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button27.Location = new System.Drawing.Point(76, 84);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(50, 50);
+            this.button27.TabIndex = 13;
+            this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.Button_Click);
+            this.button27.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button27.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button28
+            // 
+            this.button28.FlatAppearance.BorderSize = 0;
+            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button28.Location = new System.Drawing.Point(10, 84);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(50, 50);
+            this.button28.TabIndex = 12;
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.Button_Click);
+            this.button28.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button28.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // button21
             // 
@@ -1109,36 +951,242 @@ namespace KyThuatDoHoa_Nhom9
             this.button24.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button24.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
-            // btn_ShowBtnDetails
+            // panel7
             // 
-            this.btn_ShowBtnDetails.FlatAppearance.BorderSize = 0;
-            this.btn_ShowBtnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ShowBtnDetails.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowBtnDetails.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Expand_Arrow_25px;
-            this.btn_ShowBtnDetails.Location = new System.Drawing.Point(0, 0);
-            this.btn_ShowBtnDetails.Name = "btn_ShowBtnDetails";
-            this.btn_ShowBtnDetails.Size = new System.Drawing.Size(35, 50);
-            this.btn_ShowBtnDetails.TabIndex = 1;
-            this.btn_ShowBtnDetails.Tag = "Show or hide name on the menu";
-            this.btn_ShowBtnDetails.UseVisualStyleBackColor = true;
-            this.btn_ShowBtnDetails.Click += new System.EventHandler(this.Btn_ShowBtnDetails_Click);
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(260, 49);
+            this.panel7.TabIndex = 0;
             // 
-            // btn_Menu
+            // label2
             // 
-            this.btn_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Menu.FlatAppearance.BorderSize = 0;
-            this.btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Menu.ForeColor = System.Drawing.Color.White;
-            this.btn_Menu.Image = global::KyThuatDoHoa_Nhom9.Image_Res.List_25px;
-            this.btn_Menu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Menu.Location = new System.Drawing.Point(10, 0);
-            this.btn_Menu.Name = "btn_Menu";
-            this.btn_Menu.Size = new System.Drawing.Size(60, 50);
-            this.btn_Menu.TabIndex = 2;
-            this.btn_Menu.Tag = "Menu";
-            this.btn_Menu.Text = "Menu";
-            this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Menu.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(15, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 22);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "3D Shapes";
+            // 
+            // pnl_Change
+            // 
+            this.pnl_Change.BackColor = System.Drawing.Color.MintCream;
+            this.pnl_Change.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_Change.Controls.Add(this.lblWidth);
+            this.pnl_Change.Controls.Add(this.lblHeight);
+            this.pnl_Change.Controls.Add(this.lblX4);
+            this.pnl_Change.Controls.Add(this.lblY4);
+            this.pnl_Change.Controls.Add(this.lblX3);
+            this.pnl_Change.Controls.Add(this.lblY3);
+            this.pnl_Change.Controls.Add(this.chkLuoiPixel);
+            this.pnl_Change.Controls.Add(this.label3);
+            this.pnl_Change.Controls.Add(this.lblY1);
+            this.pnl_Change.Controls.Add(this.label6);
+            this.pnl_Change.Controls.Add(this.lblY2);
+            this.pnl_Change.Controls.Add(this.lblX2);
+            this.pnl_Change.Controls.Add(this.lblX1);
+            this.pnl_Change.Controls.Add(this.panel5);
+            this.pnl_Change.Controls.Add(this.panel4);
+            this.pnl_Change.Controls.Add(this.panel3);
+            this.pnl_Change.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_Change.Location = new System.Drawing.Point(0, 49);
+            this.pnl_Change.Name = "pnl_Change";
+            this.pnl_Change.Size = new System.Drawing.Size(600, 49);
+            this.pnl_Change.TabIndex = 2;
+            // 
+            // lblWidth
+            // 
+            this.lblWidth.AutoSize = true;
+            this.lblWidth.Location = new System.Drawing.Point(99, 2);
+            this.lblWidth.Name = "lblWidth";
+            this.lblWidth.Size = new System.Drawing.Size(45, 19);
+            this.lblWidth.TabIndex = 8;
+            this.lblWidth.Text = "label4";
+            // 
+            // lblHeight
+            // 
+            this.lblHeight.AutoSize = true;
+            this.lblHeight.Location = new System.Drawing.Point(99, 25);
+            this.lblHeight.Name = "lblHeight";
+            this.lblHeight.Size = new System.Drawing.Size(45, 19);
+            this.lblHeight.TabIndex = 9;
+            this.lblHeight.Text = "label4";
+            // 
+            // lblX4
+            // 
+            this.lblX4.AutoSize = true;
+            this.lblX4.Location = new System.Drawing.Point(425, 2);
+            this.lblX4.Name = "lblX4";
+            this.lblX4.Size = new System.Drawing.Size(45, 19);
+            this.lblX4.TabIndex = 7;
+            this.lblX4.Text = "label4";
+            // 
+            // lblY4
+            // 
+            this.lblY4.AutoSize = true;
+            this.lblY4.Location = new System.Drawing.Point(425, 25);
+            this.lblY4.Name = "lblY4";
+            this.lblY4.Size = new System.Drawing.Size(45, 19);
+            this.lblY4.TabIndex = 7;
+            this.lblY4.Text = "label4";
+            // 
+            // lblX3
+            // 
+            this.lblX3.AutoSize = true;
+            this.lblX3.Location = new System.Drawing.Point(365, 2);
+            this.lblX3.Name = "lblX3";
+            this.lblX3.Size = new System.Drawing.Size(45, 19);
+            this.lblX3.TabIndex = 7;
+            this.lblX3.Text = "label4";
+            // 
+            // lblY3
+            // 
+            this.lblY3.AutoSize = true;
+            this.lblY3.Location = new System.Drawing.Point(365, 25);
+            this.lblY3.Name = "lblY3";
+            this.lblY3.Size = new System.Drawing.Size(45, 19);
+            this.lblY3.TabIndex = 7;
+            this.lblY3.Text = "label4";
+            // 
+            // chkLuoiPixel
+            // 
+            this.chkLuoiPixel.AutoSize = true;
+            this.chkLuoiPixel.Location = new System.Drawing.Point(227, 18);
+            this.chkLuoiPixel.Name = "chkLuoiPixel";
+            this.chkLuoiPixel.Size = new System.Drawing.Size(15, 14);
+            this.chkLuoiPixel.TabIndex = 6;
+            this.chkLuoiPixel.UseVisualStyleBackColor = true;
+            this.chkLuoiPixel.CheckedChanged += new System.EventHandler(this.ChkLuoiPixel_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(150, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 19);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Lưới Pixel";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // lblY1
+            // 
+            this.lblY1.AutoSize = true;
+            this.lblY1.Location = new System.Drawing.Point(248, 25);
+            this.lblY1.Name = "lblY1";
+            this.lblY1.Size = new System.Drawing.Size(45, 19);
+            this.lblY1.TabIndex = 4;
+            this.lblY1.Text = "label4";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(604, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 19);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "label3";
+            // 
+            // lblY2
+            // 
+            this.lblY2.AutoSize = true;
+            this.lblY2.Location = new System.Drawing.Point(301, 25);
+            this.lblY2.Name = "lblY2";
+            this.lblY2.Size = new System.Drawing.Size(45, 19);
+            this.lblY2.TabIndex = 3;
+            this.lblY2.Text = "label3";
+            // 
+            // lblX2
+            // 
+            this.lblX2.AutoSize = true;
+            this.lblX2.Location = new System.Drawing.Point(301, 2);
+            this.lblX2.Name = "lblX2";
+            this.lblX2.Size = new System.Drawing.Size(45, 19);
+            this.lblX2.TabIndex = 3;
+            this.lblX2.Text = "label3";
+            // 
+            // lblX1
+            // 
+            this.lblX1.AutoSize = true;
+            this.lblX1.Location = new System.Drawing.Point(248, 2);
+            this.lblX1.Name = "lblX1";
+            this.lblX1.Size = new System.Drawing.Size(45, 19);
+            this.lblX1.TabIndex = 3;
+            this.lblX1.Text = "label3";
+            this.lblX1.Click += new System.EventHandler(this.lblX1_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(473, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(61, 45);
+            this.panel5.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(534, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(62, 45);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(93, 45);
+            this.panel3.TabIndex = 0;
+            // 
+            // pnl_WorkStation
+            // 
+            this.pnl_WorkStation.AutoScroll = true;
+            this.pnl_WorkStation.BackColor = System.Drawing.Color.LightGray;
+            this.pnl_WorkStation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_WorkStation.Controls.Add(this.picb_2DArea);
+            this.pnl_WorkStation.Controls.Add(this.picb_3DArea);
+            this.pnl_WorkStation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_WorkStation.Location = new System.Drawing.Point(0, 98);
+            this.pnl_WorkStation.Name = "pnl_WorkStation";
+            this.pnl_WorkStation.Size = new System.Drawing.Size(600, 552);
+            this.pnl_WorkStation.TabIndex = 3;
+            this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
+            // 
+            // picb_2DArea
+            // 
+            this.picb_2DArea.BackColor = System.Drawing.Color.DarkGray;
+            this.picb_2DArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picb_2DArea.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.picb_2DArea.Location = new System.Drawing.Point(305, 100);
+            this.picb_2DArea.Name = "picb_2DArea";
+            this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
+            this.picb_2DArea.TabIndex = 1;
+            this.picb_2DArea.TabStop = false;
+            this.picb_2DArea.SizeChanged += new System.EventHandler(this.picb_2DArea_SizeChanged);
+            this.picb_2DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.picb_2DArea_Paint);
+            this.picb_2DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picb_2DArea_MouseMove);
+            // 
+            // picb_3DArea
+            // 
+            this.picb_3DArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.picb_3DArea.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.picb_3DArea.Location = new System.Drawing.Point(73, 100);
+            this.picb_3DArea.Name = "picb_3DArea";
+            this.picb_3DArea.Size = new System.Drawing.Size(220, 219);
+            this.picb_3DArea.TabIndex = 0;
+            this.picb_3DArea.TabStop = false;
+            this.picb_3DArea.SizeChanged += new System.EventHandler(this.Picb_3DArea_SizeChanged);
+            this.picb_3DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.Picb_3DArea_Paint);
+            this.picb_3DArea.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseClick);
+            this.picb_3DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseMove);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 90;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frm_Main
             // 
@@ -1161,6 +1209,8 @@ namespace KyThuatDoHoa_Nhom9
             this.Load += new System.EventHandler(this.Frm_Main_Load);
             this.pnl_Mode.ResumeLayout(false);
             this.pnl_Mode.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnl_ToolBox.ResumeLayout(false);
             this.pnl_Tb_2D.ResumeLayout(false);
@@ -1169,9 +1219,9 @@ namespace KyThuatDoHoa_Nhom9
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.pnl_Tb_3D.ResumeLayout(false);
+            this.grb_3Dobject.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.grb_3Dobject.ResumeLayout(false);
             this.pnl_Change.ResumeLayout(false);
             this.pnl_Change.PerformLayout();
             this.pnl_WorkStation.ResumeLayout(false);
@@ -1265,6 +1315,9 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Button zoom;
         private System.Windows.Forms.Button button42;
         private System.Windows.Forms.Button button41;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btn_Author;
+        private System.Windows.Forms.Button btn_Help;
     }
 }
 
