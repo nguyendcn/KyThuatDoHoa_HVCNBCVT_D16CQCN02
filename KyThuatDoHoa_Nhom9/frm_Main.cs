@@ -664,7 +664,7 @@ namespace KyThuatDoHoa_Nhom9
 
         private void Cl_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            label4.Text = cl.CurrentDatetime.ToString();
+     
             //this.Invalidate();
             if (flagXe == false)
             {

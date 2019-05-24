@@ -34,10 +34,6 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Mode = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btn_Author = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button37 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Help = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -144,10 +140,6 @@ namespace KyThuatDoHoa_Nhom9
             // 
             this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnl_Mode.Controls.Add(this.panel8);
-            this.pnl_Mode.Controls.Add(this.button40);
-            this.pnl_Mode.Controls.Add(this.button39);
-            this.pnl_Mode.Controls.Add(this.label4);
-            this.pnl_Mode.Controls.Add(this.button37);
             this.pnl_Mode.Controls.Add(this.panel2);
             this.pnl_Mode.Controls.Add(this.panel1);
             this.pnl_Mode.Controls.Add(this.btn_Menu);
@@ -183,44 +175,6 @@ namespace KyThuatDoHoa_Nhom9
             this.btn_Author.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Author.UseVisualStyleBackColor = true;
             this.btn_Author.Click += new System.EventHandler(this.btn_Author_Click);
-            // 
-            // button40
-            // 
-            this.button40.Location = new System.Drawing.Point(475, 9);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(75, 23);
-            this.button40.TabIndex = 9;
-            this.button40.Text = "button40";
-            this.button40.UseVisualStyleBackColor = true;
-            // 
-            // button39
-            // 
-            this.button39.Location = new System.Drawing.Point(147, 11);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(75, 23);
-            this.button39.TabIndex = 8;
-            this.button39.Text = "button39";
-            this.button39.UseVisualStyleBackColor = true;
-            this.button39.Click += new System.EventHandler(this.button39_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(610, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 19);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "label4";
-            // 
-            // button37
-            // 
-            this.button37.Location = new System.Drawing.Point(371, 14);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(75, 23);
-            this.button37.TabIndex = 5;
-            this.button37.Text = "button37";
-            this.button37.UseVisualStyleBackColor = true;
-            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
             // panel2
             // 
@@ -1243,7 +1197,6 @@ namespace KyThuatDoHoa_Nhom9
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Main_Load);
             this.pnl_Mode.ResumeLayout(false);
-            this.pnl_Mode.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -1346,11 +1299,7 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.Label lblHeight;
         private System.Windows.Forms.PictureBox picb_2DArea;
         private System.Windows.Forms.PictureBox picb_3DArea;
-        private System.Windows.Forms.Button button37;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btn_Author;
         private System.Windows.Forms.Button btn_Help;
