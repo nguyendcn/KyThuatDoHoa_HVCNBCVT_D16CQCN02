@@ -70,3 +70,9 @@ D:\Git\C#\KyThuatDoHoa\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.exe.confi
 D:\Git\C#\KyThuatDoHoa\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.exe
 D:\Git\C#\KyThuatDoHoa\KyThuatDoHoa_Nhom9\bin\Debug\KyThuatDoHoa_Nhom9.pdb
 D:\Git\C#\KyThuatDoHoa\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.Form1.resources
+C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.Form1.resources
+C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.XeProperties.resources
+C:\Users\Nguyen\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.TimepieceProperties.resources
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.Form1.resources
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.TimepieceProperties.resources
+C:\Users\PhongNT\Source\Repos\nguyendcn\KyThuatDoHoa_HVCNBCVT_D16CQCN02\KyThuatDoHoa_Nhom9\obj\Debug\KyThuatDoHoa_Nhom9.UI.UserCtr.XeProperties.resources

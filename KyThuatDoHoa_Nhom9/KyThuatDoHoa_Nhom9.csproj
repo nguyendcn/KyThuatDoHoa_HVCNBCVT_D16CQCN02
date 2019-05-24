@@ -60,6 +60,7 @@
     <Compile Include="Construct\_2DObject\HinhChuNhat.cs" />
     <Compile Include="Construct\_2DObject\Pendulum.cs" />
     <Compile Include="Construct\_2DObject\Square.cs" />
+    <Compile Include="Construct\_2DObject\Timepiece.cs" />
     <Compile Include="Construct\_2DObject\Transformations.cs" />
     <Compile Include="Construct\_3DObject\HinhHopChuNhat.cs" />
     <Compile Include="Construct\_3DObject\HinhTru.cs" />
@@ -86,6 +87,18 @@
     </Compile>
     <Compile Include="UI\UserCtr\ClockProperties.Designer.cs">
       <DependentUpon>ClockProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserCtr\TimepieceProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserCtr\TimepieceProperties.Designer.cs">
+      <DependentUpon>TimepieceProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserCtr\XeProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserCtr\XeProperties.Designer.cs">
+      <DependentUpon>XeProperties.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables\CodeFile1.cs" />
     <Compile Include="Variables\Collection_Strs.cs" />
@@ -128,6 +141,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\frm_ChangeMode.resx">
       <DependentUpon>frm_ChangeMode.cs</DependentUpon>
@@ -140,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserCtr\ClockProperties.resx">
       <DependentUpon>ClockProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserCtr\TimepieceProperties.resx">
+      <DependentUpon>TimepieceProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserCtr\XeProperties.resx">
+      <DependentUpon>XeProperties.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -241,6 +261,14 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Note.txt" />
+    <None Include="Resources\Dispose_32px.png" />
+    <None Include="Resources\Hide_32px.png" />
+    <None Include="Resources\Old_Clock.png" />
+    <None Include="Resources\history.png" />
+    <None Include="Resources\đồng hồ.PNG" />
+    <None Include="Resources\gnome_window_close.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\xe ô tô.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

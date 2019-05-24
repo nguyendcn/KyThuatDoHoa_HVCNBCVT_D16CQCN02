@@ -34,9 +34,9 @@ namespace KyThuatDoHoa_Nhom9.Construct._3DObject
             DrawLine(g, 2, 5);
 
             Point point = ToaDo.NguoiDungMayTinh_3D(this.TamDay[1, 0], this.TamDay[1, 1], this.TamDay[1, 2]);
-            ToaDo.HienThi(point, g);
+            ToaDo.HienThi(point, g, Color.Black);
             point = ToaDo.NguoiDungMayTinh_3D(this.TamDay[4, 0], this.TamDay[4, 1], this.TamDay[4, 2]);
-            ToaDo.HienThi(point, g);
+            ToaDo.HienThi(point, g, Color.Black);
 
             DrawElip(g);
 

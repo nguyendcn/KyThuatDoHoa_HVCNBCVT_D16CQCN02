@@ -8,12 +8,13 @@ using KyThuatDoHoa_Nhom9.Construct.DefineType;
 
 namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 {
-    class HinhChuNhat : Shapes2DObject
+    public class HinhChuNhat : Shapes2DObject
     {
         private Point _a;
         private Point _b;
         private Point _c;
         private Point _d;
+        private Color color;
 
         public Point A { get => _a; set => _a = value; }
         public Point B { get => _b; set => _b = value; }
@@ -50,7 +51,17 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             this.B = new Point(end.X, start.Y);
             this.C = end;
             this.D = new Point(start.X, end.Y);
+            this.color = Color.Black;
         }
+        public HinhChuNhat(Point start, Point end, Color color)
+        {
+            this.A = start;
+            this.B = new Point(end.X, start.Y);
+            this.C = end;
+            this.D = new Point(start.X, end.Y);
+            this.color = color;
+        }
+
         public void Init(Point start, Point end, Size sizeOfLine, Color color)
         {
             throw new NotImplementedException();
@@ -69,12 +80,20 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             throw new NotImplementedException();
         }
 
-        public void Shifting(Point pDest)
+        public void Shifting(int dx, int dy)
+        {
+            this.A = this.A.Translate(dx, dy);
+            this.B = this.B.Translate(dx, dy);
+            this.C = this.C.Translate(dx, dy);
+            this.D = this.D.Translate(dx, dy);
+        }
+
+        public void Symmetry(Point orgin, SymmetryMode mode)
         {
             throw new NotImplementedException();
         }
 
-        public void Symmetry(Point orgin, SymmetryMode mode)
+        public void Shifting(Point pDest)
         {
             throw new NotImplementedException();
         }

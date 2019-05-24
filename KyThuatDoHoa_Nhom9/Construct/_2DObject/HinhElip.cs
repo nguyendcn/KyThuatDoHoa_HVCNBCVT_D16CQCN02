@@ -17,10 +17,10 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         private Color color { get; set; }
         public void Drawn4Point(int x,int y,Graphics g)
         {
-            ToaDo.HienThi(new Point(point.X + x, point.Y + y), g);
-            ToaDo.HienThi(new Point(point.X - x, point.Y + y), g);
-            ToaDo.HienThi(new Point(point.X - x, point.Y - y), g);
-            ToaDo.HienThi(new Point(point.X + x, point.Y - y), g);
+            ToaDo.HienThi(point.X + x, point.Y + y, g, color);
+            ToaDo.HienThi(point.X - x, point.Y + y, g, color);
+            ToaDo.HienThi(point.X - x, point.Y - y, g, color);
+            ToaDo.HienThi(point.X + x, point.Y - y, g, color);
         }
         public void Drawn4Point_3D(int x, int y, Graphics g, Color color)
         {

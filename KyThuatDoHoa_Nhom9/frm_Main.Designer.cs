@@ -30,7 +30,11 @@ namespace KyThuatDoHoa_Nhom9
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.pnl_Mode = new System.Windows.Forms.Panel();
+            this.button42 = new System.Windows.Forms.Button();
+            this.button41 = new System.Windows.Forms.Button();
+            this.zoom = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
@@ -68,6 +72,8 @@ namespace KyThuatDoHoa_Nhom9
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_Tb_3D = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.grb_3Dobject = new System.Windows.Forms.GroupBox();
             this.button33 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
@@ -85,8 +91,6 @@ namespace KyThuatDoHoa_Nhom9
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnl_Change = new System.Windows.Forms.Panel();
             this.lblWidth = new System.Windows.Forms.Label();
             this.lblHeight = new System.Windows.Forms.Label();
@@ -116,8 +120,8 @@ namespace KyThuatDoHoa_Nhom9
             this.grb_2DLine.SuspendLayout();
             this.panel6.SuspendLayout();
             this.pnl_Tb_3D.SuspendLayout();
-            this.grb_3Dobject.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.grb_3Dobject.SuspendLayout();
             this.pnl_Change.SuspendLayout();
             this.pnl_WorkStation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).BeginInit();
@@ -126,7 +130,10 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // pnl_Mode
             // 
-            this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnl_Mode.Controls.Add(this.button42);
+            this.pnl_Mode.Controls.Add(this.button41);
+            this.pnl_Mode.Controls.Add(this.zoom);
             this.pnl_Mode.Controls.Add(this.button40);
             this.pnl_Mode.Controls.Add(this.button39);
             this.pnl_Mode.Controls.Add(this.button38);
@@ -141,6 +148,36 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Mode.Name = "pnl_Mode";
             this.pnl_Mode.Size = new System.Drawing.Size(860, 49);
             this.pnl_Mode.TabIndex = 0;
+            // 
+            // button42
+            // 
+            this.button42.Location = new System.Drawing.Point(715, 24);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(75, 26);
+            this.button42.TabIndex = 12;
+            this.button42.Text = "Oy";
+            this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
+            // 
+            // button41
+            // 
+            this.button41.Location = new System.Drawing.Point(634, 27);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(75, 23);
+            this.button41.TabIndex = 11;
+            this.button41.Text = "Ox";
+            this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
+            // 
+            // zoom
+            // 
+            this.zoom.Location = new System.Drawing.Point(653, 3);
+            this.zoom.Name = "zoom";
+            this.zoom.Size = new System.Drawing.Size(75, 23);
+            this.zoom.TabIndex = 10;
+            this.zoom.Text = "trục";
+            this.zoom.UseVisualStyleBackColor = true;
+            this.zoom.Click += new System.EventHandler(this.zoom_Click);
             // 
             // button40
             // 
@@ -223,6 +260,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // btn_Menu
             // 
+            this.btn_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Menu.FlatAppearance.BorderSize = 0;
             this.btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Menu.ForeColor = System.Drawing.Color.White;
@@ -239,6 +277,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // btn_Toolbar
             // 
+            this.btn_Toolbar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Toolbar.FlatAppearance.BorderSize = 0;
             this.btn_Toolbar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Toolbar.ForeColor = System.Drawing.Color.White;
@@ -304,33 +343,40 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button9.BackgroundImage = global::KyThuatDoHoa_Nhom9.Properties.Resources.xe_ô_tô;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Location = new System.Drawing.Point(200, 209);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(50, 50);
             this.button9.TabIndex = 15;
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.Button_Click);
             this.button9.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button9.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // button10
             // 
+            this.button10.BackColor = System.Drawing.Color.LawnGreen;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Old_Clock;
             this.button10.Location = new System.Drawing.Point(138, 209);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 14;
             this.button10.Tag = "TimePiece";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.Button_Click);
+            this.button10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button10.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button10.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // button11
             // 
+            this.button11.BackColor = System.Drawing.Color.LightGreen;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Location = new System.Drawing.Point(76, 209);
@@ -338,13 +384,14 @@ namespace KyThuatDoHoa_Nhom9
             this.button11.Size = new System.Drawing.Size(50, 50);
             this.button11.TabIndex = 13;
             this.button11.Tag = "Pendulum";
-            this.button11.UseVisualStyleBackColor = true;
+            this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.Button_Click);
             this.button11.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button11.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // button12
             // 
+            this.button12.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Location = new System.Drawing.Point(10, 209);
@@ -352,7 +399,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button12.Size = new System.Drawing.Size(50, 50);
             this.button12.TabIndex = 12;
             this.button12.Tag = "Clock";
-            this.button12.UseVisualStyleBackColor = true;
+            this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.Button_Click);
             this.button12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button12.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
@@ -610,6 +657,26 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_Tb_3D.Size = new System.Drawing.Size(260, 601);
             this.pnl_Tb_3D.TabIndex = 1;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(260, 49);
+            this.panel7.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(15, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 22);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "3D Shapes";
+            // 
             // grb_3Dobject
             // 
             this.grb_3Dobject.Controls.Add(this.button33);
@@ -853,26 +920,6 @@ namespace KyThuatDoHoa_Nhom9
             this.button24.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button24.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(260, 49);
-            this.panel7.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(15, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "3D Shapes";
-            // 
             // pnl_Change
             // 
             this.pnl_Change.BackColor = System.Drawing.Color.MintCream;
@@ -1059,8 +1106,9 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // picb_2DArea
             // 
-            this.picb_2DArea.BackColor = System.Drawing.Color.White;
+            this.picb_2DArea.BackColor = System.Drawing.Color.DarkGray;
             this.picb_2DArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picb_2DArea.Cursor = System.Windows.Forms.Cursors.Cross;
             this.picb_2DArea.Location = new System.Drawing.Point(305, 100);
             this.picb_2DArea.Name = "picb_2DArea";
             this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
@@ -1073,6 +1121,7 @@ namespace KyThuatDoHoa_Nhom9
             // picb_3DArea
             // 
             this.picb_3DArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.picb_3DArea.Cursor = System.Windows.Forms.Cursors.Cross;
             this.picb_3DArea.Location = new System.Drawing.Point(73, 100);
             this.picb_3DArea.Name = "picb_3DArea";
             this.picb_3DArea.Size = new System.Drawing.Size(220, 219);
@@ -1085,7 +1134,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 90;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frm_Main
@@ -1100,10 +1149,11 @@ namespace KyThuatDoHoa_Nhom9
             this.Controls.Add(this.pnl_Mode);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Main";
-            this.Text = "frm_main";
+            this.Text = "Đồ Họa N9";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Main_Load);
             this.pnl_Mode.ResumeLayout(false);
@@ -1116,9 +1166,9 @@ namespace KyThuatDoHoa_Nhom9
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.pnl_Tb_3D.ResumeLayout(false);
-            this.grb_3Dobject.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.grb_3Dobject.ResumeLayout(false);
             this.pnl_Change.ResumeLayout(false);
             this.pnl_Change.PerformLayout();
             this.pnl_WorkStation.ResumeLayout(false);
@@ -1204,11 +1254,14 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.PictureBox picb_2DArea;
         private System.Windows.Forms.PictureBox picb_3DArea;
         private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button zoom;
+        private System.Windows.Forms.Button button42;
+        private System.Windows.Forms.Button button41;
     }
 }
 
