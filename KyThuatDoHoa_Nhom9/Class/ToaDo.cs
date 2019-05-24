@@ -146,7 +146,6 @@ namespace KyThuatDoHoa_Nhom9
             //Xp = (float)(X + L * (float)Math.Cos(phi));
             //Yp = (float)(Y + L * (float)Math.Sin(phi));
 
-
             Xp = (float)(X - (float)Z * Math.Sqrt(2) / 2);
             Yp = (float)(Y - (float)Z * Math.Sqrt(2) / 2);
 

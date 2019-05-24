@@ -28,7 +28,7 @@ namespace KyThuatDoHoa_Nhom9
             InitializeComponent();
 
             //flagTimer = false;
-            //hinhXe = new HinhXe();
+            hinhXe = new HinhXe();
 
             //// Tạo quả lắc theo kích thước cho trước
             //pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
@@ -520,8 +520,8 @@ namespace KyThuatDoHoa_Nhom9
             //hinhElip.Draw(e.Graphics);
 
 
-            //if (clock != null)
-            //    clock.Draw(e.Graphics);
+            if (clock != null)
+                clock.Draw(e.Graphics);
 
             //pendulum.Draw(e.Graphics);
 
@@ -600,13 +600,13 @@ namespace KyThuatDoHoa_Nhom9
         {
             VeLuoi3D(e.Graphics);
 
-            //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
-            //hinhHopChuNhat.Draw(e.Graphics);
+            HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
+            hinhHopChuNhat.Draw(e.Graphics);
 
 
-            HinhTru hinhTru = new HinhTru(10, -10, 0, 30, 40);
-            hinhTru.Draw(e.Graphics);
-           // hinhTru.DrawElip(e.Graphics);
+            //HinhTru hinhTru = new HinhTru(10, -10, 0, 30, 40);
+            //hinhTru.Draw(e.Graphics);
+            // hinhTru.DrawElip(e.Graphics);
 
         }
 

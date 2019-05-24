@@ -49,14 +49,14 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
         public void Drawn8Point( int x,int y, Graphics g)
         {
-            ToaDo.HienThi(x + point.X, y + point.Y, g);
-            ToaDo.HienThi(y + point.X, x + point.Y, g);
-            ToaDo.HienThi(-x + point.X, -y + point.Y, g);
-            ToaDo.HienThi(-y + point.X, -x + point.Y, g);
-            ToaDo.HienThi(-x + point.X, y + point.Y, g);
-            ToaDo.HienThi(-y + point.X, x + point.Y, g);
-            ToaDo.HienThi(x + point.X, -y + point.Y, g);
-            ToaDo.HienThi(y + point.X, -x + point.Y, g); 
+            ToaDo.HienThi(new Point(x + point.X, y + point.Y), g);
+            ToaDo.HienThi(new Point(y + point.X, x + point.Y), g);
+            ToaDo.HienThi(new Point(-x + point.X, -y + point.Y), g);
+            ToaDo.HienThi(new Point(- y + point.X, -x + point.Y), g);
+            ToaDo.HienThi(new Point(-x + point.X, y + point.Y), g);
+            ToaDo.HienThi(new Point(-y + point.X, x + point.Y), g);
+            ToaDo.HienThi(new Point(x + point.X, -y + point.Y), g);
+            ToaDo.HienThi(new Point(y + point.X, -x + point.Y), g); 
         }
 
         public HinhTron(int bk, Point tamht, Color m)

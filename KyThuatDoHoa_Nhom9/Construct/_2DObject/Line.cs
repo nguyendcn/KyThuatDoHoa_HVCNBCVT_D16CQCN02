@@ -60,7 +60,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             this.B = p;
         }
         /// <summary>
-        ///  Vẽ nét đứt
+        ///  Vẽ đường thẳng dạng nét đứt
         /// </summary>
         public void NetDut(Graphics g)
         {
@@ -220,7 +220,9 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             }
         }
 
-
+        /// <summary>
+        /// Vẽ đường thẳng lên hệ tọa độ
+        /// </summary>
         public void Draw(Graphics g)
         {
             // Làm tròn tạo độ trên Lưới Pixel
