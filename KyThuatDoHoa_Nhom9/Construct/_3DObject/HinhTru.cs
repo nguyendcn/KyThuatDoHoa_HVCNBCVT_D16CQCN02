@@ -76,7 +76,8 @@ namespace KyThuatDoHoa_Nhom9.Construct._3DObject
             Point point = ToaDo.NguoiDungMayTinh_3D(this.TamDay[2, 0], this.TamDay[2, 1], this.TamDay[2, 2]);
             point = ToaDo.MayTinhNguoiDung_3D(point);
 
-            int b = this.BanKinhDay / 3 ;// (int)Math.Sqrt(Math.Abs(Math.Pow(this.BanKinhDay, 2) * Math.Pow(point.Y, 2)/(Math.Pow(this.BanKinhDay,2)-Math.Pow(point.X,2))));
+            double d = this.BanKinhDay * (Math.Sqrt(2) / 2);
+            int b = (int)d;// this.BanKinhDay / 3 ;// (int)Math.Sqrt(Math.Abs(Math.Pow(this.BanKinhDay, 2) * Math.Pow(point.Y, 2)/(Math.Pow(this.BanKinhDay,2)-Math.Pow(point.X,2))));
             HinhElip hinhElip = new HinhElip(ToaDo.NguoiDungMayTinh_3D(this.TamDay[1, 0], this.TamDay[1, 1], this.TamDay[1, 2]), this.BanKinhDay, b,Color.Black);
             hinhElip.NetDut(g);
 

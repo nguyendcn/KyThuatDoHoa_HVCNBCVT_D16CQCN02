@@ -100,7 +100,11 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         }
         public void Scale(SizeF scaleSize)
         {
-            throw new NotImplementedException();
+            this.A = this.A.Scale(scaleSize.Width);
+            this.B = this.B.Scale(scaleSize.Width);
+            this.C = this.C.Scale(scaleSize.Width);
+            this.D = this.D.Scale(scaleSize.Width);
+
         }
 
         public void Shifting(int dx, int dy)

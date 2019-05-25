@@ -71,7 +71,9 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
 
         private void btn_Destroy_Click(object sender, EventArgs e)
         {
+            
             this.Dispose();
+            OnPropertyChanged("Dispose");
         }
 
         private void btn_Hide_Click(object sender, EventArgs e)
@@ -82,6 +84,16 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+        }
+
+        private void btn_ZoomIn_Click(object sender, EventArgs e)
+        {
+            OnPropertyChanged("ZoomIn");
+        }
+
+        private void btn_ZoomOut_Click(object sender, EventArgs e)
+        {
+            OnPropertyChanged("ZoomOut");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

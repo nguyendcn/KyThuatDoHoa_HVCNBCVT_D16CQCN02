@@ -98,7 +98,6 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea = new System.Windows.Forms.PictureBox();
             this.picb_3DArea = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label4 = new System.Windows.Forms.Label();
             this.pnl_Mode.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -125,7 +124,6 @@ namespace KyThuatDoHoa_Nhom9
             // pnl_Mode
             // 
             this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnl_Mode.Controls.Add(this.label4);
             this.pnl_Mode.Controls.Add(this.panel8);
             this.pnl_Mode.Controls.Add(this.panel2);
             this.pnl_Mode.Controls.Add(this.panel1);
@@ -1007,14 +1005,6 @@ namespace KyThuatDoHoa_Nhom9
             this.timer1.Interval = 90;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(307, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 18);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "label4";
-            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1132,7 +1122,6 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_LocationInGird;
         private System.Windows.Forms.Label lbl_SizeGird;
-        private System.Windows.Forms.Label label4;
     }
 }
 

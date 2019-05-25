@@ -108,7 +108,9 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         public void Draw(Graphics g)
         {
             this.item_triangle.Draw(g, Color.Red);
+            
             this.item_rectangle.Draw(g, Color.Blue);
+            //this.item_rectangle.Scale(new SizeF(2, 2));
             this.Item_clock.Draw(g);
             this.Item_pendulum.Draw(g);
             

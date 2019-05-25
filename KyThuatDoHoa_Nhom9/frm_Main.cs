@@ -478,7 +478,7 @@ namespace KyThuatDoHoa_Nhom9
         }
         private void TimepieceProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName.Equals("timeChanged"))
+            if (e.PropertyName.Equals("currentTime"))
             {
                 timepiece.Item_clock.CurrentDatetime = timepieceProperties.ClockProperties.CurrentTime;
             }
@@ -490,6 +490,14 @@ namespace KyThuatDoHoa_Nhom9
             {
                 this.timepiece = null;
                 this.timepieceProperties = null;
+            }
+            else if(e.PropertyName.Equals("ZoomIn"))
+            {
+                this.timepiece.Item_clock.R += 5;
+            }
+            else if(e.PropertyName.Equals("ZoomOut"))
+            {
+                this.timepiece.Item_clock.R -= 5;
             }
         }
         #endregion
@@ -525,15 +533,31 @@ namespace KyThuatDoHoa_Nhom9
             {
                 this.picb_2DArea.Refresh();
             }
-            clockProperties.CurrentTime = clock.CurrentDatetime;
-            clockProperties.HHours = clock.HHours;
-            clockProperties.HMinute = clock.HMinute;
-            clockProperties.HSecond = clock.HSecond;
+            if (clockProperties != null && clock != null)
+            {
+                clockProperties.CurrentTime = clock.CurrentDatetime;
+                clockProperties.HHours = clock.HHours;
+                clockProperties.HMinute = clock.HMinute;
+                clockProperties.HSecond = clock.HSecond;
+            }
         }
 
 
         private void ClockProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
+            if (e.PropertyName.Equals("ZoomIn"))
+            {
+                clock.R += 5;
+            }
+            else if(e.PropertyName.Equals("ZoomOut"))
+            {
+                clock.R -= 5;
+            }
+            else if(e.PropertyName.Equals("Dispose"))
+            {
+                clock = null;
+                return;
+            }
             clock.CurrentDatetime = clockProperties.CurrentTime;
         }
         #endregion
@@ -852,7 +876,7 @@ namespace KyThuatDoHoa_Nhom9
         {
             Point p = e.Location;
 
-            label4.Text = p.ToString();
+            
 
         }
 
@@ -987,6 +1011,14 @@ namespace KyThuatDoHoa_Nhom9
         private void lbl_LocationInGird_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button21_Click_1(object sender, EventArgs e)
+        {
+            if(clock != null)
+            {
+                clock.R = 30;
+            }
         }
     }
 

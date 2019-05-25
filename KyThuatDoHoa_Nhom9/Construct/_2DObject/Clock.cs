@@ -62,6 +62,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                 if(value != _r) //change
                 {
                     _r = value;
+                    SetupClockwise(this.CurrentDatetime);
                     OnPropertyChanged("_r");
                 }
             }

@@ -95,6 +95,24 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             return matrix;
         }
 
+        private static double[,] SetUpForMatrixScale(this double[,] matrix, double  x) 
+        {
+            if (matrix.Length == 0 || matrix == null)
+            {
+                matrix = new double[3, 3] {
+                   { 1, 0, 0},
+                   { 0, 1, 0},
+                   { 0, 0, 1}
+                };
+                return matrix;
+            }
+
+            matrix[0, 0] = x; matrix[0, 1] = 0; matrix[0, 2] = 0;
+            matrix[1, 0] = 0; matrix[1, 1] = x; matrix[1, 2] = 0;
+            matrix[2, 0] = 0; matrix[2, 1] =0 ; matrix[2, 2] = 1;
+            return matrix;
+        }
+
         /// <summary>
         /// Matrix Translation To Original Coordinate
         /// </summary>
@@ -170,6 +188,18 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
             return p;
         }
-        
+
+        public static Point Scale(this Point d1, double x)
+        {
+            double[] arr = new double[3];
+            double[,] matrix = new double[3, 3];
+
+            arr = d1.ConvertToMatrix();
+            matrix = matrix.SetUpForMatrixScale(x);
+            Point p = GetNewPointByMulMatixs(matrix, arr);
+
+            return p;
+        }
+
     }
 }

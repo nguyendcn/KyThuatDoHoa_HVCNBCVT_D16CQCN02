@@ -26,7 +26,7 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
 
         private void ClockProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            OnPropertyChanged("timeChanged");
+            OnPropertyChanged(e.PropertyName);
         }
 
         public Point MainLocation { get => mainLocation;

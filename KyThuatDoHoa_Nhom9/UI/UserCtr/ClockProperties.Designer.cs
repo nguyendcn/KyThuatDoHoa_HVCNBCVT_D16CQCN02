@@ -33,6 +33,8 @@
             this.btn_Destroy = new System.Windows.Forms.Button();
             this.Clock = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_ZoomOut = new System.Windows.Forms.Button();
+            this.btn_ZoomIn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_TimeCurrent = new System.Windows.Forms.Label();
             this.btn_GetTimeSystem = new System.Windows.Forms.Button();
@@ -112,6 +114,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MintCream;
+            this.panel2.Controls.Add(this.btn_ZoomOut);
+            this.panel2.Controls.Add(this.btn_ZoomIn);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -120,6 +124,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(175, 571);
             this.panel2.TabIndex = 2;
+            // 
+            // btn_ZoomOut
+            // 
+            this.btn_ZoomOut.Location = new System.Drawing.Point(98, 287);
+            this.btn_ZoomOut.Name = "btn_ZoomOut";
+            this.btn_ZoomOut.Size = new System.Drawing.Size(37, 23);
+            this.btn_ZoomOut.TabIndex = 5;
+            this.btn_ZoomOut.Text = "-";
+            this.btn_ZoomOut.UseVisualStyleBackColor = true;
+            this.btn_ZoomOut.Click += new System.EventHandler(this.btn_ZoomOut_Click);
+            // 
+            // btn_ZoomIn
+            // 
+            this.btn_ZoomIn.Location = new System.Drawing.Point(31, 287);
+            this.btn_ZoomIn.Name = "btn_ZoomIn";
+            this.btn_ZoomIn.Size = new System.Drawing.Size(44, 23);
+            this.btn_ZoomIn.TabIndex = 4;
+            this.btn_ZoomIn.Text = "+";
+            this.btn_ZoomIn.UseVisualStyleBackColor = true;
+            this.btn_ZoomIn.Click += new System.EventHandler(this.btn_ZoomIn_Click);
             // 
             // groupBox1
             // 
@@ -361,5 +385,7 @@
         private System.Windows.Forms.Label lbl_1;
         private System.Windows.Forms.Button btn_Hide;
         private System.Windows.Forms.Button btn_Destroy;
+        private System.Windows.Forms.Button btn_ZoomOut;
+        private System.Windows.Forms.Button btn_ZoomIn;
     }
 }

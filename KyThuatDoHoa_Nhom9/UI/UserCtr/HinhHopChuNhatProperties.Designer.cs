@@ -276,9 +276,9 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label10.Location = new System.Drawing.Point(3, 262);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 20);
+            this.label10.Size = new System.Drawing.Size(88, 20);
             this.label10.TabIndex = 25;
-            this.label10.Text = "Tọa độ tâm";
+            this.label10.Text = "Tọa độ gốc";
             // 
             // label11
             // 
