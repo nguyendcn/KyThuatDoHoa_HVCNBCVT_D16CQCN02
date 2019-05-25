@@ -103,7 +103,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(16, 371);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(138, 46);
+            this.groupBox3.Size = new System.Drawing.Size(138, 61);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Control";
@@ -135,7 +135,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Location = new System.Drawing.Point(49, 27);
+            this.button2.Location = new System.Drawing.Point(50, 28);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(45, 16);
             this.button2.TabIndex = 0;

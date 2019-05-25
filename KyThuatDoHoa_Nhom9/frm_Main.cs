@@ -30,7 +30,7 @@ namespace KyThuatDoHoa_Nhom9
         bool flagXe;
         Clock clock;
         ClockProperties clockProperties;
-        bool flagDung = false;
+       
 
         Point s = new Point(3, 3);
         Point ep = new Point(15, 15);
@@ -517,8 +517,9 @@ namespace KyThuatDoHoa_Nhom9
             else if (e.PropertyName.Equals("xoa"))
             {
                 flagXe = false;
-                
+
             }
+           
         }
         #endregion
         #region Clock action
@@ -690,10 +691,12 @@ namespace KyThuatDoHoa_Nhom9
                 {
                     
                     dem++;
-                    // tịnh tiến 5 đơn vị
-                    // đi phải qua trái
-                    hinhXe.traslationXe(5, 0);
-                    hinhXe.quayBanhXe(30);
+                        // tịnh tiến 5 đơn vị
+                        // đi phải qua trái
+                        hinhXe.traslationXe(5, 0);
+                        hinhXe.quayBanhXe(30);
+                  
+                   
                 }
                 else if (dem <= 60)
                 {
