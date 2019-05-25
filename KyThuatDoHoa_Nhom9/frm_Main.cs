@@ -861,7 +861,7 @@ namespace KyThuatDoHoa_Nhom9
         #region Vẽ trên picb_3DArea sử dụng Cavalier
         private void Picb_3DArea_Paint(object sender, PaintEventArgs e)
         {
-            //VeLuoi3D(e.Graphics);
+            VeLuoi3D(e.Graphics);
 
             //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
             //hinhHopChuNhat.Draw(e.Graphics);
@@ -926,15 +926,15 @@ namespace KyThuatDoHoa_Nhom9
             Pen pen = new Pen(Color.Black);
 
 
-            // Vẽ lưới 
-            for (int i = 0; i < picb_3DArea.Width; i += 5)
-            {
-                g.DrawLine(pen, new Point(i, 0), new Point(i, picb_3DArea.Height));
-            }
-            for (int i = 0; i < picb_3DArea.Height; i += 5)
-            {
-                g.DrawLine(pen, new Point(0, i), new Point(picb_3DArea.Width, i));
-            }
+            //// Vẽ lưới 
+            //for (int i = 0; i < picb_3DArea.Width; i += 5)
+            //{
+            //    g.DrawLine(pen, new Point(i, 0), new Point(i, picb_3DArea.Height));
+            //}
+            //for (int i = 0; i < picb_3DArea.Height; i += 5)
+            //{
+            //    g.DrawLine(pen, new Point(0, i), new Point(picb_3DArea.Width, i));
+            //}
 
             // Vẽ trục tọa độ
             pen = new Pen(Color.Red);
@@ -945,6 +945,8 @@ namespace KyThuatDoHoa_Nhom9
             g.DrawLine(pen, new Point(x, y), new Point(x, 0));                          // trục Oy
             g.DrawLine(pen, new Point(x, y), new Point(x-y, y + y));                      // trục Oz
             System.Console.WriteLine((x - y) + " " + (y ));
+
+
 ;        }
 
 
