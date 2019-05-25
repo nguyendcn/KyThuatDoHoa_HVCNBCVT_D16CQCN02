@@ -296,9 +296,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label12.Location = new System.Drawing.Point(26, 330);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(20, 20);
+            this.label12.Size = new System.Drawing.Size(19, 20);
             this.label12.TabIndex = 27;
-            this.label12.Text = "Y";
+            this.label12.Text = "Z";
             // 
             // label13
             // 
@@ -306,9 +306,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label13.Location = new System.Drawing.Point(29, 288);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(19, 20);
+            this.label13.Size = new System.Drawing.Size(20, 20);
             this.label13.TabIndex = 28;
-            this.label13.Text = "Z";
+            this.label13.Text = "X";
             // 
             // txtTamZ
             // 

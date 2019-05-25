@@ -599,7 +599,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // picb_2DArea
             // 
-            this.picb_2DArea.BackColor = System.Drawing.Color.DarkGray;
+            this.picb_2DArea.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.picb_2DArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picb_2DArea.Cursor = System.Windows.Forms.Cursors.Cross;
             this.picb_2DArea.Location = new System.Drawing.Point(305, 100);
@@ -613,7 +613,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // picb_3DArea
             // 
-            this.picb_3DArea.BackColor = System.Drawing.Color.DarkGray;
+            this.picb_3DArea.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.picb_3DArea.Cursor = System.Windows.Forms.Cursors.Cross;
             this.picb_3DArea.Location = new System.Drawing.Point(73, 100);
             this.picb_3DArea.Name = "picb_3DArea";
@@ -939,6 +939,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // btn_Author
             // 
+            this.btn_Author.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Author.FlatAppearance.BorderSize = 0;
             this.btn_Author.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Author.ForeColor = System.Drawing.Color.White;
@@ -956,6 +957,7 @@ namespace KyThuatDoHoa_Nhom9
             // 
             // btn_Help
             // 
+            this.btn_Help.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Help.FlatAppearance.BorderSize = 0;
             this.btn_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Help.ForeColor = System.Drawing.Color.White;

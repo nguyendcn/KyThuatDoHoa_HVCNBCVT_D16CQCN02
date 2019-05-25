@@ -30,6 +30,7 @@ namespace KyThuatDoHoa_Nhom9
         bool flagXe;
         Clock clock;
         ClockProperties clockProperties;
+        bool flagDung = false;
 
         Point s = new Point(3, 3);
         Point ep = new Point(15, 15);
@@ -687,6 +688,7 @@ namespace KyThuatDoHoa_Nhom9
 
                 if (dem <= 30)
                 {
+                    
                     dem++;
                     // tịnh tiến 5 đơn vị
                     // đi phải qua trái
@@ -831,7 +833,7 @@ namespace KyThuatDoHoa_Nhom9
 
             //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
             //hinhHopChuNhat.Draw(e.Graphics);
-
+       
 
             //HinhTru hinhTru = new HinhTru(10, -10, 0, 30, 40);
             if (hinhTruProperties.Visible == true)
@@ -886,7 +888,7 @@ namespace KyThuatDoHoa_Nhom9
             //}
 
             // Vẽ trục tọa độ
-            pen = new Pen(Color.Red);
+            pen = new Pen(Color.Black);
             int x = picb_3DArea.Width * 2 / 5,//365,
                y = picb_3DArea.Height / 2; //305,
 

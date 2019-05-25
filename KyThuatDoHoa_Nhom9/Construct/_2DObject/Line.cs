@@ -231,7 +231,6 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         /// </summary>
         public void Draw(Graphics g)
         {
-            // Làm tròn tạo độ trên Lưới Pixel
             this.A = ToaDo.RoundPixel(this.A);
             this.B = ToaDo.RoundPixel(this.B);
 

@@ -31,7 +31,7 @@ namespace KyThuatDoHoa_Nhom9
         /// </summary>
         public static int RoundPixel(int p)
         {
-            double d = p % 5;
+            int d= p % 5;
             if (d >= 3)
                 return (int)(p - d + 5);
 
@@ -46,7 +46,7 @@ namespace KyThuatDoHoa_Nhom9
                 y = p.Y % 5;
 
             x = (x >= 3 ? p.X - x + 5 : p.X - x);
-            y = (y >= 3 ? y = p.Y - y + 5 : y = p.Y - y);
+            y = (y >= 3 ? p.Y - y + 5 : p.Y - y);
 
             return new Point(x, y);
         }
