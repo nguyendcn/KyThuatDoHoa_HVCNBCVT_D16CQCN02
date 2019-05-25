@@ -150,20 +150,20 @@
             // btn_GetTimeSystem
             // 
             this.btn_GetTimeSystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GetTimeSystem.Location = new System.Drawing.Point(107, 29);
+            this.btn_GetTimeSystem.Location = new System.Drawing.Point(120, 29);
             this.btn_GetTimeSystem.Name = "btn_GetTimeSystem";
-            this.btn_GetTimeSystem.Size = new System.Drawing.Size(60, 23);
+            this.btn_GetTimeSystem.Size = new System.Drawing.Size(47, 23);
             this.btn_GetTimeSystem.TabIndex = 8;
-            this.btn_GetTimeSystem.Text = "Sys Time";
+            this.btn_GetTimeSystem.Text = "Syn";
             this.btn_GetTimeSystem.UseVisualStyleBackColor = true;
             this.btn_GetTimeSystem.Click += new System.EventHandler(this.Btn_GetTimeSystem_Click);
             // 
             // btn_ChangeTime
             // 
             this.btn_ChangeTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ChangeTime.Location = new System.Drawing.Point(108, 65);
+            this.btn_ChangeTime.Location = new System.Drawing.Point(120, 68);
             this.btn_ChangeTime.Name = "btn_ChangeTime";
-            this.btn_ChangeTime.Size = new System.Drawing.Size(59, 23);
+            this.btn_ChangeTime.Size = new System.Drawing.Size(47, 23);
             this.btn_ChangeTime.TabIndex = 7;
             this.btn_ChangeTime.Text = "Change";
             this.btn_ChangeTime.UseVisualStyleBackColor = true;
