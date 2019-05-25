@@ -315,8 +315,7 @@
             this.txtTamZ.Location = new System.Drawing.Point(89, 337);
             this.txtTamZ.Name = "txtTamZ";
             this.txtTamZ.Size = new System.Drawing.Size(45, 20);
-            this.txtTamZ.TabIndex = 31;
-            this.txtTamZ.Text = "0";
+            this.txtTamZ.TabIndex = 2;
             this.txtTamZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTamY
@@ -324,8 +323,7 @@
             this.txtTamY.Location = new System.Drawing.Point(89, 311);
             this.txtTamY.Name = "txtTamY";
             this.txtTamY.Size = new System.Drawing.Size(45, 20);
-            this.txtTamY.TabIndex = 29;
-            this.txtTamY.Text = "0";
+            this.txtTamY.TabIndex = 1;
             this.txtTamY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTamX
@@ -333,8 +331,7 @@
             this.txtTamX.Location = new System.Drawing.Point(89, 285);
             this.txtTamX.Name = "txtTamX";
             this.txtTamX.Size = new System.Drawing.Size(45, 20);
-            this.txtTamX.TabIndex = 30;
-            this.txtTamX.Text = "0";
+            this.txtTamX.TabIndex = 0;
             this.txtTamX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label14
@@ -373,7 +370,7 @@
             this.btnOK.Location = new System.Drawing.Point(37, 430);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 38;
+            this.btnOK.TabIndex = 6;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.BtnOK_Click);
@@ -383,8 +380,7 @@
             this.txtChieuDai.Location = new System.Drawing.Point(88, 359);
             this.txtChieuDai.Name = "txtChieuDai";
             this.txtChieuDai.Size = new System.Drawing.Size(45, 20);
-            this.txtChieuDai.TabIndex = 36;
-            this.txtChieuDai.Text = "0";
+            this.txtChieuDai.TabIndex = 3;
             this.txtChieuDai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtChieuCao
@@ -392,8 +388,7 @@
             this.txtChieuCao.Location = new System.Drawing.Point(88, 405);
             this.txtChieuCao.Name = "txtChieuCao";
             this.txtChieuCao.Size = new System.Drawing.Size(45, 20);
-            this.txtChieuCao.TabIndex = 37;
-            this.txtChieuCao.Text = "0";
+            this.txtChieuCao.TabIndex = 5;
             this.txtChieuCao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtChieuRong
@@ -401,8 +396,7 @@
             this.txtChieuRong.Location = new System.Drawing.Point(88, 381);
             this.txtChieuRong.Name = "txtChieuRong";
             this.txtChieuRong.Size = new System.Drawing.Size(45, 20);
-            this.txtChieuRong.TabIndex = 35;
-            this.txtChieuRong.Text = "0";
+            this.txtChieuRong.TabIndex = 4;
             this.txtChieuRong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // HinhHopChuNhatProperties

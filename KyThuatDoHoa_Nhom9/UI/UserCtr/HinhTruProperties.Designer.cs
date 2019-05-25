@@ -93,18 +93,18 @@
             this.txtChieuCao.Location = new System.Drawing.Point(92, 326);
             this.txtChieuCao.Name = "txtChieuCao";
             this.txtChieuCao.Size = new System.Drawing.Size(45, 20);
-            this.txtChieuCao.TabIndex = 20;
-            this.txtChieuCao.Text = "0";
+            this.txtChieuCao.TabIndex = 3;
             this.txtChieuCao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtChieuCao.TextChanged += new System.EventHandler(this.txtChieuCao_TextChanged);
             // 
             // txtBanKinh
             // 
             this.txtBanKinh.Location = new System.Drawing.Point(92, 352);
             this.txtBanKinh.Name = "txtBanKinh";
             this.txtBanKinh.Size = new System.Drawing.Size(45, 20);
-            this.txtBanKinh.TabIndex = 21;
-            this.txtBanKinh.Text = "0";
+            this.txtBanKinh.TabIndex = 4;
             this.txtBanKinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBanKinh.TextChanged += new System.EventHandler(this.txtBanKinh_TextChanged);
             // 
             // groupBox1
             // 
@@ -293,27 +293,27 @@
             this.txtTamX.Location = new System.Drawing.Point(91, 248);
             this.txtTamX.Name = "txtTamX";
             this.txtTamX.Size = new System.Drawing.Size(45, 20);
-            this.txtTamX.TabIndex = 20;
-            this.txtTamX.Text = "0";
+            this.txtTamX.TabIndex = 0;
             this.txtTamX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTamX.TextChanged += new System.EventHandler(this.txtTamX_TextChanged);
             // 
             // txtTamZ
             // 
             this.txtTamZ.Location = new System.Drawing.Point(92, 300);
             this.txtTamZ.Name = "txtTamZ";
             this.txtTamZ.Size = new System.Drawing.Size(45, 20);
-            this.txtTamZ.TabIndex = 21;
-            this.txtTamZ.Text = "0";
+            this.txtTamZ.TabIndex = 2;
             this.txtTamZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTamZ.TextChanged += new System.EventHandler(this.txtTamZ_TextChanged);
             // 
             // txtTamY
             // 
             this.txtTamY.Location = new System.Drawing.Point(91, 274);
             this.txtTamY.Name = "txtTamY";
             this.txtTamY.Size = new System.Drawing.Size(45, 20);
-            this.txtTamY.TabIndex = 20;
-            this.txtTamY.Text = "0";
+            this.txtTamY.TabIndex = 1;
             this.txtTamY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTamY.TextChanged += new System.EventHandler(this.txtTamY_TextChanged);
             // 
             // btnOK
             // 
@@ -321,7 +321,7 @@
             this.btnOK.Location = new System.Drawing.Point(36, 387);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 27;
+            this.btnOK.TabIndex = 5;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.BtnOK_Click);
@@ -359,6 +359,7 @@
             this.Controls.Add(this.button1);
             this.Name = "HinhTruProperties";
             this.Size = new System.Drawing.Size(198, 601);
+            this.Load += new System.EventHandler(this.HinhTruProperties_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

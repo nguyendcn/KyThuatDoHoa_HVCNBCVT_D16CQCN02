@@ -35,8 +35,8 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             set
             {
                 this._hHours = value;
-                lbl_hHoursA.Text = value.A.ToString();
-                lbl_hHoursB.Text = value.B.ToString();
+                lbl_hHoursA.Text = ToaDo.MayTinhNguoiDung(value.A).ToString();
+                lbl_hHoursB.Text = ToaDo.MayTinhNguoiDung(value.B).ToString();
           
             }
         }
@@ -44,16 +44,16 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
             set
             {
                 this._hMinute = value;
-                lbl_hMinuteA.Text = value.A.ToString();
-                lbl_hMinuteB.Text = value.B.ToString();
+                lbl_hMinuteA.Text = ToaDo.MayTinhNguoiDung(value.A).ToString();
+                lbl_hMinuteB.Text = ToaDo.MayTinhNguoiDung(value.B).ToString();
             }
         }
         public Line HSecond { get => _hSecond;
             set
             {
                 this._hSecond = value;
-                lbl_hSecondA.Text = value.A.ToString();
-                lbl_hSecondB.Text = value.B.ToString();
+                lbl_hSecondA.Text = ToaDo.MayTinhNguoiDung(value.A).ToString();
+                lbl_hSecondB.Text = ToaDo.MayTinhNguoiDung(value.B).ToString();
             }
         }
 

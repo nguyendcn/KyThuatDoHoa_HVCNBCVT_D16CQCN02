@@ -63,9 +63,29 @@ namespace KyThuatDoHoa_Nhom9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _61287020_371287316833461_49culo91464580271046656_n {
+            get {
+                object obj = ResourceManager.GetObject("61287020_371287316833461_49culo91464580271046656_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CỦ_LOZ {
+            get {
+                object obj = ResourceManager.GetObject("CỦ LOZ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

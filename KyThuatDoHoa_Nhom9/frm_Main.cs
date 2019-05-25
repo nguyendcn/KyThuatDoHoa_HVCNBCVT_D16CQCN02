@@ -44,6 +44,9 @@ namespace KyThuatDoHoa_Nhom9
         public frm_Main()
         {
             InitializeComponent();
+
+            //button21.Visible = false;
+            //button41.Visible = false;
                       
             hinhTru = new HinhTru(10, -10, 0, 30, 10);
             hinhTruProperties = new HinhTruProperties();
@@ -171,6 +174,7 @@ namespace KyThuatDoHoa_Nhom9
                     this.btn_Toolbar.Text = Collection_Strs._2D_shapes;
                 this.btn_Toolbar.Image = Image_Res._2D_Model_25px;
                 this.picb_2DArea.Dock = DockStyle.Fill;
+                this.panel9.Visible = true;
                 picb_2DArea.BringToFront();
 
             }
@@ -181,6 +185,7 @@ namespace KyThuatDoHoa_Nhom9
                     this.btn_Toolbar.Text = Collection_Strs._3D_shapes;
                 this.btn_Toolbar.Image = Image_Res._3D_Model_25px;
                 this.picb_3DArea.Dock = DockStyle.Fill;
+                this.panel9.Visible = false;
                 picb_3DArea.BringToFront();
             }
 
@@ -656,11 +661,6 @@ namespace KyThuatDoHoa_Nhom9
         {
             cl = new Clock(new Point(550, 320), 20, DateTime.Now);
             cl.PropertyChanged += Cl_PropertyChanged;
-
-            //hinhChuNhat = new HinhChuNhat(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
-            ////line = new Line(ToaDo.NguoiDungMayTinh(s), ToaDo.NguoiDungMayTinh(ep));
-            //tm.Tick += timer1_Tick;
-            //tm.Start();
         }
 
         private void Cl_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -676,23 +676,6 @@ namespace KyThuatDoHoa_Nhom9
         int dem = 0;
         private void picb_2DArea_Paint(object sender, PaintEventArgs e)
         {
-            //if (test)
-            //{
-            //    line.Draw(e.Graphics);
-            //    line.Rotate(new Point(550, 320), 20);
-            //    hinhChuNhat.Draw(e.Graphics);
-            //    hinhChuNhat.Rotate(new Point(550, 320), 90);
-            //    cl.CurrentDatetime = DateTime.Now;
-            //    cl.Draw(e.Graphics);
-            //}
-
-            //if (clock != null)
-            //    clock.Draw(e.Graphics);
-
-
-            //pendulum.Draw(e.Graphics);
-
-
 
             if (flagXe)
             {
@@ -709,8 +692,6 @@ namespace KyThuatDoHoa_Nhom9
                     // đi phải qua trái
                     hinhXe.traslationXe(5, 0);
                     hinhXe.quayBanhXe(30);
-
-
                 }
                 else if (dem <= 60)
                 {
@@ -771,12 +752,13 @@ namespace KyThuatDoHoa_Nhom9
 
         private void btn_Author_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Nhom 9 nha", "Hahahah", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            AboutBox1 box1 = new AboutBox1();
+            box1.ShowDialog();
         }
 
         private void btn_Help_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Nhom 9 nha", "Hoi cham", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("https://github.com/nguyendcn/KyThuatDoHoa_HVCNBCVT_D16CQCN02", "Hoi cham", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void button38_Click(object sender, EventArgs e)
@@ -832,30 +814,14 @@ namespace KyThuatDoHoa_Nhom9
 
             lbl_SizeGird.Text = picb_2DArea.ToString();
 
-            lblWidth.Text = picb_2DArea.Width.ToString();
-            lblHeight.Text = picb_2DArea.Height.ToString();
+            //lblWidth.Text = picb_2DArea.Width.ToString();
+            //lblHeight.Text = picb_2DArea.Height.ToString();
 
-            // Tọa độ của chuột khi move
-            lblX1.Text = e.Location.X.ToString();
-            lblY1.Text = e.Location.Y.ToString();
-
-            // Làm tròn tọa độ trên lưới Pixel
-            p = ToaDo.RoundPixel(e.Location);
-            lblX2.Text = p.X.ToString();
-            lblY2.Text = p.Y.ToString();
-
-            // Chuyển từ tọa độ máy tính về tọa độ người dùng
             p = ToaDo.MayTinhNguoiDung(p);
-            lblX3.Text = p.X.ToString();
-            lblY3.Text = p.Y.ToString();
-
             lbl_SizeGird.Text = ((picb_2DArea.Size.Width / 5) / 2) + ", " + ((picb_2DArea.Size.Height / 5) / 2);
             lbl_LocationInGird.Text = p.X + ", " + p.Y;
 
-            // Chuyển từ tọa độ người dùng về tọa độ máy tính
-            p = ToaDo.NguoiDungMayTinh(p);
-            lblX4.Text = p.X.ToString();
-            lblY4.Text = p.Y.ToString();
+     
 
         }
         #region Vẽ trên picb_3DArea sử dụng Cavalier
@@ -886,24 +852,7 @@ namespace KyThuatDoHoa_Nhom9
         {
             Point p = e.Location;
 
-            //lblWidth.Text = picb_3DArea.Width.ToString();
-            //lblHeight.Text = picb_3DArea.Height.ToString();
-            lblWidth.Text = Variables.Globals.sizeOfNewCoor_3D.Width.ToString();
-            lblHeight.Text = Variables.Globals.sizeOfNewCoor_3D.Height.ToString();
 
-            // Tọa độ của chuột khi move
-            lblX1.Text = e.Location.X.ToString();
-            lblY1.Text = e.Location.Y.ToString();
-
-            // Làm tròn tọa độ trên lưới Pixel
-            p = ToaDo.RoundPixel(e.Location);
-            lblX2.Text = p.X.ToString();
-            lblY2.Text = p.Y.ToString();
-
-            // Chuyển từ tọa độ máy tính về tọa độ người dùng
-            p = ToaDo.MayTinhNguoiDung_3D(p);
-            lblX3.Text = p.X.ToString();
-            lblY3.Text = p.Y.ToString();
 
         }
 
@@ -961,30 +910,12 @@ namespace KyThuatDoHoa_Nhom9
 
         private void button41_Click(object sender, EventArgs e)
         {
-            this.pnl_ToolBox.Controls.Add(hinhHopChuNhatProperties);
-            hinhHopChuNhatProperties.PropertyChanged += HinhHopChuNhatProperties_PropertyChanged;
-            if (flagXe == false)
-            {
-                hinhHopChuNhatProperties.Refresh();
-            }
-
-            hinhHopChuNhatProperties.BringToFront();
-            hinhHopChuNhatProperties.Visible = true;
-            hinhTruProperties.Visible = false;
+            
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
-            this.pnl_ToolBox.Controls.Add(hinhTruProperties);
-            hinhTruProperties.PropertyChanged += HinhTruProperties_PropertyChanged;
-            if (flagXe == false)
-            {
-                hinhTruProperties.Refresh();
-            }
-
-            hinhTruProperties.BringToFront();
-            hinhTruProperties.Visible = true;
-            hinhHopChuNhatProperties.Visible = false;
+            
         }
 
         private void HinhTruProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -1018,6 +949,36 @@ namespace KyThuatDoHoa_Nhom9
             hinhHopChuNhat.Draw(picb_3DArea.CreateGraphics());
         }
 
+        private void BTN3D_MouseDown(object sender, MouseEventArgs e)
+        {
+            Button btn = sender as Button;
+            if(btn.Tag.Equals("Cylinder"))
+            {
+                this.pnl_ToolBox.Controls.Add(hinhTruProperties);
+                hinhTruProperties.PropertyChanged += HinhTruProperties_PropertyChanged;
+                if (flagXe == false)
+                {
+                    hinhTruProperties.Refresh();
+                }
+
+                hinhTruProperties.BringToFront();
+                hinhTruProperties.Visible = true;
+                hinhHopChuNhatProperties.Visible = false;
+            }
+            else if(btn.Tag.Equals("Cube"))
+            {
+                this.pnl_ToolBox.Controls.Add(hinhHopChuNhatProperties);
+                hinhHopChuNhatProperties.PropertyChanged += HinhHopChuNhatProperties_PropertyChanged;
+                if (flagXe == false)
+                {
+                    hinhHopChuNhatProperties.Refresh();
+                }
+
+                hinhHopChuNhatProperties.BringToFront();
+                hinhHopChuNhatProperties.Visible = true;
+                hinhTruProperties.Visible = false;
+            }
+        }
     }
 
 

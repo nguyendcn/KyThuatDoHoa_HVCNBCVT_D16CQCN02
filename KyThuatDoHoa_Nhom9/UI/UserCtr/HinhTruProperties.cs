@@ -63,5 +63,35 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
         {
             this.Visible = false;
         }
+
+        private void HinhTruProperties_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTamY_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTamX_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTamZ_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtChieuCao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBanKinh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
