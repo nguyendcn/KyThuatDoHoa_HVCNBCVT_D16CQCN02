@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using KyThuatDoHoa_Nhom9.UI;
-using KyThuatDoHoa_Nhom9.Variables;
-using KyThuatDoHoa_Nhom9.Construct._2DObject;
+﻿using KyThuatDoHoa_Nhom9.Construct._2DObject;
 using KyThuatDoHoa_Nhom9.Construct._3DObject;
 using KyThuatDoHoa_Nhom9.UI.UserCtr;
+using KyThuatDoHoa_Nhom9.Variables;
+using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace KyThuatDoHoa_Nhom9
 {
@@ -615,6 +608,8 @@ namespace KyThuatDoHoa_Nhom9
             // Vẽ 2 đường biên Ox và Oy 
             g.DrawLine(pen, 5 * width / 2, 0, 5 * width / 2, picb_2DArea.Height);
             g.DrawLine(pen, 0, 5 * height / 2, picb_2DArea.Width, 5 * height / 2);
+            g.DrawString("Y", new Font("Time New Roman", 10), Brushes.Yellow, ToaDo.NguoiDungMayTinh(new Point(1, 59)));
+            g.DrawString("X", new Font("Time New Roman", 10), Brushes.Yellow, ToaDo.NguoiDungMayTinh(new Point(107, -1)));
         }
 
         private void Frm_Main_Load(object sender, EventArgs e)
@@ -857,7 +852,7 @@ namespace KyThuatDoHoa_Nhom9
         {
             Point p = e.Location;
 
-
+            label4.Text = p.ToString();
 
         }
 
@@ -900,8 +895,12 @@ namespace KyThuatDoHoa_Nhom9
             g.DrawLine(pen, new Point(x, y), new Point(x-y, y + y));                      // trục Oz
             System.Console.WriteLine((x - y) + " " + (y ));
 
+             g.DrawString("Y", new Font("Time New Roman", 10), Brushes.Yellow, new Point(450,55));
 
-;        }
+            g.DrawString("X", new Font("Time New Roman", 10), Brushes.Yellow, new Point(1082, 330));
+            g.DrawString("Z", new Font("Time New Roman", 10), Brushes.Yellow, new Point(88, 673));
+
+     }
 
 
 
@@ -983,6 +982,11 @@ namespace KyThuatDoHoa_Nhom9
                 hinhHopChuNhatProperties.Visible = true;
                 hinhTruProperties.Visible = false;
             }
+        }
+
+        private void lbl_LocationInGird_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

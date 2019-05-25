@@ -33,8 +33,12 @@ namespace KyThuatDoHoa_Nhom9
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.pnl_Mode = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.btn_Author = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Help = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_ShowBtnDetails = new System.Windows.Forms.Button();
+            this.btn_Menu = new System.Windows.Forms.Button();
             this.btn_Toolbar = new System.Windows.Forms.Button();
             this.pnl_ToolBox = new System.Windows.Forms.Panel();
             this.pnl_Tb_3D = new System.Windows.Forms.Panel();
@@ -51,29 +55,12 @@ namespace KyThuatDoHoa_Nhom9
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pnl_Tb_2D = new System.Windows.Forms.Panel();
             this.grb_2DShapes = new System.Windows.Forms.GroupBox();
-            this.grb_2DLine = new System.Windows.Forms.GroupBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnl_Change = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.lbl_SizeGird = new System.Windows.Forms.Label();
-            this.lbl_LocationInGird = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.chkLuoiPixel = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pnl_WorkStation = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picb_2DArea = new System.Windows.Forms.PictureBox();
-            this.picb_3DArea = new System.Windows.Forms.PictureBox();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -90,14 +77,28 @@ namespace KyThuatDoHoa_Nhom9
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.grb_2DLine = new System.Windows.Forms.GroupBox();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
-            this.btn_Author = new System.Windows.Forms.Button();
-            this.btn_Help = new System.Windows.Forms.Button();
-            this.btn_ShowBtnDetails = new System.Windows.Forms.Button();
-            this.btn_Menu = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnl_Change = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.lbl_SizeGird = new System.Windows.Forms.Label();
+            this.chkLuoiPixel = new System.Windows.Forms.CheckBox();
+            this.lbl_LocationInGird = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnl_WorkStation = new System.Windows.Forms.Panel();
+            this.picb_2DArea = new System.Windows.Forms.PictureBox();
+            this.picb_3DArea = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.pnl_Mode.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -114,9 +115,9 @@ namespace KyThuatDoHoa_Nhom9
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.pnl_WorkStation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnl_WorkStation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_3DArea)).BeginInit();
             this.SuspendLayout();
@@ -124,6 +125,7 @@ namespace KyThuatDoHoa_Nhom9
             // pnl_Mode
             // 
             this.pnl_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnl_Mode.Controls.Add(this.label4);
             this.pnl_Mode.Controls.Add(this.panel8);
             this.pnl_Mode.Controls.Add(this.panel2);
             this.pnl_Mode.Controls.Add(this.panel1);
@@ -144,6 +146,24 @@ namespace KyThuatDoHoa_Nhom9
             this.panel8.Size = new System.Drawing.Size(68, 49);
             this.panel8.TabIndex = 13;
             // 
+            // btn_Author
+            // 
+            this.btn_Author.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Author.FlatAppearance.BorderSize = 0;
+            this.btn_Author.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Author.ForeColor = System.Drawing.Color.White;
+            this.btn_Author.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Author_25px;
+            this.btn_Author.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Author.Location = new System.Drawing.Point(6, -1);
+            this.btn_Author.Name = "btn_Author";
+            this.btn_Author.Size = new System.Drawing.Size(60, 50);
+            this.btn_Author.TabIndex = 2;
+            this.btn_Author.Tag = "Author";
+            this.btn_Author.Text = "Author";
+            this.btn_Author.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Author.UseVisualStyleBackColor = true;
+            this.btn_Author.Click += new System.EventHandler(this.btn_Author_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_Help);
@@ -153,6 +173,24 @@ namespace KyThuatDoHoa_Nhom9
             this.panel2.Size = new System.Drawing.Size(66, 49);
             this.panel2.TabIndex = 4;
             // 
+            // btn_Help
+            // 
+            this.btn_Help.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Help.FlatAppearance.BorderSize = 0;
+            this.btn_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Help.ForeColor = System.Drawing.Color.White;
+            this.btn_Help.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Help_25px;
+            this.btn_Help.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Help.Location = new System.Drawing.Point(6, -1);
+            this.btn_Help.Name = "btn_Help";
+            this.btn_Help.Size = new System.Drawing.Size(60, 50);
+            this.btn_Help.TabIndex = 2;
+            this.btn_Help.Tag = "Help";
+            this.btn_Help.Text = "Help";
+            this.btn_Help.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Help.UseVisualStyleBackColor = true;
+            this.btn_Help.Click += new System.EventHandler(this.btn_Help_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btn_ShowBtnDetails);
@@ -161,6 +199,37 @@ namespace KyThuatDoHoa_Nhom9
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(45, 49);
             this.panel1.TabIndex = 3;
+            // 
+            // btn_ShowBtnDetails
+            // 
+            this.btn_ShowBtnDetails.FlatAppearance.BorderSize = 0;
+            this.btn_ShowBtnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowBtnDetails.ForeColor = System.Drawing.Color.White;
+            this.btn_ShowBtnDetails.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Expand_Arrow_25px;
+            this.btn_ShowBtnDetails.Location = new System.Drawing.Point(0, 0);
+            this.btn_ShowBtnDetails.Name = "btn_ShowBtnDetails";
+            this.btn_ShowBtnDetails.Size = new System.Drawing.Size(35, 50);
+            this.btn_ShowBtnDetails.TabIndex = 1;
+            this.btn_ShowBtnDetails.Tag = "Show or hide name on the menu";
+            this.btn_ShowBtnDetails.UseVisualStyleBackColor = true;
+            this.btn_ShowBtnDetails.Click += new System.EventHandler(this.Btn_ShowBtnDetails_Click);
+            // 
+            // btn_Menu
+            // 
+            this.btn_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Menu.FlatAppearance.BorderSize = 0;
+            this.btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Menu.ForeColor = System.Drawing.Color.White;
+            this.btn_Menu.Image = global::KyThuatDoHoa_Nhom9.Image_Res.List_25px;
+            this.btn_Menu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Menu.Location = new System.Drawing.Point(10, 0);
+            this.btn_Menu.Name = "btn_Menu";
+            this.btn_Menu.Size = new System.Drawing.Size(60, 50);
+            this.btn_Menu.TabIndex = 2;
+            this.btn_Menu.Tag = "Menu";
+            this.btn_Menu.Text = "Menu";
+            this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Menu.UseVisualStyleBackColor = true;
             // 
             // btn_Toolbar
             // 
@@ -381,6 +450,39 @@ namespace KyThuatDoHoa_Nhom9
             this.button28.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button28.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
+            // button22
+            // 
+            this.button22.FlatAppearance.BorderSize = 0;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button22.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cylinder_32px;
+            this.button22.Location = new System.Drawing.Point(66, 28);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(60, 50);
+            this.button22.TabIndex = 10;
+            this.button22.Tag = "Cylinder";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.Button_Click);
+            this.button22.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN3D_MouseDown);
+            this.button22.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button22.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button24
+            // 
+            this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button24.FlatAppearance.BorderSize = 0;
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cube_32px;
+            this.button24.Location = new System.Drawing.Point(10, 28);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(50, 50);
+            this.button24.TabIndex = 8;
+            this.button24.Tag = "Cube";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.Button_Click);
+            this.button24.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN3D_MouseDown);
+            this.button24.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button24.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.label2);
@@ -438,225 +540,6 @@ namespace KyThuatDoHoa_Nhom9
             this.grb_2DShapes.TabIndex = 1;
             this.grb_2DShapes.TabStop = false;
             this.grb_2DShapes.Text = "2D Shapes";
-            // 
-            // grb_2DLine
-            // 
-            this.grb_2DLine.Controls.Add(this.button17);
-            this.grb_2DLine.Controls.Add(this.button18);
-            this.grb_2DLine.Controls.Add(this.button19);
-            this.grb_2DLine.Controls.Add(this.button20);
-            this.grb_2DLine.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.grb_2DLine.Location = new System.Drawing.Point(0, 55);
-            this.grb_2DLine.Name = "grb_2DLine";
-            this.grb_2DLine.Size = new System.Drawing.Size(260, 100);
-            this.grb_2DLine.TabIndex = 0;
-            this.grb_2DLine.TabStop = false;
-            this.grb_2DLine.Text = "Line";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(260, 49);
-            this.panel6.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(6, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "2D Shapes";
-            // 
-            // pnl_Change
-            // 
-            this.pnl_Change.BackColor = System.Drawing.Color.MintCream;
-            this.pnl_Change.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnl_Change.Controls.Add(this.panel9);
-            this.pnl_Change.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_Change.Location = new System.Drawing.Point(0, 49);
-            this.pnl_Change.Name = "pnl_Change";
-            this.pnl_Change.Size = new System.Drawing.Size(600, 49);
-            this.pnl_Change.TabIndex = 2;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.panel3);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(196, 45);
-            this.panel9.TabIndex = 0;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.lbl_SizeGird);
-            this.panel10.Controls.Add(this.chkLuoiPixel);
-            this.panel10.Controls.Add(this.lbl_LocationInGird);
-            this.panel10.Controls.Add(this.label3);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(24, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(172, 45);
-            this.panel10.TabIndex = 10;
-            // 
-            // lbl_SizeGird
-            // 
-            this.lbl_SizeGird.AutoSize = true;
-            this.lbl_SizeGird.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SizeGird.Location = new System.Drawing.Point(6, 2);
-            this.lbl_SizeGird.Name = "lbl_SizeGird";
-            this.lbl_SizeGird.Size = new System.Drawing.Size(58, 19);
-            this.lbl_SizeGird.TabIndex = 9;
-            this.lbl_SizeGird.Text = "sizeGird";
-            // 
-            // lbl_LocationInGird
-            // 
-            this.lbl_LocationInGird.AutoSize = true;
-            this.lbl_LocationInGird.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_LocationInGird.Location = new System.Drawing.Point(3, 25);
-            this.lbl_LocationInGird.Name = "lbl_LocationInGird";
-            this.lbl_LocationInGird.Size = new System.Drawing.Size(48, 19);
-            this.lbl_LocationInGird.TabIndex = 8;
-            this.lbl_LocationInGird.Text = "InGird";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(24, 45);
-            this.panel3.TabIndex = 1;
-            // 
-            // chkLuoiPixel
-            // 
-            this.chkLuoiPixel.AutoSize = true;
-            this.chkLuoiPixel.Location = new System.Drawing.Point(103, 27);
-            this.chkLuoiPixel.Name = "chkLuoiPixel";
-            this.chkLuoiPixel.Size = new System.Drawing.Size(15, 14);
-            this.chkLuoiPixel.TabIndex = 6;
-            this.chkLuoiPixel.UseVisualStyleBackColor = true;
-            this.chkLuoiPixel.CheckedChanged += new System.EventHandler(this.ChkLuoiPixel_CheckedChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Lưới Pixel";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // pnl_WorkStation
-            // 
-            this.pnl_WorkStation.AutoScroll = true;
-            this.pnl_WorkStation.BackColor = System.Drawing.Color.LightGray;
-            this.pnl_WorkStation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnl_WorkStation.Controls.Add(this.picb_2DArea);
-            this.pnl_WorkStation.Controls.Add(this.picb_3DArea);
-            this.pnl_WorkStation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_WorkStation.Location = new System.Drawing.Point(0, 49);
-            this.pnl_WorkStation.Name = "pnl_WorkStation";
-            this.pnl_WorkStation.Size = new System.Drawing.Size(600, 601);
-            this.pnl_WorkStation.TabIndex = 3;
-            this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 90;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cursor_25px;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 21);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Size_Page_25px;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // picb_2DArea
-            // 
-            this.picb_2DArea.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.picb_2DArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picb_2DArea.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.picb_2DArea.Location = new System.Drawing.Point(305, 100);
-            this.picb_2DArea.Name = "picb_2DArea";
-            this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
-            this.picb_2DArea.TabIndex = 1;
-            this.picb_2DArea.TabStop = false;
-            this.picb_2DArea.SizeChanged += new System.EventHandler(this.picb_2DArea_SizeChanged);
-            this.picb_2DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.picb_2DArea_Paint);
-            this.picb_2DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picb_2DArea_MouseMove);
-            // 
-            // picb_3DArea
-            // 
-            this.picb_3DArea.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.picb_3DArea.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.picb_3DArea.Location = new System.Drawing.Point(73, 100);
-            this.picb_3DArea.Name = "picb_3DArea";
-            this.picb_3DArea.Size = new System.Drawing.Size(220, 219);
-            this.picb_3DArea.TabIndex = 0;
-            this.picb_3DArea.TabStop = false;
-            this.picb_3DArea.SizeChanged += new System.EventHandler(this.Picb_3DArea_SizeChanged);
-            this.picb_3DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.Picb_3DArea_Paint);
-            this.picb_3DArea.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseClick);
-            this.picb_3DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseMove);
-            // 
-            // button22
-            // 
-            this.button22.FlatAppearance.BorderSize = 0;
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cylinder_32px;
-            this.button22.Location = new System.Drawing.Point(66, 28);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(60, 50);
-            this.button22.TabIndex = 10;
-            this.button22.Tag = "Cylinder";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.Button_Click);
-            this.button22.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN3D_MouseDown);
-            this.button22.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button22.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
-            // 
-            // button24
-            // 
-            this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button24.FlatAppearance.BorderSize = 0;
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cube_32px;
-            this.button24.Location = new System.Drawing.Point(10, 28);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(50, 50);
-            this.button24.TabIndex = 8;
-            this.button24.Tag = "Cube";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.Button_Click);
-            this.button24.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN3D_MouseDown);
-            this.button24.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
-            this.button24.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // button9
             // 
@@ -897,6 +780,20 @@ namespace KyThuatDoHoa_Nhom9
             this.button1.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button1.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
+            // grb_2DLine
+            // 
+            this.grb_2DLine.Controls.Add(this.button17);
+            this.grb_2DLine.Controls.Add(this.button18);
+            this.grb_2DLine.Controls.Add(this.button19);
+            this.grb_2DLine.Controls.Add(this.button20);
+            this.grb_2DLine.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.grb_2DLine.Location = new System.Drawing.Point(0, 55);
+            this.grb_2DLine.Name = "grb_2DLine";
+            this.grb_2DLine.Size = new System.Drawing.Size(260, 100);
+            this.grb_2DLine.TabIndex = 0;
+            this.grb_2DLine.TabStop = false;
+            this.grb_2DLine.Text = "Line";
+            // 
             // button17
             // 
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -937,72 +834,186 @@ namespace KyThuatDoHoa_Nhom9
             this.button20.TabIndex = 4;
             this.button20.UseVisualStyleBackColor = true;
             // 
-            // btn_Author
+            // panel6
             // 
-            this.btn_Author.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Author.FlatAppearance.BorderSize = 0;
-            this.btn_Author.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Author.ForeColor = System.Drawing.Color.White;
-            this.btn_Author.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Author_25px;
-            this.btn_Author.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Author.Location = new System.Drawing.Point(6, -1);
-            this.btn_Author.Name = "btn_Author";
-            this.btn_Author.Size = new System.Drawing.Size(60, 50);
-            this.btn_Author.TabIndex = 2;
-            this.btn_Author.Tag = "Author";
-            this.btn_Author.Text = "Author";
-            this.btn_Author.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Author.UseVisualStyleBackColor = true;
-            this.btn_Author.Click += new System.EventHandler(this.btn_Author_Click);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(260, 49);
+            this.panel6.TabIndex = 1;
             // 
-            // btn_Help
+            // label1
             // 
-            this.btn_Help.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Help.FlatAppearance.BorderSize = 0;
-            this.btn_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Help.ForeColor = System.Drawing.Color.White;
-            this.btn_Help.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Help_25px;
-            this.btn_Help.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Help.Location = new System.Drawing.Point(6, -1);
-            this.btn_Help.Name = "btn_Help";
-            this.btn_Help.Size = new System.Drawing.Size(60, 50);
-            this.btn_Help.TabIndex = 2;
-            this.btn_Help.Tag = "Help";
-            this.btn_Help.Text = "Help";
-            this.btn_Help.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Help.UseVisualStyleBackColor = true;
-            this.btn_Help.Click += new System.EventHandler(this.btn_Help_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(6, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "2D Shapes";
             // 
-            // btn_ShowBtnDetails
+            // pnl_Change
             // 
-            this.btn_ShowBtnDetails.FlatAppearance.BorderSize = 0;
-            this.btn_ShowBtnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ShowBtnDetails.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowBtnDetails.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Expand_Arrow_25px;
-            this.btn_ShowBtnDetails.Location = new System.Drawing.Point(0, 0);
-            this.btn_ShowBtnDetails.Name = "btn_ShowBtnDetails";
-            this.btn_ShowBtnDetails.Size = new System.Drawing.Size(35, 50);
-            this.btn_ShowBtnDetails.TabIndex = 1;
-            this.btn_ShowBtnDetails.Tag = "Show or hide name on the menu";
-            this.btn_ShowBtnDetails.UseVisualStyleBackColor = true;
-            this.btn_ShowBtnDetails.Click += new System.EventHandler(this.Btn_ShowBtnDetails_Click);
+            this.pnl_Change.BackColor = System.Drawing.Color.MintCream;
+            this.pnl_Change.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_Change.Controls.Add(this.panel9);
+            this.pnl_Change.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_Change.Location = new System.Drawing.Point(0, 49);
+            this.pnl_Change.Name = "pnl_Change";
+            this.pnl_Change.Size = new System.Drawing.Size(600, 49);
+            this.pnl_Change.TabIndex = 2;
             // 
-            // btn_Menu
+            // panel9
             // 
-            this.btn_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Menu.FlatAppearance.BorderSize = 0;
-            this.btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Menu.ForeColor = System.Drawing.Color.White;
-            this.btn_Menu.Image = global::KyThuatDoHoa_Nhom9.Image_Res.List_25px;
-            this.btn_Menu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Menu.Location = new System.Drawing.Point(10, 0);
-            this.btn_Menu.Name = "btn_Menu";
-            this.btn_Menu.Size = new System.Drawing.Size(60, 50);
-            this.btn_Menu.TabIndex = 2;
-            this.btn_Menu.Tag = "Menu";
-            this.btn_Menu.Text = "Menu";
-            this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Menu.UseVisualStyleBackColor = true;
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.panel3);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(196, 45);
+            this.panel9.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.lbl_SizeGird);
+            this.panel10.Controls.Add(this.chkLuoiPixel);
+            this.panel10.Controls.Add(this.lbl_LocationInGird);
+            this.panel10.Controls.Add(this.label3);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(24, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(172, 45);
+            this.panel10.TabIndex = 10;
+            // 
+            // lbl_SizeGird
+            // 
+            this.lbl_SizeGird.AutoSize = true;
+            this.lbl_SizeGird.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SizeGird.Location = new System.Drawing.Point(6, 2);
+            this.lbl_SizeGird.Name = "lbl_SizeGird";
+            this.lbl_SizeGird.Size = new System.Drawing.Size(58, 19);
+            this.lbl_SizeGird.TabIndex = 9;
+            this.lbl_SizeGird.Text = "sizeGird";
+            // 
+            // chkLuoiPixel
+            // 
+            this.chkLuoiPixel.AutoSize = true;
+            this.chkLuoiPixel.Location = new System.Drawing.Point(103, 27);
+            this.chkLuoiPixel.Name = "chkLuoiPixel";
+            this.chkLuoiPixel.Size = new System.Drawing.Size(15, 14);
+            this.chkLuoiPixel.TabIndex = 6;
+            this.chkLuoiPixel.UseVisualStyleBackColor = true;
+            this.chkLuoiPixel.CheckedChanged += new System.EventHandler(this.ChkLuoiPixel_CheckedChanged);
+            // 
+            // lbl_LocationInGird
+            // 
+            this.lbl_LocationInGird.AutoSize = true;
+            this.lbl_LocationInGird.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_LocationInGird.Location = new System.Drawing.Point(3, 25);
+            this.lbl_LocationInGird.Name = "lbl_LocationInGird";
+            this.lbl_LocationInGird.Size = new System.Drawing.Size(48, 19);
+            this.lbl_LocationInGird.TabIndex = 8;
+            this.lbl_LocationInGird.Text = "InGird";
+            this.lbl_LocationInGird.Click += new System.EventHandler(this.lbl_LocationInGird_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(79, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 19);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Lưới Pixel";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(24, 45);
+            this.panel3.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Cursor_25px;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 21);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::KyThuatDoHoa_Nhom9.Image_Res.Size_Page_25px;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pnl_WorkStation
+            // 
+            this.pnl_WorkStation.AutoScroll = true;
+            this.pnl_WorkStation.BackColor = System.Drawing.Color.LightGray;
+            this.pnl_WorkStation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_WorkStation.Controls.Add(this.picb_2DArea);
+            this.pnl_WorkStation.Controls.Add(this.picb_3DArea);
+            this.pnl_WorkStation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_WorkStation.Location = new System.Drawing.Point(0, 49);
+            this.pnl_WorkStation.Name = "pnl_WorkStation";
+            this.pnl_WorkStation.Size = new System.Drawing.Size(600, 601);
+            this.pnl_WorkStation.TabIndex = 3;
+            this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
+            // 
+            // picb_2DArea
+            // 
+            this.picb_2DArea.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.picb_2DArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picb_2DArea.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.picb_2DArea.Location = new System.Drawing.Point(305, 100);
+            this.picb_2DArea.Name = "picb_2DArea";
+            this.picb_2DArea.Size = new System.Drawing.Size(229, 218);
+            this.picb_2DArea.TabIndex = 1;
+            this.picb_2DArea.TabStop = false;
+            this.picb_2DArea.SizeChanged += new System.EventHandler(this.picb_2DArea_SizeChanged);
+            this.picb_2DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.picb_2DArea_Paint);
+            this.picb_2DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picb_2DArea_MouseMove);
+            // 
+            // picb_3DArea
+            // 
+            this.picb_3DArea.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.picb_3DArea.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.picb_3DArea.Location = new System.Drawing.Point(73, 100);
+            this.picb_3DArea.Name = "picb_3DArea";
+            this.picb_3DArea.Size = new System.Drawing.Size(220, 219);
+            this.picb_3DArea.TabIndex = 0;
+            this.picb_3DArea.TabStop = false;
+            this.picb_3DArea.SizeChanged += new System.EventHandler(this.Picb_3DArea_SizeChanged);
+            this.picb_3DArea.Paint += new System.Windows.Forms.PaintEventHandler(this.Picb_3DArea_Paint);
+            this.picb_3DArea.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseClick);
+            this.picb_3DArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Picb_3DArea_MouseMove);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 90;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(307, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 18);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "label4";
             // 
             // frm_Main
             // 
@@ -1042,9 +1053,9 @@ namespace KyThuatDoHoa_Nhom9
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.pnl_WorkStation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnl_WorkStation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picb_2DArea)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_3DArea)).EndInit();
             this.ResumeLayout(false);
@@ -1121,6 +1132,7 @@ namespace KyThuatDoHoa_Nhom9
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_LocationInGird;
         private System.Windows.Forms.Label lbl_SizeGird;
+        private System.Windows.Forms.Label label4;
     }
 }
 
