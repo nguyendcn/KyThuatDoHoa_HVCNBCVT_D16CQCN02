@@ -24,8 +24,9 @@ namespace KyThuatDoHoa_Nhom9
         HinhTru hinhTru;
         Pendulum pendulum;
         XeProperties xe;
-        HinhTruProperties tru;
-        HinhHopChuNhatProperties hopCN;
+        HinhTruProperties hinhTruProperties;
+        HinhHopChuNhatProperties hinhHopChuNhatProperties;
+        HinhHopChuNhat hinhHopChuNhat;
         bool flagXe;
         Clock clock;
         ClockProperties clockProperties;
@@ -43,25 +44,19 @@ namespace KyThuatDoHoa_Nhom9
         public frm_Main()
         {
             InitializeComponent();
+                      
+            hinhTru = new HinhTru(10, -10, 0, 30, 10);
+            hinhTruProperties = new HinhTruProperties();
+            hinhTruProperties.Visible = false;
 
+            hinhHopChuNhat = new HinhHopChuNhat(0, 0, 0, 10, 10, 10);
+            hinhHopChuNhatProperties = new HinhHopChuNhatProperties();
+            hinhHopChuNhatProperties.Visible = false;
 
-         
-          
-            hinhTru = new HinhTru();
-            tru = new HinhTruProperties();
-            hopCN = new HinhHopChuNhatProperties();
             // Tạo quả lắc theo kích thước cho trước
             pendulum = new Pendulum(new Point(100, 20), new Point(400, 220));
             pendulum.SetAlpha(-3); // set góc quay alpha 
             pendulum.PropertyChanged += Pendulum_PropertyChanged;
-
-            //flagTimer = false;
-            //hinhXe = new HinhXe();
-
-            //// Tạo quả lắc theo kích thước cho trước
-            //pendulum = new Pendulum(new Point(100, 20), new Point(400,220));
-            //pendulum.SetAlpha(-3); // set góc quay alpha 
-
 
             //2D mode is startup;
             Setup_Toolbar(Globals._Mode_current);
@@ -767,10 +762,6 @@ namespace KyThuatDoHoa_Nhom9
             xe.HienThiThongTin();
              
         }
-        private void HinhTru_PropertyChange(object sender,PropertyChangedEventArgs e)
-        {
-            tru.Dinh = hinhTru.TamDay;
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -870,15 +861,24 @@ namespace KyThuatDoHoa_Nhom9
         #region Vẽ trên picb_3DArea sử dụng Cavalier
         private void Picb_3DArea_Paint(object sender, PaintEventArgs e)
         {
-            VeLuoi3D(e.Graphics);
+            //VeLuoi3D(e.Graphics);
 
-            HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
-            hinhHopChuNhat.Draw(e.Graphics);
+            //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
+            //hinhHopChuNhat.Draw(e.Graphics);
 
 
-            HinhTru hinhTru = new HinhTru(10, -10, 0, 30, 40);
-            hinhTru.Draw(e.Graphics);
-            hinhTru.DrawElip(e.Graphics);
+            //HinhTru hinhTru = new HinhTru(10, -10, 0, 30, 40);
+            if (hinhTruProperties.Visible == true)
+            {
+                hinhTru.Draw(e.Graphics);
+                hinhTruProperties.Dinh = hinhTru.TamDay;
+            }
+            if (hinhHopChuNhatProperties.Visible == true)
+            {
+                hinhHopChuNhat.Draw(e.Graphics);
+                hinhHopChuNhatProperties.Dinh = hinhHopChuNhat.Dinh;
+            }
+            //hinhTru.DrawElip(e.Graphics);
 
         }
 
@@ -959,25 +959,70 @@ namespace KyThuatDoHoa_Nhom9
 
         private void button41_Click(object sender, EventArgs e)
         {
-            this.pnl_ToolBox.Controls.Add(hopCN);
-            hopCN.BringToFront();
-            hopCN.Visible = true;
+            this.pnl_ToolBox.Controls.Add(hinhHopChuNhatProperties);
+            hinhHopChuNhatProperties.PropertyChanged += HinhHopChuNhatProperties_PropertyChanged;
+            if (flagXe == false)
+            {
+                hinhHopChuNhatProperties.Refresh();
+            }
+
+            hinhHopChuNhatProperties.BringToFront();
+            hinhHopChuNhatProperties.Visible = true;
+            hinhTruProperties.Visible = false;
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
+            this.pnl_ToolBox.Controls.Add(hinhTruProperties);
+            hinhTruProperties.PropertyChanged += HinhTruProperties_PropertyChanged;
+            if (flagXe == false)
+            {
+                hinhTruProperties.Refresh();
+            }
 
-            this.pnl_ToolBox.Controls.Add(tru);
-            tru.BringToFront();
-            tru.Visible = true;
+            hinhTruProperties.BringToFront();
+            hinhTruProperties.Visible = true;
+            hinhHopChuNhatProperties.Visible = false;
         }
+
+        private void HinhTruProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+
+            string[] str = e.PropertyName.Split(',');
+            int x = Int16.Parse(str[0]),
+                y = Int16.Parse(str[1]),
+                z = Int16.Parse(str[2]),
+                chieuCao = Int16.Parse(str[3]),
+                banKinhDay = Int16.Parse(str[4]);
+
+            hinhTru = new HinhTru(x, y, z, chieuCao, banKinhDay);
+
+            picb_3DArea.Refresh();
+            hinhTru.Draw(picb_3DArea.CreateGraphics());
+        }
+        private void HinhHopChuNhatProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            string[] str = e.PropertyName.Split(',');
+            int x = Int16.Parse(str[0]),
+                y = Int16.Parse(str[1]),
+                z = Int16.Parse(str[2]),
+                chieuDai = Int16.Parse(str[3]),
+                chieuCao = Int16.Parse(str[4]),
+                chieuRong = Int16.Parse(str[5]);
+
+            hinhHopChuNhat = new HinhHopChuNhat(x, y, z, chieuDai, chieuCao,chieuRong);
+
+            picb_3DArea.Refresh();
+            hinhHopChuNhat.Draw(picb_3DArea.CreateGraphics());
+        }
+
     }
-    
-
-     
 
 
 
-    
+
+
+
+
 }
 

@@ -11,10 +11,10 @@ namespace KyThuatDoHoa_Nhom9.Construct._3DObject
 {
     class HinhHopChuNhat
     {
-        private int ChieuDai { get; set; }
-        private int ChieuRong { get; set; }
-        private int ChieuCao { get; set; }
-        private int[,] Dinh { get; set; }
+        public int ChieuDai { get; set; }
+        public int ChieuRong { get; set; }
+        public int ChieuCao { get; set; }
+        public int[,] Dinh { get; set; }
         /// <summary>
         /// Khởi tạo hình hộp chữ nhật
         /// </summary>
