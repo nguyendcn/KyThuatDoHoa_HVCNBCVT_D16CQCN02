@@ -95,6 +95,7 @@
             this.txtChieuCao.Size = new System.Drawing.Size(45, 20);
             this.txtChieuCao.TabIndex = 20;
             this.txtChieuCao.Text = "0";
+            this.txtChieuCao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBanKinh
             // 
@@ -103,6 +104,7 @@
             this.txtBanKinh.Size = new System.Drawing.Size(45, 20);
             this.txtBanKinh.TabIndex = 21;
             this.txtBanKinh.Text = "0";
+            this.txtBanKinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox1
             // 
@@ -134,6 +136,7 @@
             this.txtDinhF.Size = new System.Drawing.Size(45, 22);
             this.txtDinhF.TabIndex = 31;
             this.txtDinhF.Text = "0";
+            this.txtDinhF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDinhE
             // 
@@ -143,6 +146,7 @@
             this.txtDinhE.Size = new System.Drawing.Size(45, 22);
             this.txtDinhE.TabIndex = 30;
             this.txtDinhE.Text = "0";
+            this.txtDinhE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDinhD
             // 
@@ -152,6 +156,7 @@
             this.txtDinhD.Size = new System.Drawing.Size(45, 22);
             this.txtDinhD.TabIndex = 29;
             this.txtDinhD.Text = "0";
+            this.txtDinhD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDinhC
             // 
@@ -290,6 +295,7 @@
             this.txtTamX.Size = new System.Drawing.Size(45, 20);
             this.txtTamX.TabIndex = 20;
             this.txtTamX.Text = "0";
+            this.txtTamX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTamZ
             // 
@@ -298,6 +304,7 @@
             this.txtTamZ.Size = new System.Drawing.Size(45, 20);
             this.txtTamZ.TabIndex = 21;
             this.txtTamZ.Text = "0";
+            this.txtTamZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTamY
             // 
@@ -306,6 +313,7 @@
             this.txtTamY.Size = new System.Drawing.Size(45, 20);
             this.txtTamY.TabIndex = 20;
             this.txtTamY.Text = "0";
+            this.txtTamY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnOK
             // 
@@ -327,6 +335,7 @@
             this.button1.Size = new System.Drawing.Size(21, 19);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // HinhTruProperties
             // 
@@ -350,7 +359,6 @@
             this.Controls.Add(this.button1);
             this.Name = "HinhTruProperties";
             this.Size = new System.Drawing.Size(198, 601);
-            this.Load += new System.EventHandler(this.HinhTruProperties_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

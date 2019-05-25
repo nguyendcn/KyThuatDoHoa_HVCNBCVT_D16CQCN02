@@ -30,6 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDinhH = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtDinhG = new System.Windows.Forms.TextBox();
             this.txtDinhF = new System.Windows.Forms.TextBox();
             this.txtDinhE = new System.Windows.Forms.TextBox();
             this.txtDinhD = new System.Windows.Forms.TextBox();
@@ -44,10 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -58,9 +58,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.txtBanKinh = new System.Windows.Forms.TextBox();
+            this.txtChieuDai = new System.Windows.Forms.TextBox();
             this.txtChieuCao = new System.Windows.Forms.TextBox();
+            this.txtChieuRong = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,14 +72,13 @@
             this.label1.Size = new System.Drawing.Size(138, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "H. hộp chữ nhật";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtDinhH);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtDinhG);
             this.groupBox1.Controls.Add(this.txtDinhF);
             this.groupBox1.Controls.Add(this.txtDinhE);
             this.groupBox1.Controls.Add(this.txtDinhD);
@@ -99,6 +98,46 @@
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "THÔNG SỐ";
+            // 
+            // txtDinhH
+            // 
+            this.txtDinhH.Location = new System.Drawing.Point(83, 203);
+            this.txtDinhH.Name = "txtDinhH";
+            this.txtDinhH.ReadOnly = true;
+            this.txtDinhH.Size = new System.Drawing.Size(45, 22);
+            this.txtDinhH.TabIndex = 32;
+            this.txtDinhH.Text = "0";
+            this.txtDinhH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label9.Location = new System.Drawing.Point(21, 176);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(22, 20);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "G";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.Location = new System.Drawing.Point(21, 204);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 20);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "H";
+            // 
+            // txtDinhG
+            // 
+            this.txtDinhG.Location = new System.Drawing.Point(83, 178);
+            this.txtDinhG.Name = "txtDinhG";
+            this.txtDinhG.ReadOnly = true;
+            this.txtDinhG.Size = new System.Drawing.Size(45, 22);
+            this.txtDinhG.TabIndex = 31;
+            this.txtDinhG.Text = "0";
+            this.txtDinhG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDinhF
             // 
@@ -229,6 +268,7 @@
             this.button1.Size = new System.Drawing.Size(21, 19);
             this.button1.TabIndex = 24;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label10
             // 
@@ -239,46 +279,6 @@
             this.label10.Size = new System.Drawing.Size(89, 20);
             this.label10.TabIndex = 25;
             this.label10.Text = "Tọa độ tâm";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(21, 204);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 20);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "H";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.Location = new System.Drawing.Point(21, 176);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(22, 20);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "G";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(83, 178);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(45, 22);
-            this.textBox1.TabIndex = 31;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(83, 203);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(45, 22);
-            this.textBox2.TabIndex = 32;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
             // 
@@ -309,7 +309,6 @@
             this.label13.Size = new System.Drawing.Size(19, 20);
             this.label13.TabIndex = 28;
             this.label13.Text = "Z";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // txtTamZ
             // 
@@ -377,33 +376,34 @@
             this.btnOK.TabIndex = 38;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.BtnOK_Click);
             // 
-            // textBox3
+            // txtChieuDai
             // 
-            this.textBox3.Location = new System.Drawing.Point(88, 359);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(45, 20);
-            this.textBox3.TabIndex = 36;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtBanKinh
-            // 
-            this.txtBanKinh.Location = new System.Drawing.Point(88, 405);
-            this.txtBanKinh.Name = "txtBanKinh";
-            this.txtBanKinh.Size = new System.Drawing.Size(45, 20);
-            this.txtBanKinh.TabIndex = 37;
-            this.txtBanKinh.Text = "0";
-            this.txtBanKinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtChieuDai.Location = new System.Drawing.Point(88, 359);
+            this.txtChieuDai.Name = "txtChieuDai";
+            this.txtChieuDai.Size = new System.Drawing.Size(45, 20);
+            this.txtChieuDai.TabIndex = 36;
+            this.txtChieuDai.Text = "0";
+            this.txtChieuDai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtChieuCao
             // 
-            this.txtChieuCao.Location = new System.Drawing.Point(88, 381);
+            this.txtChieuCao.Location = new System.Drawing.Point(88, 405);
             this.txtChieuCao.Name = "txtChieuCao";
             this.txtChieuCao.Size = new System.Drawing.Size(45, 20);
-            this.txtChieuCao.TabIndex = 35;
+            this.txtChieuCao.TabIndex = 37;
             this.txtChieuCao.Text = "0";
             this.txtChieuCao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtChieuRong
+            // 
+            this.txtChieuRong.Location = new System.Drawing.Point(88, 381);
+            this.txtChieuRong.Name = "txtChieuRong";
+            this.txtChieuRong.Size = new System.Drawing.Size(45, 20);
+            this.txtChieuRong.TabIndex = 35;
+            this.txtChieuRong.Text = "0";
+            this.txtChieuRong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // HinhHopChuNhatProperties
             // 
@@ -411,9 +411,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.txtBanKinh);
+            this.Controls.Add(this.txtChieuDai);
             this.Controls.Add(this.txtChieuCao);
+            this.Controls.Add(this.txtChieuRong);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -454,10 +454,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDinhH;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDinhG;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -468,8 +468,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox txtBanKinh;
+        private System.Windows.Forms.TextBox txtChieuDai;
         private System.Windows.Forms.TextBox txtChieuCao;
+        private System.Windows.Forms.TextBox txtChieuRong;
     }
 }

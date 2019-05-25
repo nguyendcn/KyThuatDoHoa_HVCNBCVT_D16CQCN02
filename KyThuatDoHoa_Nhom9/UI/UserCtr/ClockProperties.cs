@@ -37,6 +37,7 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
                 this._hHours = value;
                 lbl_hHoursA.Text = value.A.ToString();
                 lbl_hHoursB.Text = value.B.ToString();
+          
             }
         }
         public Line HMinute { get => _hMinute;
