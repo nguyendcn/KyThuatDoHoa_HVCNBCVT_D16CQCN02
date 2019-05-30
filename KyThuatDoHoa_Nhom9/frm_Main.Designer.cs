@@ -300,8 +300,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(50, 50);
             this.button33.TabIndex = 23;
+            this.button33.Tag = "isNull";
             this.button33.UseVisualStyleBackColor = true;
             this.button33.Click += new System.EventHandler(this.Button_Click);
+            this.button33.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button33.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button33.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -313,8 +315,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(50, 50);
             this.button34.TabIndex = 22;
+            this.button34.Tag = "isNull";
             this.button34.UseVisualStyleBackColor = true;
             this.button34.Click += new System.EventHandler(this.Button_Click);
+            this.button34.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button34.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button34.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -326,8 +330,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(50, 50);
             this.button35.TabIndex = 21;
+            this.button35.Tag = "isNull";
             this.button35.UseVisualStyleBackColor = true;
             this.button35.Click += new System.EventHandler(this.Button_Click);
+            this.button35.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button35.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button35.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -339,8 +345,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(50, 50);
             this.button36.TabIndex = 20;
+            this.button36.Tag = "isNull";
             this.button36.UseVisualStyleBackColor = true;
             this.button36.Click += new System.EventHandler(this.Button_Click);
+            this.button36.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button36.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button36.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -352,8 +360,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(50, 50);
             this.button29.TabIndex = 19;
+            this.button29.Tag = "isNull";
             this.button29.UseVisualStyleBackColor = true;
             this.button29.Click += new System.EventHandler(this.Button_Click);
+            this.button29.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button29.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button29.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -365,8 +375,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(50, 50);
             this.button30.TabIndex = 18;
+            this.button30.Tag = "isNull";
             this.button30.UseVisualStyleBackColor = true;
             this.button30.Click += new System.EventHandler(this.Button_Click);
+            this.button30.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button30.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button30.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -378,8 +390,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(50, 50);
             this.button31.TabIndex = 17;
+            this.button31.Tag = "isNull";
             this.button31.UseVisualStyleBackColor = true;
             this.button31.Click += new System.EventHandler(this.Button_Click);
+            this.button31.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button31.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button31.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -391,8 +405,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(50, 50);
             this.button32.TabIndex = 16;
+            this.button32.Tag = "isNull";
             this.button32.UseVisualStyleBackColor = true;
             this.button32.Click += new System.EventHandler(this.Button_Click);
+            this.button32.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button32.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button32.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -404,8 +420,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(50, 50);
             this.button25.TabIndex = 15;
+            this.button25.Tag = "isNull";
             this.button25.UseVisualStyleBackColor = true;
             this.button25.Click += new System.EventHandler(this.Button_Click);
+            this.button25.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button25.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button25.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -417,8 +435,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(50, 50);
             this.button26.TabIndex = 14;
+            this.button26.Tag = "isNull";
             this.button26.UseVisualStyleBackColor = true;
             this.button26.Click += new System.EventHandler(this.Button_Click);
+            this.button26.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button26.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button26.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -430,8 +450,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(50, 50);
             this.button27.TabIndex = 13;
+            this.button27.Tag = "isNull";
             this.button27.UseVisualStyleBackColor = true;
             this.button27.Click += new System.EventHandler(this.Button_Click);
+            this.button27.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button27.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button27.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -443,8 +465,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(50, 50);
             this.button28.TabIndex = 12;
+            this.button28.Tag = "isNull";
             this.button28.UseVisualStyleBackColor = true;
             this.button28.Click += new System.EventHandler(this.Button_Click);
+            this.button28.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button28.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button28.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -587,6 +611,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button11.Tag = "Pendulum";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.Button_Click);
+            this.button11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button11.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button11.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -616,8 +641,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(50, 50);
             this.button13.TabIndex = 11;
+            this.button13.Tag = "isNull";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.Button_Click);
+            this.button13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button13.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button13.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -630,8 +657,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(50, 50);
             this.button14.TabIndex = 10;
+            this.button14.Tag = "isNull";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.Button_Click);
+            this.button14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button14.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button14.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -644,8 +673,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(50, 50);
             this.button15.TabIndex = 9;
+            this.button15.Tag = "isNull";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.Button_Click);
+            this.button15.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button15.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button15.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -658,8 +689,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(50, 50);
             this.button16.TabIndex = 8;
+            this.button16.Tag = "isNull";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.Button_Click);
+            this.button16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button16.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button16.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -672,8 +705,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(50, 50);
             this.button8.TabIndex = 7;
+            this.button8.Tag = "isNull";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.Button_Click);
+            this.button8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button8.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button8.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -686,8 +721,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(50, 50);
             this.button7.TabIndex = 6;
+            this.button7.Tag = "isNull";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.Button_Click);
+            this.button7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button7.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button7.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -700,8 +737,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(50, 50);
             this.button6.TabIndex = 5;
+            this.button6.Tag = "isNull";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.Button_Click);
+            this.button6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button6.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button6.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -714,8 +753,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(50, 50);
             this.button5.TabIndex = 4;
+            this.button5.Tag = "isNull";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.Button_Click);
+            this.button5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button5.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button5.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -728,8 +769,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 50);
             this.button4.TabIndex = 3;
+            this.button4.Tag = "isNull";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.Button_Click);
+            this.button4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button4.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button4.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -742,8 +785,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 50);
             this.button3.TabIndex = 2;
+            this.button3.Tag = "isNull";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button_Click);
+            this.button3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button3.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button3.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -756,7 +801,7 @@ namespace KyThuatDoHoa_Nhom9
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
             this.button2.TabIndex = 1;
-            this.button2.Tag = "Circle";
+            this.button2.Tag = "isNull";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button_Click);
             this.button2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
@@ -772,9 +817,10 @@ namespace KyThuatDoHoa_Nhom9
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 0;
-            this.button1.Tag = "Squre";
+            this.button1.Tag = "isNull";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button_Click);
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             this.button1.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button1.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -800,7 +846,9 @@ namespace KyThuatDoHoa_Nhom9
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(50, 50);
             this.button17.TabIndex = 7;
+            this.button17.Tag = "isNull";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             // 
             // button18
             // 
@@ -810,7 +858,9 @@ namespace KyThuatDoHoa_Nhom9
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(50, 50);
             this.button18.TabIndex = 6;
+            this.button18.Tag = "isNull";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             // 
             // button19
             // 
@@ -820,7 +870,9 @@ namespace KyThuatDoHoa_Nhom9
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(50, 50);
             this.button19.TabIndex = 5;
+            this.button19.Tag = "isNull";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             // 
             // button20
             // 
@@ -830,7 +882,9 @@ namespace KyThuatDoHoa_Nhom9
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(50, 50);
             this.button20.TabIndex = 4;
+            this.button20.Tag = "isNull";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button_MouseDown);
             // 
             // panel6
             // 
@@ -914,7 +968,6 @@ namespace KyThuatDoHoa_Nhom9
             this.lbl_LocationInGird.Size = new System.Drawing.Size(48, 19);
             this.lbl_LocationInGird.TabIndex = 8;
             this.lbl_LocationInGird.Text = "InGird";
-            this.lbl_LocationInGird.Click += new System.EventHandler(this.lbl_LocationInGird_Click);
             // 
             // label3
             // 
@@ -924,7 +977,6 @@ namespace KyThuatDoHoa_Nhom9
             this.label3.Size = new System.Drawing.Size(71, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Lưới Pixel";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
@@ -970,7 +1022,6 @@ namespace KyThuatDoHoa_Nhom9
             this.pnl_WorkStation.Name = "pnl_WorkStation";
             this.pnl_WorkStation.Size = new System.Drawing.Size(600, 601);
             this.pnl_WorkStation.TabIndex = 3;
-            this.pnl_WorkStation.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_WorkStation_MouseClick);
             // 
             // picb_2DArea
             // 
@@ -1023,7 +1074,6 @@ namespace KyThuatDoHoa_Nhom9
             this.Name = "frm_Main";
             this.Text = "Đồ Họa N9";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Frm_Main_Load);
             this.pnl_Mode.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -9,7 +9,7 @@ using KyThuatDoHoa_Nhom9.Construct._2DObject;
 
 namespace KyThuatDoHoa_Nhom9.Construct._3DObject
 {
-    class HinhHopChuNhat
+    public class HinhHopChuNhat
     {
         public int ChieuDai { get; set; }
         public int ChieuRong { get; set; }

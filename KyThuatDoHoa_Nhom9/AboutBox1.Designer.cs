@@ -29,13 +29,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox1));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.labelProductName = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.labelCompanyName = new System.Windows.Forms.Label();
             this.okButton = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -65,14 +65,28 @@
             this.tableLayoutPanel.Size = new System.Drawing.Size(719, 313);
             this.tableLayoutPanel.TabIndex = 0;
             // 
+            // logoPictureBox
+            // 
+            this.logoPictureBox.BackgroundImage = global::KyThuatDoHoa_Nhom9.Properties.Resources.CỦ_LOZ;
+            this.logoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logoPictureBox.Image = global::KyThuatDoHoa_Nhom9.Properties.Resources._61287020_371287316833461_49culo91464580271046656_n;
+            this.logoPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 6);
+            this.logoPictureBox.Size = new System.Drawing.Size(488, 307);
+            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoPictureBox.TabIndex = 12;
+            this.logoPictureBox.TabStop = false;
+            // 
             // labelProductName
             // 
             this.labelProductName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelProductName.Location = new System.Drawing.Point(499, 0);
+            this.labelProductName.Location = new System.Drawing.Point(500, 0);
             this.labelProductName.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.labelProductName.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(217, 17);
+            this.labelProductName.Size = new System.Drawing.Size(216, 17);
             this.labelProductName.TabIndex = 19;
             this.labelProductName.Text = "Product Name: Đồ Họa Cơ Bản";
             this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -80,11 +94,11 @@
             // labelVersion
             // 
             this.labelVersion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelVersion.Location = new System.Drawing.Point(499, 31);
+            this.labelVersion.Location = new System.Drawing.Point(500, 31);
             this.labelVersion.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.labelVersion.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(217, 17);
+            this.labelVersion.Size = new System.Drawing.Size(216, 17);
             this.labelVersion.TabIndex = 0;
             this.labelVersion.Text = "Version: 10.0";
             this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -92,11 +106,11 @@
             // labelCopyright
             // 
             this.labelCopyright.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCopyright.Location = new System.Drawing.Point(499, 62);
+            this.labelCopyright.Location = new System.Drawing.Point(500, 62);
             this.labelCopyright.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.labelCopyright.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(217, 17);
+            this.labelCopyright.Size = new System.Drawing.Size(216, 17);
             this.labelCopyright.TabIndex = 21;
             this.labelCopyright.Text = "Copyright:  Thuộc về Nhom 9 nha";
             this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -104,11 +118,11 @@
             // labelCompanyName
             // 
             this.labelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCompanyName.Location = new System.Drawing.Point(499, 93);
+            this.labelCompanyName.Location = new System.Drawing.Point(500, 93);
             this.labelCompanyName.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.labelCompanyName.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelCompanyName.Name = "labelCompanyName";
-            this.labelCompanyName.Size = new System.Drawing.Size(217, 17);
+            this.labelCompanyName.Size = new System.Drawing.Size(216, 17);
             this.labelCompanyName.TabIndex = 22;
             this.labelCompanyName.Text = "D16CQCN02-N";
             this.labelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,25 +140,12 @@
             // richTextBox1
             // 
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(496, 127);
+            this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(497, 127);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(220, 150);
+            this.richTextBox1.Size = new System.Drawing.Size(219, 150);
             this.richTextBox1.TabIndex = 25;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
-            // logoPictureBox
-            // 
-            this.logoPictureBox.BackgroundImage = global::KyThuatDoHoa_Nhom9.Properties.Resources.CỦ_LOZ;
-            this.logoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoPictureBox.Image = global::KyThuatDoHoa_Nhom9.Properties.Resources._61287020_371287316833461_49culo91464580271046656_n;
-            this.logoPictureBox.Location = new System.Drawing.Point(3, 3);
-            this.logoPictureBox.Name = "logoPictureBox";
-            this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 6);
-            this.logoPictureBox.Size = new System.Drawing.Size(487, 307);
-            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoPictureBox.TabIndex = 12;
-            this.logoPictureBox.TabStop = false;
             // 
             // AboutBox1
             // 

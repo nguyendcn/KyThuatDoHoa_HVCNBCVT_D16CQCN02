@@ -29,7 +29,12 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             }
         }
 
-        public bool DisplayNow { get => displayNow; set => displayNow = value; }
+        public bool DisplayNow { get => displayNow;
+            set
+            {
+                OnPropertyChanged("nextStep");
+            }
+        }
         public Clock Item_clock { get => item_clock;
             set
             {

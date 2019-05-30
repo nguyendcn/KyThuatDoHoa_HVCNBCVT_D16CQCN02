@@ -14,7 +14,8 @@ namespace KyThuatDoHoa_Nhom9
         public AboutBox1()
         {
             InitializeComponent();
-      
+
+            this.labelVersion.Text = "Version: " + AssemblyVersion;
         }
 
         #region Assembly Attribute Accessors

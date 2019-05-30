@@ -14,7 +14,6 @@ namespace KyThuatDoHoa_Nhom9.UI.UserCtr
     {
         private Point mainLocation;
         private ClockProperties _clockProperties;
-        private bool dispose;
 
         public TimepieceProperties()
         {

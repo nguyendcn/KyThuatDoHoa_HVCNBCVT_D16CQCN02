@@ -12,66 +12,25 @@ namespace KyThuatDoHoa_Nhom9
 
     public partial class frm_Main : Form
     {
-
-        HinhXe hinhXe;
-        HinhTru hinhTru;
-        Pendulum pendulum;
-        XeProperties xe;
-        HinhTruProperties hinhTruProperties;
-        HinhHopChuNhatProperties hinhHopChuNhatProperties;
-        HinhHopChuNhat hinhHopChuNhat;
-        bool flagXe;
-        Clock clock;
-        ClockProperties clockProperties;
-       
-
-        Point s = new Point(3, 3);
-        Point ep = new Point(15, 15);
-        Clock cl;
-        Timer tm = new Timer
-        {
-            Interval = 300
-        };
-
-        HinhTron ht;
-
         public frm_Main()
         {
             InitializeComponent();
+        
+            Variables.Globals.hinhTru = new HinhTru(10, -10, 0, 30, 10);
+            Variables.Globals.hinhTruProperties = new HinhTruProperties();
+            Variables.Globals.hinhTruProperties.Visible = false;
 
-            //button21.Visible = false;
-            //button41.Visible = false;
-                      
-            hinhTru = new HinhTru(10, -10, 0, 30, 10);
-            hinhTruProperties = new HinhTruProperties();
-            hinhTruProperties.Visible = false;
-
-            hinhHopChuNhat = new HinhHopChuNhat(0, 0, 0, 10, 10, 10);
-            hinhHopChuNhatProperties = new HinhHopChuNhatProperties();
-            hinhHopChuNhatProperties.Visible = false;
-
-            // Tạo quả lắc theo kích thước cho trước
-            pendulum = new Pendulum(new Point(100, 20), new Point(400, 220));
-            pendulum.SetAlpha(-3); // set góc quay alpha 
-            pendulum.PropertyChanged += Pendulum_PropertyChanged;
+            Variables.Globals.hinhHopChuNhat = new HinhHopChuNhat(0, 0, 0, 10, 10, 10);
+            Variables.Globals.hinhHopChuNhatProperties = new HinhHopChuNhatProperties();
+            Variables.Globals.hinhHopChuNhatProperties.Visible = false;
 
             //2D mode is startup;
             Setup_Toolbar(Globals._Mode_current);
             picb_2DArea.Dock = picb_3DArea.Dock = DockStyle.Fill;
 
             Setup_ToolTips();
-            flagXe = false;
+            Variables.Globals.flagXe = false;
         }
-
-        private void Pendulum_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (flagXe == false)
-            {
-                this.picb_2DArea.Refresh();
-            }
-
-        }
-
 
         #region Function
 
@@ -238,8 +197,36 @@ namespace KyThuatDoHoa_Nhom9
 
         #endregion
 
-
         #region Event Handl
+
+        private void btn_Author_Click(object sender, EventArgs e)
+        {
+            AboutBox1 box1 = new AboutBox1();
+            box1.ShowDialog();
+        }
+
+        private void btn_Help_Click(object sender, EventArgs e)
+        {
+            string target = "https://github.com/nguyendcn/KyThuatDoHoa_HVCNBCVT_D16CQCN02";
+
+            try
+            {
+                System.Diagnostics.Process.Start(target);
+            }
+            catch
+                (
+                 System.ComponentModel.Win32Exception noBrowser)
+            {
+                if (noBrowser.ErrorCode == -2147467259)
+                    MessageBox.Show(noBrowser.Message);
+            }
+            catch (System.Exception other)
+            {
+                MessageBox.Show(other.Message);
+            }
+
+            //MessageBox.Show("https://github.com/nguyendcn/KyThuatDoHoa_HVCNBCVT_D16CQCN02", "Hoi cham", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
 
         /// <summary>
         /// Whent user click to button ShowDetails
@@ -353,37 +340,25 @@ namespace KyThuatDoHoa_Nhom9
         private void Button_MouseDown(object sender, MouseEventArgs e)
         {
             Button btn = sender as Button;
-            if (btn.Tag.Equals("Circle"))
-            {
-                CircleProperties circleProperties = new CircleProperties(this.pnl_Tb_2D.Size);
-                circleProperties.PropertyChanged += CircleProperties_PropertyChanged;
-                this.pnl_ToolBox.Controls.Add(circleProperties);
-                circleProperties.BringToFront();
 
-                ht = new HinhTron(new Point(550, 320), 10);
-                circleProperties.CoorOriginal = ToaDo.MayTinhNguoiDung(new Point(550, 320));
-                circleProperties.Radius = 10;
-                ht.Draw(picb_2DArea.CreateGraphics());
-                ht.PropertyChanged += Ht_PropertyChanged;
-            }
-            else if (btn.Tag.Equals("Clock"))
+            if (btn.Tag.Equals("Clock"))
             {
-                clockProperties = new ClockProperties();
+                Variables.Globals.clockProperties = new ClockProperties();
 
-                clockProperties.PropertyChanged += ClockProperties_PropertyChanged;
-                this.pnl_ToolBox.Controls.Add(clockProperties);
-                if (flagXe == false)
+                Variables.Globals.clockProperties.PropertyChanged += ClockProperties_PropertyChanged;
+                this.pnl_ToolBox.Controls.Add(Variables.Globals.clockProperties);
+                if (Variables.Globals.flagXe == false)
                 {
-                    clockProperties.Refresh();
+                    Variables.Globals.clockProperties.Refresh();
                 }
 
-                clockProperties.BringToFront();
+                Variables.Globals.clockProperties.BringToFront();
 
                 DateTime dt = DateTime.Now;
-                clock = new Clock(new Point(0, 0), 15, dt);
-                clock.CurrentDatetime = new DateTime(2019, 05, 19, 12, 30, 15);
-                clock.Draw(this.picb_2DArea.CreateGraphics());
-                clock.PropertyChanged += Clock_PropertyChanged;
+                Variables.Globals.clock = new Clock(new Point(0, 0), 15, dt);
+                Variables.Globals.clock.CurrentDatetime = new DateTime(2019, 05, 19, 12, 30, 15);
+                Variables.Globals.clock.Draw(this.picb_2DArea.CreateGraphics());
+                Variables.Globals.clock.PropertyChanged += Clock_PropertyChanged;
             }
             else if (btn.Tag.Equals("TimePiece"))
             {
@@ -398,61 +373,18 @@ namespace KyThuatDoHoa_Nhom9
             else if (btn.Tag.Equals("Car"))
             {
                 this.timer1.Start();
-                xe =  new XeProperties();
-                flagXe = true;
-                hinhXe = new HinhXe();
-                this.pnl_ToolBox.Controls.Add(xe);
-                xe.BringToFront();
-                xe.Visible = true;
-                xe.PropertyChanged += Xe_PropertyChanged;
-
-                //if (flagXe)
-                //{
-
-                //    // biểu diễn các hoạt động của xe
-                //    hinhXe.PropertyChanged += HinhXe_PropertyChanged;
-                //    hinhXe.ToMau(e.Graphics);
-                //    hinhXe.drawCar(e.Graphics);
-
-                //    if (dem <= 30)
-                //    {
-                //        dem++;
-                //        // tịnh tiến 5 đơn vị
-                //        // đi phải qua trái
-                //        hinhXe.traslationXe(5, 0);
-                //        hinhXe.quayBanhXe(30);
-
-
-                //    }
-                //    else if (dem <= 60)
-                //    {
-                //        dem++;
-                //        //tịnh tiến 5 đơn vị
-                //        // đi phải qua trái
-                //        hinhXe.traslationXe(0, 5);
-                //        hinhXe.quayBanhXe(30);
-                //    }
-                //    else if (dem <= 90)
-                //    {
-                //        dem++;
-                //        // đi từ trên xuống dưới
-                //        hinhXe.traslationXe(-5, 0);
-                //        hinhXe.quayBanhXe(-30);
-                //    }
-                //    else if (dem <= 120)
-                //    {
-                //        dem++;
-                //        // đi từ dưới lên trên
-                //        hinhXe.traslationXe(0, -5);
-                //        hinhXe.quayBanhXe(-30);
-                //    }else
-                //    {
-                //        // cập nhật lại
-                //        dem = 0;
-                //    }
-                //}
+                Variables.Globals.xe =  new XeProperties();
+                Variables.Globals.flagXe = true;
+                Variables.Globals.hinhXe = new HinhXe();
+                this.pnl_ToolBox.Controls.Add(Variables.Globals.xe);
+                Variables.Globals.xe.BringToFront();
+                Variables.Globals.xe.Visible = true;
+                Variables.Globals.xe.PropertyChanged += Xe_PropertyChanged;
             }
-
+            else
+            {
+                MessageBox.Show("The function is unavailable. Please contact the author to get more information.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #region Timepiece action
@@ -460,6 +392,10 @@ namespace KyThuatDoHoa_Nhom9
         Timepiece timepiece;
         private void Timepiece_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
+            if (e.PropertyName.Equals("nextStep"))
+            {
+                this.picb_2DArea.Refresh();
+            }
             if (e.PropertyName.Equals("location"))
             {
                 timepieceProperties.MainLocation = timepiece.Location;
@@ -501,44 +437,44 @@ namespace KyThuatDoHoa_Nhom9
             }
         }
         #endregion
+
         private void Xe_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("ox"))
             {
-                hinhXe.doiXungQuaOx();
+                Variables.Globals.hinhXe.doiXungQuaOx();
             }
             else if (e.PropertyName.Equals("oy"))
             {
-                hinhXe.doiXungQuaOy();
+                Variables.Globals.hinhXe.doiXungQuaOy();
             }
             else if (e.PropertyName.Equals("goc"))
             {
-                hinhXe.doiXungQuaGoc();
+                Variables.Globals.hinhXe.doiXungQuaGoc();
             }
             else if (e.PropertyName.Equals("xoa"))
             {
-                flagXe = false;
+                Variables.Globals.flagXe = false;
 
             }
            
         }
         #endregion
+
         #region Clock action
-        //Clock clock;
-        //ClockProperties clockProperties;
+
         private void Clock_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-
-            if (flagXe == false)
+            if (Variables.Globals.flagXe == false)
             {
                 this.picb_2DArea.Refresh();
             }
-            if (clockProperties != null && clock != null)
+            if (Variables.Globals.clockProperties != null && Variables.Globals.clock != null)
             {
-                clockProperties.CurrentTime = clock.CurrentDatetime;
-                clockProperties.HHours = clock.HHours;
-                clockProperties.HMinute = clock.HMinute;
-                clockProperties.HSecond = clock.HSecond;
+                Variables.Globals.clockProperties.CurrentTime = Variables.Globals.clock.CurrentDatetime;
+                Variables.Globals.clockProperties.HHours = Variables.Globals.clock.HHours;
+                Variables.Globals.clockProperties.HMinute = Variables.Globals.clock.HMinute;
+                Variables.Globals.clockProperties.HSecond = Variables.Globals.clock.HSecond;
             }
         }
 
@@ -547,51 +483,20 @@ namespace KyThuatDoHoa_Nhom9
         {
             if (e.PropertyName.Equals("ZoomIn"))
             {
-                clock.R += 5;
+                Variables.Globals.clock.R += 5;
             }
             else if(e.PropertyName.Equals("ZoomOut"))
             {
-                clock.R -= 5;
+                Variables.Globals.clock.R -= 5;
             }
             else if(e.PropertyName.Equals("Dispose"))
             {
-                clock = null;
+                Variables.Globals.clock = null;
                 return;
             }
-            clock.CurrentDatetime = clockProperties.CurrentTime;
+            Variables.Globals.clock.CurrentDatetime = Variables.Globals.clockProperties.CurrentTime;
         }
         #endregion
-
-        #region Circle action
-
-        private void CircleProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (ht != null)
-            {
-                CircleProperties cp = (sender as CircleProperties);
-                if (e.PropertyName.Equals("radius"))
-                    ht.Radius = cp.Radius;
-                else if (e.PropertyName.Equals("coorOriginal"))
-                {
-                    ht.Point = ToaDo.NguoiDungMayTinh(cp.CoorOriginal);
-                }
-            }
-        }
-
-        private void Ht_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (flagXe == false)
-            {
-                this.picb_2DArea.Refresh();
-            }
-
-            (sender as HinhTron).Draw(this.picb_2DArea.CreateGraphics());
-        }
-        #endregion
-
-
-
-
 
         #region Vẽ trên pnl_WorkStation
 
@@ -636,11 +541,6 @@ namespace KyThuatDoHoa_Nhom9
             g.DrawString("X", new Font("Time New Roman", 10), Brushes.Yellow, ToaDo.NguoiDungMayTinh(new Point(107, -1)));
         }
 
-        private void Frm_Main_Load(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// Trả về giá trị chẵn của pnl_WorkStation
         /// </summary>
@@ -660,84 +560,49 @@ namespace KyThuatDoHoa_Nhom9
             this.picb_2DArea.BackgroundImage = DrawCoordinate(new Size(picb_2DArea.Width, picb_2DArea.Height));
         }
 
-        private void Pnl_WorkStation_MouseClick(object sender, MouseEventArgs e)
-        {
-            ////pnl_WorkStation.Refresh();
-            //if (chkLuoiPixel.Checked)
-            //{
-            // VeLuoiPixel(new Pen(Color.Red));
-            //}
-
-            //grp = picb_2DArea.CreateGraphics();
-
-        }
-
         #endregion
-
-
-
-
-
-        private void button37_Click(object sender, EventArgs e)
-        {
-            cl = new Clock(new Point(550, 320), 20, DateTime.Now);
-            cl.PropertyChanged += Cl_PropertyChanged;
-        }
-
-        private void Cl_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-     
-            //this.Invalidate();
-            if (flagXe == false)
-            {
-                this.picb_2DArea.Refresh();
-            }
-        }
 
         int dem = 0;
         private void picb_2DArea_Paint(object sender, PaintEventArgs e)
         {
-
-            if (flagXe)
+            if (Variables.Globals.flagXe)
             {
 
                 // biểu diễn các hoạt động của xe
-                hinhXe.PropertyChanged += HinhXe_PropertyChanged;
-                hinhXe.ToMau(e.Graphics);
-                hinhXe.drawCar(e.Graphics);
+                Variables.Globals.hinhXe.PropertyChanged += HinhXe_PropertyChanged;
+                Variables.Globals.hinhXe.ToMau(e.Graphics);
+                Variables.Globals.hinhXe.drawCar(e.Graphics);
 
                 if (dem <= 30)
                 {
                     
                     dem++;
-                        // tịnh tiến 5 đơn vị
-                        // đi phải qua trái
-                        hinhXe.traslationXe(5, 0);
-                        hinhXe.quayBanhXe(30);
-                  
-                   
+                    // tịnh tiến 5 đơn vị
+                    // đi phải qua trái
+                    Variables.Globals.hinhXe.traslationXe(5, 0);
+                    Variables.Globals.hinhXe.quayBanhXe(30);
                 }
                 else if (dem <= 60)
                 {
                     dem++;
                     //tịnh tiến 5 đơn vị
                     // đi phải qua trái
-                    hinhXe.traslationXe(0, 5);
-                    hinhXe.quayBanhXe(30);
+                    Variables.Globals.hinhXe.traslationXe(0, 5);
+                    Variables.Globals.hinhXe.quayBanhXe(30);
                 }
                 else if (dem <= 90)
                 {
                     dem++;
                     // đi từ trên xuống dưới
-                    hinhXe.traslationXe(-5, 0);
-                    hinhXe.quayBanhXe(-30);
+                    Variables.Globals.hinhXe.traslationXe(-5, 0);
+                    Variables.Globals.hinhXe.quayBanhXe(-30);
                 }
                 else if (dem <= 120)
                 {
                     dem++;
                     // đi từ dưới lên trên
-                    hinhXe.traslationXe(0, -5);
-                    hinhXe.quayBanhXe(-30);
+                    Variables.Globals.hinhXe.traslationXe(0, -5);
+                    Variables.Globals.hinhXe.quayBanhXe(-30);
                 }
                 else
                 {
@@ -746,138 +611,65 @@ namespace KyThuatDoHoa_Nhom9
                 }
             }
 
-            if (clock != null)
+            if (Variables.Globals.clock != null)
             {
-                clock.Draw(e.Graphics);
+                Variables.Globals.clock.Draw(e.Graphics);
             }
-            else if (timepiece != null)
+            if (timepiece != null)
             {
                 timepiece.Draw(e.Graphics);
             }
-
-            //pendulum.Draw(e.Graphics);
-
         }
         private void HinhXe_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-
             // cập nhật lspoint từ class HinhXe vào class Xeproperties
-            xe.lsPoint = (Point[])hinhXe.LsPoint.Clone();
-            xe.bankinh = hinhXe.BkBanh;
-            xe.HienThiThongTin();
-             
+            Variables.Globals.xe.lsPoint = (Point[])Variables.Globals.hinhXe.LsPoint.Clone();
+            Variables.Globals.xe.bankinh = Variables.Globals.hinhXe.BkBanh;
+            Variables.Globals.xe.HienThiThongTin(); 
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
             this.picb_2DArea.Refresh();
         }
 
-        private void btn_Author_Click(object sender, EventArgs e)
-        {
-            AboutBox1 box1 = new AboutBox1();
-            box1.ShowDialog();
-        }
-
-        private void btn_Help_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("https://github.com/nguyendcn/KyThuatDoHoa_HVCNBCVT_D16CQCN02", "Hoi cham", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void button38_Click(object sender, EventArgs e)
-        {
-            if (flagXe == false)
-            {
-                this.timer1.Start();
-
-            }
-            // bật chế độ của xe
-            flagXe = true;
-            this.pnl_ToolBox.Controls.Add(xe);
-            xe.BringToFront();
-            xe.Visible = true;
-
-
-
-        }
-    
         private void picb_2DArea_SizeChanged(object sender, EventArgs e)
         {
             Variables.Globals.sizeOfNewCoor_2D.Width = ReturnEvenNumber(picb_2DArea.Width / Variables.Globals.sizePerPoint.Width);
             Variables.Globals.sizeOfNewCoor_2D.Height = ReturnEvenNumber(picb_2DArea.Height / Variables.Globals.sizePerPoint.Height);
         }
 
-        private void lblX1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void button40_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void button39_Click(object sender, EventArgs e)
-        {
-            this.timer1.Start();
-        }
-
-
         private void picb_2DArea_MouseMove(object sender, MouseEventArgs e)
         {
             Point p = e.Location;
 
-
             lbl_SizeGird.Text = picb_2DArea.ToString();
-
-            //lblWidth.Text = picb_2DArea.Width.ToString();
-            //lblHeight.Text = picb_2DArea.Height.ToString();
 
             p = ToaDo.MayTinhNguoiDung(p);
             lbl_SizeGird.Text = ((picb_2DArea.Size.Width / 5) / 2) + ", " + ((picb_2DArea.Size.Height / 5) / 2);
             lbl_LocationInGird.Text = p.X + ", " + p.Y;
-
-     
-
         }
+
         #region Vẽ trên picb_3DArea sử dụng Cavalier
         private void Picb_3DArea_Paint(object sender, PaintEventArgs e)
         {
             VeLuoi3D(e.Graphics);
 
-            //HinhHopChuNhat hinhHopChuNhat = new HinhHopChuNhat(-10, -10, 0, 20, 20, 20);
-            //hinhHopChuNhat.Draw(e.Graphics);
-       
-
-            //HinhTru hinhTru = new HinhTru(10, -10, 0, 30, 40);
-            if (hinhTruProperties.Visible == true)
+            if (Variables.Globals.hinhTruProperties.Visible == true)
             {
-                hinhTru.Draw(e.Graphics);
-                hinhTruProperties.Dinh = hinhTru.TamDay;
+                Variables.Globals.hinhTru.Draw(e.Graphics);
+                Variables.Globals.hinhTruProperties.Dinh = Variables.Globals.hinhTru.TamDay;
             }
-            if (hinhHopChuNhatProperties.Visible == true)
+            if (Variables.Globals.hinhHopChuNhatProperties.Visible == true)
             {
-                hinhHopChuNhat.Draw(e.Graphics);
-                hinhHopChuNhatProperties.Dinh = hinhHopChuNhat.Dinh;
+                Variables.Globals.hinhHopChuNhat.Draw(e.Graphics);
+                Variables.Globals.hinhHopChuNhatProperties.Dinh = Variables.Globals.hinhHopChuNhat.Dinh;
             }
-            //hinhTru.DrawElip(e.Graphics);
-
         }
 
         private void Picb_3DArea_MouseMove(object sender, MouseEventArgs e)
         {
             Point p = e.Location;
-
-            
-
         }
 
         private void Picb_3DArea_SizeChanged(object sender, EventArgs e)
@@ -898,17 +690,6 @@ namespace KyThuatDoHoa_Nhom9
         {
             Pen pen = new Pen(Color.Black);
 
-
-            //// Vẽ lưới 
-            //for (int i = 0; i < picb_3DArea.Width; i += 5)
-            //{
-            //    g.DrawLine(pen, new Point(i, 0), new Point(i, picb_3DArea.Height));
-            //}
-            //for (int i = 0; i < picb_3DArea.Height; i += 5)
-            //{
-            //    g.DrawLine(pen, new Point(0, i), new Point(picb_3DArea.Width, i));
-            //}
-
             // Vẽ trục tọa độ
             pen = new Pen(Color.Black);
             int x = picb_3DArea.Width * 2 / 5,//365,
@@ -923,28 +704,9 @@ namespace KyThuatDoHoa_Nhom9
 
             g.DrawString("X", new Font("Time New Roman", 10), Brushes.Yellow, new Point(1082, 330));
             g.DrawString("Z", new Font("Time New Roman", 10), Brushes.Yellow, new Point(88, 673));
-
-     }
-
-
+        }
 
         #endregion
-
-        private void Button40_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void button41_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button21_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void HinhTruProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -956,10 +718,10 @@ namespace KyThuatDoHoa_Nhom9
                 chieuCao = Int16.Parse(str[3]),
                 banKinhDay = Int16.Parse(str[4]);
 
-            hinhTru = new HinhTru(x, y, z, chieuCao, banKinhDay);
+            Variables.Globals.hinhTru = new HinhTru(x, y, z, chieuCao, banKinhDay);
 
             picb_3DArea.Refresh();
-            hinhTru.Draw(picb_3DArea.CreateGraphics());
+            Variables.Globals.hinhTru.Draw(picb_3DArea.CreateGraphics());
         }
         private void HinhHopChuNhatProperties_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -971,10 +733,10 @@ namespace KyThuatDoHoa_Nhom9
                 chieuCao = Int16.Parse(str[4]),
                 chieuRong = Int16.Parse(str[5]);
 
-            hinhHopChuNhat = new HinhHopChuNhat(x, y, z, chieuDai, chieuCao,chieuRong);
+            Variables.Globals.hinhHopChuNhat = new HinhHopChuNhat(x, y, z, chieuDai, chieuCao,chieuRong);
 
             picb_3DArea.Refresh();
-            hinhHopChuNhat.Draw(picb_3DArea.CreateGraphics());
+            Variables.Globals.hinhHopChuNhat.Draw(picb_3DArea.CreateGraphics());
         }
 
         private void BTN3D_MouseDown(object sender, MouseEventArgs e)
@@ -982,51 +744,31 @@ namespace KyThuatDoHoa_Nhom9
             Button btn = sender as Button;
             if(btn.Tag.Equals("Cylinder"))
             {
-                this.pnl_ToolBox.Controls.Add(hinhTruProperties);
-                hinhTruProperties.PropertyChanged += HinhTruProperties_PropertyChanged;
-                if (flagXe == false)
+                this.pnl_ToolBox.Controls.Add(Variables.Globals.hinhTruProperties);
+                Variables.Globals.hinhTruProperties.PropertyChanged += HinhTruProperties_PropertyChanged;
+                if (Variables.Globals.flagXe == false)
                 {
-                    hinhTruProperties.Refresh();
+                    Variables.Globals.hinhTruProperties.Refresh();
                 }
 
-                hinhTruProperties.BringToFront();
-                hinhTruProperties.Visible = true;
-                hinhHopChuNhatProperties.Visible = false;
+                Variables.Globals.hinhTruProperties.BringToFront();
+                Variables.Globals.hinhTruProperties.Visible = true;
+                Variables.Globals.hinhHopChuNhatProperties.Visible = false;
             }
             else if(btn.Tag.Equals("Cube"))
             {
-                this.pnl_ToolBox.Controls.Add(hinhHopChuNhatProperties);
-                hinhHopChuNhatProperties.PropertyChanged += HinhHopChuNhatProperties_PropertyChanged;
-                if (flagXe == false)
+                this.pnl_ToolBox.Controls.Add(Variables.Globals.hinhHopChuNhatProperties);
+                Variables.Globals.hinhHopChuNhatProperties.PropertyChanged += HinhHopChuNhatProperties_PropertyChanged;
+                if (Variables.Globals.flagXe == false)
                 {
-                    hinhHopChuNhatProperties.Refresh();
+                    Variables.Globals.hinhHopChuNhatProperties.Refresh();
                 }
 
-                hinhHopChuNhatProperties.BringToFront();
-                hinhHopChuNhatProperties.Visible = true;
-                hinhTruProperties.Visible = false;
-            }
-        }
-
-        private void lbl_LocationInGird_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button21_Click_1(object sender, EventArgs e)
-        {
-            if(clock != null)
-            {
-                clock.R = 30;
+                Variables.Globals.hinhHopChuNhatProperties.BringToFront();
+                Variables.Globals.hinhHopChuNhatProperties.Visible = true;
+                Variables.Globals.hinhTruProperties.Visible = false;
             }
         }
     }
-
-
-
-
-
-
-
 }
 

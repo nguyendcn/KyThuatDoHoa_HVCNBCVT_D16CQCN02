@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 {
-    class HinhXe : INotifyPropertyChanged
+    public class HinhXe : INotifyPropertyChanged
     {
 
         // danh sách các points để vẽ hình xe
@@ -17,8 +17,9 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         // bán kính bánh xe
         private int bkBanh;
         public Point[] LsPoint
-        { get => lsPoint;
-          set
+        {
+            get => lsPoint;
+            set
             {
                 lsPoint = value;
             }
@@ -30,7 +31,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-     
+
 
 
         // khởi tạo các giá trị mặc định cho thuộc tính vẽ xe
@@ -82,7 +83,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
 
         }
 
-       
+
         public void drawCar(Graphics g)
         {
             // tô màu trước
@@ -158,12 +159,12 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             tamTruoc3.ColorOfLine = Color.DarkRed;
             tamTruoc3.Draw(g);
         }
-        public void ToMau(Graphics g) 
+        public void ToMau(Graphics g)
         {
             // Create solid brush.
             SolidBrush brush = new SolidBrush(Color.Purple);
             SolidBrush brush1 = new SolidBrush(Color.LawnGreen);
-            SolidBrush  brush2 = new SolidBrush(Color.Orange);
+            SolidBrush brush2 = new SolidBrush(Color.Orange);
             SolidBrush brush3 = new SolidBrush(Color.Chocolate);
             // Create points that define polygon.
             // tô màu bên ngoài
@@ -173,12 +174,12 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
             // tô màu hình chữ nhật
             Point d1 = new Point(this.LsPoint[8].X, this.LsPoint[9].Y);
             Point d2 = new Point(this.LsPoint[9].X, this.LsPoint[8].Y);
-            Point[] curvePoints1 = {this.LsPoint[8],  d1, this.LsPoint[9], d2, this.LsPoint[8] };
+            Point[] curvePoints1 = { this.LsPoint[8], d1, this.LsPoint[9], d2, this.LsPoint[8] };
 
             // tô màu hình tam giác 
-            Point[] curvePoints2 = { this.LsPoint[10], this.LsPoint[11], this.LsPoint[12], this.LsPoint[10]};
+            Point[] curvePoints2 = { this.LsPoint[10], this.LsPoint[11], this.LsPoint[12], this.LsPoint[10] };
 
-            
+
             // Draw polygon to screen.
             g.FillPolygon(brush, curvePoints);
             g.FillPolygon(brush1, curvePoints1);
@@ -270,7 +271,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
         }
 
         // hàm tịnh tiến tọa đồ pn xDonVi, yDonVi
-        private void tinhTien( ref Point pn, int xDonVi, int yDonVi)
+        private void tinhTien(ref Point pn, int xDonVi, int yDonVi)
         {
             double[] matran1 = new double[3] { pn.X, pn.Y, 1 };
             // khởi tạo ma trận tịnh tiến
@@ -289,7 +290,7 @@ namespace KyThuatDoHoa_Nhom9.Construct._2DObject
                                              { 0,  0, 1} };
 
             pn = nhanMT(matran2, matran1);
-            
+
         }
 
         private void doiXungOY(ref Point pn)

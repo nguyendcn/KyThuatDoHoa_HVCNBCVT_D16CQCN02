@@ -32,6 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_Paint_Palette.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -288,6 +295,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="icons8_Paint_Palette.ico" />
     <Content Include="Note.txt" />
     <None Include="Resources\61287020_371287316833461_49culo91464580271046656_n.jpg" />
     <None Include="Resources\CỦ LOZ.jpg" />

@@ -9,9 +9,8 @@ using System.ComponentModel;
 
 namespace KyThuatDoHoa_Nhom9.Construct._3DObject
 {
-    class HinhTru
+    public class HinhTru
     {
-        private int _chieuCao;
         public int ChieuCao { get; set; }
         public int BanKinhDay { get; set; }
         public int[,] TamDay { get; set; }

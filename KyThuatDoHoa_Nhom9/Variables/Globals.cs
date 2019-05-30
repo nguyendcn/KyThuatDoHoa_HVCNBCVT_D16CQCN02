@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KyThuatDoHoa_Nhom9.Construct._2DObject;
+using KyThuatDoHoa_Nhom9.Construct._3DObject;
+using KyThuatDoHoa_Nhom9.UI.UserCtr;
 using KyThuatDoHoa_Nhom9.Variables;
 
 namespace KyThuatDoHoa_Nhom9.Variables
@@ -43,6 +46,14 @@ namespace KyThuatDoHoa_Nhom9.Variables
         /// </summary>
         public static Stack<Object> sObject_2D = new Stack<object>();
 
-
+        public static HinhXe hinhXe;
+        public static HinhTru hinhTru;
+        public static XeProperties xe;
+        public static HinhTruProperties hinhTruProperties;
+        public static HinhHopChuNhatProperties hinhHopChuNhatProperties;
+        public static HinhHopChuNhat hinhHopChuNhat;
+        public static bool flagXe;
+        public static Clock clock;
+        public static ClockProperties clockProperties;
     }
 }
